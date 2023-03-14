@@ -14,7 +14,7 @@
 
 .logo {
   margin: 10px 30px;
-  max-width: 200px;
+  max-width: 300px;
 }
 
 .phone {
@@ -42,7 +42,8 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 45px;
+  font-size: 1.2rem;
+  height: 54px;
   border: 1px solid #9C9C9C;
   border-radius: 12px;
   padding: 5px;
@@ -52,10 +53,18 @@
   font-family: "Day One", sans-serif;
   z-index: 5;
   color: #F9F9F9;
+  font-family: "Day One", sans-serif;
+  font-size: 1.2rem;
+  border: none;
   position: relative;
   right: 20px;
-  height: 45px;
+  height: 54px;
   border-radius: 12px;
   background: linear-gradient(180.77deg, rgba(255, 255, 255, 0.2) 0.67%, rgba(255, 255, 255, 0.2) 16.73%, rgba(255, 255, 255, 0) 99.33%), #F3950A;
+}
+
+.btn:hover {
+  -webkit-box-shadow: -11px -8px 8px 27px rgba(114, 79, 46, 0.2) inset;
+          box-shadow: -11px -8px 8px 27px rgba(114, 79, 46, 0.2) inset;
 }
 /*# sourceMappingURL=Header.module.css.map */
