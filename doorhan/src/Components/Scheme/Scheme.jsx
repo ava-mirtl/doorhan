@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Scheme.scss';
+import styles from './Scheme.module.scss';
 
 
 export default function Scheme() {
