@@ -18,9 +18,11 @@
 
 .scheme__container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(180px, 1129px));
+    box-sizing: border-box;
     max-width: 80%;
     margin: 3rem auto;
+
 
     .scheme__block {
         display: flex;
@@ -31,30 +33,31 @@
         height: 163px;
 
         .icon__container {
-
-
             .icon {
-                width: 100px;
-                height: 100px;
+                width: 90px;
+                height: 90px;
                 background-color: $base-orange-icon;
                 border-radius: 0 89px 89px 89px;
                 margin: 0 1rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-            }
 
-            .text {
-                font-family: $fontM;
-                font-size: 27.16px;
-                padding-right: 15px;
-
-                a {
-                    text-decoration: none;
-                    color: $base-blue;
+                img {
+                    max-width: 60%;
                 }
             }
+        }
 
+        .text {
+            font-family: $fontM;
+            font-size: 2vw;
+            padding-right: 15px;
+
+            a {
+                text-decoration: none;
+                color: $base-blue;
+            }
 
         }
 
