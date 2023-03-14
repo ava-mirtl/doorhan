@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './WhyDoorhan.module.scss';
 
+import Button from '../Button/Button';
 
 import pic1 from '../../assets/images/pic1.png';
 import pic2 from '../../assets/images/pic2.png';
@@ -16,7 +17,6 @@ export default function WhyDoorhan() {
           <div className={styles.title}>ПОЧЕМУ ВОРОТА DOORHAN?</div>
           <div className={styles.container__main}>
             <div className={styles.main__left}>
-
               <div className={styles.main__text}>
                 <p>Единственные ворота в мире которые выглядят как новые через 25 лет</p>
                 <div className={styles.main__img}>
@@ -47,17 +47,22 @@ export default function WhyDoorhan() {
 
 
             </div>
-            <div className={styles.main__left}>FORM</div>
+            <div className={styles.main__right}>
+              <div className={styles.form__box}>
+                <form className={styles.form}>
+                  <input type="text" className={styles.input} placeholder='Имя' />
+                  <input type="text" className={styles.input} placeholder='Телефон' />
+                  <Button name="ПОЛУЧИТЬ ПОДАРОК" />
+                </form>
+              </div>
+
+            </div>
           </div>
         </div>
 
 
-
-
-
-
-
         <div className={styles.container__aboutus}>
+          <div className={styles.title}>ПОЧЕМУ ВЫБИРАЮТ НАС:</div>
 
         </div>
       </div>
