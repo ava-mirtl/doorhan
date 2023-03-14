@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './Header.scss'
+import styles from './Header.module.scss'
 
 
 export default function Header() {
   return (
-    <div>
+    <div className={styles.cool}> ПОЧЕМУ ВОРОТА DOORHAN
     </div>
   )
 }
