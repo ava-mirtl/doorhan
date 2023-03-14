@@ -1,5 +1,4 @@
 .header {
-  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,5 +28,34 @@
   height: 120%;
   position: relative;
   top: 10%;
+  z-index: 5;
+}
+
+.form {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 0 20px;
+}
+
+.input {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 45px;
+  border: 1px solid #9C9C9C;
+  border-radius: 12px;
+  padding: 5px;
+}
+
+.btn {
+  font-family: "Day One", sans-serif;
+  z-index: 5;
+  color: #F9F9F9;
+  position: relative;
+  right: 20px;
+  height: 45px;
+  border-radius: 12px;
+  background: linear-gradient(180.77deg, rgba(255, 255, 255, 0.2) 0.67%, rgba(255, 255, 255, 0.2) 16.73%, rgba(255, 255, 255, 0) 99.33%), #F3950A;
 }
 /*# sourceMappingURL=Header.module.css.map */
