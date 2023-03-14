@@ -10,7 +10,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 5vh;
+  height: 8vh;
 }
 
 .logo {
@@ -19,8 +19,12 @@
 }
 
 .phone {
-  background-color: #F49C19;
+  background-color: #F39509;
   text-align: center;
+  font-size: 1.5em;
+  border-radius: 0 0 10px 10px;
+  padding: 30px 20px;
+  font-family: "Montserrat", sans-serif;
   color: #F9F9F9;
   height: 120%;
   position: relative;
