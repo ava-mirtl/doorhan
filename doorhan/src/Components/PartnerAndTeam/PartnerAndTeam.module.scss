@@ -1,1 +1,31 @@
 @import "../../styles/vars.scss";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.photos{
+    display: flex;
+    justify-content: space-around;
+}
+
+.our__team{
+max-width: 80%;
+margin: 0 auto;
+display: flex;
+}
+.team{
+    margin-right: 3em;
+}
+
+
+
+
+
+.title{
+font-size: $base-h2;
+border-bottom: 3px solid $base-blue;
+margin: 2rem;
+padding-bottom: 1rem;
+}
