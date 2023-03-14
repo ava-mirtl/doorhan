@@ -1,5 +1,38 @@
 
-$fontD: 'Day One', sans-serif;
+@font-face {
+	font-family: "Days";
+	src: url("../fonts/days.eot");
+	src: url("../fonts/days.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/days.otf") format("opentype"), 
+		url("../fonts/days.ttf") format("truetype"), 
+		url("../fonts/days.woff") format("woff"), 
+		url("../fonts/days.woff2") format("woff2");
+}
+@font-face {
+	font-family: "Montseratt", sans-serif;
+	src: url("../fonts/Montserrat-Black.ttf") format("truetype"),
+	    url("../fonts/Montserrat-BlackItalic.ttf") format("truetype"), 
+		url("../fonts/Montserrat-Bold.ttf") format("truetype"),
+		url("../fonts/Montserrat-BoldItalic.ttf") format("truetype"),
+		url("../fonts/Montserrat-ExtraBold.ttf") format("truetype"),
+		url("../fonts/Montserrat-ExtraBoldItalic.ttf") format("truetype"),
+        url("../fonts/Montserrat-ExtraLight.ttf") format("truetype"),
+        url("../fonts/Montserrat-ExtraLightItalic.ttf") format("truetype"),
+        url("../fonts/Montserrat-Italic-VariableFont_wght.ttf") format("truetype"),
+		url("../fonts/Montserrat-Italic.ttf") format("truetype"),
+		url("../fonts/Montserrat-Light.ttf") format("truetype"),
+		url("../fonts/Montserrat-LightItalic.ttf") format("truetype"),
+		url("../fonts/Montserrat-Medium.ttf") format("truetype"),
+		url("../fonts/Montserrat-MediumItalic.ttf") format("truetype"),
+        url("../fonts/Montserrat-Regular.ttf") format("truetype"),
+		url("../fonts/Montserrat-SemiBold.ttf") format("truetype"),
+		url("../fonts/Montserrat-SemiBoldItalic.ttf") format("truetype"),
+        url("../fonts/Montserrat-Thin.ttf") format("truetype"),
+		url("../fonts/Montserrat-ThinItalic.ttf") format("truetype"),
+		url("../fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+$fontD: 'Days';
 $fontM: 'Montserrat', sans-serif;
 
 
