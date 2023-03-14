@@ -1,1 +1,63 @@
 @import "../../styles/vars.scss";
+
+.scheme {
+    background-color: $base-blue;
+}
+
+.title {
+    color: $base-white;
+    border-bottom: 5px solid $base-white;
+    box-sizing: content-box;
+    width: 45%;
+    height: 100%;
+    font-size: $base-h2;
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+    padding-top: 1rem;
+}
+
+.scheme__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 80%;
+    margin: 3rem auto;
+
+    .scheme__block {
+        display: flex;
+        align-items: center;
+        background-color: $base-white;
+        border-radius: 15px;
+        margin: 15px;
+        height: 163px;
+
+        .icon__container {
+
+
+            .icon {
+                width: 100px;
+                height: 100px;
+                background-color: $base-orange-icon;
+                border-radius: 0 89px 89px 89px;
+                margin: 0 1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .text {
+                font-family: $fontM;
+                font-size: 27.16px;
+                padding-right: 15px;
+
+                a {
+                    text-decoration: none;
+                    color: $base-blue;
+                }
+            }
+
+
+        }
+
+
+    }
+}
