@@ -1,10 +1,19 @@
 import React from 'react';
-import styles from './Header.module.scss'
+import Button from '../Button/Button';
+import styles from './Header.module.scss';
+import logo from '../../assets/images/logo.png';
+
 
 
 export default function Header() {
-  return (
-    <div className={styles.cool}> ПОЧЕМУ ВОРОТА DOORHAN
-    </div>
+  return (<>
+    <div className={styles.header}> 
+    <img className={styles.logo} src={logo} alt="logo"/>
+    <span className={styles.phone}>+7(495)127-05-21</span>
+    <div className={styles.form}>
+    <input type="number" className={styles.input} placeholder='Телефон'/>
+    <Button txt="Заказать звонок"/></div>
+
+    </div></>
   )
 }

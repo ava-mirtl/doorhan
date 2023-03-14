@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "FirstScreen.module.scss",
+        "../../styles/vars.scss"
+    ],
+    "names": [],
+    "file": "FirstScreen.module.css"
+}

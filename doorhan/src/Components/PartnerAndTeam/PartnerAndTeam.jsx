@@ -1,12 +1,9 @@
 import React from 'react';
-
 import styles from './PartnerAndTeam.module.scss';
-
 import photo1 from "../../assets/images/premium1.png"
 import photo2 from "../../assets/images/premium2.png"
 import photo3 from "../../assets/images/premium3.png"
 import photo4 from "../../assets/images/premium4.png"
-
 import team1 from "../../assets/images/team1.png"
 import team2 from "../../assets/images/team2.png"
 import team3 from "../../assets/images/team3.png"
