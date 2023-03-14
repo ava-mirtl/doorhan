@@ -1,7 +1,6 @@
 @import "../../styles/vars.scss";
 
 .header{
-    width: 100vw;
     display: flex;
 justify-content: space-between;
 background-color: #F9F9F9;
@@ -22,11 +21,26 @@ height: 8vh;}
     color: #F9F9F9;
     height: 120%;
     position: relative;
-    top: 10%
+    top: 10%;
+    z-index: 5;
+}
+.form{
+    max-width: fit-content;
+    margin: 0 20px;
 }
 .input{
+    width: fit-content;
     height: 45px;
     border: 1px solid $base-gray;
     border-radius: 12px;
     padding: 5px;
+}
+.btn{font-family: $fontD;
+    z-index: 5;
+    color: #F9F9F9;
+    position: relative;
+    right: 20px;
+    height: 45px;
+    border-radius: 12px;
+    background: linear-gradient(180.77deg, rgba(255, 255, 255, 0.2) 0.67%, rgba(255, 255, 255, 0.2) 16.73%, rgba(255, 255, 255, 0) 99.33%), #F3950A;
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from '../Button/Button';
 import styles from './Header.module.scss';
 import logo from '../../assets/images/logo.png';
 
@@ -12,7 +11,7 @@ export default function Header() {
     <span className={styles.phone}>+7(495)127-05-21</span>
     <div className={styles.form}>
     <input type="text" className={styles.input} placeholder='Телефон'/>
-    <Button txt="Заказать звонок"/></div>
+    <button className={styles.btn}>Заказать звонок</button></div>
     </div></>
   )
 }
