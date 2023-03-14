@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "Scheme.module.scss",
+        "../../styles/vars.scss"
+    ],
+    "names": [],
+    "file": "Scheme.module.css"
+}

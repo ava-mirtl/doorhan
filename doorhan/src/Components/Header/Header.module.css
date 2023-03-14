@@ -1,0 +1,29 @@
+.header {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #F9F9F9;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5vh;
+}
+
+.logo {
+  margin: 10px 30px;
+  max-width: 200px;
+}
+
+.phone {
+  background-color: #F49C19;
+  text-align: center;
+  color: #F9F9F9;
+  height: 120%;
+  position: relative;
+  top: 10%;
+}
+/*# sourceMappingURL=Header.module.css.map */

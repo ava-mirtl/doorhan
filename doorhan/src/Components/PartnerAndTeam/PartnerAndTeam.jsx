@@ -1,16 +1,9 @@
 import React from 'react';
-
-import styles from './PartnerAndTeam.scss';
-import vector from "../../assets/icons/blue_partners.png"
-import vector2 from "../../assets/icons/blue_partners2.png"
-
 import styles from './PartnerAndTeam.module.scss';
-
 import photo1 from "../../assets/images/premium1.png"
 import photo2 from "../../assets/images/premium2.png"
 import photo3 from "../../assets/images/premium3.png"
 import photo4 from "../../assets/images/premium4.png"
-
 import team1 from "../../assets/images/team1.png"
 import team2 from "../../assets/images/team1.png"
 import team3 from "../../assets/images/team1.png"
@@ -20,7 +13,7 @@ export default function PartnerAndTeam() {
     <div>
       <div className="title">
         <p>Doorhan преимум-партнер</p>
-        <img src={vector} alt="alt" />
+        {/* <img src={vector} alt="alt" /> */}
       </div>
       <div className="photos">
         <img src={photo1} alt="photo" />
@@ -30,7 +23,7 @@ export default function PartnerAndTeam() {
       </div>
       <div className="title">
         <p>Наша команда</p>
-        <img src={vector2} alt="alt" />
+        {/* <img src={} alt="alt" /> */}
       </div>
       <div className="our-team">
         <div className="team">

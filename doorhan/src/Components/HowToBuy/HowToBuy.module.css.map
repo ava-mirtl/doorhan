@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "HowToBuy.module.scss",
+        "../../styles/vars.scss"
+    ],
+    "names": [],
+    "file": "HowToBuy.module.css"
+}

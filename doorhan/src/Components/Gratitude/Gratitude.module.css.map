@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "Gratitude.module.scss",
+        "../../styles/vars.scss"
+    ],
+    "names": [],
+    "file": "Gratitude.module.css"
+}

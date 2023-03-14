@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "PartnerAndTeam.module.scss",
+        "../../styles/vars.scss"
+    ],
+    "names": [],
+    "file": "PartnerAndTeam.module.css"
+}
