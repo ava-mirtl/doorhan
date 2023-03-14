@@ -21,6 +21,7 @@
 .phone {
   background-color: #F49C19;
   text-align: center;
+  padding: auto 10px;
   color: #F9F9F9;
   height: 120%;
   position: relative;
