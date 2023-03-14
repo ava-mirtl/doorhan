@@ -29,16 +29,16 @@ export default function Header() {
   <h1>ГАРАЖНЫЕ ВОРОТА DOORHAN</h1>
   <div className={styles.subtitle}>ПРОИЗВОДСТВО. ДОСТАВКА. МОНТАЖ.</div>
   <div className={styles.item}>
-    <OrangeBtn img={atm}/><span className={styles.txt}>10% предоплата.</span>
+    <OrangeBtn img={atm}/><span className={styles.txt}>10% ПРЕДОПЛАТА.</span>
   </div>
   <div className={styles.item}>
-    <OrangeBtn img={percent}/><span className={styles.txt}>Рассрочка от 3 до 12 месяцев</span>
+    <OrangeBtn img={percent}/><span className={styles.txt}>РАССРОЧКА ОТ 3 ДО 12 МЕСЯЦЕВ</span>
   </div><div className={styles.item}>
-    <OrangeBtn img={settings}/><span className={styles.txt}>Ежегодное бесплатное обслуживание</span>
+    <OrangeBtn img={settings}/><span className={styles.txt}>ЕЖЕГОДНОЕ БЕСПЛАТНОЕ ОБСЛУЖИВАНИЕ</span>
   </div><div className={styles.item}>
-    <OrangeBtn img={shipping}/><span className={styles.txt}>Бесплатный выезд замерщика</span>
+    <OrangeBtn img={shipping}/><span className={styles.txt}>БЕСПЛАТНЫЙ ВЫЕЗД ЗАМЕРЩИКА</span>
   </div><div className={styles.item}>
-    <OrangeBtn img={box}/><span className={styles.txt}>Свои склады  в : Одинцово, Мытищи, Люберцы, Подольск</span>
+    <OrangeBtn img={box}/><span className={styles.txt}>СВОИ СКЛАДЫ В : ОДИНЦОВО, МЫТИЩИ, ЛЮБЕРЦЫ, ПОДОЛЬСК</span>
   </div>
 </div>
     </div>
