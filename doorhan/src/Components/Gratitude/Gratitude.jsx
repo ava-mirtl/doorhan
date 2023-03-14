@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Gratitude.scss'
+import styles from './Gratitude.module.scss'
 
 
 export default function Gratitude() {
