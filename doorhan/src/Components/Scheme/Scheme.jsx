@@ -14,7 +14,7 @@ export default function Scheme() {
   return (
     <div>
       <div className={styles.scheme}>
-        <div className={styles.title}>Cхема работы</div>
+        <div className={styles.title}>CХЕМА РАБОТЫ</div>
         <div className={styles.scheme__container}>
           <div className={styles.scheme__block}>
             <OrangeBtn img={icon_call} />

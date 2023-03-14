@@ -1,22 +1,19 @@
 @import "../../styles/vars.scss";
 
-.partnerandteam {
-    width: 100vw;
-}
-
 .title1 {
+    font-family: $fontD ;
     box-sizing: content-box;
     width: 60%;
     height: 100%;
     font-size: $base-h2;
     border-bottom: 5px solid $base-blue;
-
     margin: 2rem 0;
     padding-bottom: 1rem;
     padding-left: 3rem;
 }
 
 .title2 {
+    font-family: $fontD ;
     box-sizing: content-box;
     width: 45%;
     height: 100%;
@@ -30,17 +27,21 @@
 .photos {
     display: flex;
     justify-content: space-between;
-    width: 100vw;
 }
 
 .our__team {
     max-width: 80%;
     margin: 0 auto;
     display: flex;
+    justify-content: center;
 }
 
 .team {
     margin-right: 3em;
+
+    img {
+        max-width: 100%;
+    }
 }
 
 .team__name {
