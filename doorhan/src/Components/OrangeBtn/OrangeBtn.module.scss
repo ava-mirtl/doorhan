@@ -1,0 +1,19 @@
+@import '../../styles/vars.scss';
+
+
+.icon__container {
+    .icon {
+        width: 90px;
+        height: 90px;
+        background-color: $base-orange-icon;
+        border-radius: 0 89px 89px 89px;
+        margin: 0 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            max-width: 60%;
+        }
+    }
+}
