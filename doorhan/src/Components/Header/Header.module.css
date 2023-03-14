@@ -30,4 +30,11 @@
   position: relative;
   top: 10%;
 }
+
+.input {
+  height: 45px;
+  border: 1px solid #9C9C9C;
+  border-radius: 12px;
+  padding: 5px;
+}
 /*# sourceMappingURL=Header.module.css.map */
