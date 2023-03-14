@@ -11,9 +11,8 @@ export default function Header() {
     <img className={styles.logo} src={logo} alt="logo"/>
     <span className={styles.phone}>+7(495)127-05-21</span>
     <div className={styles.form}>
-    <input type="number" className={styles.input} placeholder='Телефон'/>
+    <input type="text" className={styles.input} placeholder='Телефон'/>
     <Button txt="Заказать звонок"/></div>
-
     </div></>
   )
 }
