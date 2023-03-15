@@ -168,18 +168,19 @@
 
             .four {
                 position: relative;
-                margin-right: 15vw;
+                top: 5%;
+                margin-right: 18vw;
             }
 
             .five {
                 position: relative;
-                top: 30%;
+                top: 47%;
                 margin-left: 3vw;
             }
 
             .six {
                 position: relative;
-                top: 60%;
+                top: 65%;
                 margin-right: 15vw;
             }
         }
@@ -190,4 +191,65 @@
         position: relative;
         left: 35vw;
     }
+}
+
+
+.container__circlepic1 {
+    .circle1 {
+        position: relative;
+        bottom: 4vh;
+        left: 21vw;
+    }
+}
+
+.container__circlepic2 {
+    .circle2 {
+        position: relative;
+        top: 18vh;
+        left: 14vw;
+    }
+}
+
+.container__circlepic3 {
+    .circle3 {
+        position: relative;
+        top: 35vh;
+        left: 20vw;
+    }
+}
+
+.container__circlepic4 {
+    .circle4 {
+        position: relative;
+        bottom: 2vh;
+        right: 25vw;
+    }
+}
+
+.container__circlepic5 {
+    .circle5 {
+        position: relative;
+        top: 38vh;
+        right: 15vw;
+
+    }
+
+}
+
+.container__circlepic6 {
+    .circle6 {
+        position: relative;
+        top: 50vh;
+        right: 23vw;
+    }
+
+}
+
+.container__circlepic7 {
+    .circle7 {
+        position: relative;
+        left: 47vw;
+        bottom: 10vh;
+    }
+
 }
