@@ -14,30 +14,30 @@ export default function PartnerAndTeam() {
       <div className={styles.partnerandteam}>
         <div className={styles.title1}>DOORHAN ПРЕМИУМ-ПАРТНЕР</div>
         <div className={styles.photos}>
-          <img src={photo1} alt="photo" />
-          <img src={photo2} alt="photo" />
-          <img src={photo3} alt="photo" />
-          <img src={photo4} alt="photo" />
+          <img src={photo1} alt="производство" />
+          <img src={photo2} alt="завод" />
+          <img src={photo3} alt="профиль" />
+          <img src={photo4} alt="склады" />
         </div>
         <div className={styles.title2}>НАША КОМАНДА
         </div>
         <div className={styles.our__team}>
           <div className={styles.team}>
-            <img src={team1} alt="photo" />
+            <img src={team1} alt="гендиректор" />
             <div className={styles.team__name}>
               <div className={styles.name}>Сергей Казачинский</div>
               <div className={styles.profession}>Генеральный директор</div>
             </div>
           </div>
           <div className={styles.team}>
-            <img src={team2} alt="photo" />
+            <img src={team2} alt="финдиректор" />
             <div className={styles.team__name}>
               <div className={styles.name}>Виолетта Савченко</div>
               <div className={styles.profession}>Финансовый дирекор</div>
             </div>
           </div>
           <div className={styles.team}>
-            <img src={team3} alt="photo" />
+            <img src={team3} alt="руководитель монтажников" />
             <div className={styles.team__name}>
               <div className={styles.name}>Ренат Тугушев</div>
               <div className={styles.profession}>Руководитель монтажников</div>
