@@ -44,8 +44,6 @@ export default function WhyDoorhan() {
                   <img src={pic4} alt="деталь" />
                 </div>
               </div>
-
-
             </div>
             <div className={styles.main__right}>
               <div className={styles.form__box}>

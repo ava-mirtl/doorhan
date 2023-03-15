@@ -1,5 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
+
 import styles from './Header.module.scss';
+import Modal from '../Modal/Modal';
+import popup from '../../assets/images/popup1.jpg';
 import logo from '../../assets/images/logo.png';
 import atm from '../../assets/icons/local_atm.png';
 import percent from '../../assets/icons/percent.png';
@@ -12,13 +15,18 @@ import OrangeBtn from '../OrangeBtn/OrangeBtn';
 
 
 export default function Header() {
+const [modalActive, setModalActive] = useState(true);
+const handleSubmit = (e)=>{
+e.preventDefault();
+}
   return (<>
     <div className={styles.header}> 
     <img className={styles.logo} src={logo} alt="logo"/>
     <span className={styles.phone}>+7(495)127-05-21</span>
     <form className={styles.form}>
     <input type="text" className={styles.input} placeholder='Телефон'/>
-    <button type='submit' className={styles.btn}>Заказать звонок</button></form>
+    <button type='submit' onSubmit={(e)=>{handleSubmit(e)}} 
+    onClick={()=>setModalActive(true)} className={styles.btn}>Заказать звонок</button></form>
     </div>
     <div className={styles.mainСontainer}>
 <div className={styles.imgCont}>
@@ -43,6 +51,16 @@ export default function Header() {
   </div>
 </div>
     </div>
+    <Modal active={modalActive} setActive={setModalActive}>
+      <div className={styles.popupContainer}>
+        <div className={styles.imgContainer}>
+<img src={popup} alt="девушка"/>
+</div>
+<div className={styles.popupTxt}>
+СПАСИБО ЗА ВАШЕ ОБРАЩЕНИЕ, НАШ МЕНЕДЖЕР СКОРО С ВАМИ СВЯЖЕТСЯ!
+</div>
+      </div>
+    </Modal>
   </>
   )
 }

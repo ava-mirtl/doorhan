@@ -162,7 +162,13 @@ h1 {
   margin: 0.5vw 20px;
 }
 
-@media (min-width: 780px) and (max-width: 1420px) {
+.popupContainer {
+  height: 500px;
+  width: 50vw;
+  background-color: #F1F0F2;
+}
+
+@media (min-width: 781px) and (max-width: 1420px) {
   .imgCont {
     background-size: cover;
   }
