@@ -9,7 +9,7 @@
     justify-content: center;
     opacity: 0;
     pointer-events: none;
-    transition: 0.5s;
+    transition: opacity 0.4s;
     height: 100vh;
 }
 
@@ -25,20 +25,21 @@
     width: 50vw;
     padding: 20px;
     transform: scale(0.5);
-    transition: 0.4s all;
+    transition: transform 0.4s ;
    
 }
 
 .modal__content.active{
     transform: scale(1);
-    z-index: 120;
-    overflow: visible;
-
 }
 .modal__triangles{
+    opacity: 0;
     display: flex;
     flex-direction: column;
-    align-items:stretch ;
+    align-items:stretch;
+}
+.modal.active>.modal__content>.modal__triangles{
+    opacity:1
 }
 .modal__triangles::before{
     content: "";
@@ -52,8 +53,6 @@
  clip-path: polygon(0% 0%, 100% 100%, 40% 60%);
  transform: rotate(135deg);
  border-radius: 0 0 0 70%;
-
-
     }
     .modal__triangles::after{
     content: "";
@@ -68,3 +67,5 @@
     transform: rotate(135deg);
     border-radius: 0 0 0 70%;
     }
+
+   

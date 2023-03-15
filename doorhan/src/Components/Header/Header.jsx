@@ -22,8 +22,10 @@ const handleSubmit = (event)=>{
 setModalActive(true);
 }
 const handleClick = (event)=>{
-event.preventDefault();
+  event.preventDefault();
 setModalSecond(true);
+console.log(modalSecond);
+
 }
   return (<>
     <div className={styles.header}> 
@@ -37,7 +39,7 @@ setModalSecond(true);
     <div className={styles.mainСontainer}>
 <div className={styles.imgCont}>
   <div className={styles.buttonCont}>
-    <Button onClick={(e)=>handleClick(e)} name="ЗАПИСАТЬСЯ НА ЗАМЕР"/>
+    <Button name="ЗАПИСАТЬСЯ НА ЗАМЕР" onClick={handleClick}/>
 </div>
 </div>
 <div className={styles.content}>
@@ -57,17 +59,30 @@ setModalSecond(true);
   </div>
 </div>
     </div>
-    <Modal active={modalActive} setActive={setModalActive}>
-      <div className={styles.popupContainer}>
-        <div className={styles.imgContainer}>
+      {
+  modalActive&&      <Modal active={modalActive} setActive={setModalActive}>
+  <div className={styles.popupContainer}>
+  <div className={styles.imgContainer}>
 <img src={popup} alt="девушка"/>
 </div>
-<div className={styles.popupTxt}>
-  <div className={styles.popupTitle}>СПАСИБО ЗА ВАШЕ ОБРАЩЕНИЕ, НАШ МЕНЕДЖЕР СКОРО С ВАМИ СВЯЖЕТСЯ!
-</div>
-</div>
-      </div>
-    </Modal>
+<div className={styles.popupTxt}><div className={styles.popupTitle}>СПАСИБО ЗА ВАШЕ ОБРАЩЕНИЕ, НАШ МЕНЕДЖЕР СКОРО С ВАМИ СВЯЖЕТСЯ!
+  </div></div>
+      </div>    </Modal>
+}
+      {
+  modalSecond&&<Modal active={modalSecond} setActive={setModalSecond}>
+    <div className={styles.popupContainerNext}>
+     <div className={styles.popupTitleNext}>РАСЧЕТ СТОИМОСТИ УСЛУГИ</div>  
+     <form className={styles.formNext}>
+    <input type="text" className={styles.inputNext} placeholder='Ваше имя'/>
+    <input type="text" className={styles.inputNext} placeholder='Телефон'/>
+    <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleClick}/>
+    </form>
+     
+     </div>  </Modal>
+
+}
+
   </>
   )
 }
