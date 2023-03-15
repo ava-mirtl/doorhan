@@ -1,0 +1,294 @@
+@font-face {
+  font-family: "Days";
+  src: url("../fonts/days.eot");
+  src: url("../fonts/days.eot?#iefix") format("embedded-opentype"), url("../fonts/days.otf") format("opentype"), url("../fonts/days.ttf") format("truetype"), url("../fonts/days.woff") format("woff"), url("../fonts/days.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Montseratt", sans-serif;
+  src: url("../fonts/Montserrat-Black.ttf") format("truetype"), url("../fonts/Montserrat-BlackItalic.ttf") format("truetype"), url("../fonts/Montserrat-Bold.ttf") format("truetype"), url("../fonts/Montserrat-BoldItalic.ttf") format("truetype"), url("../fonts/Montserrat-ExtraBold.ttf") format("truetype"), url("../fonts/Montserrat-ExtraBoldItalic.ttf") format("truetype"), url("../fonts/Montserrat-ExtraLight.ttf") format("truetype"), url("../fonts/Montserrat-ExtraLightItalic.ttf") format("truetype"), url("../fonts/Montserrat-Italic-VariableFont_wght.ttf") format("truetype"), url("../fonts/Montserrat-Italic.ttf") format("truetype"), url("../fonts/Montserrat-Light.ttf") format("truetype"), url("../fonts/Montserrat-LightItalic.ttf") format("truetype"), url("../fonts/Montserrat-Medium.ttf") format("truetype"), url("../fonts/Montserrat-MediumItalic.ttf") format("truetype"), url("../fonts/Montserrat-Regular.ttf") format("truetype"), url("../fonts/Montserrat-SemiBold.ttf") format("truetype"), url("../fonts/Montserrat-SemiBoldItalic.ttf") format("truetype"), url("../fonts/Montserrat-Thin.ttf") format("truetype"), url("../fonts/Montserrat-ThinItalic.ttf") format("truetype"), url("../fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+.wrapper {
+  margin: 2rem 0;
+  background: linear-gradient(176.59deg, rgba(233, 251, 255, 0) 5.41%, rgba(248, 254, 255, 0) 5.42%, rgba(237, 237, 237, 0.45) 26.05%, rgba(247, 247, 247, 0.45) 79.2%, rgba(255, 255, 255, 0) 97.4%);
+}
+
+.title {
+  font-family: "Days";
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  width: 60%;
+  height: 100%;
+  font-size: 45px;
+  border-bottom: 5px solid #003676;
+  margin: 2rem 0;
+  padding-bottom: 1rem;
+  padding-left: 3rem;
+}
+
+.container__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container__main .main__left {
+  max-width: 45%;
+}
+
+.container__main .main__left .main__text {
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.09);
+          box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.09);
+  border-bottom-right-radius: 111px;
+  border-top-right-radius: 111px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+}
+
+.container__main .main__left .main__text p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2vh 2vw;
+  font-family: "Montserrat", sans-serif;
+  font-size: 26px;
+}
+
+.container__main .main__left .main__text .main__img {
+  margin: 10px;
+}
+
+.container__main .main__right {
+  background: url("../../assets/images/gift.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: local;
+  width: 55%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  background-attachment: fixed, inherit;
+}
+
+.container__main .main__right .form__box {
+  width: 60%;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 10vh;
+}
+
+.container__main .main__right .form__box .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container__main .main__right .form__box .form .input {
+  margin-bottom: 8px;
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid #787878;
+  padding: 0 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container__aboutus .container__main2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 3rem auto;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.container__aboutus .container__main2 .container__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container__aboutus .container__main2 .container__left .one {
+  position: relative;
+  margin-left: 15vw;
+}
+
+.container__aboutus .container__main2 .container__left .two {
+  position: relative;
+  top: 30%;
+  margin-left: 8vw;
+}
+
+.container__aboutus .container__main2 .container__left .three {
+  position: relative;
+  top: 60%;
+  margin-left: 15vw;
+}
+
+.container__aboutus .container__main2 .container__pict {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container__aboutus .container__main2 .container__pict .round {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40em;
+  height: 40em;
+  border: 2px solid #D73123;
+  border-radius: 50%;
+  background: rgba(252, 252, 252, 0);
+}
+
+.container__aboutus .container__main2 .container__pict .round .round2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 34em;
+  height: 34em;
+  border: 2px solid #D73123;
+  border-radius: 50%;
+  background: rgba(252, 252, 252, 0);
+}
+
+.container__aboutus .container__main2 .container__pict .round .round2 .round3 {
+  width: 28em;
+  height: 28em;
+  border: 2px solid #D73123;
+  border-radius: 50%;
+  background: rgba(252, 252, 252, 0);
+}
+
+.container__aboutus .container__main2 .container__pict .round .round2 .round3 .container__bigpic .bigpic {
+  position: relative;
+  right: 25%;
+  top: 30px;
+}
+
+.container__aboutus .container__main2 .container__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container__aboutus .container__main2 .container__right .four {
+  position: relative;
+  top: 5%;
+  margin-right: 18vw;
+}
+
+.container__aboutus .container__main2 .container__right .five {
+  position: relative;
+  top: 47%;
+  margin-left: 3vw;
+}
+
+.container__aboutus .container__main2 .container__right .six {
+  position: relative;
+  top: 65%;
+  margin-right: 15vw;
+}
+
+.container__aboutus .seven {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  left: 35vw;
+}
+
+.container__circlepic1 .circle1 {
+  position: relative;
+  bottom: 4vh;
+  left: 21vw;
+}
+
+.container__circlepic2 .circle2 {
+  position: relative;
+  top: 18vh;
+  left: 14vw;
+}
+
+.container__circlepic3 .circle3 {
+  position: relative;
+  top: 35vh;
+  left: 20vw;
+}
+
+.container__circlepic4 .circle4 {
+  position: relative;
+  bottom: 2vh;
+  right: 25vw;
+}
+
+.container__circlepic5 .circle5 {
+  position: relative;
+  top: 38vh;
+  right: 15vw;
+}
+
+.container__circlepic6 .circle6 {
+  position: relative;
+  top: 50vh;
+  right: 23vw;
+}
+
+.container__circlepic7 .circle7 {
+  position: relative;
+  left: 47vw;
+  bottom: 10vh;
+}
+/*# sourceMappingURL=WhyDoorhan.module.css.map */
