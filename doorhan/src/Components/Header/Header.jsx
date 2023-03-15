@@ -15,11 +15,15 @@ import OrangeBtn from '../OrangeBtn/OrangeBtn';
 
 
 export default function Header() {
-
+const [modalSecond, setModalSecond] = useState(false);
 const [modalActive, setModalActive] = useState(false);
 const handleSubmit = (event)=>{
   event.preventDefault();
 setModalActive(true);
+}
+const handleClick = (event)=>{
+event.preventDefault();
+setModalSecond(true);
 }
   return (<>
     <div className={styles.header}> 
@@ -33,7 +37,7 @@ setModalActive(true);
     <div className={styles.mainСontainer}>
 <div className={styles.imgCont}>
   <div className={styles.buttonCont}>
-    <Button name="ЗАПИСАТЬСЯ НА ЗАМЕР"/>
+    <Button onClick={(e)=>handleClick(e)} name="ЗАПИСАТЬСЯ НА ЗАМЕР"/>
 </div>
 </div>
 <div className={styles.content}>
