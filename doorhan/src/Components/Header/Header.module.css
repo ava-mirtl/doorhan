@@ -32,14 +32,14 @@
 .phone {
   background-color: #F39509;
   text-align: center;
-  font-size: 2em;
+  font-size: 2vw;
   border-radius: 0 0 10px 10px;
   padding: 40px 20px;
   font-family: "Montserrat", sans-serif;
   color: #F9F9F9;
-  height: 120%;
+  height: 140%;
   position: relative;
-  top: 10%;
+  top: 20%;
   z-index: 5;
 }
 
@@ -75,6 +75,7 @@
   border: none;
   position: relative;
   right: 20px;
+  top: 1px;
   height: 55px;
   border-radius: 12px;
   background: linear-gradient(180.77deg, rgba(255, 255, 255, 0.2) 0.67%, rgba(255, 255, 255, 0.2) 16.73%, rgba(255, 255, 255, 0) 99.33%), #F3950A;
@@ -91,18 +92,41 @@
   display: flex;
 }
 
-.img, .content {
+.imgCont, .content {
   width: 50vw;
 }
 
-.img {
-  height: 100%;
+.imgCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  background: url("../../assets/images/Rectangle31.png") no-repeat;
+  background-size: 100%;
+}
+
+.buttonCont {
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .content {
   color: #F9F9F9;
   background: linear-gradient(322.66deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 37.38%), #02336F;
-  padding: 50px 20px;
+  padding: 2vw 2vw;
 }
 
 h1 {
@@ -110,9 +134,9 @@ h1 {
   letter-spacing: 0.05em;
   font-style: normal;
   font-weight: 400;
-  font-size: 49.1489px;
-  line-height: 63px;
-  padding: 20px;
+  font-size: 3vw;
+  line-height: 60px;
+  padding: 10px 20px;
 }
 
 .subtitle, .txt {
@@ -120,13 +144,12 @@ h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: 100;
   letter-spacing: 0.1em;
-  font-size: 20pt;
+  font-size: 1.8vw;
 }
 
 .txt {
   padding: 0;
-  font-size: 18pt;
-  font-style: "";
+  font-size: 1.5vw;
 }
 
 .item {
@@ -136,6 +159,17 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 20px;
+  margin: 0.5vw 20px;
+}
+
+@media (min-width: 780px) and (max-width: 1420px) {
+  .imgCont {
+    background-size: cover;
+  }
+  .content {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }
 /*# sourceMappingURL=Header.module.css.map */

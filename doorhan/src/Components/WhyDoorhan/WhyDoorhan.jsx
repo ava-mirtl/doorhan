@@ -20,28 +20,28 @@ export default function WhyDoorhan() {
               <div className={styles.main__text}>
                 <p>Единственные ворота в мире которые выглядят как новые через 25 лет</p>
                 <div className={styles.main__img}>
-                  <img src={pic1} alt="photo" />
+                  <img src={pic1} alt="ворота" />
                 </div>
               </div>
 
               <div className={styles.main__text}>
                 <p>Ворота и петли НЕ разболтаются через 25 лет</p>
                 <div className={styles.main__img}>
-                  <img src={pic2} alt="photo" />
+                  <img src={pic2} alt="креплание" />
                 </div>
               </div>
 
               <div className={styles.main__text}>
                 <p>Предназначены для Российских климатических условий - многокамерный нижний уплотнитель (экономия на отоплении 15%)</p>
                 <div className={styles.main__img}>
-                  <img src={pic3} alt="photo" />
+                  <img src={pic3} alt="карта" />
                 </div>
               </div>
 
               <div className={styles.main__text}>
                 <p>Устройство безопасности (гальваническое серебрение) защищает от обрыва тросов</p>
                 <div className={styles.main__img}>
-                  <img src={pic4} alt="photo" />
+                  <img src={pic4} alt="деталь" />
                 </div>
               </div>
 

@@ -1,13 +1,12 @@
 import React from 'react';
 import styles from './Header.module.scss';
 import logo from '../../assets/images/logo.png';
-import doorhan from '../../assets/images/Rectangle31.png';
 import atm from '../../assets/icons/local_atm.png';
 import percent from '../../assets/icons/percent.png';
 import settings from '../../assets/icons/settings.png';
 import shipping from '../../assets/icons/local_shipping (1).png';
 import box from '../../assets/icons/warehouse.png';
-
+import Button from '../Button/Button'
 import OrangeBtn from '../OrangeBtn/OrangeBtn';
 
 
@@ -23,7 +22,9 @@ export default function Header() {
     </div>
     <div className={styles.mainСontainer}>
 <div className={styles.imgCont}>
-  <img className={styles.img} src={doorhan} alt="Ворота" />
+  <div className={styles.buttonCont}>
+    <Button name="ЗАПИСАТЬСЯ НА ЗАМЕР"/>
+</div>
 </div>
 <div className={styles.content}>
   <h1>ГАРАЖНЫЕ ВОРОТА DOORHAN</h1>
