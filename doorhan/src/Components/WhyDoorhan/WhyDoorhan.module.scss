@@ -49,41 +49,145 @@
             }
         }
     }
+
+    .main__right {
+        background: url('../../assets/images/gift.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: local;
+        width: 55%;
+        display: flex;
+        justify-content: end;
+        background-attachment: fixed, inherit;
+
+        .form__box {
+            width: 60%;
+            height: 80%;
+            display: flex;
+            align-items: center;
+            padding-top: 10vh;
+
+            .form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .input {
+                    margin-bottom: 8px;
+                    height: 50px;
+                    border-radius: 8px;
+                    border: 1px solid $base-frame;
+                    padding: 0 10px;
+                    font-family: $fontM;
+                }
+            }
+        }
+    }
 }
 
 
-.main__right {
-    background: url('../../assets/images/gift.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    box-sizing: content-box;
-    width: 55%;
-    display: flex;
-    justify-content: center;
-    position: static;
-
-
-    .form__box {
-        width: 60%;
-        height: 80%;
+.container__aboutus {
+    .container__main2 {
         display: flex;
-        align-items: center;
-        padding-top: 10vh;
+        margin: 3rem auto;
+        font-family: $fontM;
+        text-align: center;
+
+        .container__left {
+            display: flex;
+            flex-direction: column;
+
+
+            .one {
+                position: relative;
+                margin-left: 15vw;
+            }
+
+            .two {
+                position: relative;
+                top: 30%;
+                margin-left: 8vw;
+            }
+
+            .three {
+                position: relative;
+                top: 60%;
+                margin-left: 15vw;
+            }
+        }
+
+        .container__pict {
+            display: flex;
+            justify-content: center;
+
+            .round {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40em;
+                height: 40em;
+                border: 2px solid #D73123;
+                border-radius: 50%;
+                background: rgba(252, 252, 252, 0);
+
+                .round2 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 34em;
+                    height: 34em;
+                    border: 2px solid #D73123;
+                    border-radius: 50%;
+                    background: rgba(252, 252, 252, 0);
+
+                    .round3 {
+                        width: 28em;
+                        height: 28em;
+                        border: 2px solid #D73123;
+                        border-radius: 50%;
+                        background: rgba(252, 252, 252, 0);
+
+                        .container__bigpic {
+                            .bigpic {
+                                position: relative;
+                                right: 25%;
+                                top: 30px;
+                            }
+
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        .container__right {
+            display: flex;
+            flex-direction: column;
+
+            .four {
+                position: relative;
+                margin-right: 15vw;
+            }
+
+            .five {
+                position: relative;
+                top: 30%;
+                margin-left: 3vw;
+            }
+
+            .six {
+                position: relative;
+                top: 60%;
+                margin-right: 15vw;
+            }
+        }
     }
 
-    .form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        .input {
-            margin-bottom: 8px;
-            height: 50px;
-            border-radius: 8px;
-            border: 1px solid $base-frame;
-            padding: 0 10px;
-            font-family: $fontM;
-        }
+    .seven {
+        font-family: $fontM;
+        position: relative;
+        left: 35vw;
     }
 }
