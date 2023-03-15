@@ -11,12 +11,15 @@
     pointer-events: none;
     transition: 0.5s;
     height: 100vh;
-
 }
+
 .modal.active{
     opacity: 1;
     pointer-events: all;
 
+}
+.body{
+    overflow-y: hidden;
 }
 .modal__content{
     width: 50vw;
