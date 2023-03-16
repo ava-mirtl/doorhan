@@ -1,1 +1,20 @@
 @import "../../styles/vars.scss";
+
+
+.title {
+    font-family: $fontD;
+    color: $base-black;
+    border-bottom: 5px solid $base-blue;
+    box-sizing: content-box;
+    width: 45%;
+    height: 100%;
+    font-size: $base-h2;
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+    padding-top: 1rem;
+}
+
+.container {
+    display: grid;
+
+}
