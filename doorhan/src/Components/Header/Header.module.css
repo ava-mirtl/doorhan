@@ -164,8 +164,50 @@ h1 {
 
 .popupContainer {
   height: 500px;
-  width: 50vw;
+  width: 65vw;
   background-color: #F1F0F2;
+  border: 4.72906px solid #003676;
+  border-radius: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.imgContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.popupTxt {
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 65vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  font-weight: 600;
+  font-size: 30pt;
+  line-height: 142.5%;
+}
+
+.popupTitle {
+  width: 60%;
+  margin: 10px;
+  justify-self: flex-end;
 }
 
 @media (min-width: 781px) and (max-width: 1420px) {
