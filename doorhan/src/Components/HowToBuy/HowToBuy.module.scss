@@ -4,6 +4,7 @@
      background: linear-gradient(310.74deg, rgba(255, 255, 255, 0.2) 3.93%, rgba(255, 255, 255, 0) 29.17%), #003676;
     font-family: $fontM;
     color: $base-white;
+padding: 30px;
 }
 .title{
     font-family: $fontD;
@@ -43,9 +44,10 @@ display: flex;
     justify-content: start;
 }
 .txt{
-    padding: 10px;
+    padding: 5px;
     width: 60%;
     text-align: center;
+    font-size: 1.5vw;
 }
 .dropContainer{
     padding: 20px;
@@ -62,3 +64,72 @@ display: grid;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     }
+    .popupContainer{
+        height: 500px;
+        width: 65vw;
+        background-color: #F1F0F2;
+        border: 4.72906px solid #003676;
+        border-radius: 35px;
+        display: flex;
+        }
+        .imgContainer{
+            display: flex;
+            align-items: flex-end;
+            width: fit-content;
+        }
+        .popupTxt{
+        font-family: $fontM;
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        width: 65vw;
+        align-items: center;
+        height: 100%;
+        font-weight: 600;
+        font-size: 30pt;
+        line-height: 142.5%;
+        }
+        .popupTitle{
+        width: 60%;
+        margin: 10px;
+        justify-self:flex-end;
+        color: $base-black;
+        }
+        
+        .formNext{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .inputNext{
+        margin: 10px;
+        height: 4vw;
+        width: 15vw;        
+        box-shadow: inset 0px -1.125px 2.25px rgba(0, 0, 0, 0.25), inset 0px 2.25px 4.5px rgba(0, 0, 0, 0.25);
+        font-size: 1rem;
+        border: 1px solid $base-gray;
+        border-radius: 12px;
+        padding: 10px;
+        }
+        .dateContainer{
+            border-radius: 0% 45px 45px 45px;
+            border: 3px solid $base-white;
+            display: flex;
+            margin: 20px;
+            padding: 15px;
+            font-family: $fontM;
+justify-content: space-between;
+max-width: 50vw;
+        }
+        .date{
+            background: #F19610;
+            border-radius: 45px;
+            padding: 1vw;
+            line-height: 10vw;
+            font-weight: 600;
+            font-size: 6vw;
+        }
+        .txtDate{
+            font-size: 3vw;
+            align-self: center;
+        }
