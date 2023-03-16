@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Calc.module.scss';
 import pict from '../../assets/images/gv.png';
 import pic1 from '../../assets/images/online1.png';
 import pic2 from '../../assets/images/online2.png';
 import pic3 from '../../assets/images/online3.png';
 import pic4 from '../../assets/images/online4.png';
+import check from '../../assets/icons/check.png';
 import Button from '../Button/Button';
+
+
+
+
+
 
 
 
@@ -18,47 +24,49 @@ export default function Calc() {
           <div className={styles.container1_left}>
             <div className={styles.container1_left__top}>
 
-
               <div className={styles.choice}>
-                <div className={styles.img}><img src={pic1} alt="ДОСКА" /></div>
-                <input type="radio" id='btn' name='btn1' value='btn' checked />
-                <label for="btn">
-                  <span>г</span>
-                </label>
+                <div className={styles.img}>
+                  <img src={pic1} alt="ДОСКА" />
+                </div>
+                <div className={styles.checked}>
+                  <img src={check} alt="check" />
+                </div>
                 <p>ДОСКА</p>
               </div>
-
               <div className={styles.choice}>
                 <div className={styles.img}><img src={pic2} alt="ШИРОКАЯ ЦЕНТРАЛЬНАЯ ПОЛОСА" /></div>
-                <input type="radio" id='btn' name='btn1' value='btn' checked />
-                <label for="btn">
-                  <span>г</span>
-                </label>
+                <div className={styles.checked}>
+                  <img src={check} alt="check" />
+                </div>
                 <p>ШИРОКАЯ ЦЕНТРАЛЬНАЯ ПОЛОСА</p>
               </div>
-
               <div className={styles.choice}>
                 <div className={styles.img}><img src={pic3} alt="ФИЛЕНКА" /></div>
-                <input type="radio" id='btn' name='btn1' value='btn' checked />
-                <label for="btn">
-                  <span>г</span>
-                </label>
+                <div className={styles.checked}>
+                  <img src={check} alt="check" />
+                </div>
                 <p>ФИЛЕНКА</p>
               </div>
-
               <div className={styles.choice}>
                 <div className={styles.img}><img src={pic4} alt="ВОЛНА" /></div>
-                <input type="radio" id='btn' name='btn1' value='btn' checked />
-                <label for="btn">
-                  <span>г</span>
-                </label>
+                <div className={styles.checked}>
+                  <img src={check} alt="check" />
+                </div>
                 <p>ВОЛНА</p>
               </div>
 
 
+            </div>
+            <div className={styles.container1_left__bottom}>
+
+              <div className={styles.controls}>
+
+              </div>
+              <div className={styles.texture}>
+                <p>ТИП ПОВЕРХНОСТИ</p>
+              </div>
 
             </div>
-            <div className={styles.container1_bottom}></div>
           </div>
 
 
@@ -79,9 +87,11 @@ export default function Calc() {
             <div></div>
           </div>
 
-
-
         </div>
+
+
+
+
 
 
         <div className={styles.title2}>НАШИ РАБОТЫ</div>
