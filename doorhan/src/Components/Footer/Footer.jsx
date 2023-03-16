@@ -14,7 +14,7 @@ export default function Footer() {
         <a className={styles.footerLink} href="#">Политика конфиденциальности</a>
       </div>
       <div className={styles.footerMap}></div>
-      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A97aa64e858252fff555113a374563c5873945fa5ae718fb93e4be04f8345f93c&amp;source=constructor" width="1000" height="400" frameborder="0"></iframe>
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A97aa64e858252fff555113a374563c5873945fa5ae718fb93e4be04f8345f93c&amp;source=constructor" width="1000" height="400" frameborder="0" title='карта'></iframe>
     </div>
   )
 }
