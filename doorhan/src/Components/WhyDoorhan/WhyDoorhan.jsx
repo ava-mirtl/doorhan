@@ -63,28 +63,47 @@ export default function WhyDoorhan() {
         <div className={styles.container__aboutus}>
           <div className={styles.title}>ПОЧЕМУ ВЫБИРАЮТ НАС:</div>
           <div className={styles.container__main2}>
-            <div className={styles.container__left}>
-              <p className={styles.one}>10% предоплата. Оплачиваете полную стоимость изделия и доставку по факту доставки ворот на ваш объект.</p>
+
+
+
+            <div className="orange">
               <div className={styles.container__circlepic1}>
                 <img className={styles.circle1} src={circle} alt="picture" />
               </div>
-              <p className={styles.two}>У нас свой склад в: Одинцово, Мытищи, Люберцы, Подольск.</p>
               <div className={styles.container__circlepic2}>
                 <img className={styles.circle2} src={circle} alt="picture" />
               </div>
-              <p className={styles.three}>Ежегодное бесплатное обслуживание (регулировка роликов/пружины,
-                настройка автоматики)</p>
               <div className={styles.container__circlepic3}>
                 <img className={styles.circle3} src={circle} alt="picture" />
               </div>
+              <div className={styles.container__circlepic4}>
+                <img className={styles.circle4} src={circle} alt="picture" />
+              </div>
+              <div className={styles.container__circlepic5}>
+                <img className={styles.circle5} src={circle} alt="picture" />
+              </div>
+              <div className={styles.container__circlepic6}>
+                <img className={styles.circle6} src={circle} alt="picture" />
+              </div>
+              <div className={styles.container__circlepic7}>
+                <img className={styles.circle7} src={circle} alt="picture" />
+              </div>
+            </div>
+
+
+
+            <div className={styles.container__left}>
+              <p className={styles.one}>10% предоплата. Оплачиваете полную стоимость изделия и доставку по факту доставки ворот на ваш объект.</p>
+              <p className={styles.two}>У нас свой склад в: Одинцово, Мытищи, Люберцы, Подольск.</p>
+              <p className={styles.three}>Ежегодное бесплатное обслуживание (регулировка роликов/пружины,
+                настройка автоматики)</p>
+
             </div>
             <div className={styles.container__pict}>
               <div className={styles.round}>
                 <div className={styles.round2}>
                   <div className={styles.round3}>
-                    <div className={styles.container__bigpic}>
-                      <img className={styles.bigpic} src={bigpic} alt="picture" />
-                    </div>
+                    <img className={styles.bigpic} src={bigpic} alt="picture" />
                   </div>
                 </div>
               </div>
@@ -92,25 +111,12 @@ export default function WhyDoorhan() {
 
             <div className={styles.container__right}>
               <p className={styles.four}>При покупке ворот под ключ mini box в подарок </p>
-              <div className={styles.container__circlepic4}>
-                <img className={styles.circle4} src={circle} alt="picture" />
-              </div>
               <p className={styles.five}>Покупка ворот в рассрочку от 3 до 12 месяцев</p>
-              <div className={styles.container__circlepic5}>
-                <img className={styles.circle5} src={circle} alt="picture" />
-              </div>
               <p className={styles.six}>Квалифицированные и опытные специалисты по монтажу, которые ежегодно проходят обучение по установке ворот.</p>
-              <div className={styles.container__circlepic6}>
-                <img className={styles.circle6} src={circle} alt="picture" />
-              </div>
             </div>
-          </div>
 
-          <div className={styles.container__circlepic7}>
-            <img className={styles.circle7} src={circle} alt="picture" />
           </div>
           <p className={styles.seven}>Бесплатный выезд замерщика с образцами и раскладкой цветов по RAL</p>
-
 
         </div>
       </div>

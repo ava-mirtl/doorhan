@@ -29,6 +29,10 @@
     justify-content: space-between;
 }
 
+.photo1 {
+    width: 10px;
+}
+
 .our__team {
     max-width: 80%;
     margin: 0 auto;
@@ -39,9 +43,9 @@
 .team {
     margin-right: 3em;
 
-    img {
-        max-width: 100%;
-    }
+    // img {
+    //     max-width: 100%;
+    // }
 }
 
 .team__name {

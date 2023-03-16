@@ -87,6 +87,9 @@
 
 
 .container__aboutus {
+    margin-bottom: 5rem;
+    font-size: 1vw;
+
     .container__main2 {
         display: flex;
         margin: 3rem auto;
@@ -94,38 +97,31 @@
         text-align: center;
 
         .container__left {
-            display: flex;
-            flex-direction: column;
-
-
             .one {
                 position: relative;
-                margin-left: 15vw;
+                margin-left: 10vw;
             }
 
             .two {
                 position: relative;
                 top: 30%;
-                margin-left: 8vw;
+                margin-left: 3vw;
             }
 
             .three {
                 position: relative;
                 top: 60%;
-                margin-left: 15vw;
+                margin-left: 10vw;
             }
         }
 
         .container__pict {
-            display: flex;
-            justify-content: center;
-
             .round {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 40em;
-                height: 40em;
+                width: 35em;
+                height: 35em;
                 border: 2px solid #D73123;
                 border-radius: 50%;
                 background: rgba(252, 252, 252, 0);
@@ -134,27 +130,28 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: 34em;
-                    height: 34em;
+                    width: 29em;
+                    height: 29em;
                     border: 2px solid #D73123;
                     border-radius: 50%;
                     background: rgba(252, 252, 252, 0);
 
                     .round3 {
-                        width: 28em;
-                        height: 28em;
+                        width: 23em;
+                        height: 23em;
                         border: 2px solid #D73123;
                         border-radius: 50%;
                         background: rgba(252, 252, 252, 0);
 
-                        .container__bigpic {
-                            .bigpic {
-                                position: relative;
-                                right: 25%;
-                                top: 30px;
-                            }
 
+                        .bigpic {
+                            width: 160%;
+                            position: relative;
+                            right: 27%;
+                            top: 20px;
                         }
+
+
                     }
                 }
 
@@ -163,9 +160,6 @@
         }
 
         .container__right {
-            display: flex;
-            flex-direction: column;
-
             .four {
                 position: relative;
                 top: 5%;
@@ -183,64 +177,82 @@
                 top: 65%;
                 margin-right: 15vw;
             }
+
+
         }
     }
 
-    .seven {
-        font-family: $fontM;
-        position: relative;
-        left: 35vw;
-    }
+
 }
 
+.seven {
+    text-align: center;
+    font-family: $fontM;
+    font-size: 1vw;
+}
 
 .container__circlepic1 {
     .circle1 {
         position: relative;
-        bottom: 4vh;
-        left: 21vw;
+        top: 4vh;
+        left: 37.8vw;
+        width: 2em;
+        height: 2em;
     }
 }
 
 .container__circlepic2 {
     .circle2 {
         position: relative;
-        top: 18vh;
-        left: 14vw;
+        top: 25vh;
+        left: 30.2vw;
+        width: 2em;
+        height: 2em;
     }
 }
 
 .container__circlepic3 {
     .circle3 {
+        border: 1px solid red;
         position: relative;
-        top: 35vh;
-        left: 20vw;
+        top: 47vh;
+        left: 33.5vw;
+        width: 2em;
+        height: 2em;
     }
 }
 
 .container__circlepic4 {
     .circle4 {
+        border: 1px solid rgb(0, 255, 55);
         position: relative;
-        bottom: 2vh;
-        right: 25vw;
+        bottom: 10vh;
+        left: 57vw;
+        width: 2em;
+        height: 2em;
     }
 }
 
 .container__circlepic5 {
     .circle5 {
+        border: 1px solid rgb(25, 0, 255);
         position: relative;
         top: 38vh;
-        right: 15vw;
-
+        left: 62vw;
+        width: 2em;
+        height: 2em;
     }
 
 }
 
 .container__circlepic6 {
     .circle6 {
+        border: 2px solid rgb(255, 0, 170);
         position: relative;
-        top: 50vh;
-        right: 23vw;
+        top: 48vh;
+        left: 47vw;
+        width: 2em;
+        height: 2em;
     }
 
 }
@@ -248,8 +260,10 @@
 .container__circlepic7 {
     .circle7 {
         position: relative;
-        left: 47vw;
-        bottom: 10vh;
+        left: 65vw;
+        top: 12vh;
+        width: 2em;
+        height: 2em;
     }
 
 }
