@@ -15,6 +15,7 @@ import OrangeBtn from '../OrangeBtn/OrangeBtn';
 
 
 export default function Header() {
+  document.body.style.overflow = '';
 const [modalSecond, setModalSecond] = useState(false);
 const [modalActive, setModalActive] = useState(false);
 const handleSubmit = (event)=>{
@@ -76,7 +77,7 @@ console.log(modalSecond);
      <form className={styles.formNext}>
     <input type="text" className={styles.inputNext} placeholder='Ваше имя'/>
     <input type="text" className={styles.inputNext} placeholder='Телефон'/>
-    <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleClick}/>
+    <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleClick} active={modalSecond}/>
     </form>
      
      </div>  </Modal>
