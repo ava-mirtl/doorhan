@@ -1,1 +1,35 @@
 @import "../../styles/vars.scss";
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(310.74deg, rgba(255, 255, 255, 0.2) 3.93%, rgba(255, 255, 255, 0) 29.17%), #003676;
+    font-family: $fontM;
+    color: $base-white;
+}
+.txtContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.txtContainer2{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+}
+.txt{
+    margin: 0 auto;
+}
+.dropContainer{
+display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+    align-items: center;
+}
+.borderContainer{
+    border-bottom: 3px dashed  #F19610;
+
+}
+.dropContainer2{
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    }
