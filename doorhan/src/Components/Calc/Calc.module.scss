@@ -1,7 +1,16 @@
 @import "../../styles/vars.scss";
 
 
-.title {
+
+
+
+.wraper {
+    background: linear-gradient(176.59deg, rgba(233, 251, 255, 0) 5.41%, rgba(248, 254, 255, 0) 5.42%, rgba(237, 237, 237, 0.45) 26.05%, rgba(247, 247, 247, 0.45) 79.2%, rgba(255, 255, 255, 0) 97.4%);
+    font-family: $fontM;
+}
+
+//онлайн калькулятор
+.title1 {
     font-family: $fontD;
     color: $base-black;
     border-bottom: 5px solid $base-blue;
@@ -14,7 +23,165 @@
     padding-top: 1rem;
 }
 
-.container {
-    display: grid;
+.container1 {
+    display: flex;
+    justify-content: space-between;
+}
 
+//блок с радио
+
+
+
+
+
+
+//длинная кнопка горизонт
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.tabs {
+    display: flex;
+    position: relative;
+    background: linear-gradient(176.59deg, rgba(233, 251, 255, 0) 5.41%, rgba(248, 254, 255, 0) 5.42%, rgba(237, 237, 237, 0.45) 26.05%, rgba(247, 247, 247, 0.45) 79.2%, rgba(255, 255, 255, 0) 97.4%);
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(30.5px);
+    padding: 0.75rem;
+    border-radius: 87px;
+    height: 88px;
+
+    * {
+        z-index: 2;
+    }
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 65px;
+    width: 200px;
+    font-size: 1.25rem;
+    border-radius: 74px;
+    cursor: pointer;
+    transition: color 0.15s ease-in;
+}
+
+input[id="radio-1"] {
+    &:checked {
+        &~.glider {
+            transform: translateX(0);
+        }
+    }
+}
+
+input[id="radio-2"] {
+    &:checked {
+        &~.glider {
+            transform: translateX(100%);
+        }
+    }
+}
+
+input[id="radio-3"] {
+    &:checked {
+        &~.glider {
+            transform: translateX(200%);
+        }
+    }
+}
+
+.glider {
+    position: absolute;
+    display: flex;
+    height: 65px;
+    width: 200px;
+    background-color: $base-white;
+    z-index: 1;
+    border-radius: 74px;
+    transition: 0.25s ease-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//наши работы
+.title2 {
+    font-family: $fontD;
+    color: $base-black;
+    border-bottom: 5px solid $base-blue;
+    box-sizing: content-box;
+    width: 30%;
+    height: 100%;
+    font-size: $base-h2;
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+    padding-top: 1rem;
+}
+
+.main2 {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+
+    .pict {
+        box-shadow: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.25));
+        margin-right: 5vw;
+
+    }
+
+    .container2__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-family: $fontM;
+        font-size: 26px;
+
+        .text {
+            .p__title {
+                margin: 2vh 0 5vh 0;
+            }
+
+            .p {
+                margin-bottom: 3vh;
+
+                span {
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
 }
