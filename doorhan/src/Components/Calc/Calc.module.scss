@@ -1,8 +1,5 @@
 @import "../../styles/vars.scss";
 
-
-
-
 .wraper {
     background: linear-gradient(176.59deg, rgba(233, 251, 255, 0) 5.41%, rgba(248, 254, 255, 0) 5.42%, rgba(237, 237, 237, 0.45) 26.05%, rgba(247, 247, 247, 0.45) 79.2%, rgba(255, 255, 255, 0) 97.4%);
     font-family: $fontM;
@@ -25,7 +22,7 @@
 .container1 {
     display: flex;
     justify-content: space-between;
-    max-width: 90%;
+    max-width: 95%;
     margin: 2rem auto;
 
     .container1_left {
@@ -34,6 +31,8 @@
 
         .container1_left__top {
             display: flex;
+            margin-bottom: 2vh;
+
 
             .choice {
                 display: flex;
@@ -68,28 +67,121 @@
                     position: relative;
                     bottom: 1rem;
                 }
-
             }
-
         }
     }
 
     .container1_left__bottom {
-        margin-top: 1rem;
         background-color: white;
         border-radius: 6px;
         margin-left: 1rem;
         box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.11);
+        display: flex;
+
+        .left__bottom {
+            margin: 2.5vw;
+        }
+
+        // .controls_i {
+        //     display: flex;
+        //     align-items: center;
+        //     margin-bottom: 3rem;
+
+        //     p {
+        //         margin-right: 2vw;
+        //     }
+
+        //     .tabs__ispolnenie {
+        //         .tabi {}
+        //     }
+
+        //     .glideri {
+        //         position: absolute;
+        //         display: flex;
+        //         height: 65px;
+        //         width: 180px;
+        //         background-color: $base-white;
+        //         z-index: 1;
+        //         border-radius: 74px;
+        //         transition: 0.25s ease-out;
+        //         box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
+        //     }
+
+
+
+        //     .buttons {
+        //         display: flex;
+
+        //         buttons {
+        //             border: 1px solid black;
+        //             padding: 20px;
+        //             margin: 4px 2px;
+        //             border-radius: 50%;
+        //         }
+
+        //         .btn1 {
+        //             background-color: #FFFFFF;
+        //         }
+
+        //         .btn2 {
+        //             background-color: #BCBCBC;
+        //         }
+
+        //         .btn3 {
+        //             background-color: #E0CB9C;
+        //         }
+
+        //         .btn4 {
+        //             background-color: #0F372F;
+        //         }
+
+        //         .btn5 {
+        //             background-color: #415C93;
+        //         }
+
+        //         .btn6 {
+        //             background-color: #964438;
+        //         }
+
+        //         .btn7 {
+        //             background-color: #472327;
+        //         }
+
+        //         .btn8 {
+        //             background-color: #312320;
+        //         }
+        //     }
+        // }
     }
 
 }
 
-//блок с радио
+//исполнение
 
 
 
 
 
+//тип поверхности
+.texture__photo {
+    display: flex;
+
+    .texture1 {
+
+
+        .first {}
+
+        .second {}
+    }
+
+}
+
+
+
+
+.container1_right {
+    margin-left: 2rem;
+}
 
 //длинная кнопка горизонт
 *,
@@ -98,21 +190,20 @@
     box-sizing: border-box;
 }
 
-.container {
+.container__tabs {
     display: flex;
     align-items: center;
-    justify-content: end;
+
 }
 
 .tabs {
     display: flex;
-    position: relative;
     background: linear-gradient(176.59deg, rgba(233, 251, 255, 0) 5.41%, rgba(248, 254, 255, 0) 5.42%, rgba(237, 237, 237, 0.45) 26.05%, rgba(247, 247, 247, 0.45) 79.2%, rgba(255, 255, 255, 0) 97.4%);
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
     backdrop-filter: blur(30.5px);
-    padding: 0.75rem;
+    padding: 0.50rem;
     border-radius: 87px;
-    height: 88px;
+    height: 80px;
 
     * {
         z-index: 2;
@@ -128,7 +219,7 @@ input[type="radio"] {
     align-items: center;
     justify-content: center;
     height: 65px;
-    width: 200px;
+    width: 180px;
     font-size: 1.25rem;
     border-radius: 74px;
     cursor: pointer;
@@ -163,17 +254,41 @@ input[id="radio-3"] {
     position: absolute;
     display: flex;
     height: 65px;
-    width: 200px;
+    width: 180px;
     background-color: $base-white;
     z-index: 1;
     border-radius: 74px;
     transition: 0.25s ease-out;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
+}
+
+.container__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(237, 237, 237, 0.1);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(34px);
+    border-radius: 8px;
+    margin-top: 2rem;
+    height: 80%;
 }
 
 
+.container__form {
+    display: flex;
+    margin-top: 1rem;
 
+    .input {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), #F9F9F9;
+        box-shadow: 0px 1px 11px rgba(0, 0, 0, 0.08), inset 0px 4px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        border: none;
+        margin-right: 1rem;
+        padding-left: 10px;
 
-
+    }
+}
 
 
 
@@ -209,8 +324,8 @@ input[id="radio-3"] {
 }
 
 .main2 {
-    width: 90%;
-    margin: 0 auto;
+    width: 95%;
+    margin: 2rem auto;
     display: flex;
 
     .pict {
