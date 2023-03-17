@@ -10,7 +10,7 @@ import sm from '../../assets/icons/sm.png';
 import bibip from '../../assets/icons/bibip.png';
 import dogovor from '../../assets/icons/dogovor.png';
 import styles from './HowToBuy.module.scss';
-
+import { howto } from '../Button/Button';
 
 export default function HowToBuy() {
   document.body.style.overflow = '';
@@ -55,7 +55,7 @@ export default function HowToBuy() {
 <form className={styles.formNext}>
     <input type="text" className={styles.inputNext} placeholder='Имя'/>
     <input type="text" className={styles.inputNext} placeholder='Телефон'/>
-    <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleClick} />
+    <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleClick} styles={howto} />
     </form>
     </div>{modalActive&& <Modal active={modalActive} setActive={setModalActive}>
     <div className={styles.popupContainer}>
