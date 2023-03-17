@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Calc.module.scss';
 import Modal from '../Modal/Modal';
+import Title from '../Title/Title';
 import popup from '../../assets/images/popup1.jpg'
 import pict from '../../assets/images/gv.png';
 import pic1 from '../../assets/images/online1.png';
@@ -13,6 +14,7 @@ import der2 from '../../assets/images/derevo2.png';
 import der3 from '../../assets/images/derevo3.png';
 import vor1 from '../../assets/images/vor1.png';
 import Button from '../Button/Button';
+import { blue } from '../Title/Title';
 
 
 
@@ -34,7 +36,7 @@ export default function Calc() {
   return (
     <div>
       <div className={styles.wraper}>
-        <div className={styles.title1}>ОНЛАЙН КАЛЬКУЛЯТОР</div>
+      <Title styles={blue} title="ОНЛАЙН КАЛЬКУЛЯТОР"/>
         <div className={styles.container1}>
           <div className={styles.container1_left}>
             <div className={styles.container1_left__top}>
@@ -199,8 +201,7 @@ export default function Calc() {
 
 
 
-
-        <div className={styles.title2}>НАШИ РАБОТЫ</div>
+        <Title styles={blue} title="НАШИ РАБОТЫ"/>
         <div className={styles.container2}>
           <div className={styles.container2__btns}>
             <buttons></buttons>

@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import OrangeBtn from '../OrangeBtn/OrangeBtn';
 import Button from '../Button/Button';
 import Modal from '../Modal/Modal';
+import Title from '../Title/Title';
 import popup from '../../assets/images/popup1.jpg';
 import calendar from '../../assets/icons/calendar.png';
 import house from '../../assets/icons/house.png';
@@ -11,6 +12,7 @@ import bibip from '../../assets/icons/bibip.png';
 import dogovor from '../../assets/icons/dogovor.png';
 import styles from './HowToBuy.module.scss';
 import { howto } from '../Button/Button';
+import { white } from '../Title/Title';
 
 export default function HowToBuy() {
   document.body.style.overflow = '';
@@ -22,8 +24,7 @@ export default function HowToBuy() {
   }
     return (
     <div className={styles.box}>
-    <h2 className={styles.title}>КАК КУПИТЬ ВОРОТА ЗА 1 ДЕНЬ</h2>
-
+      <Title styles={white} title="КАК КУПИТЬ ВОРОТА ЗА 1 ДЕНЬ"/>
     <div className={styles.container}>
       <div  className={styles.dropContainer}>
         <OrangeBtn img={calendar}/>

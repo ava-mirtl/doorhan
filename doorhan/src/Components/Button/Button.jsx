@@ -1,5 +1,6 @@
 import React from 'react';
-import './Button.scss'
+import './Button.scss';
+
 export const small = {
     padding: "10px",
     width: "247px",
@@ -14,7 +15,8 @@ export const popupStyle = {
  export const howto = {
     padding: "10px",
     width: "15vw",
-    height: "4vw"
+    height: "4vw",
+    fontSize: "0.8vw"
 }
 
 

@@ -7,18 +7,6 @@
     ;
 }
 
-.title {
-    font-family: $fontD ;
-    box-sizing: content-box;
-    width: 60%;
-    height: 100%;
-    font-size: $base-h2;
-    border-bottom: 5px solid $base-blue;
-    margin: 2rem 0;
-    padding-bottom: 1rem;
-    padding-left: 3rem;
-}
-
 .container__main {
     display: flex;
     justify-content: space-between;

@@ -1,14 +1,14 @@
 import React from 'react';
 import styles from './WhyDoorhan.module.scss';
-
+import Title from '../Title/Title';
 import Button from '../Button/Button';
-
 import pic1 from '../../assets/images/pic1.png';
 import pic2 from '../../assets/images/pic2.png';
 import pic3 from '../../assets/images/pic3.png';
 import pic4 from '../../assets/images/pic4.png';
 import bigpic from '../../assets/images/image 16.png';
 import circle from '../../assets/icons/elips.png'
+import { blue } from '../Title/Title';
 
 
 export default function WhyDoorhan() {
@@ -16,7 +16,7 @@ export default function WhyDoorhan() {
     <div>
       <div className={styles.wrapper}>
         <div className={styles.container__why}>
-          <div className={styles.title}>ПОЧЕМУ ВОРОТА DOORHAN?</div>
+        <Title styles={blue} title="ПОЧЕМУ ВОРОТА DOORHAN?"/>
           <div className={styles.container__main}>
             <div className={styles.main__left}>
               <div className={styles.main__text}>
@@ -61,7 +61,7 @@ export default function WhyDoorhan() {
 
 
         <div className={styles.container__aboutus}>
-          <div className={styles.title}>ПОЧЕМУ ВЫБИРАЮТ НАС:</div>
+        <Title styles={blue} title="ПОЧЕМУ ВЫБИРАЮТ НАС:"/>
           <div className={styles.container__main2}>
 
 
