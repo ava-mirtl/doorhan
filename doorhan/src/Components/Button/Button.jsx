@@ -19,6 +19,12 @@ export const popupStyle = {
     fontSize: "0.8vw"
 }
 
+export const medium = {
+  padding: "10px",
+  width: "15vw",
+  height: "3vw",
+  fontSize: "0.7vw"
+}
 
 
 
