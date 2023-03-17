@@ -1,20 +1,21 @@
 import React from 'react';
 import styles from './Scheme.module.scss';
-
+import Title from '../Title/Title';
 import OrangeBtn from '../OrangeBtn/OrangeBtn';
-
 import icon_call from "../../assets/icons/call.png"
 import file_present from "../../assets/icons/file_present.png"
 import lift_to_talk from "../../assets/icons/lift_to_talk.png"
 import description from "../../assets/icons/description.png"
 import straighten from "../../assets/icons/straighten.png"
 import local_shipping from "../../assets/icons/local_shipping.png"
+import { white } from '../Title/Title';
+
 
 export default function Scheme() {
   return (
     <div>
       <div className={styles.scheme}>
-        <div className={styles.title}>СХЕМА РАБОТЫ</div>
+      <Title styles={white} title="СХЕМА РАБОТЫ"/>
         <div className={styles.scheme__container}>
           <div className={styles.scheme__block}>
             <OrangeBtn img={icon_call} />

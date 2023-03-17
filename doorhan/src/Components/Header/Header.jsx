@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import { motion} from "framer-motion";
 import styles from './Header.module.scss';
 import Modal from '../Modal/Modal';
 import popup from '../../assets/images/popup1.jpg';
@@ -11,7 +11,7 @@ import shipping from '../../assets/icons/local_shipping (1).png';
 import box from '../../assets/icons/warehouse.png';
 import Button from '../Button/Button'
 import OrangeBtn from '../OrangeBtn/OrangeBtn';
-
+import { popupStyle, medium } from '../Button/Button';
 
 
 export default function Header() {
@@ -26,7 +26,17 @@ const handleClick = (event)=>{
   event.preventDefault();
 setModalSecond(true);
 console.log(modalSecond);
-
+}
+const animationText = {
+  hidden: {
+      y: -200,
+      opacity: 0,
+  },
+  visible:{
+      y: 0,
+      opacity: 1,
+      transition: 1,
+  }
 }
   return (<>
     <div className={styles.header}> 
@@ -40,11 +50,14 @@ console.log(modalSecond);
     <div className={styles.mainСontainer}>
 <div className={styles.imgCont}>
   <div className={styles.buttonCont}>
-    <Button name="ЗАПИСАТЬСЯ НА ЗАМЕР" onClick={handleClick}/>
+    <Button name="ЗАПИСАТЬСЯ НА ЗАМЕР" onClick={handleClick} styles={medium}/>
 </div>
 </div>
 <div className={styles.content}>
-  <h1>ГАРАЖНЫЕ ВОРОТА DOORHAN</h1>
+  <motion.h1  initial="hidden" 
+    whileInView="visible"
+    viewport={{amount: 0.3, once: true}}
+variants={animationText}    >ГАРАЖНЫЕ ВОРОТА DOORHAN</motion.h1>
   <div className={styles.subtitle}>ПРОИЗВОДСТВО. ДОСТАВКА. МОНТАЖ.</div>
   <div className={styles.item}>
     <OrangeBtn img={atm}/><span className={styles.txt}>10% ПРЕДОПЛАТА.</span>
@@ -77,7 +90,7 @@ console.log(modalSecond);
      <form className={styles.formNext}>
     <input type="text" className={styles.inputNext} placeholder='Ваше имя'/>
     <input type="text" className={styles.inputNext} placeholder='Телефон'/>
-    <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleClick} active={modalSecond}/>
+    <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleClick} styles={popupStyle}/>
     </form>
      
      </div>  </Modal>

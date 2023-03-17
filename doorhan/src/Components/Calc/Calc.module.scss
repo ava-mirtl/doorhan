@@ -6,18 +6,6 @@
 }
 
 //онлайн калькулятор
-.title1 {
-    font-family: $fontD;
-    color: $base-black;
-    border-bottom: 5px solid $base-blue;
-    box-sizing: content-box;
-    width: 45%;
-    height: 100%;
-    font-size: $base-h2;
-    padding-bottom: 1rem;
-    padding-left: 3rem;
-    padding-top: 1rem;
-}
 
 .container1 {
     display: flex;
@@ -446,18 +434,7 @@ input[type="radio"] {
 
 
 //наши работы
-.title2 {
-    font-family: $fontD;
-    color: $base-black;
-    border-bottom: 5px solid $base-blue;
-    box-sizing: content-box;
-    width: 30%;
-    height: 100%;
-    font-size: $base-h2;
-    padding-bottom: 1rem;
-    padding-left: 3rem;
-    padding-top: 1rem;
-}
+
 
 .main2 {
     width: 95%;
