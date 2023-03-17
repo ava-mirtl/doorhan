@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './WhyDoorhan.module.scss';
 import Title from '../Title/Title';
+import Modal from '../Modal/Modal';
 import Button, { why } from '../Button/Button';
+import popup from '../../assets/images/popup1.jpg';
 import pic1 from '../../assets/images/pic1.png';
 import pic2 from '../../assets/images/pic2.png';
 import pic3 from '../../assets/images/pic3.png';
@@ -12,6 +14,15 @@ import { blue } from '../Title/Title';
 
 
 export default function WhyDoorhan() {
+
+  document.body.style.overflow = '';
+  const [modalActive, setModalActive] = useState(false);
+
+  const handleSubmit = (event)=>{
+  event.preventDefault();
+  setModalActive(true);
+  }
+
   return (
     <div>
       <div className={styles.wrapper}>
@@ -52,7 +63,7 @@ export default function WhyDoorhan() {
                 <form className={styles.form}>
                   <input type="text" className={styles.input} placeholder='Имя' />
                   <input type="text" className={styles.input} placeholder='Телефон' />
-                  <Button name="ПОЛУЧИТЬ ПОДАРОК" styles={why}/>
+                  <Button name="ПОЛУЧИТЬ ПОДАРОК" styles={why} onClick={(e)=>handleSubmit(e)}/>
                 </form>
               </div>
             </div>
@@ -120,6 +131,18 @@ export default function WhyDoorhan() {
 
         </div>
       </div>
+      {modalActive&&      
+      <Modal active={modalActive} setActive={setModalActive}>
+        <div className={styles.popupContainer}>
+          <div className={styles.imgContainer}>
+            <img src={popup} alt="девушка"/>
+          </div>
+          <div className={styles.popupTxt}>
+            <div className={styles.popupTitle}>СПАСИБО ЗА ВАШЕ ОБРАЩЕНИЕ, НАШ МЕНЕДЖЕР СКОРО С ВАМИ СВЯЖЕТСЯ!</div>
+          </div>
+        </div>    
+      </Modal>
+      }
     </div>
   )
 }

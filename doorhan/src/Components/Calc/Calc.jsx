@@ -13,7 +13,7 @@ import der1 from '../../assets/images/derevo1.png';
 import der2 from '../../assets/images/derevo2.png';
 import der3 from '../../assets/images/derevo3.png';
 import vor1 from '../../assets/images/vor1.png';
-import Button, {medium} from '../Button/Button';
+import Button, {medium, popupStyle} from '../Button/Button';
 import { blue } from '../Title/Title';
 
 
@@ -27,11 +27,16 @@ export default function Calc() {
 
   document.body.style.overflow = '';
   const [modalActive, setModalActive] = useState(false);
+  const [modalSecond, setModalSecond] = useState(false);
   const handleSubmit = (event) => {
+    setModalSecond(false);
     event.preventDefault();
     setModalActive(true);
   }
-
+  const handleClick = (event)=>{
+  event.preventDefault();
+  setModalSecond(true);
+  }
 
   return (
     <div>
@@ -220,7 +225,7 @@ export default function Calc() {
                 <p className={styles.p}><span>Адрес объекта:</span> Павловская Слобода</p>
                 <p className={styles.p}><span>Способ управления:</span>автоматические</p>
               </div>
-              <Button name="РАССЧИТАТЬ ВОРОТА" styles={medium}/>
+              <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleClick} styles={medium}/>
             </div>
           </div>
 
@@ -239,6 +244,19 @@ export default function Calc() {
             </div></div>
           </div>    </Modal>
       }
+      {
+modalSecond&&
+<Modal active={modalSecond} setActive={setModalSecond}>
+  <div className={styles.popupContainerNext}>
+    <div className={styles.popupTitleNext}>РАСЧЕТ СТОИМОСТИ УСЛУГИ</div>  
+      <form className={styles.formNext}>
+        <input type="text" className={styles.inputNext} placeholder='Ваше имя'/>
+        <input type="text" className={styles.inputNext} placeholder='Телефон'/>
+        <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleSubmit} styles={popupStyle}/>
+      </form>
+    </div>  
+</Modal>
+}
     </div>
   )
 }

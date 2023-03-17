@@ -1,8 +1,9 @@
 @import "../../styles/vars.scss";
 
 .scheme {
+    padding: 2vw 0;
     background-color: $base-blue;
-    h2{padding-top: 2vw;
+    h2{
         color: $base-white;
     }
 }
@@ -34,7 +35,5 @@
             }
 
         }
-
-
     }
 }

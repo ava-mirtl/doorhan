@@ -19,13 +19,13 @@ export default function Header() {
 const [modalSecond, setModalSecond] = useState(false);
 const [modalActive, setModalActive] = useState(false);
 const handleSubmit = (event)=>{
+  setModalSecond(false);
   event.preventDefault();
 setModalActive(true);
 }
 const handleClick = (event)=>{
   event.preventDefault();
 setModalSecond(true);
-console.log(modalSecond);
 }
 const animationText = {
   hidden: {
@@ -73,28 +73,31 @@ variants={animationText}    >ГАРАЖНЫЕ ВОРОТА DOORHAN</motion.h1>
   </div>
 </div>
     </div>
-      {
-  modalActive&&      <Modal active={modalActive} setActive={setModalActive}>
+{
+modalActive&&
+<Modal active={modalActive} setActive={setModalActive}>
   <div className={styles.popupContainer}>
-  <div className={styles.imgContainer}>
-<img src={popup} alt="девушка"/>
-</div>
-<div className={styles.popupTxt}><div className={styles.popupTitle}>СПАСИБО ЗА ВАШЕ ОБРАЩЕНИЕ, НАШ МЕНЕДЖЕР СКОРО С ВАМИ СВЯЖЕТСЯ!
-  </div></div>
-      </div>    </Modal>
+    <div className={styles.imgContainer}>
+      <img src={popup} alt="девушка"/>
+    </div>
+    <div className={styles.popupTxt}>
+      <div className={styles.popupTitle}>СПАСИБО ЗА ВАШЕ ОБРАЩЕНИЕ, НАШ МЕНЕДЖЕР СКОРО С ВАМИ СВЯЖЕТСЯ!</div>
+    </div>
+  </div>    
+</Modal>
 }
-      {
-  modalSecond&&<Modal active={modalSecond} setActive={setModalSecond}>
-    <div className={styles.popupContainerNext}>
-     <div className={styles.popupTitleNext}>РАСЧЕТ СТОИМОСТИ УСЛУГИ</div>  
-     <form className={styles.formNext}>
-    <input type="text" className={styles.inputNext} placeholder='Ваше имя'/>
-    <input type="text" className={styles.inputNext} placeholder='Телефон'/>
-    <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleClick} styles={popupStyle}/>
-    </form>
-     
-     </div>  </Modal>
-
+{
+modalSecond&&
+<Modal active={modalSecond} setActive={setModalSecond}>
+  <div className={styles.popupContainerNext}>
+    <div className={styles.popupTitleNext}>РАСЧЕТ СТОИМОСТИ УСЛУГИ</div>  
+      <form className={styles.formNext}>
+        <input type="text" className={styles.inputNext} placeholder='Ваше имя'/>
+        <input type="text" className={styles.inputNext} placeholder='Телефон'/>
+        <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleSubmit} styles={popupStyle}/>
+      </form>
+    </div>  
+</Modal>
 }
 
   </>
