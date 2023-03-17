@@ -54,6 +54,8 @@
             display: flex;
             align-items: center;
             padding-top: 10vh;
+            position: relative;
+            right: 9vw;
 
             .form {
                 display: flex;
@@ -249,20 +251,22 @@
     }
 
 }
-.popupContainer{
+
+.popupContainer {
     height: 500px;
     width: 65vw;
     background-color: #F1F0F2;
     border: 4.72906px solid #003676;
     border-radius: 35px;
     display: flex;
-    
-    .imgContainer{
+
+    .imgContainer {
         display: flex;
         align-items: flex-end;
         width: fit-content;
     }
-        .popupTxt{
+
+    .popupTxt {
         font-family: $fontM;
         position: absolute;
         display: flex;
@@ -273,8 +277,11 @@
         font-weight: 600;
         font-size: 30pt;
         line-height: 142.5%;
-            .popupTitle{
+
+        .popupTitle {
             width: 60%;
             margin: 10px;
-            justify-self:flex-end;
-    }}}
+            justify-self: flex-end;
+        }
+    }
+}
