@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './WhyDoorhan.module.scss';
 import Title from '../Title/Title';
-import Button from '../Button/Button';
+import Button, { why } from '../Button/Button';
 import pic1 from '../../assets/images/pic1.png';
 import pic2 from '../../assets/images/pic2.png';
 import pic3 from '../../assets/images/pic3.png';
@@ -52,7 +52,7 @@ export default function WhyDoorhan() {
                 <form className={styles.form}>
                   <input type="text" className={styles.input} placeholder='Имя' />
                   <input type="text" className={styles.input} placeholder='Телефон' />
-                  <Button name="ПОЛУЧИТЬ ПОДАРОК" />
+                  <Button name="ПОЛУЧИТЬ ПОДАРОК" styles={why}/>
                 </form>
               </div>
             </div>

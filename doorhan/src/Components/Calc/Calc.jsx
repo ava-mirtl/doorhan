@@ -13,7 +13,7 @@ import der1 from '../../assets/images/derevo1.png';
 import der2 from '../../assets/images/derevo2.png';
 import der3 from '../../assets/images/derevo3.png';
 import vor1 from '../../assets/images/vor1.png';
-import Button from '../Button/Button';
+import Button, {medium} from '../Button/Button';
 import { blue } from '../Title/Title';
 
 
@@ -190,7 +190,7 @@ export default function Calc() {
             </div>
             <form className={styles.container__form}>
               <input type="text" className={styles.input} placeholder='Телефон' />
-              <Button type='submit' onClick={(e) => handleSubmit(e)} name="УТОЧНИТЬ СТОИМОСТЬ" />
+              <Button type='submit' onClick={(e) => handleSubmit(e)} styles={medium} name="УТОЧНИТЬ СТОИМОСТЬ" />
 
             </form>
           </div>
@@ -220,7 +220,7 @@ export default function Calc() {
                 <p className={styles.p}><span>Адрес объекта:</span> Павловская Слобода</p>
                 <p className={styles.p}><span>Способ управления:</span>автоматические</p>
               </div>
-              <Button name="РАССЧИТАТЬ ВОРОТА" />
+              <Button name="РАССЧИТАТЬ ВОРОТА" styles={medium}/>
             </div>
           </div>
 
