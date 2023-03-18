@@ -3,7 +3,6 @@ import styles from './Calc.module.scss';
 import Modal from '../Modal/Modal';
 import Title from '../Title/Title';
 import popup from '../../assets/images/popup1.jpg'
-import pict from '../../assets/images/gv.png';
 import pic1 from '../../assets/images/online1.png';
 import pic2 from '../../assets/images/online2.png';
 import pic3 from '../../assets/images/online3.png';
@@ -13,11 +12,8 @@ import der1 from '../../assets/images/derevo1.png';
 import der2 from '../../assets/images/derevo2.png';
 import der3 from '../../assets/images/derevo3.png';
 import vor1 from '../../assets/images/vor1.png';
-import Button, {medium, popupStyle} from '../Button/Button';
+import Button, { medium, popupStyle } from '../Button/Button';
 import { blue } from '../Title/Title';
-
-
-
 
 
 
@@ -33,15 +29,15 @@ export default function Calc() {
     event.preventDefault();
     setModalActive(true);
   }
-  const handleClick = (event)=>{
-  event.preventDefault();
-  setModalSecond(true);
+  const handleClick = (event) => {
+    event.preventDefault();
+    setModalSecond(true);
   }
 
   return (
     <div>
       <div className={styles.wraper}>
-      <Title styles={blue} title="ОНЛАЙН КАЛЬКУЛЯТОР"/>
+        <Title styles={blue} title="ОНЛАЙН КАЛЬКУЛЯТОР" />
         <div className={styles.container1}>
           <div className={styles.container1_left}>
             <div className={styles.container1_left__top}>
@@ -205,32 +201,7 @@ export default function Calc() {
 
 
 
-        <Title styles={blue} title="НАШИ РАБОТЫ"/>
-        <div className={styles.container2}>
-          <div className={styles.container2__btns}>
-            <buttons></buttons>
-            <buttons></buttons>
-          </div>
-          <div className={styles.main2}>
-            <div className={styles.pict}>
-              <img src={pict} alt="гаражные секционные ворота" />
-            </div>
-            <div className={styles.container2__text}>
-              <div className={styles.text}>
-                <p className={styles.p__title}>Гаражные секционные ворота </p>
-                <p className={styles.p}><span>Размер проема:</span> ш. 3000 мм, в. 2400 мм</p>
-                <p className={styles.p}><span>Тип панели:</span>М-гофр широкая полоса</p>
-                <p className={styles.p}><span>Цвет:</span>Wood Blue (RAL9016)</p>
-                <p className={styles.p}><span>Адрес объекта:</span> Павловская Слобода</p>
-                <p className={styles.p}><span>Способ управления:</span>автоматические</p>
-              </div>
-              <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleClick} styles={medium}/>
-            </div>
-          </div>
 
-
-
-        </div>
 
       </div>
       {
@@ -244,19 +215,18 @@ export default function Calc() {
           </div>    </Modal>
       }
       {
-modalSecond&&
-<Modal active={modalSecond} setActive={setModalSecond}>
-  <div className={styles.popupContainerNext}>
-    <div className={styles.popupTitleNext}>РАСЧЕТ СТОИМОСТИ УСЛУГИ</div>  
-      <form className={styles.formNext}>
-        <input type="text" className={styles.inputNext} placeholder='Ваше имя'/>
-        <input type="text" className={styles.inputNext} placeholder='Телефон'/>
-        <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleSubmit} styles={popupStyle}/>
-      </form>
-    </div>  
-</Modal>
-}
+        modalSecond &&
+        <Modal active={modalSecond} setActive={setModalSecond}>
+          <div className={styles.popupContainerNext}>
+            <div className={styles.popupTitleNext}>РАСЧЕТ СТОИМОСТИ УСЛУГИ</div>
+            <form className={styles.formNext}>
+              <input type="text" className={styles.inputNext} placeholder='Ваше имя' />
+              <input type="text" className={styles.inputNext} placeholder='Телефон' />
+              <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleSubmit} styles={popupStyle} />
+            </form>
+          </div>
+        </Modal>
+      }
     </div>
-
   )
 }

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import styles from './WhyDoorhan.module.scss';
 import Title from '../Title/Title';
 import Modal from '../Modal/Modal';
@@ -18,16 +18,16 @@ export default function WhyDoorhan() {
   document.body.style.overflow = '';
   const [modalActive, setModalActive] = useState(false);
 
-  const handleSubmit = (event)=>{
-  event.preventDefault();
-  setModalActive(true);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setModalActive(true);
   }
 
   return (
     <div>
       <div className={styles.wrapper}>
         <div className={styles.container__why}>
-        <Title styles={blue} title="ПОЧЕМУ ВОРОТА DOORHAN?"/>
+          <Title styles={blue} title="ПОЧЕМУ ВОРОТА DOORHAN?" />
           <div className={styles.container__main}>
             <div className={styles.main__left}>
               <div className={styles.main__text}>
@@ -63,7 +63,7 @@ export default function WhyDoorhan() {
                 <form className={styles.form}>
                   <input type="text" className={styles.input} placeholder='Имя' />
                   <input type="text" className={styles.input} placeholder='Телефон' />
-                  <Button name="ПОЛУЧИТЬ ПОДАРОК" styles={why} onClick={(e)=>handleSubmit(e)}/>
+                  <Button name="ПОЛУЧИТЬ ПОДАРОК" styles={why} onClick={(e) => handleSubmit(e)} />
                 </form>
               </div>
             </div>
@@ -72,11 +72,8 @@ export default function WhyDoorhan() {
 
 
         <div className={styles.container__aboutus}>
-        <Title styles={blue} title="ПОЧЕМУ ВЫБИРАЮТ НАС:"/>
+          <Title styles={blue} title="ПОЧЕМУ ВЫБИРАЮТ НАС:" />
           <div className={styles.container__main2}>
-
-
-
             <div className="orange">
               <div className={styles.container__circlepic1}>
                 <img className={styles.circle1} src={circle} alt="picture" />
@@ -131,17 +128,17 @@ export default function WhyDoorhan() {
 
         </div>
       </div>
-      {modalActive&&      
-      <Modal active={modalActive} setActive={setModalActive}>
-        <div className={styles.popupContainer}>
-          <div className={styles.imgContainer}>
-            <img src={popup} alt="девушка"/>
+      {modalActive &&
+        <Modal active={modalActive} setActive={setModalActive}>
+          <div className={styles.popupContainer}>
+            <div className={styles.imgContainer}>
+              <img src={popup} alt="девушка" />
+            </div>
+            <div className={styles.popupTxt}>
+              <div className={styles.popupTitle}>СПАСИБО ЗА ВАШЕ ОБРАЩЕНИЕ, НАШ МЕНЕДЖЕР СКОРО С ВАМИ СВЯЖЕТСЯ!</div>
+            </div>
           </div>
-          <div className={styles.popupTxt}>
-            <div className={styles.popupTitle}>СПАСИБО ЗА ВАШЕ ОБРАЩЕНИЕ, НАШ МЕНЕДЖЕР СКОРО С ВАМИ СВЯЖЕТСЯ!</div>
-          </div>
-        </div>    
-      </Modal>
+        </Modal>
       }
     </div>
   )
