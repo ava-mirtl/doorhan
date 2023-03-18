@@ -243,7 +243,6 @@ export default function Calc() {
             </div></div>
           </div>    </Modal>
       }
-<<<<<<< HEAD
       {
 modalSecond&&
 <Modal active={modalSecond} setActive={setModalSecond}>
@@ -258,8 +257,6 @@ modalSecond&&
 </Modal>
 }
     </div>
-=======
-    </div >
->>>>>>> 20107f28abbdb076601593ac81f0e82616956246
+
   )
 }
