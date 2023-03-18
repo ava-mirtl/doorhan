@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styles from './Calc.module.scss';
-import Modal from '../Modal/Modal';
+import ModalGrats from '../Modal/ModalGrats';
+import ModalInputs from '../Modal/ModalInputs';
 import Title from '../Title/Title';
-import popup from '../../assets/images/popup1.jpg'
 import pic1 from '../../assets/images/online1.png';
 import pic2 from '../../assets/images/online2.png';
 import pic3 from '../../assets/images/online3.png';
@@ -12,7 +12,7 @@ import der1 from '../../assets/images/derevo1.png';
 import der2 from '../../assets/images/derevo2.png';
 import der3 from '../../assets/images/derevo3.png';
 import vor1 from '../../assets/images/vor1.png';
-import Button, { medium, popupStyle } from '../Button/Button';
+import Button, { medium } from '../Button/Button';
 import { blue } from '../Title/Title';
 
 
@@ -184,7 +184,19 @@ export default function Calc() {
 
 
       </div>
+<<<<<<< HEAD
     </div >
+=======
+      {
+        modalActive && <ModalGrats active={modalActive} setActive={setModalActive}/> 
+
+      }
+      {
+        modalSecond &&
+        <ModalInputs active={modalSecond} setActive={setModalSecond} handleSubmit={handleSubmit}/>
+      }
+    </div>
+>>>>>>> 6597051e82916681313aac4f1f4afae4920096de
   )
 
 }

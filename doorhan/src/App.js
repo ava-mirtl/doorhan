@@ -5,11 +5,12 @@ import './styles/App.css';
 
 
 function App() {
+  
   return (
     <>
-    <Header/>
-    <Main/>
-    <Footer/>
+      <Header/>
+      <Main/>
+      <Footer/>
     </>
   );
 }
