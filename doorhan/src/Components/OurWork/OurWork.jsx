@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import styles from './OurWork.module.scss';
-import Modal from '../Modal/Modal';
 import Title from '../Title/Title';
-import popup from '../../assets/images/popup1.jpg'
+import ModalGrats from '../Modal/ModalGrats';
+import ModalInputs from '../Modal/ModalInputs';
 import { blue } from '../Title/Title';
 import gv from '../../assets/images/gv.png';
 import gv2 from '../../assets/images/gv2.png';
-import Button, { medium, popupStyle, our_gar, our_prom } from '../Button/Button';
+import Button, { medium, our_gar, our_prom } from '../Button/Button';
 
 export default function OurWork() {
     document.body.style.overflow = '';
@@ -56,32 +56,13 @@ export default function OurWork() {
                     </div>
                 </div>
             </div>
-
-
-            {
-                modalActive && <Modal active={modalActive} setActive={setModalActive}>
-                    <div className={styles.popupContainer}>
-                        <div className={styles.imgContainer}>
-                            <img src={popup} alt="девушка" />
-                        </div>
-                        <div className={styles.popupTxt}><div className={styles.popupTitle}>СПАСИБО ЗА ВАШЕ ОБРАЩЕНИЕ, НАШ МЕНЕДЖЕР СКОРО С ВАМИ СВЯЖЕТСЯ!
-                        </div></div>
-                    </div>    </Modal>
-            }
-            {
-                modalSecond &&
-                <Modal active={modalSecond} setActive={setModalSecond}>
-                    <div className={styles.popupContainerNext}>
-                        <div className={styles.popupTitleNext}>РАСЧЕТ СТОИМОСТИ УСЛУГИ</div>
-                        <form className={styles.formNext}>
-                            <input type="text" className={styles.inputNext} placeholder='Ваше имя' />
-                            <input type="text" className={styles.inputNext} placeholder='Телефон' />
-                            <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleSubmit} styles={popupStyle} />
-                        </form>
-                    </div>
-                </Modal>
-            }
-
+            {modalActive&&
+<ModalGrats active={modalActive} setActive={setModalActive}/> 
+}
+{
+modalSecond&&
+<ModalInputs active={modalSecond} setActive={setModalSecond} handleSubmit={handleSubmit}/>
+  }
             {
 
                 <div className={styles.container}>

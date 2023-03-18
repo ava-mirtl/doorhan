@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import OrangeBtn from '../OrangeBtn/OrangeBtn';
 import Button from '../Button/Button';
-import Modal from '../Modal/Modal';
-import Title from '../Title/Title';
-import popup from '../../assets/images/popup1.jpg';
+import ModalGrats from '../Modal/ModalGrats';
+import Title, { white } from '../Title/Title';
+import { howto } from '../Button/Button';
 import calendar from '../../assets/icons/calendar.png';
 import house from '../../assets/icons/house.png';
 import price from '../../assets/icons/price.png';
@@ -11,8 +11,6 @@ import sm from '../../assets/icons/sm.png';
 import bibip from '../../assets/icons/bibip.png';
 import dogovor from '../../assets/icons/dogovor.png';
 import styles from './HowToBuy.module.scss';
-import { howto } from '../Button/Button';
-import { white } from '../Title/Title';
 
 export default function HowToBuy() {
   document.body.style.overflow = '';
@@ -58,14 +56,10 @@ export default function HowToBuy() {
     <input type="text" className={styles.inputNext} placeholder='Телефон'/>
     <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleClick} styles={howto} />
     </form>
-    </div>{modalActive&& <Modal active={modalActive} setActive={setModalActive}>
-    <div className={styles.popupContainer}>
-    <div className={styles.imgContainer}>
-  <img src={popup} alt="девушка"/>
-  </div>
-  <div className={styles.popupTxt}><div className={styles.popupTitle}>СПАСИБО ЗА ВАШЕ ОБРАЩЕНИЕ, НАШ МЕНЕДЖЕР СКОРО С ВАМИ СВЯЖЕТСЯ!
-    </div></div>
-        </div></Modal>}
+    </div>
+    {modalActive&&
+<ModalGrats active={modalActive} setActive={setModalActive}/> 
+}
     </div>
     
   )

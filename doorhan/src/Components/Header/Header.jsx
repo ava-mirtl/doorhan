@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import { motion} from "framer-motion";
 import styles from './Header.module.scss';
-import Modal from '../Modal/Modal';
-import popup from '../../assets/images/popup1.jpg';
+import ModalGrats from '../Modal/ModalGrats';
+import ModalInputs from '../Modal/ModalInputs';
 import logo from '../../assets/images/logo.png';
 import atm from '../../assets/icons/local_atm.png';
 import percent from '../../assets/icons/percent.png';
@@ -11,7 +11,7 @@ import shipping from '../../assets/icons/local_shipping (1).png';
 import box from '../../assets/icons/warehouse.png';
 import Button from '../Button/Button'
 import OrangeBtn from '../OrangeBtn/OrangeBtn';
-import { popupStyle, medium } from '../Button/Button';
+import { medium } from '../Button/Button';
 
 
 export default function Header() {
@@ -75,30 +75,12 @@ variants={animationText}    >ГАРАЖНЫЕ ВОРОТА DOORHAN</motion.h1>
     </div>
 {
 modalActive&&
-<Modal active={modalActive} setActive={setModalActive}>
-  <div className={styles.popupContainer}>
-    <div className={styles.imgContainer}>
-      <img src={popup} alt="девушка"/>
-    </div>
-    <div className={styles.popupTxt}>
-      <div className={styles.popupTitle}>СПАСИБО ЗА ВАШЕ ОБРАЩЕНИЕ, НАШ МЕНЕДЖЕР СКОРО С ВАМИ СВЯЖЕТСЯ!</div>
-    </div>
-  </div>    
-</Modal>
+<ModalGrats active={modalActive} setActive={setModalActive}/> 
 }
 {
 modalSecond&&
-<Modal active={modalSecond} setActive={setModalSecond}>
-  <div className={styles.popupContainerNext}>
-    <div className={styles.popupTitleNext}>РАСЧЕТ СТОИМОСТИ УСЛУГИ</div>  
-      <form className={styles.formNext}>
-        <input type="text" className={styles.inputNext} placeholder='Ваше имя'/>
-        <input type="text" className={styles.inputNext} placeholder='Телефон'/>
-        <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleSubmit} styles={popupStyle}/>
-      </form>
-    </div>  
-</Modal>
-}
+<ModalInputs active={modalSecond} setActive={setModalSecond} handleSubmit={handleSubmit}/>
+  }
 
   </>
   )
