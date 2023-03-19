@@ -17,20 +17,23 @@ import { blue } from '../Title/Title';
 
 
 export default function Calc() {
+  const handleChoice = (e) =>{
+console.log(e.target);
+  }
   return (
     <div>
       <div className={styles.wraper}>
         <Title styles={blue} title="ОНЛАЙН КАЛЬКУЛЯТОР" />
         <div className={styles.container}>
           <div className={styles.container__left}>
-            <div className={styles.container__left_top}>
+            <div className={styles.container__left_top} onClick={(e)=>{handleChoice(e)}}>
               <div className={styles.choice}>
                 <div className={styles.img}>
                   <img src={pic1} alt="ДОСКА" />
                 </div>
                 <div className={styles.checked}>
                   <input type="radio" id="choice1" name="one" value="choice" />
-                  <label for="choice1"><img src={check} alt="доска" /></label>
+                  <label htmlFor="choice1"><img src={check} alt="доска" /></label>
                 </div>
                 <p>ДОСКА</p>
               </div>
@@ -41,7 +44,7 @@ export default function Calc() {
                 </div>
                 <div className={styles.checked}>
                   <input type="radio" id="choice2" name="two" value="choice" />
-                  <label for="choice2"><img src={check} alt="полоса" /></label>
+                  <label htmlFor="choice2"><img src={check} alt="полоса" /></label>
                 </div>
                 <p>ШИРОКАЯ ЦЕНТРАЛЬНАЯ <br /> ПОЛОСА</p>
               </div>
@@ -52,7 +55,7 @@ export default function Calc() {
                 </div>
                 <div className={styles.checked}>
                   <input type="radio" id="choice3" name="three" value="choice" />
-                  <label for="choice3"><img src={check} alt="филенка" /></label>
+                  <label htmlFor="choice3"><img src={check} alt="филенка" /></label>
                 </div>
                 <p>ФИЛЕНКА</p>
               </div>
@@ -63,7 +66,7 @@ export default function Calc() {
                 </div>
                 <div className={styles.checked}>
                   <input type="radio" id="choice4" name="four" value="choice" />
-                  <label for="choice4"><img src={check} alt="волна" /></label>
+                  <label htmlFor="choice4"><img src={check} alt="волна" /></label>
                 </div>
                 <p>ВОЛНА</p>
               </div>
@@ -74,30 +77,30 @@ export default function Calc() {
               <div className={styles.container_controls}>
 
                 <div className={styles.control_1}>
-                  <p class={styles.tabs__p}>ИСПОЛНЕНИЕ</p>
-                  <div class={styles.tabs__isp}>
+                  <p className={styles.tabs__p}>ИСПОЛНЕНИЕ</p>
+                  <form className={styles.tabs__isp}>
                     <input className={styles.isp1} type="radio" id="isp1" name="tabs" />
-                    <label class={styles.tab__isp1} for="isp1">ГОРИЗОНТАЛЬНОЕ</label>
+                    <label className={styles.tab__isp1} htmlFor="isp1">ГОРИЗОНТАЛЬНОЕ</label>
                     <input className={styles.isp2} type="radio" id="isp2" name="tabs" />
-                    <label class={styles.tab__isp2} for="isp2">ВЕРТИКАЛЬНОЕ</label>
+                    <label className={styles.tab__isp2} htmlFor="isp2">ВЕРТИКАЛЬНОЕ</label>
                     <span className={styles.glider__isp}></span>
-                  </div>
+                  </form>
                 </div>
 
                 <div className={styles.control_2}>
-                  <p class={styles.tabs__p}>АВТОМАТИКА</p>
-                  <div class={styles.tabs__avtom}>
+                  <p className={styles.tabs__p}>АВТОМАТИКА</p>
+                  <form className={styles.tabs__avtom}>
                     <input className={styles.avtom1} type="radio" id="avtom1" name="tabs" />
-                    <label class={styles.tab__avtom1} for="avtom1">ВСТРОЕННАЯ</label>
+                    <label className={styles.tab__avtom1} htmlFor="avtom1">ВСТРОЕННАЯ</label>
                     <input className={styles.avtom2} type="radio" id="avtom2" name="tabs" />
-                    <label class={styles.tab__avtom2} for="avtom2">ОТДЕЛЬНАЯ</label>
+                    <label className={styles.tab__avtom2} htmlFor="avtom2">ОТДЕЛЬНАЯ</label>
                     <span className={styles.glider__avtom}></span>
-                  </div>
+                  </form>
                 </div>
 
                 <div className={styles.control_3}>
                   <p>РАЗМЕРЫ</p>
-                  <div class={styles.sizes}>
+                  <div className={styles.sizes}>
                     <input type="number" name="number" id="num" min="1" />
                     <input type="number" name="number" id="num" min="1" />
                   </div>
@@ -107,15 +110,15 @@ export default function Calc() {
 
                 <div className={styles.control_4}>
                   <p>ВЫБЕРИТЕ <br />ЦВЕТ ВОРОТ</p>
-                  <div class={styles.buttons}>
-                    <buttons class={styles.btn1}></buttons>
-                    <buttons class={styles.btn2}></buttons>
-                    <buttons class={styles.btn3}></buttons>
-                    <buttons class={styles.btn4}></buttons>
-                    <buttons class={styles.btn5}></buttons>
-                    <buttons class={styles.btn6}></buttons>
-                    <buttons class={styles.btn7}></buttons>
-                    <buttons class={styles.btn8}></buttons>
+                  <div className={styles.buttons}>
+                    <button className={styles.btn1}></button>
+                    <button className={styles.btn2}></button>
+                    <button className={styles.btn3}></button>
+                    <button className={styles.btn4}></button>
+                    <button className={styles.btn5}></button>
+                    <button className={styles.btn6}></button>
+                    <button className={styles.btn7}></button>
+                    <button className={styles.btn8}></button>
                   </div>
                 </div>
 
@@ -131,7 +134,7 @@ export default function Calc() {
                       </div>
                       <div className={styles.checked_texture}>
                         <input type="radio" id="texture1" name="texture" value="check" />
-                        <label for="texture1"><img src={check} alt="волна" /></label>
+                        <label htmlFor="texture1"><img src={check} alt="волна" /></label>
                       </div>
                     </div>
 
@@ -141,7 +144,7 @@ export default function Calc() {
                       </div>
                       <div className={styles.checked_texture}>
                         <input type="radio" id="texture2" name="texture" value="check" />
-                        <label for="texture2"><img src={check} alt="волна" /></label>
+                        <label htmlFor="texture2"><img src={check} alt="волна" /></label>
                       </div>
                     </div>
 
@@ -154,7 +157,7 @@ export default function Calc() {
                       </div>
                       <div className={styles.checked_texture}>
                         <input type="radio" id="texture3" name="texture" value="check" />
-                        <label for="texture3"><img src={check} alt="волна" /></label>
+                        <label htmlFor="texture3"><img src={check} alt="волна" /></label>
                       </div>
                     </div>
 
@@ -184,19 +187,7 @@ export default function Calc() {
 
 
       </div>
-<<<<<<< HEAD
-    </div >
-=======
-      {
-        modalActive && <ModalGrats active={modalActive} setActive={setModalActive}/> 
-
-      }
-      {
-        modalSecond &&
-        <ModalInputs active={modalSecond} setActive={setModalSecond} handleSubmit={handleSubmit}/>
-      }
     </div>
->>>>>>> 6597051e82916681313aac4f1f4afae4920096de
   )
 
 }
@@ -230,7 +221,7 @@ export default function Calc() {
 //                 </div>
 //                 <div className={styles.checked}>
 //                   <input type="radio" id="contactChoice1" name="contact" value="email" />
-//                   <label for="contactChoice1"><img src={check} alt="доска" /></label>
+//                   <label htmlFor="contactChoice1"><img src={check} alt="доска" /></label>
 //                 </div>
 //                 <p>ДОСКА</p>
 //               </div>
@@ -240,7 +231,7 @@ export default function Calc() {
 //                 </div>
 //                 <div className={styles.checked}>
 //                   <input type="radio" id="contactChoice2" name="contact" value="email" />
-//                   <label for="contactChoice2"><img src={check} alt="полоса" /></label>
+//                   <label htmlFor="contactChoice2"><img src={check} alt="полоса" /></label>
 //                 </div>
 //                 <p>ШИРОКАЯ ЦЕНТРАЛЬНАЯ ПОЛОСА</p>
 //               </div>
