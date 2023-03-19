@@ -22,8 +22,9 @@ export const howto = {
 export const why = {
   padding: "10px",
   width: "100%",
+  minHeight: "45px",
   height: "2.5vw",
-  fontSize: "0.7vw"
+  fontSize: "10pt"
 }
 
 export const medium = {
