@@ -26,7 +26,15 @@ margin: 25px;}
 .footerContent{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
+}
+.footerAdress{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+
 }
 .footerLink{
     color: $base-white;
