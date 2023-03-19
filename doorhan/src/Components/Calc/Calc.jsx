@@ -24,7 +24,7 @@ console.log(e.target);
     <div>
       <div className={styles.wraper}>
         <Title styles={blue} title="ОНЛАЙН КАЛЬКУЛЯТОР" />
-        <div className={styles.container}>
+        <form className={styles.container}>
           <div className={styles.container__left}>
             <div className={styles.container__left_top} onClick={(e)=>{handleChoice(e)}}>
               <div className={styles.choice}>
@@ -184,23 +184,11 @@ console.log(e.target);
           </div>
 
 
-        </div>
+        </form>
 
 
       </div>
-<<<<<<< HEAD
     </div >
-=======
-      {
-        modalActive && <ModalGrats active={modalActive} setActive={setModalActive}/> 
-
-      }
-      {
-        modalSecond &&
-        <ModalInputs active={modalSecond} setActive={setModalSecond} handleSubmit={handleSubmit}/>
-      }
-    </div>
->>>>>>> 6597051e82916681313aac4f1f4afae4920096de
   )
 
 }
