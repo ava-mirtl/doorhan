@@ -58,7 +58,7 @@ export default function Calc() {
       <div className={styles.wraper}>
 
         <Title styles={blue} title="ОНЛАЙН КАЛЬКУЛЯТОР" />
-        <div className={styles.container}>
+        <form className={styles.container}>
           <div className={styles.container__left}>
             <div className={styles.container__left_top} onClick={(e) => { handleChoice(e) }}>
               <div className={styles.choice}>
@@ -267,13 +267,18 @@ export default function Calc() {
           </div>
 
 
-        </div>
+        </form>
 
 
+<<<<<<< HEAD
       </div >
 
     </div >
 
+=======
+      </div>
+    </div >
+>>>>>>> c08373f3483ed08aec51d20f1ec02c17c468c261
   )
 }
 

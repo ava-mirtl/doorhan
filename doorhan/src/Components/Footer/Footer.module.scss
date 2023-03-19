@@ -26,7 +26,15 @@ margin: 25px;}
 .footerContent{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
+}
+.footerAdress{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+
 }
 .footerLink{
     color: $base-white;
@@ -36,4 +44,30 @@ margin: 25px;}
     font-weight: 100;
     font-family: $fontM;
     font-size: 12pt;
+}
+@media  (max-width: 781px) { 
+        iframe, .footerLink, .footerContent h2{
+        display: none;}
+        .footerContent{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            img, .footerAdress{
+                height: fit-content;
+            width: 45vw;
+            }
+            .footerTxt{
+                padding: 10px;
+                font-size: 2.5vw;
+                width: 100%;
+            }
+            .footerAdress{
+                justify-self: end;
+            }
+        }
+    .footerContainer{
+        padding: 20px;
+    }
+    
 }

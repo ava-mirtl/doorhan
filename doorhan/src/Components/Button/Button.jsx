@@ -22,15 +22,17 @@ export const howto = {
 export const why = {
   padding: "10px",
   width: "100%",
+  minHeight: "45px",
   height: "2.5vw",
-  fontSize: "0.7vw"
+  fontSize: "10pt"
 }
 
 export const medium = {
-  padding: "10px",
-  width: "15vw",
-  height: "3vw",
-  fontSize: "0.7vw"
+  padding: "20px",
+  width: "90%",
+  minWidth: "260px",
+  minHeight: "fit-content",
+  borderRadius: '0 40px 40px'
 }
 
 export const our_gar = {
@@ -52,8 +54,6 @@ export const our_prom = {
 
 export default function Button({ name, onClick, styles }) {
   return (
-    <div>
       <button style={styles} onClick={(e) => onClick(e)} className="btn">{name}</button>
-    </div>
   )
 }
