@@ -46,7 +46,7 @@ margin: 25px;}
     font-size: 12pt;
 }
 @media  (max-width: 781px) { 
-        iframe, h2, .footerLink{
+        iframe, .footerLink, .footerContent h2{
         display: none;}
         .footerContent{
             width: 100%;

@@ -39,7 +39,7 @@ export default function WhyDoorhan() {
               <div className={styles.main__text}>
                 <p>Ворота и петли НЕ разболтаются через 25 лет</p>
                 <div className={styles.main__img}>
-                  <img src={pic2} alt="креплание" />
+                  <img src={pic2} alt="крепление" />
                 </div>
               </div>
 

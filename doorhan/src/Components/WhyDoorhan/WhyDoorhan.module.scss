@@ -251,5 +251,79 @@
         width: 2em;
         height: 2em;
     }
+}
+@media  (max-width: 1000px) {
+    .container__main {
+        display: flex;
+        flex-direction: column;
+    
+        .main__left {
+            max-width: 80vw;    
+            }
+            .main__right {
+                max-width: 100vw;
+                width: 98vw;
+                height: 70vh;
+    
+                .form__box {
+                    padding-right: 13vw;
+                    .form button{
+                        width: 100%;
+                        min-width: 210px;
+                        max-width: 550px;               
+                 }
+                }
+            }    
+        }
+    
+       
+}
+@media  (max-width: 780px) {
+    .container__main {
+        display: flex;
+        flex-direction: column;    
+        .main__left {
+            max-width: 100vw;
+            .main__text {
+                margin-bottom: 10px;
+                p {
+                    font-size: 3.5vw;
+                }
+                .main__img {
+                    margin: 5px;
+                    .main__img img{
+                        width: 10px;
+                    } 
+                }
+            }
+        }
+    .main__right {
+        background: $base-white;
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+        .form__box {
+            width: 80%;
+            height: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            .form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
 
+                .input {
+                    width: 100%;
+                    min-width: 210px;
+                    max-width: 550px;
+                }
+            }
+        }
+    }
+}
 }
