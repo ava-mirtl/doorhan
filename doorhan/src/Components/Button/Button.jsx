@@ -28,10 +28,13 @@ export const why = {
 }
 
 export const medium = {
-  padding: "10px",
-  width: "15vw",
-  height: "3vw",
-  fontSize: "0.7vw"
+  padding: "20px",
+  width: "80%",
+  minWidth: "260px",
+  minHeight: "fit-content",
+  height: "15vw",
+  fontSize: "20pt",
+  borderRadius: '0 40px 40px'
 }
 
 export const our_gar = {
@@ -53,8 +56,6 @@ export const our_prom = {
 
 export default function Button({ name, onClick, styles }) {
   return (
-    <div>
       <button style={styles} onClick={(e) => onClick(e)} className="btn">{name}</button>
-    </div>
   )
 }

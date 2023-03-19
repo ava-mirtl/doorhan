@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { motion} from "framer-motion";
 import styles from './Header.module.scss';
 import ModalGrats from '../Modal/ModalGrats';
 import ModalInputs from '../Modal/ModalInputs';
@@ -36,19 +35,6 @@ const handleClick = (event)=>
     }
 
 
-const animationText = {
-  hidden: {
-      y: -200,
-      opacity: 0,
-  },
-  visible:{
-      y: 0,
-      opacity: 1,
-      transition: 1,
-  }
-}
-
-
   return (<>
     <div className={styles.header}> 
       <img className={styles.logo} src={logo} alt="logo"/>
@@ -65,10 +51,7 @@ const animationText = {
         </div>
       </div>
     <div className={styles.content}>
-      <motion.h1  initial="hidden" 
-      whileInView="visible"
-      viewport={{amount: 0.3, once: true}}
-      variants={animationText}>ГАРАЖНЫЕ ВОРОТА DOORHAN</motion.h1>
+      <h1>ГАРАЖНЫЕ ВОРОТА DOORHAN</h1>
     <div className={styles.subtitle}>ПРОИЗВОДСТВО. ДОСТАВКА. МОНТАЖ.</div>
     <div className={styles.item}>
       <OrangeBtn img={atm}/>

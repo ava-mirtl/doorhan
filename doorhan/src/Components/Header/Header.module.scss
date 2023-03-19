@@ -118,5 +118,51 @@ height: fit-content;
     }
  }
  @media  (max-width: 780px) { 
+.form{
+    display: none;
+}
+.phone{
+position: static;
+padding: 10px;
+font-size: 20pt;
+height: 6vw;
+border-radius: 10px;
+margin: 10px;
+}
+.logo{
+    max-width: 40vw;
+}
+.header{
+    height: 8vw;
+    align-items: center;
+}
+.mainСontainer{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.content{
+    width: 100vw;
+h1{
+    text-align: center;
+    font-size: 5vw;
+}
+.subtitle{
+    text-align: center;
+    font-size: 4vw;
+}
+.item{
+    margin-top: 20px;
+.txt{
+    font-size: 3vw;
 
+}}
+}
+.imgCont{
+    width: 100vw;
+    min-height: 60vh;
+    padding-bottom: 10vh;
+    .buttonCont{
+        width: 100vw;
+    }
+}
  }
