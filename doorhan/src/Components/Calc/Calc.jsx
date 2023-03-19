@@ -175,7 +175,8 @@ export default function Calc() {
 
 
 
-            <div className={styles.container__right_center}></div>
+            <div className={styles.container__right_center}>
+            </div>
             <div className={styles.container__right_bottom}></div>
           </div>
 
@@ -184,19 +185,7 @@ export default function Calc() {
 
 
       </div>
-<<<<<<< HEAD
     </div >
-=======
-      {
-        modalActive && <ModalGrats active={modalActive} setActive={setModalActive}/> 
-
-      }
-      {
-        modalSecond &&
-        <ModalInputs active={modalSecond} setActive={setModalSecond} handleSubmit={handleSubmit}/>
-      }
-    </div>
->>>>>>> 6597051e82916681313aac4f1f4afae4920096de
   )
 
 }
