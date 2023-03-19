@@ -270,15 +270,10 @@ export default function Calc() {
         </form>
 
 
-<<<<<<< HEAD
       </div >
 
     </div >
 
-=======
-      </div>
-    </div >
->>>>>>> c08373f3483ed08aec51d20f1ec02c17c468c261
   )
 }
 
