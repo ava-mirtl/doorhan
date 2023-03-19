@@ -29,11 +29,9 @@ export const why = {
 
 export const medium = {
   padding: "20px",
-  width: "80%",
+  width: "90%",
   minWidth: "260px",
   minHeight: "fit-content",
-  height: "15vw",
-  fontSize: "20pt",
   borderRadius: '0 40px 40px'
 }
 

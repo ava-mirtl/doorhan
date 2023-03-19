@@ -1,5 +1,7 @@
 @import "../../styles/vars.scss";
 
+
+
 .header{
     display: flex;
 justify-content: space-between;
@@ -9,7 +11,7 @@ height: 10vh;}
 
 .logo{
     margin: 10px 30px;
-    max-width: 300px;}
+    width: 20vw;}
 
 .phone{
     background-color: $base-orange;
@@ -74,9 +76,13 @@ background-size:100%;
 }
 .buttonCont{
     height: 30%;
+    width: 30vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    button{
+        font-size: 1.5vw;
+    }
 }
 .content{
     color: #F9F9F9;
@@ -89,7 +95,6 @@ h1{
     font-style: normal;
     font-weight: 400;
     font-size: 3vw;
-    line-height: 60px;
     padding: 10px 20px;
 }
 .subtitle, .txt{
@@ -97,72 +102,123 @@ h1{
     font-family: $fontM;
     font-weight: 100;
     letter-spacing: 0.1em;
-    font-size: 1.8vw;}
+    font-size: 2vw;}
     .txt{
         padding: 0;
-        font-size: 1.5vw;
+        font-size: 1.3vw;
     }
 .item{
     display: flex;
     align-items: center;
     margin: 0.5vw 20px;
 }
-    
-@media (min-width: 781px) and (max-width: 1420px) { 
+@media (max-width: 1471px) { 
     .imgCont{
-        background-size: cover;
-        
+        width: 60vw;
     }
-    .content {
-height: fit-content;
+    .content{
+        width: 40vw;
     }
  }
- @media  (max-width: 780px) { 
-.form{
-    display: none;
-}
-.phone{
-position: static;
-padding: 10px;
-font-size: 20pt;
-height: 6vw;
-border-radius: 10px;
-margin: 10px;
-}
-.logo{
-    max-width: 40vw;
-}
-.header{
-    height: 8vw;
-    align-items: center;
-}
-.mainСontainer{
-    display: flex;
-    flex-direction: column-reverse;
-}
-.content{
-    width: 100vw;
-h1{
-    text-align: center;
-    font-size: 5vw;
-}
-.subtitle{
-    text-align: center;
+    
+@media  (max-width: 1233px) { 
+    .form{
+        display: none;
+    }
+    .phone{
+    position: static;
+    padding: 10px;
     font-size: 4vw;
-}
-.item{
-    margin-top: 20px;
-.txt{
-    font-size: 3vw;
-
-}}
-}
-.imgCont{
-    width: 100vw;
-    min-height: 60vh;
-    padding-bottom: 10vh;
-    .buttonCont{
-        width: 100vw;
+    height: 6vw;
+    border-radius: 10px;
+    margin: 10px;
     }
-}
- }
+    .logo{
+        max-width: 40vw;
+    }
+    .header{
+        height: 10vw;
+        align-items: center;
+    }
+    .mainСontainer{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .content{
+        width: 100vw;
+    h1{
+        text-align: center;
+        font-size: 5vw;
+    }
+    .subtitle{
+        text-align: center;
+        font-size: 4vw;
+    }
+    .item{
+        margin-top: 20px;
+    .txt{
+        font-size: 3vw;
+    
+    }}
+    }
+    .imgCont{
+        width: 100vw;
+        min-height: 60vh;
+        padding-bottom: 5vh;
+        
+        .buttonCont{
+            width: 100vw;
+            height: 50%;
+            button{
+                font-size: 3vw;
+                height: 6vh;            
+            }
+        }
+    }
+     }
+     @media  (max-width: 676px) { 
+        .imgCont{
+            width: 100vw;
+            min-height: 50vh;
+            padding-bottom: 10vh;
+            .buttonCont{
+                width: 100vw;
+            }
+        }
+     }
+       
+     @media  (max-width: 600px) { 
+       
+        .phone{
+        position: static;
+        padding: 5px;
+        font-size: 3vw;
+        }
+        
+        
+        .txt{
+            font-size: 4vw;
+        }
+        
+        .imgCont{
+            width: 100vw;
+            min-height: 40vh;
+            padding-bottom: 10vh;
+            .buttonCont{
+                width: 100vw;
+                button{
+                    font-size: 4vw;
+                }
+            }
+        }
+         }
+         @media  (max-width: 370px) { 
+       
+            
+            .imgCont{
+                min-height: 30vh;
+                padding-bottom: 5vh;
+               
+            }
+             }
+            
