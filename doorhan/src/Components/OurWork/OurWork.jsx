@@ -55,14 +55,16 @@ export default function OurWork() {
                         <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleClick} styles={medium} />
                     </div>
                 </div>
+
             </div>
-            {modalActive&&
-<ModalGrats active={modalActive} setActive={setModalActive}/> 
-}
-{
-modalSecond&&
-<ModalInputs active={modalSecond} setActive={setModalSecond} handleSubmit={handleSubmit}/>
-  }
+
+            {modalActive &&
+                <ModalGrats active={modalActive} setActive={setModalActive} />
+            }
+            {
+                modalSecond &&
+                <ModalInputs active={modalSecond} setActive={setModalSecond} handleSubmit={handleSubmit} />
+            }
             {
 
                 <div className={styles.container}>
@@ -86,9 +88,9 @@ modalSecond&&
                         </div>
                     </div>
                 </div>
-
-
             }
+
+
 
         </div>
     )
