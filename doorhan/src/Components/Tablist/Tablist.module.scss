@@ -38,15 +38,6 @@ input[type="radio"] {
     transition: color 0.15s ease-in;
 }
 
-
-// input[type="radio"] {
-//     &:checked {
-//         &+label {
-//             color: var(--primary-color);
-//         }
-//     }
-// }
-
 input[id="radio-1"] {
     &:checked {
         &~.glider {
@@ -68,7 +59,6 @@ input[id="radio-3"] {
         &~.glider {
             transform: translateX(200%);
         }
-
 
     }
 }

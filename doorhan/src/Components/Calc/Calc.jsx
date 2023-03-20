@@ -66,8 +66,9 @@ export default function Calc() {
                   <img src={pic1} alt="ДОСКА" />
                 </div>
                 <form className={styles.checked}>
-                  <input type="radio" id="choice1" name="one" value="choice" />
-                  <label htmlFor="choice1"><img src={check} alt="доска" /></label>
+                  <label htmlFor="choice1"><img src={check} alt="доска" />
+                    <input type="radio" id="choice1" name="one" value="choice" />
+                  </label>
                 </form>
                 <p>ДОСКА</p>
               </div>
@@ -77,8 +78,9 @@ export default function Calc() {
                   <img src={pic2} alt="ШИРОКАЯ ЦЕНТРАЛЬНАЯ ПОЛОСА" />
                 </div>
                 <form className={styles.checked}>
-                  <input type="radio" id="choice2" name="two" value="choice" />
-                  <label htmlFor="choice2"><img src={check} alt="полоса" /></label>
+                  <label htmlFor="choice2"><img src={check} alt="полоса" />
+                    <input type="radio" id="choice2" name="two" value="choice" />
+                  </label>
                 </form>
                 <p>ШИРОКАЯ ЦЕНТРАЛЬНАЯ <br /> ПОЛОСА</p>
               </div>
@@ -88,8 +90,9 @@ export default function Calc() {
                   <img src={pic3} alt="ФИЛЕНКА" />
                 </div>
                 <form className={styles.checked}>
-                  <input type="radio" id="choice3" name="three" value="choice" />
-                  <label htmlFor="choice3"><img src={check} alt="филенка" /></label>
+                  <label htmlFor="choice3"><img src={check} alt="филенка" />
+                    <input type="radio" id="choice3" name="three" value="choice" />
+                  </label>
                 </form>
                 <p>ФИЛЕНКА</p>
               </div>
@@ -99,8 +102,8 @@ export default function Calc() {
                   <img src={pic4} alt="ВОЛНА" />
                 </div>
                 <form className={styles.checked}>
-                  <input type="radio" id="choice4" name="four" value="choice" />
-                  <label htmlFor="choice4"><img src={check} alt="волна" /></label>
+                  <label htmlFor="choice4"><img src={check} alt="волна" />
+                    <input type="radio" id="choice4" name="four" value="choice" /></label>
                 </form>
                 <p>ВОЛНА</p>
               </div>
