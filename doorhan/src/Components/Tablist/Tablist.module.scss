@@ -75,17 +75,25 @@ input[id="radio-3"] {
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
 }
 
-.tabs>div {
-    display: none;
+.content1,
+.content2,
+.content3 {
+    margin: 3rem;
+    height: 408px;
+    max-width: 30vw;
+    background: rgba(237, 237, 237, 0.1);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(34px);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        max-width: 100%;
+    }
+
 }
-
-
-#radio-1:checked~.content1,
-#radio-2:checked~.content2,
-#radio-3:checked~.content3 {
-    display: block;
-}
-
 
 
 
