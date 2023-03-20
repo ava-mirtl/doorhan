@@ -45,8 +45,8 @@ margin: 25px;}
     font-family: $fontM;
     font-size: 12pt;
 }
-@media  (max-width: 781px) { 
-        iframe, .footerLink, .footerContent h2{
+@media  (max-width: 780px) { 
+ .footerLink, .footerContent h2{
         display: none;}
         .footerContent{
             width: 100%;
@@ -67,7 +67,14 @@ margin: 25px;}
             }
         }
     .footerContainer{
-        padding: 20px;
+        padding: 0 0 20px 0;
+        display: flex;
+        flex-direction: column-reverse;
+        iframe{
+            max-width: 100%;
+            height: 200px;
+            margin: 0;
+        }
     }
     
 }

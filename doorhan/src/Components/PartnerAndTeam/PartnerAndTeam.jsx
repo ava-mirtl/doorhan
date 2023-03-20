@@ -12,6 +12,7 @@ import { blue } from '../Title/Title';
 
 
 export default function PartnerAndTeam() {
+  let mobile = window.innerWidth;
   return (
     <div>
       <div className={styles.partnerandteam}>
@@ -25,21 +26,21 @@ export default function PartnerAndTeam() {
         </div>
         <Title styles={blue} title="НАША КОМАНДА"/>
         <div className={styles.our__team}>
-          <div className={styles.team}>
+          <div className={styles.team} id="1">
             <img src={team1} alt="гендиректор" />
             <div className={styles.team__name}>
               <div className={styles.name}>Сергей Казачинский</div>
               <div className={styles.profession}>Генеральный директор</div>
             </div>
           </div>
-          <div className={styles.team}>
+          <div className={styles.team} id = "2">
             <img src={team2} alt="финдиректор" />
             <div className={styles.team__name}>
               <div className={styles.name}>Виолетта Савченко</div>
               <div className={styles.profession}>Финансовый дирекор</div>
             </div>
           </div>
-          <div className={styles.team}>
+          <div className={styles.team} id="3">
             <img src={team3} alt="руководитель монтажников" />
             <div className={styles.team__name}>
               <div className={styles.name}>Ренат Тугушев</div>

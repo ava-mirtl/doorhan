@@ -1,42 +1,59 @@
 @import "../../styles/vars.scss";
 
+.partnerandteam{
+    max-width: 100vw;
+}
 .photos {
     display: flex;
-    justify-content: space-between;
-}
-
-.photo1 {
-    width: 10px;
+    justify-content:center;
+    img{
+        max-width: 22vw;
+    }
 }
 
 .our__team {
-    max-width: 80%;
-    margin: 0 auto;
+    max-width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    .team {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    img {
+       max-width: 24vw;
+    }
 }
-
-.team {
-    margin-right: 3em;
-
-    // img {
-    //     max-width: 100%;
-    // }
 }
-
 .team__name {
     text-align: center;
     padding: 1.5rem;
 
     .name {
         padding-bottom: 5px;
-        font-size: 26px;
+        font-size: 2vw;
         font-weight: bolder;
         font-family: $fontM;
     }
 
     .profession {
-        font-size: 22px;
+        font-size: 1.6vw;
         font-family: $fontM;
     }
+}
+@media  (max-width: 780px) { 
+    .photos{
+        padding: 1rem;
+        display: flex;
+        overflow-x: scroll;
+        scroll-padding: 0 50%;
+        scroll-snap-type: x mandatory;
+        img{
+            max-width: 100vw;
+            scroll-snap-align: center;
+        }
+    }
+
+
+    
+    
 }
