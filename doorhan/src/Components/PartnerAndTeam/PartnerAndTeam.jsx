@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Title from '../Title/Title';
-import styles from './PartnerAndTeam.module.scss';
+import Card from './Card';
 import photo1 from "../../assets/images/premium1.png"
 import photo2 from "../../assets/images/premium2.png"
 import photo3 from "../../assets/images/premium3.png"
@@ -9,10 +9,35 @@ import team1 from "../../assets/images/team1.png"
 import team2 from "../../assets/images/team2.png"
 import team3 from "../../assets/images/team3.png"
 import { blue } from '../Title/Title';
+import styles from './PartnerAndTeam.module.scss';
+
 
 
 export default function PartnerAndTeam() {
-  let mobile = window.innerWidth;
+const [slideIndex, setSlideIndex] = useState(0);
+  const teamData = [{
+      name: 'Сергей Казачинский', 
+      profession: "Генеральный директор",
+      src: `${team1}`
+    }, 
+    {
+      name: 'Виолетта Савченко', 
+      profession: "Финансовый директор",
+      src: `${team2}`
+    },
+    {
+      name: 'Ренат Тугушев', 
+      profession: "Руководитель директор",
+      src: `${team3}`
+    }]
+  let handleSlidePlus = () =>{
+if(slideIndex===2){setSlideIndex(-1);}
+setSlideIndex(prev=> prev+1)
+  }
+  let handleSlideMinus = () =>{
+    if(slideIndex===0){setSlideIndex(3);}
+    setSlideIndex(prev=> prev-1)
+  }
   return (
     <div>
       <div className={styles.partnerandteam}>
@@ -26,31 +51,15 @@ export default function PartnerAndTeam() {
         </div>
         <Title styles={blue} title="НАША КОМАНДА"/>
         <div className={styles.our__team}>
-          <div className={styles.team} id="1">
-            <img src={team1} alt="гендиректор" />
-            <div className={styles.team__name}>
-              <div className={styles.name}>Сергей Казачинский</div>
-              <div className={styles.profession}>Генеральный директор</div>
-            </div>
-          </div>
-          <div className={styles.team} id = "2">
-            <img src={team2} alt="финдиректор" />
-            <div className={styles.team__name}>
-              <div className={styles.name}>Виолетта Савченко</div>
-              <div className={styles.profession}>Финансовый дирекор</div>
-            </div>
-          </div>
-          <div className={styles.team} id="3">
-            <img src={team3} alt="руководитель монтажников" />
-            <div className={styles.team__name}>
-              <div className={styles.name}>Ренат Тугушев</div>
-              <div className={styles.profession}>Руководитель монтажников</div>
-            </div>
-          </div>
-
-
-
-        </div>
+        {teamData.map((item, i)=>(
+          <Card key={i} img={item.src} name={item.name} profession={item.profession}/>
+        ))} </div>
+        {<div className={styles.sliderContainer}>
+            <div className={styles.sliderButton} onClick={handleSlideMinus}>&#12296;</div>
+            <Card img={teamData[slideIndex].src} name={teamData[slideIndex].name} profession={teamData[slideIndex].profession}/>
+            <div onClick={()=>handleSlidePlus()} className={styles.sliderButton}>&#12297;</div>
+          </div>}
+       
 
       </div>
     </div>
