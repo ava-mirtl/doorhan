@@ -73,39 +73,37 @@ export default function WhyDoorhan() {
         <div className={styles.container__aboutus}>
           <Title styles={blue} title="ПОЧЕМУ ВЫБИРАЮТ НАС:" />
           <div className={styles.container__main2}>
-            <div className="orange">
               <div className={styles.container__circlepic1}>
-                <img className={styles.circle1} src={circle} alt="picture" />
+                <p className={styles.one}>10% предоплата. Оплачиваете полную стоимость изделия и доставку по факту доставки ворот на ваш объект.</p>
+                <img className={styles.circle1} src={circle} alt="точка" />
               </div>
               <div className={styles.container__circlepic2}>
-                <img className={styles.circle2} src={circle} alt="picture" />
+                <p className={styles.two}>У нас свой склад в: Одинцово, Мытищи, Люберцы, Подольск.</p>
+                <img className={styles.circle2} src={circle} alt="точка" />
               </div>
               <div className={styles.container__circlepic3}>
-                <img className={styles.circle3} src={circle} alt="picture" />
+                <p className={styles.three}>Ежегодное бесплатное обслуживание (регулировка роликов/пружины,
+                настройка автоматики)</p>
+                <img className={styles.circle3} src={circle} alt="точка" />
               </div>
               <div className={styles.container__circlepic4}>
-                <img className={styles.circle4} src={circle} alt="picture" />
+                <p className={styles.four}>При покупке ворот под ключ mini box в подарок </p>
+                <img className={styles.circle4} src={circle} alt="точка" />
               </div>
               <div className={styles.container__circlepic5}>
-                <img className={styles.circle5} src={circle} alt="picture" />
+                <p className={styles.five}>Покупка ворот в рассрочку от 3 до 12 месяцев</p>
+                <img className={styles.circle5} src={circle} alt="точка" />
               </div>
               <div className={styles.container__circlepic6}>
-                <img className={styles.circle6} src={circle} alt="picture" />
+                <p className={styles.six}>Квалифицированные и опытные специалисты по монтажу, которые ежегодно проходят обучение по установке ворот.</p>
+                <img className={styles.circle6} src={circle} alt="точка" />
               </div>
               <div className={styles.container__circlepic7}>
-                <img className={styles.circle7} src={circle} alt="picture" />
+                <p className={styles.seven}>Бесплатный выезд замерщика с образцами и раскладкой цветов по RAL</p>
+                <img className={styles.circle7} src={circle} alt="точка" />
               </div>
-            </div>
 
 
-
-            <div className={styles.container__left}>
-              <p className={styles.one}>10% предоплата. Оплачиваете полную стоимость изделия и доставку по факту доставки ворот на ваш объект.</p>
-              <p className={styles.two}>У нас свой склад в: Одинцово, Мытищи, Люберцы, Подольск.</p>
-              <p className={styles.three}>Ежегодное бесплатное обслуживание (регулировка роликов/пружины,
-                настройка автоматики)</p>
-
-            </div>
             <div className={styles.container__pict}>
               <div className={styles.round}>
                 <div className={styles.round2}>
@@ -115,16 +113,7 @@ export default function WhyDoorhan() {
                 </div>
               </div>
             </div>
-
-            <div className={styles.container__right}>
-              <p className={styles.four}>При покупке ворот под ключ mini box в подарок </p>
-              <p className={styles.five}>Покупка ворот в рассрочку от 3 до 12 месяцев</p>
-              <p className={styles.six}>Квалифицированные и опытные специалисты по монтажу, которые ежегодно проходят обучение по установке ворот.</p>
-            </div>
-
           </div>
-          <p className={styles.seven}>Бесплатный выезд замерщика с образцами и раскладкой цветов по RAL</p>
-
         </div>
       </div>
       {modalActive &&
