@@ -1,0 +1,106 @@
+@import '../../styles/vars.scss';
+
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+
+.tabs {
+    display: flex;
+    background: linear-gradient(176.59deg, rgba(233, 251, 255, 0) 5.41%, rgba(248, 254, 255, 0) 5.42%, rgba(237, 237, 237, 0.45) 26.05%, rgba(247, 247, 247, 0.45) 79.2%, rgba(255, 255, 255, 0) 97.4%);
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(30.5px);
+    padding: 0.50rem;
+    border-radius: 87px;
+    height: 80px;
+
+    * {
+        z-index: 2;
+    }
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 65px;
+    width: 180px;
+    font-size: 1.25rem;
+    border-radius: 74px;
+    cursor: pointer;
+    transition: color 0.15s ease-in;
+}
+
+
+// input[type="radio"] {
+//     &:checked {
+//         &+label {
+//             color: var(--primary-color);
+//         }
+//     }
+// }
+
+input[id="radio-1"] {
+    &:checked {
+        &~.glider {
+            transform: translateX(0);
+        }
+    }
+}
+
+input[id="radio-2"] {
+    &:checked {
+        &~.glider {
+            transform: translateX(100%);
+        }
+    }
+}
+
+input[id="radio-3"] {
+    &:checked {
+        &~.glider {
+            transform: translateX(200%);
+        }
+
+
+    }
+}
+
+.glider {
+    position: absolute;
+    display: flex;
+    height: 65px;
+    width: 180px;
+    background-color: $base-white;
+    z-index: 1;
+    border-radius: 74px;
+    transition: 0.25s ease-out;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
+}
+
+.tabs>div {
+    display: none;
+}
+
+
+#radio-1:checked~.content1,
+#radio-2:checked~.content2,
+#radio-3:checked~.content3 {
+    display: block;
+}
+
+
+
+
+@media (max-width: 700px) {
+    .tabs {
+        transform: scale(0.6);
+    }
+}
