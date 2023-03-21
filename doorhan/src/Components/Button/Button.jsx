@@ -40,7 +40,10 @@ export const our_gar = {
   width: "15vw",
   height: "3vw",
   fontSize: "0.8vw",
-  margin: "0.5vw"
+  margin: "0.5vw",
+  backgroundColor: 'white',
+  border: "2px solid #F39912",
+  color: "#F39912"
 }
 export const our_prom = {
   padding: "10px",
