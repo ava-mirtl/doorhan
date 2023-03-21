@@ -39,29 +39,16 @@ export default function Calc() {
 
 
   //счетчики длина и высота
-  const onNextClick = () => {
-    setCount(count + 1);
+  const onNextClick = (a, set) => {
+    set(a + 1);
   }
 
-  const onPrevClick = () => {
-    if (count > 0) {
-      setCount(count - 1);
+  const onPrevClick = (a, set) => {
+    if (a > 0) {
+      set(a - 1);
     }
     else {
-      setCount(count)
-    }
-  }
-
-  const onNextClick2 = () => {
-    setCount2(count2 + 1);
-  }
-
-  const onPrevClick2 = () => {
-    if (count2 > 0) {
-      setCount2(count2 - 1);
-    }
-    else {
-      setCount2(count2)
+      set(a)
     }
   }
 
@@ -161,19 +148,19 @@ export default function Calc() {
                       ДЛИНА
                     </div>
                     <div className={styles.sizes__count}>
-                      <button className={styles.bt_left} >
+                      <button className={styles.bt_left} type="button" >
                         <img
                           src={str}
                           alt="left"
-                          onClick={onPrevClick}
+                          onClick={()=>onPrevClick(count, setCount)}
                         />
                       </button>
                       <input type="text" value={count} />
-                      <button className={styles.bt_right} >
+                      <button className={styles.bt_right} type="button" >
                         <img
                           src={str}
                           alt="right"
-                          onClick={onNextClick}
+                          onClick={()=>onNextClick(count, setCount)}
                         />
                       </button>
                     </div>
@@ -185,19 +172,19 @@ export default function Calc() {
                       ВЫСОТА
                     </div>
                     <div className={styles.sizes__count}>
-                      <button className={styles.bt_left} >
+                      <button className={styles.bt_left} type="button" >
                         <img
                           src={str}
                           alt="left"
-                          onClick={onPrevClick2}
+                          onClick={()=>onPrevClick(count2, setCount2)}
                         />
                       </button>
-                      <input type="text" value={count2} readonly min="0" />
-                      <button className={styles.bt_right} >
+                      <input type="text" value={count2} />
+                      <button className={styles.bt_right} type="button">
                         <img
                           src={str}
                           alt="right"
-                          onClick={onNextClick2}
+                          onClick={()=>onNextClick(count2, setCount2)}
                         />
                       </button>
                     </div>

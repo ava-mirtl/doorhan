@@ -49,18 +49,18 @@ export default function OurWork() {
                         {promBlock
                         ?<div className={styles.text}>
                             <p className={styles.p__title}>Промышленные секционные ворота </p>
-                            <p className={styles.p}><span>Размер проема:</span> ш. 13000 мм, в. 11500 мм</p>
-                            <p className={styles.p}><span>Тип панели:</span> М-гофр широкая полоса</p>
-                            <p className={styles.p}><span>Цвет:</span> Wood Blue (RAL9016)</p>
-                            <p className={styles.p}><span>Способ управления:</span>автоматические</p>
+                            <p className={styles.p}><span>Размер проема: </span>ш. 13000 мм, в. 11500 мм</p>
+                            <p className={styles.p}><span>Тип панели: </span>М-гофр широкая полоса</p>
+                            <p className={styles.p}><span>Цвет: </span>Wood Blue (RAL9016)</p>
+                            <p className={styles.p}><span>Способ управления: </span>автоматические</p>
                         </div>
                         :<div className={styles.text}>
                             <p className={styles.p__title}>Гаражные секционные ворота </p>
-                            <p className={styles.p}><span>Размер проема:</span> ш. 3000 мм, в. 2400 мм</p>
-                            <p className={styles.p}><span>Тип панели:</span>М-гофр широкая полоса</p>
-                            <p className={styles.p}><span>Цвет:</span>Wood Blue (RAL9016)</p>
-                            <p className={styles.p}><span>Адрес объекта:</span> Павловская Слобода</p>
-                            <p className={styles.p}><span>Способ управления:</span>автоматические</p>
+                            <p className={styles.p}><span>Размер проема: </span>ш. 3000 мм, в. 2400 мм</p>
+                            <p className={styles.p}><span>Тип панели: </span>М-гофр широкая полоса</p>
+                            <p className={styles.p}><span>Цвет: </span>Wood Blue (RAL9016)</p>
+                            <p className={styles.p}><span>Адрес объекта: </span>Павловская Слобода</p>
+                            <p className={styles.p}><span>Способ управления: </span>автоматические</p>
                         </div>}
                         <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleClick} styles={medium} />
                     </div>
