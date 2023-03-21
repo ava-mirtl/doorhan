@@ -50,19 +50,21 @@
                 border-radius: 50%;
                 position: relative;
                 bottom: 4vh;
+                left: calc(50% - 17.5px);
 
-
-
-                input {
-                    display: none;
-                }
-
+                
                 img {
                     margin-top: 10px;
+                    align-self: center;
                     align-content: center;
                 }
             }
-
+                input {
+                    display: none;
+                }
+                input:checked~.checked{
+                    background-color: #415C93;
+                }
             p {
                 position: relative;
                 bottom: 1rem;
@@ -496,7 +498,6 @@ input[name="texture"] {
 
     .container__right_bottom {}
 }
-
 
 // .container1 {
 

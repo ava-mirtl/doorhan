@@ -67,50 +67,55 @@ export default function Calc() {
           <div className={styles.container__left}>
             <div className={styles.container__left_top} onClick={(e) => { handleChoice(e) }}>
               <div className={styles.choice}>
-                <div className={styles.img}>
-                  <img src={pic1} alt="ДОСКА" />
-                </div>
-                <form className={styles.checked}>
-                  <label htmlFor="choice1"><img src={check} alt="доска" />
-                    <input type="radio" id="choice1" name="one" value="choice" />
+                <label htmlFor="choice1">
+                  <div className={styles.img}>
+                    <img src={pic1} alt="ДОСКА" />
+                  </div>
+                  <input type="radio" id="choice1" name="one" value="доска" />
+                  <div className={styles.checked}>
+                      <img src={check} alt="доска" />
+                    </div>
+                    <p>ДОСКА</p>
                   </label>
-                </form>
-                <p>ДОСКА</p>
               </div>
 
               <div className={styles.choice}>
-                <div className={styles.img}>
-                  <img src={pic2} alt="ШИРОКАЯ ЦЕНТРАЛЬНАЯ ПОЛОСА" />
-                </div>
-                <form className={styles.checked}>
-                  <label htmlFor="choice2"><img src={check} alt="полоса" />
-                    <input type="radio" id="choice2" name="two" value="choice" />
+                <label htmlFor="choice2">
+                  <div className={styles.img}>
+                    <img src={pic2} alt="ШИРОКАЯ ЦЕНТРАЛЬНАЯ ПОЛОСА" />
+                  </div>
+                  <input type="radio" id="choice2" name="one" value="широкая центральная полоса" />
+                  <div className={styles.checked}>
+                      <img src={check} alt="полоса" />
+                    </div>
+                    <p>ШИРОКАЯ ЦЕНТРАЛЬНАЯ <br /> ПОЛОСА</p>
                   </label>
-                </form>
-                <p>ШИРОКАЯ ЦЕНТРАЛЬНАЯ <br /> ПОЛОСА</p>
               </div>
 
               <div className={styles.choice}>
-                <div className={styles.img}>
-                  <img src={pic3} alt="ФИЛЕНКА" />
-                </div>
-                <form className={styles.checked}>
-                  <label htmlFor="choice3"><img src={check} alt="филенка" />
-                    <input type="radio" id="choice3" name="three" value="choice" />
-                  </label>
-                </form>
-                <p>ФИЛЕНКА</p>
+                <label htmlFor="choice3">
+                  <div className={styles.img}>
+                    <img src={pic3} alt="ФИЛЕНКА" />
+                  </div>
+                  <input className={styles.checkedInput} type="radio" id="choice3" name="one" value="филенка" />
+                  <div className={styles.checked}>
+                    <img src={check} alt="филенка" />
+                  </div>
+                  <p>ФИЛЕНКА</p>
+                </label>
               </div>
 
               <div className={styles.choice}>
-                <div className={styles.img}>
-                  <img src={pic4} alt="ВОЛНА" />
-                </div>
-                <form className={styles.checked}>
-                  <label htmlFor="choice4"><img src={check} alt="волна" />
-                    <input type="radio" id="choice4" name="four" value="choice" /></label>
-                </form>
-                <p>ВОЛНА</p>
+                <label htmlFor="choice4">
+                  <div className={styles.img}>
+                    <img src={pic4} alt="ВОЛНА" />
+                  </div>
+                  <input type="radio" id="choice4" name="one" value="волна" />
+                  <div className={styles.checked}>
+                    <img src={check} alt="волна" />
+                  </div>
+                  <p>ВОЛНА</p>
+                </label>
               </div>
             </div>
 
