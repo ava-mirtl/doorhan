@@ -1,6 +1,6 @@
 @import "../../styles/vars.scss";
 
-.modal{
+.modal {
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.4);
     position: fixed;
@@ -14,36 +14,44 @@
     transition: opacity 0.4s;
     height: 100vh;
 }
-.modal.active{
+
+.modal.active {
     opacity: 1;
     pointer-events: all;
 }
-.body{
+
+.body {
     overflow-y: hidden;
 }
-.modal__content{
+
+.modal__content {
     width: 50vw;
     padding: 20px;
     transform: scale(0.5);
-    transition: transform 0.4s ;
+    transition: transform 0.4s;
 }
-.modal__content.active{
+
+.modal__content.active {
     transform: scale(1);
 }
-.modal__triangles{
+
+.modal__triangles {
     opacity: 0;
     display: flex;
     flex-direction: column;
-    align-items:stretch;
+    align-items: stretch;
 }
-.modal.active>.modal__content>.modal__triangles{
-    opacity:1
+
+.modal.active>.modal__content>.modal__triangles {
+    opacity: 1
 }
-.modal__triangles::before{
+
+.modal__triangles::before {
     content: "";
     height: 20vw;
     width: 20vw;
-    background:  linear-gradient(180deg, #003676 0%, #1A59A3 100%);;
+    background: linear-gradient(180deg, #003676 0%, #1A59A3 100%);
+    ;
     border: inherit;
     position: absolute;
     bottom: -8.8vw;
@@ -52,11 +60,13 @@
     transform: rotate(135deg);
     border-radius: 0 0 0 70%;
 }
-.modal__triangles::after{
+
+.modal__triangles::after {
     content: "";
     height: 20vw;
     width: 20vw;
-    background:  linear-gradient(180deg, #003676 0%, #1A59A3 100%);;
+    background: linear-gradient(180deg, #003676 0%, #1A59A3 100%);
+    ;
     border: inherit;
     position: absolute;
     top: -8.8vw;
@@ -64,76 +74,93 @@
     clip-path: polygon(0% 0%, 100% 100%, 60% 40%);
     transform: rotate(135deg);
     border-radius: 0 0 0 70%;
-    }
+}
 
-.popupContainer{
+.popupContainer {
     height: 500px;
     width: 65vw;
     background-color: #F1F0F2;
     border: 4.72906px solid #003676;
     border-radius: 35px;
     display: flex;
-        
-    .imgContainer{
+
+    .imgContainer {
         display: flex;
         align-items: flex-end;
         width: fit-content;
+    }
+
+    .popupTxt {
+        font-family: $fontM;
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        width: 65vw;
+        align-items: center;
+        height: 100%;
+        font-weight: 600;
+        font-size: 30pt;
+        line-height: 142.5%;
+
+        .popupTitle {
+            width: 60%;
+            margin: 10px;
+            justify-self: flex-end;
         }
-            .popupTxt{
-            font-family: $fontM;
-            position: absolute;
-            display: flex;
-            justify-content: flex-end;
-            width: 65vw;
-            align-items: center;
-            height: 100%;
-            font-weight: 600;
-            font-size: 30pt;
-            line-height: 142.5%;
-                .popupTitle{
-                width: 60%;
-                margin: 10px;
-                justify-self:flex-end;
-        }}}
-        .popupContainerNext{
-            height: 600px;
-            min-height: 500px;
-            width: 65vw;
+    }
+}
+
+.popupContainerNext {
+    height: 600px;
+    min-height: 500px;
+    width: 65vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F1F0F2;
+    border: 4.72906px solid #003676;
+    border-radius: 35px;
+
+    .popupTitleNext {
+        width: 65vw;
+        font-family: $fontM;
+        font-weight: 600;
+        font-size: 30pt;
+        line-height: 142.5%;
+        text-align: center;
+
+        .formNext {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: #F1F0F2;
-            border: 4.72906px solid #003676;
-            border-radius: 35px;
-        .popupTitleNext{width: 65vw;
-            font-family: $fontM;
-            font-weight: 600;
-                font-size: 30pt;
-                line-height: 142.5%; 
-                text-align: center;
-            .formNext{
-                display: flex;
-                flex-direction: column ;
-                justify-content: space-around;
-                width: 80%;}}}
-        .inputNext{
-            margin: 10px;
-            width: 100%;
-            height: 5vw;
-            box-shadow: inset 0px -1.125px 2.25px rgba(0, 0, 0, 0.25), inset 0px 2.25px 4.5px rgba(0, 0, 0, 0.25);
-            font-size: 2rem;
-            border: 1px solid $base-gray;
-            border-radius: 12px;
-            padding: 5px;
-            }
-            .popupTitle{
-                width: 60%;
-                margin: 10px;
-                justify-self:flex-end;
-                color: $base-black;
-                }
-
-@media (max-width: 768px) {
-    
+            justify-content: space-around;
+            width: 80%;
+        }
+    }
 }
+
+.inputNext {
+    margin: 10px;
+    width: 100%;
+    height: 5vw;
+    box-shadow: inset 0px -1.125px 2.25px rgba(0, 0, 0, 0.25), inset 0px 2.25px 4.5px rgba(0, 0, 0, 0.25);
+    font-size: 2rem;
+    border: 1px solid $base-gray;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+.popupTitle {
+    width: 60%;
+    margin: 10px;
+    justify-self: flex-end;
+    color: $base-black;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {}

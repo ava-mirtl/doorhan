@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import OrangeBtn from '../OrangeBtn/OrangeBtn';
-import Button from '../Button/Button';
+import Button, { why } from '../Button/Button';
 import ModalGrats from '../Modal/ModalGrats';
 import Title, { white } from '../Title/Title';
 import { howto } from '../Button/Button';
@@ -13,28 +13,38 @@ import dogovor from '../../assets/icons/dogovor.png';
 import styles from './HowToBuy.module.scss';
 
 export default function HowToBuy() {
-  
+
   document.body.style.overflow = '';
   const date = new Date
 
   const [modalActive, setModalActive] = useState(false);
 
-  const handleClick = (event)=>{
+  const handleClick = (event) => {
     event.preventDefault();
     setModalActive(true);
   }
 
-    return (
+  return (
     <div className={styles.box}>
-      <Title styles={white} title="КАК КУПИТЬ ВОРОТА ЗА 1 ДЕНЬ"/>
-        <div className={styles.container}>
-          <div  className={styles.dropContainer}>
-            <OrangeBtn img={calendar}/>
-            <div  className={styles.borderContainer}/>
-            <OrangeBtn img={house}/>
-            <div  className={styles.borderContainer}/>
-            <OrangeBtn img={price}/>
+      <Title styles={white} title="КАК КУПИТЬ ВОРОТА ЗА 1 ДЕНЬ" />
+      <div className={styles.container}>
+        <div className={styles.dropContainer}>
+          <div className={styles.btn}>
+            <OrangeBtn img={calendar} />
           </div>
+          <div className={styles.borderContainer} />
+
+          <div className={styles.btn}>
+            <OrangeBtn img={house} />
+          </div>
+          <div className={styles.borderContainer} />
+
+          <div className={styles.btn}>
+            <OrangeBtn img={price} />
+          </div>
+        </div>
+
+
         <div className={styles.txtContainer}>
           <div className={styles.txtC1}>
             <div className={styles.txt}>МЫ МОЖЕМ ВАМ ПОМОЧЬ ПРИОБРЕСТИ ВОРОТА ЗА 1 ДЕНЬ!
@@ -49,12 +59,19 @@ export default function HowToBuy() {
             </div>
           </div>
         </div>
-        <div  className={styles.dropContainer2}>
-          <OrangeBtn img={sm}/>
-          <div  className={styles.borderContainer}>
+
+        <div className={styles.dropContainer2}>
+
+          <div className={styles.btn2}>
+            <OrangeBtn img={sm} />
+          </div>
+
+          <div className={styles.borderContainer}>
             <img src={bibip} alt="машинка" />
           </div>
-          <OrangeBtn img={dogovor}/>
+          <div className={styles.btn2}>
+            <OrangeBtn img={dogovor} />
+          </div>
         </div>
         <div className={styles.txtContainer2}>
           <div className={styles.txtC4}>
@@ -70,18 +87,18 @@ export default function HowToBuy() {
           <div className={styles.txtDate}>УСПЕЙ ЗАКАЗАТЬ СЕГОДНЯ!
           </div>
           <div className={styles.date}>
-            {date.getDate()}.{date.getMonth()+1<10?'0'+(date.getMonth()+1):date.getMonth()+1}
+            {date.getDate()}.{date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1}
           </div>
         </div>
         <form className={styles.formNext}>
-          <input type="text" className={styles.inputNext} placeholder='Имя'/>
-          <input type="text" className={styles.inputNext} placeholder='Телефон'/>
-          <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleClick} styles={howto} />
+          <input type="text" className={styles.inputNext} placeholder='Имя' />
+          <input type="text" className={styles.inputNext} placeholder='Телефон' />
+          <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleClick} styles={why} />
         </form>
       </div>
-    {modalActive&&
-      <ModalGrats active={modalActive} setActive={setModalActive}/> 
-    }
-  </div>
+      {modalActive &&
+        <ModalGrats active={modalActive} setActive={setModalActive} />
+      }
+    </div>
   )
 }

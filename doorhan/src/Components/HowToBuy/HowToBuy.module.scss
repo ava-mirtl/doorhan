@@ -56,13 +56,28 @@
 .txtC3,
 .txtC5 {
     justify-content: start;
+
+}
+
+.txtC1 {
+    margin-left: 4vw;
+}
+
+.txtC3 {
+    margin-right: 7vw;
+
+}
+
+.txtC4 {
+    position: relative;
+    right: 1rem;
 }
 
 .txt {
     padding: 5px;
     width: 60%;
     text-align: center;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
 }
 
 .dropContainer {
@@ -77,17 +92,20 @@
 
 }
 
-
-
 .dropContainer2 {
     padding: 20px;
     align-items: center;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
 
-    .borderContainer img {
-        animation: car 3s infinite linear;
-        white-space: nowrap;
+    .borderContainer {
+        position: relative;
+        bottom: 4vh;
+
+        img {
+            animation: car 3s infinite linear;
+            white-space: nowrap;
+        }
     }
 }
 
@@ -96,12 +114,14 @@
         transform: translate(0, 0);
     }
 
-    100% {
-        transform: translate(300px, 0);
-
+    85% {
+        opacity: 0.8;
     }
 
-
+    100% {
+        transform: translate(300px, 0);
+        opacity: 0;
+    }
 }
 
 
@@ -145,4 +165,146 @@
 .txtDate {
     font-size: 3vw;
     align-self: center;
+}
+
+
+
+@media (max-width: 1350px) {
+    .txtC1 {
+        margin-left: -2vw;
+    }
+
+    .txtC3 {
+        margin-right: -2vw;
+
+    }
+}
+
+
+@media (max-width: 1250px) {
+    .txtC1 {
+        margin-right: 5vw;
+    }
+
+    .txtC3 {
+        margin-left: 5vw;
+    }
+
+    .txtC4 {
+        margin-right: 6vw;
+    }
+
+    .txtC5 {
+        margin-left: 6vw;
+    }
+
+}
+
+@media (max-width: 1050px) {
+    .txtC1 {
+        margin-left: -15vw;
+        text-align: start;
+    }
+
+    .txtC3 {
+        margin-right: -15vw;
+    }
+
+    .txtC4 {
+        margin-right: 15vw;
+    }
+
+    .txtC5 {
+        margin-left: 15vw;
+    }
+}
+
+
+@media (max-width: 780px) {
+
+    .box {
+        padding: 0 0;
+    }
+
+    .dropContainer,
+    .dropContainer2 {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .borderContainer {
+        display: none;
+    }
+
+    .txtContainer,
+    .txtContainer2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn {
+        margin-bottom: 15vh;
+    }
+
+    .txtC1 {
+        position: relative;
+        bottom: 69vh;
+        right: 10vw;
+    }
+
+    .txtC2 {
+        position: relative;
+        bottom: 49vh;
+    }
+
+    .txtC3 {
+        position: relative;
+        bottom: 29vh;
+        left: 9vw;
+    }
+
+    .txt {
+        font-size: 1rem;
+    }
+
+    .btn2 {
+        margin-bottom: 15vh;
+        position: relative;
+        bottom: 26vh;
+    }
+
+    .txtC4 {
+        position: relative;
+        bottom: 69vh;
+        right: 10vw;
+    }
+
+    .txtC5 {
+        position: relative;
+        bottom: 54vh;
+        left: 10vw;
+    }
+
+    .formNext,
+    .dateContainer {
+        position: relative;
+        bottom: 53vh;
+
+    }
+
+    .dateContainer {
+        width: 120%;
+    }
+
+    .formNext {
+        flex-direction: column;
+    }
+
+    .inputNext {
+        height: 8vw;
+        width: 100%;
+        font-size: 3vw;
+    }
+
 }
