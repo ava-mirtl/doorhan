@@ -18,7 +18,7 @@
             margin-right: 5vw;
 
             img {
-                max-width: 100%;
+                width: 100%;
             }
         }
 
@@ -46,3 +46,25 @@
         }
     }
 }
+
+
+
+
+@media (max-width: 1350px) {
+    .txtC1 {
+        margin-left: -2vw;
+    }
+
+    .txtC3 {
+        margin-right: -2vw;
+
+    }
+}
+
+
+@media (max-width: 1250px) {}
+
+@media (max-width: 1050px) {}
+
+
+@media (max-width: 780px) {}

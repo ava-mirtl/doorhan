@@ -14,10 +14,9 @@ import der1 from '../../assets/images/derevo1.png';
 import der2 from '../../assets/images/derevo2.png';
 import der3 from '../../assets/images/derevo3.png';
 import str from '../../assets/icons/str.png'
-import Button, { medium, popupStyle } from '../Button/Button';
+import Button, { medium2, popupStyle } from '../Button/Button';
 import Tabs from '../Tablist/Tablist';
 import { blue } from '../Title/Title';
-import { set } from 'immutable';
 
 
 export default function Calc() {
@@ -72,10 +71,10 @@ export default function Calc() {
                   </div>
                   <input type="radio" id="choice1" name="one" value="доска" />
                   <div className={styles.checked}>
-                      <img src={check} alt="доска" />
-                    </div>
-                    <p>ДОСКА</p>
-                  </label>
+                    <img src={check} alt="доска" />
+                  </div>
+                  <p>ДОСКА</p>
+                </label>
               </div>
               <div className={styles.choice}>
                 <label htmlFor="choice2">
@@ -84,10 +83,10 @@ export default function Calc() {
                   </div>
                   <input type="radio" id="choice2" name="one" value="широкая центральная полоса" />
                   <div className={styles.checked}>
-                      <img src={check} alt="полоса" />
-                    </div>
-                    <p>ШИРОКАЯ ЦЕНТРАЛЬНАЯ <br /> ПОЛОСА</p>
-                  </label>
+                    <img src={check} alt="полоса" />
+                  </div>
+                  <p>ШИРОКАЯ ЦЕНТРАЛЬНАЯ <br /> ПОЛОСА</p>
+                </label>
               </div>
               <div className={styles.choice}>
                 <label htmlFor="choice3">
@@ -143,18 +142,18 @@ export default function Calc() {
                       ДЛИНА
                     </div>
                     <div className={styles.sizes__count}>
-                      <button className={styles.bt_left} 
-                        type="button" 
-                        onClick={()=>onPrevClick(count, setCount)}
-                        >
-                          <img src={str} alt="left"/>
+                      <button className={styles.bt_left}
+                        type="button"
+                        onClick={() => onPrevClick(count, setCount)}
+                      >
+                        <img src={str} alt="left" />
                       </button>
                       <input type="text" value={count} />
-                      <button className={styles.bt_right} 
-                        type="button" 
-                        onClick={()=>onNextClick(count, setCount)}
-                        >
-                            <img src={str} alt="right"/>
+                      <button className={styles.bt_right}
+                        type="button"
+                        onClick={() => onNextClick(count, setCount)}
+                      >
+                        <img src={str} alt="right" />
                       </button>
                     </div>
                   </div>
@@ -163,18 +162,18 @@ export default function Calc() {
                       ВЫСОТА
                     </div>
                     <div className={styles.sizes__count}>
-                      <button className={styles.bt_left} 
-                        type="button" 
-                        onClick={()=>onPrevClick(count2, setCount2)}
-                        >
-                            <img src={str} alt="left"/>
+                      <button className={styles.bt_left}
+                        type="button"
+                        onClick={() => onPrevClick(count2, setCount2)}
+                      >
+                        <img src={str} alt="left" />
                       </button>
                       <input type="text" value={count2} />
-                      <button className={styles.bt_right} 
-                        type="button" 
-                        onClick={()=>onNextClick(count2, setCount2)}
-                        >
-                            <img src={str} alt="right"/>
+                      <button className={styles.bt_right}
+                        type="button"
+                        onClick={() => onNextClick(count2, setCount2)}
+                      >
+                        <img src={str} alt="right" />
                       </button>
                     </div>
                   </div>
@@ -182,53 +181,61 @@ export default function Calc() {
                 <div className={styles.control_4}>
                   <p>ВЫБЕРИТЕ <br />ЦВЕТ ВОРОТ</p>
                   <div className={styles.colors}>
-                    <div><input type="radio" name='color' id='color1' value="белый"/><label className={styles.round} htmlFor="color1"><div className={styles.btn1}></div></label></div>
-                    <div><input type="radio" name='color' id='color2' value="серый"/><label className={styles.round} htmlFor="color2"><div className={styles.btn2}></div></label></div>
-                    <div><input type="radio" name='color' id='color3' value="бежевый"/><label className={styles.round} htmlFor="color3"><div className={styles.btn3}></div></label></div>
-                    <div><input type="radio" name='color' id='color4' value="черный"/><label className={styles.round} htmlFor="color4"><div className={styles.btn4}></div></label></div>
-                    <div><input type="radio" name='color' id='color5' value="синий"/><label className={styles.round} htmlFor="color5"><div className={styles.btn5}></div></label></div>
-                    <div><input type="radio" name='color' id='color6' value="красный"/><label className={styles.round} htmlFor="color6"><div className={styles.btn6}></div></label></div>
-                    <div><input type="radio" name='color' id='color7' value="коричневый"/><label className={styles.round} htmlFor="color7"><div className={styles.btn7}></div></label></div>
-                    <div><input type="radio" name='color' id='color8' value="черный"/><label className={styles.round} htmlFor="color8"><div className={styles.btn8}></div></label></div>
+                    <div><input type="radio" name='color' id='color1' value="белый" /><label className={styles.round} htmlFor="color1"><div className={styles.btn1}></div></label></div>
+                    <div><input type="radio" name='color' id='color2' value="серый" /><label className={styles.round} htmlFor="color2"><div className={styles.btn2}></div></label></div>
+                    <div><input type="radio" name='color' id='color3' value="бежевый" /><label className={styles.round} htmlFor="color3"><div className={styles.btn3}></div></label></div>
+                    <div><input type="radio" name='color' id='color4' value="черный" /><label className={styles.round} htmlFor="color4"><div className={styles.btn4}></div></label></div>
+                    <div><input type="radio" name='color' id='color5' value="синий" /><label className={styles.round} htmlFor="color5"><div className={styles.btn5}></div></label></div>
+                    <div><input type="radio" name='color' id='color6' value="красный" /><label className={styles.round} htmlFor="color6"><div className={styles.btn6}></div></label></div>
+                    <div><input type="radio" name='color' id='color7' value="коричневый" /><label className={styles.round} htmlFor="color7"><div className={styles.btn7}></div></label></div>
+                    <div><input type="radio" name='color' id='color8' value="черный" /><label className={styles.round} htmlFor="color8"><div className={styles.btn8}></div></label></div>
                   </div>
                 </div>
               </div>
+
               <div className={styles.container_texture}>
                 <p>ТИП ПОВЕРХНОСТИ</p>
                 <div className={styles.texture__cards}>
                   <div className={styles.texture1}>
                     <div className={styles.first}>
-                      <div className={styles.img}>
-                        <img src={der1} alt="текстура" />
-                      </div>
-                      <form className={styles.checked_texture}>
-                        <input type="radio" id="texture1" name="texture" value="check" />
-                        <label htmlFor="texture1"><img src={check} alt="волна" /></label>
-                      </form>
+                      <label htmlFor="texture1">
+                        <div className={styles.img}>
+                          <img src={der1} alt="текстура" />
+                        </div>
+                        <input className={styles.checkedInput} type="radio" id="texture1" name="texture" value="check" />
+                        <div className={styles.checked}>
+                          <img src={check} alt="текстура1" />
+                        </div>
+                      </label>
                     </div>
                     <div className={styles.second}>
-                      <div className={styles.img}>
-                        <img src={der2} alt="текстура" />
-                      </div>
-                      <form className={styles.checked_texture}>
+                      <label htmlFor="texture2">
+                        <div className={styles.img}>
+                          <img src={der2} alt="текстура" />
+                        </div>
                         <input type="radio" id="texture2" name="texture" value="check" />
-                        <label htmlFor="texture2"><img src={check} alt="волна" /></label>
-                      </form>
+                        <div className={styles.checked}>
+                          <img src={check} alt="текстура2" />
+                        </div>
+                      </label>
                     </div>
                   </div>
                   <div className={styles.texture2}>
                     <div className={styles.third}>
-                      <div className={styles.img}>
-                        <img src={der3} alt="текстура" />
-                      </div>
-                      <form className={styles.checked_texture}>
+                      <label className={styles.label_text} htmlFor="texture3">
+                        <div className={styles.img}>
+                          <img src={der3} alt="текстура" />
+                        </div>
                         <input type="radio" id="texture3" name="texture" value="check" />
-                        <label htmlFor="texture3"><img src={check} alt="волна" /></label>
-                      </form>
+                        <div className={styles.checked}>
+                          <img src={check} alt="текстура3" />
+                        </div>
+                      </label>
                     </div>
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
           <div className={styles.container__right}>
@@ -238,7 +245,7 @@ export default function Calc() {
             <div className={styles.container__right_bottom}>
               <form className={styles.container__form}>
                 <input type="text" className={styles.input} placeholder='Телефон' />
-                <Button type='submit' onClick={(e) => handleSubmit(e)} styles={medium} name="УТОЧНИТЬ СТОИМОСТЬ" />
+                <Button type='submit' onClick={(e) => handleSubmit(e)} styles={medium2} name="УТОЧНИТЬ СТОИМОСТЬ" />
               </form>
             </div>
           </div>
