@@ -53,10 +53,19 @@ export const our_prom = {
   margin: "0.5vw",
 }
 
+export const how_to_buy = {
+  padding: "10px",
+  width: "100%",
+  minHeight: "45px",
+  fontSize: "10pt",
+  height: "4vw",
+  minheight: "7vw",
+  borderRadius: '0 20px 20px'
+}
 
 
 export default function Button({ name, onClick, styles }) {
   return (
-      <button style={styles} onClick={(e) => onClick(e)} className="btn">{name}</button>
+    <button style={styles} onClick={(e) => onClick(e)} className="btn">{name}</button>
   )
 }
