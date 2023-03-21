@@ -61,11 +61,9 @@ export default function HowToBuy() {
         </div>
 
         <div className={styles.dropContainer2}>
-
           <div className={styles.btn2}>
             <OrangeBtn img={sm} />
           </div>
-
           <div className={styles.borderContainer}>
             <img src={bibip} alt="машинка" />
           </div>
