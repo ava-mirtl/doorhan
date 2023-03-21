@@ -202,15 +202,16 @@ export default function Calc() {
 
                 <div className={styles.control_4}>
                   <p>ВЫБЕРИТЕ <br />ЦВЕТ ВОРОТ</p>
-                  <div className={styles.buttons}>
-                    <button className={styles.btn1}></button>
-                    <button className={styles.btn2}></button>
-                    <button className={styles.btn3}></button>
-                    <button className={styles.btn4}></button>
-                    <button className={styles.btn5}></button>
-                    <button className={styles.btn6}></button>
-                    <button className={styles.btn7}></button>
-                    <button className={styles.btn8}></button>
+                  <div className={styles.colors}>
+
+                    <div><input type="radio" name='color' id='color1' value="белый"/><label className={styles.round} htmlFor="color1"><div className={styles.btn1}></div></label></div>
+                    <div><input type="radio" name='color' id='color2' value="серый"/><label className={styles.round} htmlFor="color2"><div className={styles.btn2}></div></label></div>
+                    <div><input type="radio" name='color' id='color3' value="бежевый"/><label className={styles.round} htmlFor="color3"><div className={styles.btn3}></div></label></div>
+                    <div><input type="radio" name='color' id='color4' value="черный"/><label className={styles.round} htmlFor="color4"><div className={styles.btn4}></div></label></div>
+                    <div><input type="radio" name='color' id='color5' value="синий"/><label className={styles.round} htmlFor="color5"><div className={styles.btn5}></div></label></div>
+                    <div><input type="radio" name='color' id='color6' value="красный"/><label className={styles.round} htmlFor="color6"><div className={styles.btn6}></div></label></div>
+                    <div><input type="radio" name='color' id='color7' value="коричневый"/><label className={styles.round} htmlFor="color7"><div className={styles.btn7}></div></label></div>
+                    <div><input type="radio" name='color' id='color8' value="черный"/><label className={styles.round} htmlFor="color8"><div className={styles.btn8}></div></label></div>
                   </div>
                 </div>
 
