@@ -49,6 +49,7 @@
     .scheme__container{
         display: flex;
         flex-direction: column;
+        grid-template-columns: none;
         .scheme__block{
         .text{
         font-size: 3vw;}}

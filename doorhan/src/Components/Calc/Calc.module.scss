@@ -494,17 +494,9 @@ input[name="texture"] {
 }
 
 
-
-
-
-.container__right {
-    .container__right_top {}
-
-    .container__right_center {}
-
-    .container__right_bottom {}
+@media  (max-width: 780px) { 
+    
 }
-
 // .container1 {
 
 //     .container1_left__bottom {
