@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import OrangeBtn from '../OrangeBtn/OrangeBtn';
-import Button, { why } from '../Button/Button';
+import Button, { how_to_buy } from '../Button/Button';
 import ModalGrats from '../Modal/ModalGrats';
 import Title, { white } from '../Title/Title';
-import { howto } from '../Button/Button';
 import calendar from '../../assets/icons/calendar.png';
 import house from '../../assets/icons/house.png';
 import price from '../../assets/icons/price.png';
@@ -91,7 +90,7 @@ export default function HowToBuy() {
         <form className={styles.formNext}>
           <input type="text" className={styles.inputNext} placeholder='Имя' />
           <input type="text" className={styles.inputNext} placeholder='Телефон' />
-          <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleClick} styles={why} />
+          <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleClick} styles={how_to_buy} />
         </form>
       </div>
       {modalActive &&
