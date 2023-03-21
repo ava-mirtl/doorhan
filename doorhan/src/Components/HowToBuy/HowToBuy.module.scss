@@ -237,6 +237,11 @@
         display: none;
     }
 
+    .txtContainer2 {
+
+        gap: 0;
+    }
+
     .txtContainer,
     .txtContainer2 {
         display: flex;
@@ -244,18 +249,18 @@
     }
 
     .btn {
-        margin-bottom: 15vh;
+        margin-bottom: 17vh;
     }
 
     .txtC1 {
         position: relative;
-        bottom: 69vh;
+        bottom: 72vh;
         right: 10vw;
     }
 
     .txtC2 {
         position: relative;
-        bottom: 49vh;
+        bottom: 50vh;
     }
 
     .txtC3 {
@@ -276,20 +281,20 @@
 
     .txtC4 {
         position: relative;
-        bottom: 69vh;
+        bottom: 67vh;
         right: 10vw;
     }
 
     .txtC5 {
         position: relative;
-        bottom: 54vh;
+        bottom: 48vh;
         left: 10vw;
     }
 
     .formNext,
     .dateContainer {
         position: relative;
-        bottom: 53vh;
+        bottom: 47vh;
 
     }
 
@@ -307,4 +312,7 @@
         font-size: 3vw;
     }
 
+    .container {
+        height: 193vh;
+    }
 }
