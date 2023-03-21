@@ -78,11 +78,18 @@
     .scheme__container {
         display: flex;
         flex-direction: column;
+<<<<<<< HEAD
 
         .scheme__block {
             .text {
                 font-size: 3vw;
             }
         }
+=======
+        grid-template-columns: none;
+        .scheme__block{
+        .text{
+        font-size: 3vw;}}
+>>>>>>> 96147f8236665e8ada59cfef610b969c05ad6775
     }
 }
