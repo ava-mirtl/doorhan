@@ -78,6 +78,15 @@
 
 }
 
+@media (max-width: 1390px) {
+
+    .pict {
+        margin-top: 4vw;
+    }
+}
+
+
+
 
 
 @media (max-width: 1050px) {
@@ -105,14 +114,14 @@
                 text-align: justify;
             }
 
-
         }
 
         .pict {
-            img {
-                display: flex;
-                align-items: center;
-            }
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            margin-left: 10vw;
+
         }
     }
 }
