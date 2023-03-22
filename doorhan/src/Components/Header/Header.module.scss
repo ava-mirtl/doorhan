@@ -142,6 +142,11 @@ h1 {
     align-items: center;
     margin: 0.9vw 20px;
 }
+@media (max-width: 1597px){
+    .imgCont {
+background-size:cover;      
+    }
+}
 
 @media (max-width: 1397px) {
     .imgCont {
@@ -151,9 +156,6 @@ h1 {
     .content {
         width: 40vw;
     }
-}
-
-@media (max-width: 1233px) {
     .form {
         display: none;
     }
@@ -176,6 +178,10 @@ h1 {
         align-items: center;
     }
 
+}
+
+@media (max-width: 780px) {
+    
     .mainСontainer {
         display: flex;
         flex-direction: column-reverse;

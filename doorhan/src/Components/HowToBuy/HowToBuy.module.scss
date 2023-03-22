@@ -31,6 +31,7 @@
 
 .txtContainer {
     display: grid;
+    max-width: 96%;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -205,13 +206,17 @@
 }
 
 @media (max-width: 1050px) {
+    .container{
+        max-width: 96%;
+    }
     .txtC1 {
         margin-left: -15vw;
         text-align: start;
     }
 
     .txtC3 {
-        margin-right: -15vw;
+        margin-left: 15vw;
+
     }
 
     .txtC4 {

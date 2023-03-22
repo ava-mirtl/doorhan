@@ -252,7 +252,7 @@ export default function Calc() {
               <Tabs />
             </div>
             <div className={styles.container__right_bottom}>
-              <div className={styles.container__div}>
+              <div className={styles.container__form}>
                 <input type="text" className={styles.input} placeholder='Телефон' name='phone'/>
                 <Button type='submit' onClick={(e) => handleSubmit(e)} styles={medium3} name="УТОЧНИТЬ СТОИМОСТЬ" />
               </div>
