@@ -644,11 +644,19 @@ input[name="texture"] {
                 .control_3 {
                     justify-content: space-around;
                     .sizes {
-                        width: 100%;
+                        width: 90%;
+                        max-width: 90%;
 
                         .sizes__count {
                             margin: 10px;
-                            width: 100%;
+                            width: 90%;
+                            .bt_left, .bt_right{
+                            display: flex;
+                            align-content: center;
+                            img{
+                                margin: 0 10px;
+                            }
+                            }
                         }
                     }
                 }
@@ -677,25 +685,12 @@ input[name="texture"] {
                 }
             }
 
-            .container_texture {
-                .texture__cards {
-                    .texture1 {
-                        flex-wrap: wrap;
-                        justify-content: center;
-
-                    }
-
-                    .texture2 {
-                        justify-content: center;
-                    }
-                }
-            }
+           
         }
     }
-<<<<<<< HEAD
+
 }
-=======
-}
+
 
 @media (max-width: 600){
     .texture__cards {
@@ -736,7 +731,6 @@ input[name="texture"] {
         }
     }
 }
-<<<<<<< HEAD
 
 @media (max-width: 480){
     .texture__cards {
@@ -774,9 +768,3 @@ input[name="texture"] {
         }
     }
 }
-
-
-
-=======
->>>>>>> 56df571820442413de9474d7f2ed65fb2d578dac
->>>>>>> 17e3f06c3e67883917dfb3db1e1225783f973b60
