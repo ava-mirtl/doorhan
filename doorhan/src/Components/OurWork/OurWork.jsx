@@ -6,7 +6,7 @@ import ModalInputs from '../Modal/ModalInputs';
 import { blue } from '../Title/Title';
 import gv from '../../assets/images/gv.png';
 import gv2 from '../../assets/images/gv2.png';
-import Button, { medium3, our_gar, our_prom, our_gar_mini, our_prom_mini,} from '../Button/Button';
+import Button, { medium3, our_gar, our_prom, our_gar_mini, our_prom_mini, } from '../Button/Button';
 
 export default function OurWork() {
     document.body.style.overflow = '';
@@ -62,7 +62,9 @@ export default function OurWork() {
                                 <p className={styles.p}><span>Адрес объекта: </span>Павловская Слобода</p>
                                 <p className={styles.p}><span>Способ управления: </span>автоматические</p>
                             </div>}
-                        <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleClick} styles={medium3} />
+                        <div className={styles.btn}>
+                            <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleClick} styles={medium3} />
+                        </div>
                     </div>
                 </div>
 
