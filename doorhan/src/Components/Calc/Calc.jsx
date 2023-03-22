@@ -14,9 +14,10 @@ import der1 from '../../assets/images/derevo1.png';
 import der2 from '../../assets/images/derevo2.png';
 import der3 from '../../assets/images/derevo3.png';
 import str from '../../assets/icons/str.png'
-import Button, { medium2, popupStyle } from '../Button/Button';
+import Button, { medium, popupStyle } from '../Button/Button';
 import Tabs from '../Tablist/Tablist';
 import { blue } from '../Title/Title';
+import { set } from 'immutable';
 
 
 export default function Calc() {
@@ -192,88 +193,49 @@ export default function Calc() {
                   </div>
                 </div>
               </div>
-
               <div className={styles.container_texture}>
                 <p>ТИП ПОВЕРХНОСТИ</p>
                 <div className={styles.texture__cards}>
                   <div className={styles.texture1}>
-                  
-                  <label htmlFor="texture1">
-                    <div className={styles.first}>
-<<<<<<< HEAD
-                      <label htmlFor="texture1">
+
+                    <label htmlFor="texture1">
+                      <div className={styles.first}>
                         <div className={styles.img}>
                           <img src={der1} alt="текстура" />
                         </div>
-                        <input className={styles.checkedInput} type="radio" id="texture1" name="texture" value="check" />
-                        <div className={styles.checked}>
-                          <img src={check} alt="текстура1" />
+                        <input type="radio" id="texture1" name="texture" value="текстура1" />
+                        <div className={styles.checked_texture}>
+                          <img src={check} alt="текстура" />
                         </div>
-                      </label>
-                    </div>
-                    <div className={styles.second}>
-                      <label htmlFor="texture2">
-                        <div className={styles.img}>
-                          <img src={der2} alt="текстура" />
-                        </div>
-                        <input type="radio" id="texture2" name="texture" value="check" />
-                        <div className={styles.checked}>
-                          <img src={check} alt="текстура2" />
-                        </div>
-                      </label>
-                    </div>
-=======
-                      <div className={styles.img}>
-                        <img src={der1} alt="текстура" />
-                      </div>
-                    <input type="radio" id="texture1" name="texture" value="текстура1" />
-                      <div className={styles.checked_texture}>
-                        <img src={check} alt="текстура" />
-                      </div>
-                    </div></label>
+                      </div></label>
 
                     <label htmlFor="texture2">
                       <div className={styles.second}>
                         <div className={styles.img}>
                           <img src={der2} alt="текстура" />
                         </div>
-                      <input type="radio" id="texture2" name="texture" value="текстура2" />
+                        <input type="radio" id="texture2" name="texture" value="текстура2" />
                         <div className={styles.checked_texture}>
                           <img src={check} alt="текстура" />
                         </div>
                       </div>
                     </label>
->>>>>>> 96147f8236665e8ada59cfef610b969c05ad6775
                   </div>
                   <div className={styles.texture2}>
-                  <label htmlFor="texture3">
-                    <div className={styles.third}>
-<<<<<<< HEAD
-                      <label className={styles.label_text} htmlFor="texture3">
+                    <label htmlFor="texture3">
+                      <div className={styles.third}>
                         <div className={styles.img}>
                           <img src={der3} alt="текстура" />
                         </div>
-                        <input type="radio" id="texture3" name="texture" value="check" />
-                        <div className={styles.checked}>
-                          <img src={check} alt="текстура3" />
-                        </div>
-                      </label>
-                    </div>
-=======
-                      <div className={styles.img}>
-                        <img src={der3} alt="текстура" />
-                      </div>
-                    <input type="radio" id="texture3" name="texture" value="текстура3" />
+                        <input type="radio" id="texture3" name="texture" value="текстура3" />
                         <div className={styles.checked_texture}>
                           <img src={check} alt="текстура" />
                         </div>
                       </div>
                     </label>
->>>>>>> 96147f8236665e8ada59cfef610b969c05ad6775
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
           <div className={styles.container__right}>
@@ -283,7 +245,7 @@ export default function Calc() {
             <div className={styles.container__right_bottom}>
               <form className={styles.container__form}>
                 <input type="text" className={styles.input} placeholder='Телефон' />
-                <Button type='submit' onClick={(e) => handleSubmit(e)} styles={medium2} name="УТОЧНИТЬ СТОИМОСТЬ" />
+                <Button type='submit' onClick={(e) => handleSubmit(e)} styles={medium} name="УТОЧНИТЬ СТОИМОСТЬ" />
               </form>
             </div>
           </div>
@@ -315,8 +277,3 @@ export default function Calc() {
     </div >
   )
 }
-
-
-
-
-
