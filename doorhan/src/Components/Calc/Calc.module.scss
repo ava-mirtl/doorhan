@@ -680,3 +680,31 @@ input[name="texture"] {
 
 
 
+<<<<<<< HEAD
+
+
+
+@media (max-width: 1200px) {
+    // .container {
+    //     flex-direction: column;
+    // }
+
+    .container__left_bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .texture__cards {
+        display: flex;
+    }
+
+    // .container__left_bottom {
+    //     justify-content: center;
+    //     margin-top: 2vh;
+    //     margin-left: 1rem;
+    // }
+
+}
+=======
+>>>>>>> f975510f6baa060a1944b3dc71274cf7d9fec237
