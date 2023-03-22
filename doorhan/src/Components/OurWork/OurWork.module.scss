@@ -80,7 +80,7 @@
 
 @media (max-width: 1390px) {
 
-    img {
+    .pict {
         margin-top: 4vw;
     }
 }
@@ -114,14 +114,14 @@
                 text-align: justify;
             }
 
-
         }
 
         .pict {
-            img {
-                display: flex;
-                align-items: center;
-            }
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            margin-left: 10vw;
+
         }
     }
 }

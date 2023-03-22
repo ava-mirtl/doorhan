@@ -551,18 +551,20 @@ input[name="texture"] {
     .texture__cards {
         display: flex;
     }
+
     .container__form {
         display: flex;
         flex-direction: column;
         margin-top: 1rem;
         margin-left: 1.5rem;
         width: 90%;
-    
+
         .input {
-           margin-bottom: 10px;
+            margin-bottom: 10px;
             width: 100%;
         }
     }
+
     // .container__left_bottom {
     //     justify-content: center;
     //     margin-top: 2vh;
@@ -684,12 +686,11 @@ input[name="texture"] {
                     }
                 }
             }
-
-           
         }
     }
 
 }
+
 
 
 @media (max-width: 600){
