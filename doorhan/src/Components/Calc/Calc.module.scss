@@ -141,10 +141,9 @@
                     background: linear-gradient(176.59deg, rgba(233, 251, 255, 0) 5.41%, rgba(248, 254, 255, 0) 5.42%, rgba(237, 237, 237, 0.45) 26.05%, rgba(247, 247, 247, 0.45) 79.2%, rgba(255, 255, 255, 0) 97.4%);
                     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
                     backdrop-filter: blur(30.5px);
-                    padding: 0.50rem;
                     border-radius: 90px;
-                    height: 10.8vh;
-                    width: 22vw;
+                    height: 65px;
+                    width: 100%;
 
                     * {
                         z-index: 2;
@@ -154,14 +153,15 @@
                     .tab__isp2 {
                         display: flex;
                         align-items: center;
+                        text-align: center;
                         justify-content: center;
-                        height: 63px;
+                        height: 100%;
+                        width: 50%;
                         font-size: 1.10rem;
                         border-radius: 90px;
                         cursor: pointer;
                         transition: color 0.15s ease-in;
                         font-size: 0.9vw;
-                        margin: 0 0.6rem;
 
 
                     }
@@ -170,7 +170,7 @@
                         position: absolute;
                         display: flex;
                         height: 65px;
-                        width: 10.1vw;
+                        width: 50%;
                         background-color: $base-blue;
                         z-index: 1;
                         border-radius: 74px;
@@ -227,10 +227,9 @@
                     background: linear-gradient(176.59deg, rgba(233, 251, 255, 0) 5.41%, rgba(248, 254, 255, 0) 5.42%, rgba(237, 237, 237, 0.45) 26.05%, rgba(247, 247, 247, 0.45) 79.2%, rgba(255, 255, 255, 0) 97.4%);
                     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
                     backdrop-filter: blur(30.5px);
-                    padding: 0.50rem;
                     border-radius: 90px;
-                    height: 10.8vh;
-                    width: 22vw;
+                    height: 65px;
+                    width: 100%;
 
                     * {
                         z-index: 2;
@@ -240,25 +239,23 @@
                     .tab__avtom2 {
                         display: flex;
                         align-items: center;
+                        text-align: center;
                         justify-content: center;
-                        height: 63px;
-                        width: 150px;
-                        font-size: 1.10rem;
+                        height: 65px;
+                        padding: 0 5px;
+                        width: 50%;
+                        font-size: 10pt;
                         border-radius: 90px;
                         cursor: pointer;
                         transition: color 0.15s ease-in;
-                        font-size: 0.9vw;
-                    }
-
-                    .tab__avtom2 {
-                        padding-left: 2vw;
+                        font-size: 10pt;
                     }
 
                     .glider__avtom {
                         position: absolute;
                         display: flex;
-                        height: 65px;
-                        width: 10.3vw;
+                        height: 100%;
+                        width: 50%;
                         background-color: $base-blue;
                         z-index: 1;
                         border-radius: 74px;
@@ -410,7 +407,7 @@
 
 
             p {
-                margin: 5vh 0;
+                margin: 4vh 0;
             }
 
             .texture__cards {
@@ -426,6 +423,7 @@
                         box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);
                         border-radius: 7px;
                         width: 10.5vw;
+                        min-width: 120px;
 
                         input:checked~.checked_texture {
                             background-color: #415C93;
@@ -436,6 +434,8 @@
 
                             img {
                                 width: 9.3vw;
+                                min-width: 100px;
+
                             }
                         }
                     }
@@ -446,7 +446,6 @@
                 .texture2 {
                     display: flex;
                     margin-bottom: 1rem;
-                    justify-content: end;
 
                     .third {
                         padding-top: 6px;
@@ -454,6 +453,8 @@
                         box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);
                         border-radius: 7px;
                         width: 10.5vw;
+                        min-width: 120px;
+
 
                         input:checked~.checked_texture {
                             background-color: #415C93;
@@ -464,6 +465,7 @@
 
                             img {
                                 width: 9.3vw;
+                                min-width: 100px;
                             }
                         }
                     }
@@ -569,7 +571,9 @@ input[name="texture"] {
 
 }
 
-@media (max-width: 780px) {
+
+
+@media (max-width: 1000px) {
     .container {
         flex-direction: column;
         justify-content: center;
@@ -599,6 +603,7 @@ input[name="texture"] {
 
 
             .container_controls {
+                width: 80%;
                 .control_1 {
                     .tabs__isp {
                         width: 90%;
@@ -607,7 +612,7 @@ input[name="texture"] {
                         .tab__isp2 {
                             width: 100%;
                             flex-basis: 50%;
-                            font-size: 3vw;
+                            font-size: 2.5vw;
                         }
                     }
 
@@ -626,7 +631,7 @@ input[name="texture"] {
                         .tab__avtom2 {
                             width: 100%;
                             flex-basis: 50%;
-                            font-size: 3vw;
+                            font-size: 2.5vw;
                         }
                     }
 
@@ -637,22 +642,26 @@ input[name="texture"] {
                 }
 
                 .control_3 {
+                    justify-content: space-around;
                     .sizes {
-                        width: 90%;
+                        width: 100%;
 
                         .sizes__count {
                             margin: 10px;
-
+                            width: 100%;
                         }
                     }
                 }
 
-                .control_4 {
+                .control_4 {display: flex;
                     justify-content: center;
                     width: 100%;
+                    max-width: 100%;
 
                     .colors {
-                        width: 80%;
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-around;
 
                         div {
                             label {
@@ -674,10 +683,6 @@ input[name="texture"] {
                         flex-wrap: wrap;
                         justify-content: center;
 
-                        .first,
-                        .second {
-                            margin: 10px;
-                        }
                     }
 
                     .texture2 {
@@ -689,30 +694,82 @@ input[name="texture"] {
     }
 }
 
-
-
-
-
-
-@media (max-width: 1200px) {
-    // .container {
-    //     flex-direction: column;
-    // }
-
-    .container__left_bottom {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
+@media (max-width: 600){
     .texture__cards {
-        display: flex;
+        width: 100%;
+        display:block;
+    
+        .texture1 {
+            display: flex;
+            justify-content: center;
+        width: 100%;
+            .first,
+            .second {
+                
+
+                .img {
+                    margin: 0.2rem;
+                    img {
+                        width: 9.3vw;
+                        min-width: 90px;
+                    }
+                }
+            }
+        }
+
+        .texture2 {
+            .third {
+                width: 10vw;
+                min-width: 100px;
+                .img {
+                    margin: 0.6rem;
+
+                    img {
+                        width: 9.3vw;
+                        min-width: 90px;
+                    }
+                }
+            }
+        }
     }
-
-    // .container__left_bottom {
-    //     justify-content: center;
-    //     margin-top: 2vh;
-    //     margin-left: 1rem;
-    // }
-
 }
+
+@media (max-width: 480){
+    .texture__cards {
+        width: 100%;
+        .texture1 {
+        
+            .first,
+            .second {
+                width: 10vw;
+                min-width: 100px;
+
+                .img {
+                    margin: 0.2rem;
+                    img {
+                        width: 9.3vw;
+                        min-width: 90px;
+                    }
+                }
+            }
+        }
+
+        .texture2 {
+            .third {
+                width: 10vw;
+                min-width: 100px;
+                .img {
+                    margin: 0.6rem;
+
+                    img {
+                        width: 9.3vw;
+                        min-width: 90px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
