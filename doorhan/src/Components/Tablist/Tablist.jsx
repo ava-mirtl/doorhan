@@ -41,15 +41,14 @@ export default function Tabs() {
                 <input type="radio" id="radio-3" name="tabs" onClick={handleChekThree} />
                 <label className={styles.tab} htmlFor="radio-3">ГАРАЖНЫЕ</label>
                 <span className={styles.glider}></span>
-
             </div>
-            {one && <div className={styles.content1}>
+            {one && <div className={styles.content}>
                 <img src={vor1} alt="ОТКАТНЫЕ" />
             </div>}
-            {two && <div className={styles.content2}>
+            {two && <div className={styles.content}>
                 <img src={vor2} alt="РАСПАШНЫЕ" />
             </div>}
-            {three && <div className={styles.content3}>
+            {three && <div className={styles.content}>
                 <img src={vor3} alt="ГАРАЖНЫЕ" />
             </div>}
         </div>

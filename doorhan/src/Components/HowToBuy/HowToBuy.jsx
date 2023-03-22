@@ -80,6 +80,41 @@ export default function HowToBuy() {
             </div>
           </div>
         </div>
+
+
+        <div className={styles.dropmini}>
+        <div className={styles.btnmini}>
+            <OrangeBtn img={calendar} />
+            <div className={styles.txtmini}>МЫ МОЖЕМ ВАМ ПОМОЧЬ ПРИОБРЕСТИ ВОРОТА ЗА 1 ДЕНЬ!
+          </div>
+          </div>
+
+          <div className={styles.btnmini}>
+            <OrangeBtn img={house} />
+            <div className={styles.txtmini}>БОЛЬШОЙ АССОРТИМЕНТ ГОТОВЫХ ВОРОТ МЫ ХРАНИМ НА НАШЕМ СКЛАДЕ.
+          </div>
+          </div>
+
+          <div className={styles.btnmini}>
+            <OrangeBtn img={price} />
+            <div className={styles.txtmini}>НА ВОРОТА СО СКЛАДА ДЕЙСТВУЕТ СПЕЦИАЛЬНАЯ ЦЕНА.
+            </div>
+            </div>
+
+
+          <div className={styles.btnmini}>
+            <OrangeBtn img={sm} />
+            <div className={styles.txtmini}>ЕСЛИ ВЫ ЗНАЕТЕ РАЗМЕРЫ СВОЕГО ПРОЕМА, МЫ ПОДБЕРЕМ ВОРОТА ИЗ ТЕХ, ЧТО В НАЛИЧИИ НА СКЛАДЕ.
+          </div>
+          </div>
+        
+          <div className={styles.btnmini}>
+            <OrangeBtn img={dogovor} />
+            <div className={styles.txtmini}>ЗАКЛЮЧИВ ДОГОВОР ПО ЭЛЕКТРОННОЙ ПОЧТЕ, ВЫ СМОЖЕТЕ РАССЧИТАТЬСЯ ПО ФАКТУ ДОСТАВКИ ВОРОТ НА ОБЪЕКТ.
+          </div>
+        </div>
+        </div>
+
         <div className={styles.dateContainer}>
           <div className={styles.txtDate}>УСПЕЙ ЗАКАЗАТЬ СЕГОДНЯ!
           </div>
