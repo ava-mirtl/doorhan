@@ -46,8 +46,6 @@ export const medium2 = {
 }
 export const medium3 = {
   padding: "20px",
-  width: "90%",
-  minWidth: "260px",
   minHeight: "fit-content",
   borderRadius: '0 20px 20px',
   height: "72px",

@@ -125,6 +125,8 @@ export default function Calc() {
                     <span className={styles.glider__isp}></span>
                   </form>
                 </div>
+                
+                
                 <div className={styles.control_2}>
                   <p className={styles.tabs__p}>АВТОМАТИКА</p>
                   <div className={styles.tabs__avtom}>
@@ -135,6 +137,8 @@ export default function Calc() {
                     <span className={styles.glider__avtom}></span>
                   </div>
                 </div>
+
+                
                 <div className={styles.control_3}>
                   <p >РАЗМЕРЫ</p>
                   <div className={styles.sizes}>
