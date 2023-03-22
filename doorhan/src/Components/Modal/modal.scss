@@ -111,9 +111,9 @@
 }
 
 .popupContainerNext {
-    height: 600px;
+    height: 500px;
     min-height: 500px;
-    width: 65vw;
+    width: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -123,24 +123,28 @@
     border-radius: 35px;
 
     .popupTitleNext {
-        width: 65vw;
+        width: 100%;
         font-family: $fontM;
         font-weight: 600;
         font-size: 30pt;
         line-height: 142.5%;
-        text-align: center;
+        text-align: center; }
 
         .formNext {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+            align-items: center;
             width: 80%;
         }
-    }
+   
 }
 
 .inputNext {
+    align-self: center;
     margin: 10px;
+    min-height: 70px;
+    max-height: 85px;
     width: 100%;
     height: 5vw;
     box-shadow: inset 0px -1.125px 2.25px rgba(0, 0, 0, 0.25), inset 0px 2.25px 4.5px rgba(0, 0, 0, 0.25);
@@ -201,9 +205,23 @@
         height: 50%;
         width: 100%;
         justify-content: center;
-.popupTitle{
-    width: 90%;
+        .popupTitle{
+            width: 90%;
+            }
+        }
+    }
+    .popupContainerNext {
+        height: 500px;
+        min-height: 500px;
+        width: 500px;
+        
+            .formNext {
+                width: 90%;
+            }
+    }
+    
+    .inputNext {
+        height: 70px;
+    }  
 }
-       }
-    }}
 }
