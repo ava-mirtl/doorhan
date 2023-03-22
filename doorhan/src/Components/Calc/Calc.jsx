@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import styles from './Calc.module.scss';
 import popup from '../../assets/images/popup1.jpg';
 import ModalGrats from '../Modal/ModalGrats';
 import ModalInputs from '../Modal/ModalInputs';
@@ -17,6 +16,7 @@ import str from '../../assets/icons/str.png'
 import Button, { medium3, popupStyle } from '../Button/Button';
 import Tabs from '../Tablist/Tablist';
 import { blue } from '../Title/Title';
+import styles from './Calc.module.scss';
 
 
 export default function Calc() {
