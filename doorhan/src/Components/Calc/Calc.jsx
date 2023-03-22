@@ -69,7 +69,7 @@ export default function Calc() {
                   <div className={styles.img}>
                     <img src={pic1} alt="ДОСКА" />
                   </div>
-                  <input type="radio" id="choice1" name="one" value="доска" />
+                  <input type="radio" id="choice1" name="тип" value="доска" />
                   <div className={styles.checked}>
                     <img src={check} alt="доска" />
                   </div>
@@ -81,7 +81,7 @@ export default function Calc() {
                   <div className={styles.img}>
                     <img src={pic2} alt="ШИРОКАЯ ЦЕНТРАЛЬНАЯ ПОЛОСА" />
                   </div>
-                  <input type="radio" id="choice2" name="one" value="широкая центральная полоса" />
+                  <input type="radio" id="choice2" name="тип" value="широкая центральная полоса" />
                   <div className={styles.checked}>
                     <img src={check} alt="полоса" />
                   </div>
@@ -93,7 +93,7 @@ export default function Calc() {
                   <div className={styles.img}>
                     <img src={pic3} alt="ФИЛЕНКА" />
                   </div>
-                  <input className={styles.checkedInput} type="radio" id="choice3" name="one" value="филенка" />
+                  <input className={styles.checkedInput} type="radio" id="choice3" name="тип" value="филенка" />
                   <div className={styles.checked}>
                     <img src={check} alt="филенка" />
                   </div>
@@ -105,7 +105,7 @@ export default function Calc() {
                   <div className={styles.img}>
                     <img src={pic4} alt="ВОЛНА" />
                   </div>
-                  <input type="radio" id="choice4" name="one" value="волна" />
+                  <input type="radio" id="choice4" name="тип" value="волна" />
                   <div className={styles.checked}>
                     <img src={check} alt="волна" />
                   </div>
@@ -117,25 +117,25 @@ export default function Calc() {
               <div className={styles.container_controls}>
                 <div className={styles.control_1}>
                   <p className={styles.tabs__p}>ИСПОЛНЕНИЕ</p>
-                  <form className={styles.tabs__isp}>
-                    <input className={styles.isp1} type="radio" id="isp1" name="tabs" />
+                  <div className={styles.tabs__isp}>
+                    <input className={styles.isp1} type="radio" id="isp1" name="исполнение" />
                     <label className={styles.tab__isp1} htmlFor="isp1">ГОРИЗОНТАЛЬНОЕ</label>
-                    <input className={styles.isp2} type="radio" id="isp2" name="tabs" />
+                    <input className={styles.isp2} type="radio" id="isp2" name="исполнение" />
                     <label className={styles.tab__isp2} htmlFor="isp2">ВЕРТИКАЛЬНОЕ</label>
                     <span className={styles.glider__isp}></span>
-                  </form>
+                  </div>
                 </div>
 
 
                 <div className={styles.control_2}>
                   <p className={styles.tabs__p}>АВТОМАТИКА</p>
-                  <form className={styles.tabs__avtom}>
-                    <input className={styles.avtom1} type="radio" id="avtom1" name="tabs" />
+                  <div className={styles.tabs__avtom}>
+                    <input className={styles.avtom1} type="radio" id="avtom1" name="автоматика" />
                     <label className={styles.tab__avtom1} htmlFor="avtom1">ВСТРОЕННАЯ</label>
-                    <input className={styles.avtom2} type="radio" id="avtom2" name="tabs" />
+                    <input className={styles.avtom2} type="radio" id="avtom2" name="автоматика" />
                     <label className={styles.tab__avtom2} htmlFor="avtom2">ОТДЕЛЬНАЯ</label>
                     <span className={styles.glider__avtom}></span>
-                  </form>
+                  </div>
                 </div>
 
 
@@ -152,7 +152,7 @@ export default function Calc() {
                       >
                         <img src={str} alt="left" />
                       </button>
-                      <input type="text" value={count} />
+                      <input type="text" name='длина' value={count} />
                       <button className={styles.bt_right}
                         type="button"
                         onClick={() => onNextClick(count, setCount)}
@@ -172,7 +172,7 @@ export default function Calc() {
                       >
                         <img src={str} alt="left" />
                       </button>
-                      <input type="text" value={count2} />
+                      <input type="text" name='высота' value={count2} />
                       <button className={styles.bt_right}
                         type="button"
                         onClick={() => onNextClick(count2, setCount2)}
@@ -252,10 +252,10 @@ export default function Calc() {
               <Tabs />
             </div>
             <div className={styles.container__right_bottom}>
-              <form className={styles.container__form}>
-                <input type="text" className={styles.input} placeholder='Телефон' />
+              <div className={styles.container__div}>
+                <input type="text" className={styles.input} placeholder='Телефон' name='phone'/>
                 <Button type='submit' onClick={(e) => handleSubmit(e)} styles={medium3} name="УТОЧНИТЬ СТОИМОСТЬ" />
-              </form>
+              </div>
             </div>
           </div>
         </form>
@@ -276,8 +276,8 @@ export default function Calc() {
           <div className={styles.popupContainerNext}>
             <div className={styles.popupTitleNext}>РАСЧЕТ СТОИМОСТИ УСЛУГИ</div>
             <form className={styles.formNext}>
-              <input type="text" className={styles.inputNext} placeholder='Ваше имя' />
-              <input type="text" className={styles.inputNext} placeholder='Телефон' />
+              <input type="text" className={styles.inputNext} placeholder='Ваше имя' name='имя'/>
+              <input type="text" className={styles.inputNext} placeholder='Телефон' name='телефон'/>
               <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleSubmit} styles={popupStyle} />
             </form>
           </div>
