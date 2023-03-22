@@ -125,8 +125,8 @@ export default function Calc() {
                     <span className={styles.glider__isp}></span>
                   </form>
                 </div>
-                
-                
+
+
                 <div className={styles.control_2}>
                   <p className={styles.tabs__p}>АВТОМАТИКА</p>
                   <div className={styles.tabs__avtom}>
@@ -138,9 +138,9 @@ export default function Calc() {
                   </div>
                 </div>
 
-                
+
                 <div className={styles.control_3}>
-                  <p >РАЗМЕРЫ</p>
+                  <p className={styles.tabs__p}>РАЗМЕРЫ</p>
                   <div className={styles.sizes}>
                     <div className={styles.sizes__title}>
                       ДЛИНА
@@ -183,7 +183,7 @@ export default function Calc() {
                   </div>
                 </div>
                 <div className={styles.control_4}>
-                  <p>ВЫБЕРИТЕ <br />ЦВЕТ ВОРОТ</p>
+                  <p className={styles.tabs__p}>ВЫБЕРИТЕ <br />ЦВЕТ ВОРОТ</p>
                   <div className={styles.colors}>
                     <div><input type="radio" name='color' id='color1' value="белый" /><label className={styles.round} htmlFor="color1"><div className={styles.btn1}></div></label></div>
                     <div><input type="radio" name='color' id='color2' value="серый" /><label className={styles.round} htmlFor="color2"><div className={styles.btn2}></div></label></div>
@@ -195,6 +195,10 @@ export default function Calc() {
                     <div><input type="radio" name='color' id='color8' value="черный" /><label className={styles.round} htmlFor="color8"><div className={styles.btn8}></div></label></div>
                   </div>
                 </div>
+
+
+
+
               </div>
               <div className={styles.container_texture}>
                 <p>ТИП ПОВЕРХНОСТИ</p>
@@ -241,6 +245,8 @@ export default function Calc() {
               </div>
             </div>
           </div>
+
+
           <div className={styles.container__right}>
             <div className={styles.container__right_top}>
               <Tabs />
