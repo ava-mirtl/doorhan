@@ -136,7 +136,7 @@ export default function Calc() {
                   </div>
                 </div>
                 <div className={styles.control_3}>
-                  <p>РАЗМЕРЫ</p>
+                  <p >РАЗМЕРЫ</p>
                   <div className={styles.sizes}>
                     <div className={styles.sizes__title}>
                       ДЛИНА
@@ -197,7 +197,10 @@ export default function Calc() {
                 <p>ТИП ПОВЕРХНОСТИ</p>
                 <div className={styles.texture__cards}>
                   <div className={styles.texture1}>
+                  
+                  <label htmlFor="texture1">
                     <div className={styles.first}>
+<<<<<<< HEAD
                       <label htmlFor="texture1">
                         <div className={styles.img}>
                           <img src={der1} alt="текстура" />
@@ -219,9 +222,33 @@ export default function Calc() {
                         </div>
                       </label>
                     </div>
+=======
+                      <div className={styles.img}>
+                        <img src={der1} alt="текстура" />
+                      </div>
+                    <input type="radio" id="texture1" name="texture" value="текстура1" />
+                      <div className={styles.checked_texture}>
+                        <img src={check} alt="текстура" />
+                      </div>
+                    </div></label>
+
+                    <label htmlFor="texture2">
+                      <div className={styles.second}>
+                        <div className={styles.img}>
+                          <img src={der2} alt="текстура" />
+                        </div>
+                      <input type="radio" id="texture2" name="texture" value="текстура2" />
+                        <div className={styles.checked_texture}>
+                          <img src={check} alt="текстура" />
+                        </div>
+                      </div>
+                    </label>
+>>>>>>> 96147f8236665e8ada59cfef610b969c05ad6775
                   </div>
                   <div className={styles.texture2}>
+                  <label htmlFor="texture3">
                     <div className={styles.third}>
+<<<<<<< HEAD
                       <label className={styles.label_text} htmlFor="texture3">
                         <div className={styles.img}>
                           <img src={der3} alt="текстура" />
@@ -232,6 +259,17 @@ export default function Calc() {
                         </div>
                       </label>
                     </div>
+=======
+                      <div className={styles.img}>
+                        <img src={der3} alt="текстура" />
+                      </div>
+                    <input type="radio" id="texture3" name="texture" value="текстура3" />
+                        <div className={styles.checked_texture}>
+                          <img src={check} alt="текстура" />
+                        </div>
+                      </div>
+                    </label>
+>>>>>>> 96147f8236665e8ada59cfef610b969c05ad6775
                   </div>
                 </div>
               </div>
