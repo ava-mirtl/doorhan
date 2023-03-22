@@ -1,6 +1,7 @@
 @import '../../styles/vars.scss';
 
-.mainTitle{
+.mainTitle, .mainTitle2 {
+
     font-family: $fontD;
     box-sizing: content-box;
     width: fit-content;
@@ -10,9 +11,17 @@
     margin: 2rem 0;
     padding: 0 5vw 1vw 1vw;
 }
+.mainTitle{display: block;}
+.mainTitle2{
+display: none;
+}
 @media  (max-width: 780px) {
     .mainTitle {
-        font-size:5vw;
+display: none;
+}
+.mainTitle2 {
+    display: block;
+    font-size:5vw;
 
 }
 }

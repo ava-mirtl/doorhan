@@ -41,10 +41,7 @@
         }
     }
 
-    .main__text:hover {
-        background-color: $base-blue;
-        color: white;
-    }
+  
 
     .main__right {
         background: url('../../assets/images/gift.png');
@@ -463,4 +460,10 @@
     }
 
 
+}
+@media (hover: hover){
+    .container__main{.main__left{ .main__text:hover {
+        background-color: $base-blue;
+        color: white;
+    }}}
 }

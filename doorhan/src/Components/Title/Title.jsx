@@ -28,15 +28,17 @@ const animationText = {
 
 export default function Title({title, styles}) {
   return (<>
-  {window.innerWidth>780?
+  
   <motion.h2 initial="hidden" 
     whileInView="visible"
     viewport={{amount: 0.3, once: true}}
     variants={animationText}    
     styles= {styles} title="mainTitle" 
-    className='mainTitle' >{title}</motion.h2>:
+    className='mainTitle' >{title}</motion.h2>
+    
     <h2 styles= {styles} title="mainTitle" 
-    className='mainTitle' >{title}</h2>}
+    className='mainTitle2' >{title}</h2>
+    
    </>
   )
 }
