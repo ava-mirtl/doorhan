@@ -13,19 +13,19 @@ export default function Tabs() {
     const [two, setTwo] = useState(false);
     const [three, setThree] = useState(false);
 
-    const handleChekOne = () =>{
-    setThree(false);
-    setTwo(false);
-    setOne(true)
+    const handleChekOne = () => {
+        setThree(false);
+        setTwo(false);
+        setOne(true)
     }
 
-    const handleChekTwo = () =>{
+    const handleChekTwo = () => {
         setThree(false);
         setOne(false);
         setTwo(true)
-        }
-    
-    const handleChekThree = () =>{
+    }
+
+    const handleChekThree = () => {
         setOne(false);
         setTwo(false);
         setThree(true)
@@ -34,22 +34,22 @@ export default function Tabs() {
     return (
         <div className={styles.container}>
             <div className={styles.tabs}>
-                <input type="radio" id="radio-1" name="tabs" onClick={handleChekOne}/>
+                <input type="radio" id="radio-1" name="tabs" onClick={handleChekOne} />
                 <label className={styles.tab} htmlFor="radio-1">ОТКАТНЫЕ</label>
-                <input type="radio" id="radio-2" name="tabs" onClick={handleChekTwo}/>
+                <input type="radio" id="radio-2" name="tabs" onClick={handleChekTwo} />
                 <label className={styles.tab} htmlFor="radio-2">РАСПАШНЫЕ</label>
-                <input type="radio" id="radio-3" name="tabs" onClick={handleChekThree}/>
+                <input type="radio" id="radio-3" name="tabs" onClick={handleChekThree} />
                 <label className={styles.tab} htmlFor="radio-3">ГАРАЖНЫЕ</label>
                 <span className={styles.glider}></span>
 
             </div>
-            {one&&<div className={styles.content1}>
+            {one && <div className={styles.content1}>
                 <img src={vor1} alt="ОТКАТНЫЕ" />
             </div>}
-            {two&&<div className={styles.content2}>
+            {two && <div className={styles.content2}>
                 <img src={vor2} alt="РАСПАШНЫЕ" />
             </div>}
-            {three&&<div className={styles.content3}>
+            {three && <div className={styles.content3}>
                 <img src={vor3} alt="ГАРАЖНЫЕ" />
             </div>}
         </div>

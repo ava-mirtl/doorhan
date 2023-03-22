@@ -8,7 +8,7 @@
 
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     max-width: 95%;
     margin: 2rem auto;
 }
@@ -85,10 +85,9 @@
         display: flex;
 
 
-
         .container_controls {
             margin: 8vh 1vw;
-            width: 100%;
+            width: 30vw;
 
             input[type="radio"] {
                 display: none;
@@ -133,6 +132,7 @@
 
                 p {
                     font-family: $fontM ;
+
                 }
 
                 .tabs__isp {
@@ -143,7 +143,8 @@
                     backdrop-filter: blur(30.5px);
                     padding: 0.50rem;
                     border-radius: 90px;
-                    height: 80px;
+                    height: 10.8vh;
+                    width: 22vw;
 
                     * {
                         z-index: 2;
@@ -155,12 +156,13 @@
                         align-items: center;
                         justify-content: center;
                         height: 63px;
-                        width: 150px;
                         font-size: 1.10rem;
                         border-radius: 90px;
                         cursor: pointer;
                         transition: color 0.15s ease-in;
                         font-size: 0.9vw;
+                        margin: 0 0.6rem;
+
 
                     }
 
@@ -168,7 +170,7 @@
                         position: absolute;
                         display: flex;
                         height: 65px;
-                        width: 150px;
+                        width: 10.1vw;
                         background-color: $base-blue;
                         z-index: 1;
                         border-radius: 74px;
@@ -227,7 +229,8 @@
                     backdrop-filter: blur(30.5px);
                     padding: 0.50rem;
                     border-radius: 90px;
-                    height: 80px;
+                    height: 10.8vh;
+                    width: 22vw;
 
                     * {
                         z-index: 2;
@@ -245,19 +248,23 @@
                         cursor: pointer;
                         transition: color 0.15s ease-in;
                         font-size: 0.9vw;
+                    }
 
+                    .tab__avtom2 {
+                        padding-left: 2vw;
                     }
 
                     .glider__avtom {
                         position: absolute;
                         display: flex;
                         height: 65px;
-                        width: 150px;
+                        width: 10.3vw;
                         background-color: $base-blue;
                         z-index: 1;
                         border-radius: 74px;
                         transition: 0.25s ease-out;
                         box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
+
                     }
                 }
             }
@@ -273,7 +280,7 @@
                     display: flex;
                     flex-direction: column;
                     text-align: center;
-                    width: 14vw;
+                    max-width: 12vw;
 
 
                     .sizes__title {
@@ -326,15 +333,18 @@
                 display: flex;
                 align-items: center;
                 margin-top: 3rem;
+                max-width: 35vw;
+                width: 100%;
 
                 .colors {
                     margin-left: 1rem;
                     display: flex;
-                    width: 32vw;
+                    width: 40vw;
                     justify-content: space-around;
 
                     div {
                         display: flex;
+                        justify-content: space-around;
 
                         label {
                             border: 2px solid rgb(49, 48, 48);
@@ -342,10 +352,10 @@
                             padding: 1px;
 
                             div {
-                                width: 3vw;
+                                width: 2.5vw;
                                 min-width: 30px;
                                 max-width: 45px;
-                                height: 3vw;
+                                height: 2.5vw;
                                 max-height: 45px;
                                 min-height: 30px;
                                 border-radius: 50%;
@@ -394,13 +404,17 @@
         }
 
 
+
+
         .container_texture {
+
 
             p {
                 margin: 5vh 0;
             }
 
             .texture__cards {
+
                 .texture1 {
                     display: flex;
                     margin-bottom: 1rem;
@@ -411,6 +425,7 @@
                         margin-right: 1rem;
                         box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);
                         border-radius: 7px;
+                        width: 10.5vw;
 
                         input:checked~.checked_texture {
                             background-color: #415C93;
@@ -418,6 +433,10 @@
 
                         .img {
                             margin: 0.6rem;
+
+                            img {
+                                width: 9.3vw;
+                            }
                         }
                     }
 
@@ -434,6 +453,7 @@
                         margin-right: 1rem;
                         box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);
                         border-radius: 7px;
+                        width: 10.5vw;
 
                         input:checked~.checked_texture {
                             background-color: #415C93;
@@ -441,12 +461,48 @@
 
                         .img {
                             margin: 0.6rem;
+
+                            img {
+                                width: 9.3vw;
+                            }
                         }
                     }
                 }
             }
         }
     }
+}
+
+
+
+.container__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container__form {
+    display: flex;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    width: 32.4vw;
+
+    .input {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), #F9F9F9;
+        box-shadow: 0px 1px 11px rgba(0, 0, 0, 0.08), inset 0px 4px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        border: none;
+        margin-right: 1rem;
+        padding-left: 10px;
+        height: 72px;
+        font-family: $fontM;
+        font-size: 1.4rem;
+        width: 16vw;
+    }
+}
+
+.tabs__p {
+    font-size: 1vw;
 }
 
 input[name="texture"] {
@@ -464,12 +520,15 @@ input[name="texture"] {
     border-radius: 50%;
     position: relative;
     bottom: 4vh;
-    left: 4rem;
+    left: calc(50% - 17.5px);
 
     img {
         align-content: center;
+
     }
 }
+
+
 
 
 @media (max-width: 780px) {
@@ -593,17 +652,30 @@ input[name="texture"] {
 }
 
 
-.container__form {
-    display: flex;
-    margin-top: 1rem;
 
-    .input {
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), #F9F9F9;
-        box-shadow: 0px 1px 11px rgba(0, 0, 0, 0.08), inset 0px 4px 4px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        border: none;
-        margin-right: 1rem;
-        padding-left: 10px;
 
+
+
+
+@media (max-width: 1200px) {
+    // .container {
+    //     flex-direction: column;
+    // }
+
+    .container__left_bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+
+    .texture__cards {
+        display: flex;
+    }
+
+    // .container__left_bottom {
+    //     justify-content: center;
+    //     margin-top: 2vh;
+    //     margin-left: 1rem;
+    // }
+
 }

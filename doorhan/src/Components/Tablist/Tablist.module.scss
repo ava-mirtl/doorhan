@@ -8,7 +8,10 @@
 }
 
 .container {
-    margin-left: 1.8rem;
+    margin-left: 1vw;
+    width: 100%;
+    max-width: 100%;
+
 }
 
 .tabs {
@@ -19,7 +22,7 @@
     padding: 0.50rem;
     border-radius: 87px;
     height: 80px;
-    width: 98%;
+    width: 33.4vw;
 
     * {
         z-index: 2;
@@ -35,11 +38,11 @@ input[type="radio"] {
     align-items: center;
     justify-content: center;
     height: 65px;
-    width: 180px;
-    font-size: 1.25rem;
+    font-size: 1.3vw;
     border-radius: 74px;
     cursor: pointer;
     transition: color 0.15s ease-in;
+    width: 10.8vw;
 }
 
 input[id="radio-1"] {
@@ -71,20 +74,21 @@ input[id="radio-3"] {
     position: absolute;
     display: flex;
     height: 65px;
-    width: 180px;
+    width: 10.8vw;
     background-color: $base-white;
     z-index: 1;
     border-radius: 74px;
     transition: 0.25s ease-out;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
+
 }
 
 .content1,
 .content2,
 .content3 {
     margin: 3rem 0;
-    height: 65vh;
-    max-width: 40vw;
+    height: 60vh;
+    width: 33.4vw;
     background: rgba(237, 237, 237, 0.1);
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.12);
     backdrop-filter: blur(34px);
