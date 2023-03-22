@@ -462,8 +462,8 @@
 
 }
 @media (hover: hover){
-    .main__text:hover {
+    .container__main{.main__left{ .main__text:hover {
         background-color: $base-blue;
         color: white;
-    }
+    }}}
 }
