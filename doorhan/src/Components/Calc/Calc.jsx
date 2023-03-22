@@ -14,10 +14,9 @@ import der1 from '../../assets/images/derevo1.png';
 import der2 from '../../assets/images/derevo2.png';
 import der3 from '../../assets/images/derevo3.png';
 import str from '../../assets/icons/str.png'
-import Button, { medium, popupStyle } from '../Button/Button';
+import Button, { medium3, popupStyle } from '../Button/Button';
 import Tabs from '../Tablist/Tablist';
 import { blue } from '../Title/Title';
-import { set } from 'immutable';
 
 
 export default function Calc() {
@@ -245,7 +244,7 @@ export default function Calc() {
             <div className={styles.container__right_bottom}>
               <form className={styles.container__form}>
                 <input type="text" className={styles.input} placeholder='Телефон' />
-                <Button type='submit' onClick={(e) => handleSubmit(e)} styles={medium} name="УТОЧНИТЬ СТОИМОСТЬ" />
+                <Button type='submit' onClick={(e) => handleSubmit(e)} styles={medium3} name="УТОЧНИТЬ СТОИМОСТЬ" />
               </form>
             </div>
           </div>
