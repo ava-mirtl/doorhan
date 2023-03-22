@@ -165,24 +165,45 @@
 
 @media (max-width: 780px) {
     .modal__content{
+        .modal__triangles::before {
+            content: "";
+            height: 200px;
+            width: 200px;
+            top: 79.5%;
+            left: 30%;
+        }
+        
+        .modal__triangles::after {
+            content: "";
+            height: 200px;
+            width: 200px;
+            top: -19.5%;
+            left: 30%;
+        }
         .popupContainer {
        min-height: 50vh;
-       width: 150vw;
-       height: 85vh;
+       width: 500px;
+       height: 500px;
        flex-direction: column-reverse;
-       justify-content: center;
+       justify-content: space-between;
        .imgContainer{
         max-height: 50%;
         width: 100%;
-        justify-content: center;
+        justify-content: end;
+        align-items: end;
+        img{
+            max-width: 80%;
+        }
        }
        .popupTxt {
+        font-size: 18pt;
         position: static;
         height: 50%;
         width: 100%;
         justify-content: center;
-
-
+.popupTitle{
+    width: 90%;
+}
        }
     }}
 }
