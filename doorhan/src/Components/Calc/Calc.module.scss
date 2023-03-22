@@ -485,7 +485,7 @@
     display: flex;
     margin-top: 1rem;
     margin-left: 1.5rem;
-    width: 32.4vw;
+    width: 90%;
 
     .input {
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), #F9F9F9;
@@ -497,7 +497,7 @@
         height: 72px;
         font-family: $fontM;
         font-size: 1.4rem;
-        width: 16vw;
+        width: 45%;
     }
 }
 
@@ -549,7 +549,18 @@ input[name="texture"] {
     .texture__cards {
         display: flex;
     }
-
+    .container__form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        margin-left: 1.5rem;
+        width: 90%;
+    
+        .input {
+           margin-bottom: 10px;
+            width: 100%;
+        }
+    }
     // .container__left_bottom {
     //     justify-content: center;
     //     margin-top: 2vh;
