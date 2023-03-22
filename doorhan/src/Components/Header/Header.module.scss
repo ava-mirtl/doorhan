@@ -75,7 +75,7 @@
 
 .imgCont,
 .content {
-    width: 50vw;
+    width: 49vw;
 }
 
 .imgCont {
@@ -87,6 +87,7 @@
     -webkit-background-size: 100%;
     -o-background-size: 100%;
     background-size: 100%;
+    max-width: 100%;
 }
 
 .buttonCont {
@@ -105,6 +106,8 @@
     color: #F9F9F9;
     background: linear-gradient(322.66deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 37.38%), #02336F;
     padding: 2vw 2vw;
+    box-sizing: border-box;
+    max-width: 100vw;
 }
 
 h1 {
@@ -140,7 +143,7 @@ h1 {
     margin: 0.9vw 20px;
 }
 
-@media (max-width: 1471px) {
+@media (max-width: 1397px) {
     .imgCont {
         width: 60vw;
     }
@@ -178,9 +181,9 @@ h1 {
         flex-direction: column-reverse;
     }
 
-    .content {
-        width: 100vw;
-
+        .content{
+            width: 100%;
+        
         h1 {
             text-align: center;
             font-size: 5vw;
@@ -202,12 +205,12 @@ h1 {
     }
 
     .imgCont {
-        width: 100vw;
+        width: 99vw;
         min-height: 60vh;
         padding-bottom: 5vh;
 
         .buttonCont {
-            width: 100vw;
+            width: 99vw;
             height: 50%;
 
             button {
@@ -220,18 +223,21 @@ h1 {
 
 @media (max-width: 676px) {
     .imgCont {
-        width: 100vw;
+        width: 100%;
         min-height: 50vh;
         padding-bottom: 10vh;
 
         .buttonCont {
-            width: 100vw;
+            width: 99vw;
         }
+    }
+    .content{
+        width: 100%;
     }
 }
 
 @media (max-width: 600px) {
-
+    
     .phone {
         position: static;
         padding: 5px;
@@ -242,14 +248,16 @@ h1 {
     .txt {
         font-size: 4vw;
     }
-
+.content{
+    width: 100%;
+}
     .imgCont {
-        width: 100vw;
+        width: 99vw;
         min-height: 40vh;
         padding-bottom: 10vh;
 
         .buttonCont {
-            width: 100vw;
+            width: 99vw;
 
             button {
                 font-size: 4vw;
@@ -260,8 +268,13 @@ h1 {
 
 @media (max-width: 370px) {
 
+.content{
+    padding: 20px 0;
+    max-width: 100%;
 
+}
     .imgCont {
+        max-width: 100%;
         min-height: 30vh;
         padding-bottom: 5vh;
 

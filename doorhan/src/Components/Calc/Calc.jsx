@@ -129,13 +129,13 @@ export default function Calc() {
 
                 <div className={styles.control_2}>
                   <p className={styles.tabs__p}>АВТОМАТИКА</p>
-                  <div className={styles.tabs__avtom}>
+                  <form className={styles.tabs__avtom}>
                     <input className={styles.avtom1} type="radio" id="avtom1" name="tabs" />
                     <label className={styles.tab__avtom1} htmlFor="avtom1">ВСТРОЕННАЯ</label>
                     <input className={styles.avtom2} type="radio" id="avtom2" name="tabs" />
                     <label className={styles.tab__avtom2} htmlFor="avtom2">ОТДЕЛЬНАЯ</label>
                     <span className={styles.glider__avtom}></span>
-                  </div>
+                  </form>
                 </div>
 
 
