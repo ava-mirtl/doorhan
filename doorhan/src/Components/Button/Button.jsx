@@ -49,7 +49,9 @@ export const medium3 = {
   minHeight: "fit-content",
   borderRadius: '0 20px 20px',
   height: "72px",
-  fontSize: "1rem"
+  fontSize: "1rem",
+  minWidth: "530px",
+  width: "30vw"
 }
 
 export const our_gar = {
@@ -74,7 +76,7 @@ export const our_prom = {
 }
 export const our_gar_mini = {
   padding: "10px",
-  width: "20%",
+  width: "46%",
   minWidth: "140px",
   height: "100%",
   fontSize: "8pt",
@@ -85,7 +87,7 @@ export const our_gar_mini = {
 }
 export const our_prom_mini = {
   padding: "10px",
-  width: "20%",
+  width: "46%",
   minWidth: "140px",
   height: "100%",
   fontSize: "8pt",
