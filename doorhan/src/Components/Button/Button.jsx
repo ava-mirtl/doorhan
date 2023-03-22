@@ -54,9 +54,10 @@ export const medium3 = {
 
 export const our_gar = {
   padding: "10px",
-  width: "15vw",
-  height: "3vw",
-  fontSize: "1vw",
+  width: "20%",
+  minWidth: "200px",
+  height: "100%",
+  fontSize: "12pt",
   margin: "0.5vw",
   backgroundColor: 'white',
   border: "2px solid #F39912",
@@ -64,13 +65,33 @@ export const our_gar = {
 }
 export const our_prom = {
   padding: "10px",
-  width: "15vw",
-  height: "3vw",
-  fontSize: "1vw",
+  width: "20%",
+  minWidth: "200px",
+  height: "100%",
+  fontSize: "12pt",
   margin: "0.5vw",
 
 }
+export const our_gar_mini = {
+  padding: "10px",
+  width: "20%",
+  minWidth: "140px",
+  height: "100%",
+  fontSize: "8pt",
+  margin: "0.5vw",
+  backgroundColor: 'white',
+  border: "2px solid #F39912",
+  color: "#F39912"
+}
+export const our_prom_mini = {
+  padding: "10px",
+  width: "20%",
+  minWidth: "140px",
+  height: "100%",
+  fontSize: "8pt",
+  margin: "0.5vw",
 
+}
 export const how_to_buy = {
   padding: "10px",
   width: "100%",

@@ -6,7 +6,7 @@ import ModalInputs from '../Modal/ModalInputs';
 import { blue } from '../Title/Title';
 import gv from '../../assets/images/gv.png';
 import gv2 from '../../assets/images/gv2.png';
-import Button, { medium3, our_gar, our_prom } from '../Button/Button';
+import Button, { medium3, our_gar, our_prom, our_gar_mini, our_prom_mini,} from '../Button/Button';
 
 export default function OurWork() {
     document.body.style.overflow = '';
@@ -36,6 +36,10 @@ export default function OurWork() {
                 <div className={styles.container__btns}>
                     <Button styles={promBlock ? our_gar : our_prom} onClick={(e) => handleOff(e)} name='ГАРАЖНЫЕ' />
                     <Button styles={promBlock ? our_prom : our_gar} onClick={(e) => handleOn(e)} name='ПРОМЫШЛЕННЫЕ' />
+                </div>
+                <div className={styles.container__btns_mini}>
+                    <Button styles={promBlock ? our_gar_mini : our_prom_mini} onClick={(e) => handleOff(e)} name='ГАРАЖНЫЕ' />
+                    <Button styles={promBlock ? our_prom_mini : our_gar_mini} onClick={(e) => handleOn(e)} name='ПРОМЫШЛЕННЫЕ' />
                 </div>
                 <div className={styles.main}>
                     <div className={styles.pict}>
