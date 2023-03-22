@@ -337,9 +337,8 @@
                     margin-left: 1rem;
                     display: flex;
                     width: 40vw;
-                    justify-content: space-around;
 
-                    div {
+                    div {width: 100%;
                         display: flex;
                         justify-content: space-around;
 
@@ -347,15 +346,19 @@
                             border: 2px solid rgb(49, 48, 48);
                             border-radius: 50%;
                             padding: 1px;
-
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
                             div {
-                                width: 2.5vw;
+                                width: 30px;
                                 min-width: 30px;
                                 max-width: 45px;
-                                height: 2.5vw;
+                                height: 30px;
                                 max-height: 45px;
                                 min-height: 30px;
                                 border-radius: 50%;
+                                align-self: center;
+                                justify-self: center;
                             }
                         }
 
@@ -486,6 +489,7 @@
 
 .container__form {
     display: flex;
+    flex-direction: column;
     margin-top: 1rem;
     margin-left: 1.5rem;
     width: 90%;
@@ -495,12 +499,12 @@
         box-shadow: 0px 1px 11px rgba(0, 0, 0, 0.08), inset 0px 4px 4px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
         border: none;
-        margin-right: 1rem;
+        margin: 1rem 1rem 1rem 0;
         padding-left: 10px;
-        height: 72px;
+        height: 65px;
         font-family: $fontM;
         font-size: 1.4rem;
-        width: 45%;
+        width: 100%;
     }
 }
 
@@ -669,11 +673,20 @@ input[name="texture"] {
                     .colors {
                         width: 100%;
                         display: flex;
-                        justify-content: space-around;
+                        justify-content: space-evenly;
 
                         div {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
                             label {
+                                padding: 1px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
                                 div {
+                                    align-self: center;
+                                    justify-self: center;
                                     width: 4vw;
                                     height: 4vw;
                                     min-height: 20px;

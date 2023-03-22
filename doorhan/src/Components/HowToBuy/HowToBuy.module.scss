@@ -138,7 +138,7 @@
 
 .inputNext {
     margin: 10px;
-    height: 4vw;
+    height: 100%;
     width: 16vw;
     padding: 10px;
     box-shadow: inset 0px -1.125px 2.25px rgba(0, 0, 0, 0.25), inset 0px 2.25px 4.5px rgba(0, 0, 0, 0.25);
@@ -228,7 +228,6 @@
     }
 
     .inputNext {
-        height: 5vw;
         width: 100%;
         font-size: 1rem;
     }
@@ -257,6 +256,11 @@
         text-align: center;
 
     }
+}
+.formNext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 }

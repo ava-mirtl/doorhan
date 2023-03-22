@@ -48,10 +48,12 @@ export const medium3 = {
   padding: "20px",
   minHeight: "fit-content",
   borderRadius: '0 20px 20px',
-  height: "72px",
+  height: "64px",
   fontSize: "1rem",
   minWidth: "200px",
-  width: "30vw"
+  
+
+  width: "100%",
 
 }
 
@@ -77,10 +79,10 @@ export const our_prom = {
 }
 export const our_gar_mini = {
   padding: "10px",
-  width: "30%",
+  width: "35%",
   minWidth: "128px",
   height: "100%",
-  fontSize: "8pt",
+  fontSize: "7.5pt",
   margin: "0.5vw",
   backgroundColor: 'white',
   border: "2px solid #F39912",
@@ -88,10 +90,10 @@ export const our_gar_mini = {
 }
 export const our_prom_mini = {
   padding: "10px",
-  width: "30%",
+  width: "35%",
   minWidth: "128px",
   height: "100%",
-  fontSize: "8pt",
+  fontSize: "7.5pt",
   margin: "0.5vw",
 
 }
@@ -100,7 +102,7 @@ export const how_to_buy = {
   width: "100%",
   minHeight: "45px",
   fontSize: "10pt",
-  height: "4vw",
+  height: "100%",
   minheight: "7vw",
   borderRadius: '0 20px 20px'
 }
