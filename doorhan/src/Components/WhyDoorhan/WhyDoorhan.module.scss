@@ -84,9 +84,9 @@
 
 
 .container__aboutus {
-    margin-bottom: 5rem;
-    font-size: 1.2vw;
+    font-size: 12pt;
     font-weight: 600;
+    min-height: 100vh;
 
     .container__main2 {
         position: relative;
@@ -96,12 +96,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 2vw auto;
+        margin: 20px auto;
         font-family: $fontM;
         text-align: center;
 
         .container__pict {
-            grid-area: 0;
             display: flex;
             justify-content: center;
             width: fit-content;
@@ -177,9 +176,6 @@
     }
 }
 
-.container__circlepic7 {
-    margin-top: 0.9rem;
-}
 
 .container__circlepic1 {
     position: absolute;
@@ -226,7 +222,7 @@
     align-items: center;
     flex-direction: column-reverse;
     justify-content: space-between;
-    top: 95%
+    top: calc(100% - 30px);
 }
 
 .circle1,
@@ -242,7 +238,7 @@
 
 @media (max-width: 1175px) {
     .container__aboutus {
-        font-size: 11pt;
+        font-size: 10pt;
 
         .container__main2 {
             margin: 1vw auto;
@@ -306,7 +302,7 @@
     }
 
     .container__circlepic7 {
-        top: 79%
+        top: calc(100% - 1vw - 120px)
     }
 }
 
