@@ -26,15 +26,8 @@ export default function ModalInputs({ active, setActive, handleSubmit}) {
     phone: {phone},
     name: {nameF}})
   }, [nameF, 
-    phone]);
+    phone, valid]);
 
-    useEffect(() => {
-      setFormData({
-        name: {nameF},
-        phone: {phone},
-      })
-    }, [valid]);
-    
     useEffect(() => {
       if (errorName || errorPhone) {
         setValid(false) 
@@ -85,9 +78,9 @@ export default function ModalInputs({ active, setActive, handleSubmit}) {
         <div className="popupTitleNext">РАСЧЕТ СТОИМОСТИ УСЛУГИ</div>
         <form onSubmit={(e)=>handleSubm(e)} className="formNext">
           {(errorName&&nameDirty)&&<div className='error'>{errorName}</div>}
-          <input type="text" onChange={e=>handleName(e)} onBlur={e=>setNameDirty(true)} className="inputNext" placeholder='Ваше имя' value={nameF} />
+          <input type="text" onChange={e=>handleName(e)} onBlur={e=>setNameDirty(true)} value={nameF} className="inputNext" placeholder='Ваше имя'  />
           {(errorPhone&&phoneDirty)&&<div className='error'>{errorPhone}</div>}
-          <input type="text" onChange={e=>handlePhone(e)} onBlur={e=>setPhoneDirty(true)} className="inputNext" placeholder='Телефон' value={phone} />
+          <input type="text" onChange={e=>handlePhone(e)} onBlur={e=>setPhoneDirty(true)} value={phone} className="inputNext" placeholder='Телефон'  />
           <Button name="РАССЧИТАТЬ ВОРОТА" disabled={!valid} styles={popupStyle} />
         </form>
       </div>

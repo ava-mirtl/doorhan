@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState, useEffect} from 'react';
 import styles from './WhyDoorhan.module.scss';
 import Title from '../Title/Title';
 import ModalGrats from '../Modal/ModalGrats';
@@ -13,6 +13,70 @@ import { blue } from '../Title/Title';
 
 
 export default function WhyDoorhan() {
+
+  
+  const [nameF, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [valid, setValid] = useState(false);
+  const [errorName, setErrorName] = useState("введите имя");
+  const [errorPhone, setErrorPhone] = useState("введите номер телефона");
+
+  const [phoneDirty, setPhoneDirty] = useState(false);
+  const [nameDirty, setNameDirty] = useState(false);
+  const [formData, setFormData] = useState({phone: "", name: ""});
+
+
+  
+  useEffect(() => {setFormData({
+    phone: {phone},
+    name: {nameF}})
+  }, [nameF, 
+    phone, valid]);
+
+    useEffect(() => {
+      if (errorName || errorPhone) {
+        setValid(false) 
+      }
+      else {
+        setValid(true)
+      }
+    }, [errorName, errorPhone]);
+
+    
+
+  const handlePhone = (e)=>{
+    setPhone(e.target.value);
+    if (!e.target.value) setErrorPhone('Введите номер')
+    const re = /^[\d\+][\d\(\)\ -]{8,14}\d$/;
+  if (!re.test(e.target.value)){
+  setErrorPhone('Некорректный ввод')
+  }
+  else (  setErrorPhone(null)
+  )
+  }
+
+  const handleName = (e)=>{
+    setName(e.target.value);
+    if (!e.target.value) setErrorName('Введите имя')
+    const re = /^[a-zA-Zа-яёА-ЯЁ]+$/u;
+  if (!re.test(e.target.value)){
+  setErrorName('Некорректный ввод.')
+  }
+  else (  setErrorName(null)
+  )
+  }
+
+  const handleSubm = (e, nameF, 
+    phone) => {
+        e.preventDefault();
+        setFormData(state => ({...state,
+            name:  {nameF},
+            phone: {phone},
+            }))
+
+            console.log(formData);
+          handleSubmit(e)}
+
 
   document.body.style.overflow = '';
   const [modalActive, setModalActive] = useState(false);
@@ -59,10 +123,12 @@ export default function WhyDoorhan() {
             </div>
             <div className={styles.main__right}>
               <div className={styles.form__box}>
-                <form className={styles.form}>
-                  <input type="text" className={styles.input} placeholder='Имя' />
-                  <input type="text" className={styles.input} placeholder='Телефон' />
-                  <Button name="ПОЛУЧИТЬ ПОДАРОК" styles={why} onClick={(e) => handleSubmit(e)} />
+                <form onSubmit={(e)=>handleSubm(e)}  className={styles.form}>
+                {(errorName&&nameDirty)&&<div className='error'>{errorName}</div>}
+                  <input type="text" onChange={e=>handleName(e)} onBlur={e=>setNameDirty(true)} value={nameF}  className={styles.input} placeholder='Имя' />
+                  {(errorPhone&&phoneDirty)&&<div className='error'>{errorPhone}</div>}
+                  <input onChange={e=>handlePhone(e)} onBlur={e=>setPhoneDirty(true)} value={phone} type="text" className={styles.input} placeholder='Телефон' />
+                  <Button name="ПОЛУЧИТЬ ПОДАРОК" styles={why} disabled={!valid}/>
                 </form>
               </div>
             </div>
