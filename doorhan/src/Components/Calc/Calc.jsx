@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import popup from '../../assets/images/popup1.jpg';
-import ModalGrats from '../Modal/ModalGrats';
-import ModalInputs from '../Modal/ModalInputs';
 import Title from '../Title/Title';
-import Modal from '../Modal/Modal';
+import Tabs from '../Tablist/Tablist';
+import ModalGrats from '../Modal/ModalGrats';
 import pic1 from '../../assets/images/online1.png';
 import pic2 from '../../assets/images/online2.png';
 import pic3 from '../../assets/images/online3.png';
@@ -13,15 +11,13 @@ import der1 from '../../assets/images/derevo1.png';
 import der2 from '../../assets/images/derevo2.png';
 import der3 from '../../assets/images/derevo3.png';
 import str from '../../assets/icons/str.png'
-import Button, { medium3, popupStyle } from '../Button/Button';
-import Tabs from '../Tablist/Tablist';
+import Button, { medium3 } from '../Button/Button';
 import { blue } from '../Title/Title';
 import styles from './Calc.module.scss';
 
 
 export default function Calc() {
   const initialData = {
-    name: "",
     phone: "",
     type: "",
     ispolnenie: "",
@@ -33,10 +29,9 @@ export default function Calc() {
     vorota: ""
 }
 
-
+  const [modalActive, setModalActive] = useState(false);
   const [count, setCount] = useState(0);
   const [count2, setCount2] = useState(0);
-  const [nameF, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [type, setType] = useState("");
   const [ispol, setIspol] = useState("");
@@ -45,9 +40,12 @@ export default function Calc() {
   const [texture, setTexture] = useState("");
   const [vorota, setVorota] = useState("");
   const [formData, setFormData] = useState(initialData);
+  const [valid, setValid] = useState(false);
+  const [error, setError] = useState("введите номер телефона");
+  const [phoneDirty, setPhoneDirty] = useState(false)
+
 
   useEffect(() => {setFormData({
-    name:  {nameF},
     phone: {phone},
     type: { type },
     ispolnenie: { ispol },
@@ -57,11 +55,28 @@ export default function Calc() {
     color: { color }, 
     texture: { texture },
     vorota: { vorota }})
-  }, [nameF, 
-    phone, type, ispol, avtom,
-    count, count2, color, texture, vorota]);
+  }, [phone, type, ispol, avtom,
+    count, count2, color, texture, vorota, valid]);
     useEffect(() => {
     }, [formData]);
+    
+    useEffect(() => {
+      if (!error) {
+        setValid(true) 
+      }
+    }, [error]);
+    
+
+  const handlePhone = (e)=>{
+    setPhone(e.target.value);
+    if (!e.target.value) setError('Введите номер')
+    const re = /^[\d\+][\d\(\)\ -]{8,14}\d$/;
+  if (!re.test(e.target.value)){
+  setError('Допустимый формат: +7(XXX)XXX-XX-XX, 8XXX XXX XX XX, 8XXXXXXXXXX +7XXXXXXXXXX')
+  }
+  else (  setError(null)
+  )
+  }
 
   const handleSubmit = (e, nameForm, 
     phone, type, ispolnenie, avtomatika,
@@ -79,21 +94,12 @@ export default function Calc() {
             texture: { texture },
             vorota: { vorota }}))
 
-            console.log(formData);}
+            console.log(formData);
+            setModalActive(true);
+          }
 
 
   document.body.style.overflow = '';
-  const [modalActive, setModalActive] = useState(false);
-  const [modalSecond, setModalSecond] = useState(false);
-  // const handleSubmit = (event) => {
-  //   setModalSecond(false);
-  //   event.preventDefault();
-  //   setModalActive(true);
-  // }
-  const handleClick = (event) => {
-    event.preventDefault();
-    setModalSecond(true);
-  }
 
 
   //счетчики длина и высота
@@ -117,7 +123,7 @@ export default function Calc() {
     <div>
       <div className={styles.wraper}>
         <Title styles={blue} title="ОНЛАЙН КАЛЬКУЛЯТОР" />
-        <form onSubmit={(e) => handleSubmit(e, nameF, phone, type, ispol, avtom,
+        <form onSubmit={(e) => handleSubmit(e, phone, type, ispol, avtom,
     count, count2, color, texture, vorota )} className={styles.container}>
           <div className={styles.container__left}>
             <div className={styles.container__left_top} >
@@ -358,36 +364,17 @@ export default function Calc() {
             </div>
             <div className={styles.container__right_bottom}>
               <div className={styles.container__form}>
-                <input type="text" className={styles.input} placeholder='Телефон' name='phone' value={phone} onChange={(e)=>setPhone(e.target.value)}/>
-                <Button type='submit' styles={medium3} name="УТОЧНИТЬ СТОИМОСТЬ" />
+                {(phoneDirty&&error)&&<div className={styles.error}>{error}</div>}
+                <input type="text" onChange={e=>handlePhone(e)}
+                onBlur={()=>setPhoneDirty(true)} className={styles.input} placeholder='Телефон' name='phone' value={phone} 
+                />
+                <Button type='submit' styles={medium3} name="УТОЧНИТЬ СТОИМОСТЬ" disabled={error}/>
               </div>
             </div>
           </div>
         </form>
       </div >
-      {
-        modalActive && <Modal active={modalActive} setActive={setModalActive}>
-          <div className={styles.popupContainer}>
-            <div className={styles.imgContainer}>
-              <img src={popup} alt="девушка" />
-            </div>
-            <div className={styles.popupTxt}><div className={styles.popupTitle}>СПАСИБО ЗА ВАШЕ ОБРАЩЕНИЕ, НАШ МЕНЕДЖЕР СКОРО С ВАМИ СВЯЖЕТСЯ!
-            </div></div>
-          </div>    </Modal>
-      }
-      {
-        modalSecond &&
-        <Modal active={modalSecond} setActive={setModalSecond}>
-          <div className={styles.popupContainerNext}>
-            <div className={styles.popupTitleNext}>РАСЧЕТ СТОИМОСТИ УСЛУГИ</div>
-            <form className={styles.formNext}>
-              <input type="text" className={styles.inputNext} placeholder='Ваше имя' name='имя'/>
-              <input type="text" className={styles.inputNext} placeholder='Телефон' name='телефон'/>
-              <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleSubmit} styles={popupStyle} />
-            </form>
-          </div>
-        </Modal>
-      }
+      { modalActive && <ModalGrats active={modalActive} setActive={setModalActive}/> }
     </div >
   )
 }
