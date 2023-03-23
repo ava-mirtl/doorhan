@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import popup from '../../assets/images/popup1.jpg';
 import ModalGrats from '../Modal/ModalGrats';
 import ModalInputs from '../Modal/ModalInputs';
@@ -20,17 +20,76 @@ import styles from './Calc.module.scss';
 
 
 export default function Calc() {
+  const initialData = {
+    name: "",
+    phone: "",
+    type: "",
+    ispolnenie: "",
+    avtomatika: "",
+    dlina: "",
+    visota: "", 
+    color: "", 
+    texture: "",
+    vorota: ""
+}
+
+
   const [count, setCount] = useState(0);
   const [count2, setCount2] = useState(0);
+  const [nameF, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [type, setType] = useState("");
+  const [ispol, setIspol] = useState("");
+  const [avtom, setAvtom] = useState("");
+  const [color, setColor] = useState("");
+  const [texture, setTexture] = useState("");
+  const [vorota, setVorota] = useState("");
+  const [formData, setFormData] = useState(initialData);
+
+  useEffect(() => {setFormData({
+    name:  {nameF},
+    phone: {phone},
+    type: { type },
+    ispolnenie: { ispol },
+    avtomatika: { avtom },
+    dlina: { count },
+    visota: { count2 }, 
+    color: { color }, 
+    texture: { texture },
+    vorota: { vorota }})
+  }, [nameF, 
+    phone, type, ispol, avtom,
+    count, count2, color, texture, vorota]);
+    useEffect(() => {
+    }, [formData]);
+
+  const handleSubmit = (e, nameForm, 
+    phone, type, ispolnenie, avtomatika,
+    dlina, visota, color, texture, vorota) => {
+        e.preventDefault();
+        setFormData(state => ({...state,
+            name:  {nameForm},
+            phone: {phone},
+            type: { type },
+            ispolnenie: { ispolnenie },
+            avtomatika: { avtomatika },
+            dlina: { dlina },
+            visota: { visota }, 
+            color: { color }, 
+            texture: { texture },
+            vorota: { vorota }}))
+
+            console.log(formData);}
+
 
   document.body.style.overflow = '';
   const [modalActive, setModalActive] = useState(false);
   const [modalSecond, setModalSecond] = useState(false);
-  const handleSubmit = (event) => {
-    setModalSecond(false);
-    event.preventDefault();
-    setModalActive(true);
-  }
+  // const handleSubmit = (event) => {
+  //   setModalSecond(false);
+  //   event.preventDefault();
+  //   setModalActive(true);
+  // }
   const handleClick = (event) => {
     event.preventDefault();
     setModalSecond(true);
@@ -52,24 +111,24 @@ export default function Calc() {
   }
 
 
-  const handleChoice = (e) => {
-    console.log(e.target);
-  }
 
 
   return (
     <div>
       <div className={styles.wraper}>
         <Title styles={blue} title="ОНЛАЙН КАЛЬКУЛЯТОР" />
-        <form className={styles.container}>
+        <form onSubmit={(e) => handleSubmit(e, nameF, phone, type, ispol, avtom,
+    count, count2, color, texture, vorota )} className={styles.container}>
           <div className={styles.container__left}>
-            <div className={styles.container__left_top} onClick={(e) => { handleChoice(e) }}>
+            <div className={styles.container__left_top} >
               <div className={styles.choice}>
                 <label htmlFor="choice1">
                   <div className={styles.img}>
                     <img src={pic1} alt="ДОСКА" />
                   </div>
-                  <input type="radio" id="choice1" name="тип" value="доска" />
+                  <input type="radio" id="choice1" name="type" 
+                      value="доска" checked={type=="доска"?true:false}
+                      onChange={(e)=>setType(e.target.value)}/>
                   <div className={styles.checked}>
                     <img src={check} alt="доска" />
                   </div>
@@ -81,7 +140,9 @@ export default function Calc() {
                   <div className={styles.img}>
                     <img src={pic2} alt="ШИРОКАЯ ЦЕНТРАЛЬНАЯ ПОЛОСА" />
                   </div>
-                  <input type="radio" id="choice2" name="тип" value="широкая центральная полоса" />
+                  <input type="radio" id="choice2" name="type" 
+                      value="широкая центральная полоса" checked={type=="широкая центральная полоса"?true:false}
+                      onChange={(e)=>setType(e.target.value)}/>
                   <div className={styles.checked}>
                     <img src={check} alt="полоса" />
                   </div>
@@ -93,7 +154,9 @@ export default function Calc() {
                   <div className={styles.img}>
                     <img src={pic3} alt="ФИЛЕНКА" />
                   </div>
-                  <input className={styles.checkedInput} type="radio" id="choice3" name="тип" value="филенка" />
+                  <input className={styles.checkedInput} type="radio" id="choice3" name="type" 
+                      value="филенка" checked={type=="филенка"?true:false} 
+                      onChange={(e)=>setType(e.target.value)}/>
                   <div className={styles.checked}>
                     <img src={check} alt="филенка" />
                   </div>
@@ -105,7 +168,9 @@ export default function Calc() {
                   <div className={styles.img}>
                     <img src={pic4} alt="ВОЛНА" />
                   </div>
-                  <input type="radio" id="choice4" name="тип" value="волна" />
+                  <input type="radio" id="choice4" name="type" 
+                  value="волна" checked={type=="волна"?true:false}
+                  onChange={(e)=>setType(e.target.value)}/>
                   <div className={styles.checked}>
                     <img src={check} alt="волна" />
                   </div>
@@ -118,9 +183,15 @@ export default function Calc() {
                 <div className={styles.control_1}>
                   <p className={styles.tabs__p}>ИСПОЛНЕНИЕ</p>
                   <div className={styles.tabs__isp}>
-                    <input className={styles.isp1} type="radio" id="isp1" name="исполнение" />
+                    <input className={styles.isp1} type="radio" id="isp1" name="исполнение" 
+                    value="горизонтальное"
+                    checked={ispol=="горизонтальное"?true:false}
+                    onChange={(e)=>setIspol(e.target.value)}/>
                     <label className={styles.tab__isp1} htmlFor="isp1">ГОРИЗОНТАЛЬНОЕ</label>
-                    <input className={styles.isp2} type="radio" id="isp2" name="исполнение" />
+                    <input className={styles.isp2} type="radio" id="isp2" name="исполнение" 
+                    value="вертикальное"
+                    checked={ispol=="вертикальное"?true:false}
+                    onChange={(e)=>setIspol(e.target.value)} />
                     <label className={styles.tab__isp2} htmlFor="isp2">ВЕРТИКАЛЬНОЕ</label>
                     <span className={styles.glider__isp}></span>
                   </div>
@@ -130,9 +201,13 @@ export default function Calc() {
                 <div className={styles.control_2}>
                   <p className={styles.tabs__p}>АВТОМАТИКА</p>
                   <div className={styles.tabs__avtom}>
-                    <input className={styles.avtom1} type="radio" id="avtom1" name="автоматика" />
+                    <input className={styles.avtom1} type="radio" id="avtom1" name="автоматика" value="встроенная"
+                    checked={avtom=="встроенная"?true:false}
+                    onChange={(e)=>setAvtom(e.target.value)}/>
                     <label className={styles.tab__avtom1} htmlFor="avtom1">ВСТРОЕННАЯ</label>
-                    <input className={styles.avtom2} type="radio" id="avtom2" name="автоматика" />
+                    <input className={styles.avtom2} type="radio" id="avtom2" name="автоматика" value="отдельная"
+                    checked={avtom=="отдельная"?true:false}
+                    onChange={(e)=>setAvtom(e.target.value)}/>
                     <label className={styles.tab__avtom2} htmlFor="avtom2">ОТДЕЛЬНАЯ</label>
                     <span className={styles.glider__avtom}></span>
                   </div>
@@ -152,7 +227,7 @@ export default function Calc() {
                       >
                         <img src={str} alt="left" />
                       </button>
-                      <input type="text" name='длина' value={count} />
+                      <input type="text" name='dlina' value={count} readOnly/>
                       <button className={styles.bt_right}
                         type="button"
                         onClick={() => onNextClick(count, setCount)}
@@ -172,7 +247,7 @@ export default function Calc() {
                       >
                         <img src={str} alt="left" />
                       </button>
-                      <input type="text" name='высота' value={count2} />
+                      <input type="text" name='visota' value={count2} readOnly/>
                       <button className={styles.bt_right}
                         type="button"
                         onClick={() => onNextClick(count2, setCount2)}
@@ -185,14 +260,38 @@ export default function Calc() {
                 <div className={styles.control_4}>
                   <p className={styles.tabs__p}>ВЫБЕРИТЕ <br />ЦВЕТ ВОРОТ</p>
                   <div className={styles.colors}>
-                    <div><input type="radio" name='color' id='color1' value="белый" /><label className={styles.round} htmlFor="color1"><div className={styles.btn1}></div></label></div>
-                    <div><input type="radio" name='color' id='color2' value="серый" /><label className={styles.round} htmlFor="color2"><div className={styles.btn2}></div></label></div>
-                    <div><input type="radio" name='color' id='color3' value="бежевый" /><label className={styles.round} htmlFor="color3"><div className={styles.btn3}></div></label></div>
-                    <div><input type="radio" name='color' id='color4' value="черный" /><label className={styles.round} htmlFor="color4"><div className={styles.btn4}></div></label></div>
-                    <div><input type="radio" name='color' id='color5' value="синий" /><label className={styles.round} htmlFor="color5"><div className={styles.btn5}></div></label></div>
-                    <div><input type="radio" name='color' id='color6' value="красный" /><label className={styles.round} htmlFor="color6"><div className={styles.btn6}></div></label></div>
-                    <div><input type="radio" name='color' id='color7' value="коричневый" /><label className={styles.round} htmlFor="color7"><div className={styles.btn7}></div></label></div>
-                    <div><input type="radio" name='color' id='color8' value="черный" /><label className={styles.round} htmlFor="color8"><div className={styles.btn8}></div></label></div>
+                    <div><input type="radio" name='color' id='color1' 
+                        value="белый" 
+                        checked={color=="белый"?true:false}
+                        onChange={(e)=>setColor(e.target.value)}/><label className={styles.round} htmlFor="color1"><div className={styles.btn1}></div></label></div>
+                    <div><input type="radio" name='color' id='color2' 
+                        checked={color=="серый"?true:false}
+                        onChange={(e)=>setColor(e.target.value)} 
+                        value="серый" /><label className={styles.round} htmlFor="color2"><div className={styles.btn2}></div></label></div>
+                    <div><input type="radio" name='color' id='color3' 
+                        checked={color=="бежевый"?true:false}
+                        onChange={(e)=>setColor(e.target.value)} 
+                        value="бежевый" /><label className={styles.round} htmlFor="color3"><div className={styles.btn3}></div></label></div>
+                    <div><input type="radio" name='color' id='color4' 
+                        checked={color=="зеленый"?true:false}
+                        onChange={(e)=>setColor(e.target.value)} 
+                        value="зеленый" /><label className={styles.round} htmlFor="color4"><div className={styles.btn4}></div></label></div>
+                    <div><input type="radio" name='color' id='color5' 
+                        checked={color=="синий"?true:false}
+                        onChange={(e)=>setColor(e.target.value)} 
+                        value="синий" /><label className={styles.round} htmlFor="color5"><div className={styles.btn5}></div></label></div>
+                    <div><input type="radio" name='color' id='color6' 
+                        checked={color=="красный"?true:false}
+                        onChange={(e)=>setColor(e.target.value)} 
+                        value="красный" /><label className={styles.round} htmlFor="color6"><div className={styles.btn6}></div></label></div>
+                    <div><input type="radio" name='color' id='color7' 
+                        checked={color=="коричневый"?true:false}
+                        onChange={(e)=>setColor(e.target.value)} 
+                        value="коричневый" /><label className={styles.round} htmlFor="color7"><div className={styles.btn7}></div></label></div>
+                    <div><input type="radio" name='color' id='color8' 
+                        checked={color=="черный"?true:false}
+                        onChange={(e)=>setColor(e.target.value)} 
+                        value="черный" /><label className={styles.round} htmlFor="color8"><div className={styles.btn8}></div></label></div>
                   </div>
                 </div>
 
@@ -210,7 +309,9 @@ export default function Calc() {
                         <div className={styles.img}>
                           <img src={der1} alt="текстура" />
                         </div>
-                        <input type="radio" id="texture1" name="texture" value="текстура1" />
+                        <input type="radio" id="texture1" name="texture" 
+                        value="текстура1" checked={texture=="текстура1"?true:false}
+                        onChange={(e)=>setTexture(e.target.value)}/>
                         <div className={styles.checked_texture}>
                           <img src={check} alt="текстура" />
                         </div>
@@ -221,7 +322,9 @@ export default function Calc() {
                         <div className={styles.img}>
                           <img src={der2} alt="текстура" />
                         </div>
-                        <input type="radio" id="texture2" name="texture" value="текстура2" />
+                        <input type="radio" id="texture2" name="texture" 
+                        value="текстура2" checked={texture=="текстура2"?true:false}
+                        onChange={(e)=>setTexture(e.target.value)}/>
                         <div className={styles.checked_texture}>
                           <img src={check} alt="текстура" />
                         </div>
@@ -234,7 +337,9 @@ export default function Calc() {
                         <div className={styles.img}>
                           <img src={der3} alt="текстура" />
                         </div>
-                        <input type="radio" id="texture3" name="texture" value="текстура3" />
+                        <input type="radio" id="texture3" name="texture" 
+                        value="текстура3" checked={texture=="текстура3"?true:false}
+                        onChange={(e)=>setTexture(e.target.value)}/>
                         <div className={styles.checked_texture}>
                           <img src={check} alt="текстура" />
                         </div>
@@ -249,12 +354,12 @@ export default function Calc() {
 
           <div className={styles.container__right}>
             <div className={styles.container__right_top}>
-              <Tabs />
+              <Tabs vorota={vorota} state={setVorota}/>
             </div>
             <div className={styles.container__right_bottom}>
               <div className={styles.container__form}>
-                <input type="text" className={styles.input} placeholder='Телефон' name='phone'/>
-                <Button type='submit' onClick={(e) => handleSubmit(e)} styles={medium3} name="УТОЧНИТЬ СТОИМОСТЬ" />
+                <input type="text" className={styles.input} placeholder='Телефон' name='phone' value={phone} onChange={(e)=>setPhone(e.target.value)}/>
+                <Button type='submit' styles={medium3} name="УТОЧНИТЬ СТОИМОСТЬ" />
               </div>
             </div>
           </div>
