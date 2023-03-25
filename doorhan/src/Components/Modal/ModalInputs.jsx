@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
+import emailjs from '@emailjs/browser';
 import Modal from './Modal';
 import Button from '../Button/Button'
 import { popupStyle } from '../Button/Button';
-
 import "./modal.scss";
 
 
@@ -24,12 +24,10 @@ export default function ModalInputs({ active, setActive, handleSubmit}) {
   
   useEffect(() => {setFormData({
     phone: {phone},
-    name: {nameF}})
-  }, [nameF, 
-    phone, valid]);
+    name: {nameF}})}, [nameF, phone, valid]);
 
     useEffect(() => {
-      if (errorName || errorPhone) {
+      if (errorName&&!nameDirty  || errorPhone&&!phoneDirty) {
         setValid(false) 
       }
       else {
@@ -68,9 +66,20 @@ export default function ModalInputs({ active, setActive, handleSubmit}) {
             phone: {phone},
             }))
 
-            console.log(formData);
+      emailjs.send('service_xg5umvn', 'template_7i0z3ee', {
+          phone: formData.phone.phone,
+          name:  formData.name.nameF,
+          }, '9bhmH2zfa0KYm0OUd') 
+          .then((result) => {
+            console.log(result);}, 
+          (error) => {
+            console.log(error);}
+          );
+            setPhone("");
+            setName("");
             setActive(true)
-          handleSubmit(e)}
+            handleSubmit(e)
+      }
 
   return (
     <Modal active={active} setActive={setActive}>

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 import OrangeBtn from '../OrangeBtn/OrangeBtn';
 import Button, { how_to_buy } from '../Button/Button';
 import ModalGrats from '../Modal/ModalGrats';
@@ -17,11 +18,66 @@ export default function HowToBuy() {
   const date = new Date
 
   const [modalActive, setModalActive] = useState(false);
+  const [nameF, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [valid, setValid] = useState(false);
+  const [errorName, setErrorName] = useState("введите имя");
+  const [errorPhone, setErrorPhone] = useState("введите номер телефона");
 
-  const handleClick = (event) => {
-    event.preventDefault();
-    setModalActive(true);
+  const [phoneDirty, setPhoneDirty] = useState(false);
+  const [nameDirty, setNameDirty] = useState(false);
+  const [formData, setFormData] = useState({phone: "", name: ""});
+
+  useEffect(() => {setFormData({
+    phone: {phone},
+    name: {nameF}})}, [nameF, phone, valid]);
+
+  useEffect(() => {
+    if (errorName&&!nameDirty || errorPhone&&!phoneDirty) {
+      setValid(false) 
+    }
+    else {
+      setValid(true)
+    }}, [errorName, errorPhone]);
+
+  const handlePhone = (e)=>{
+      setPhone(e.target.value);
+    if (!e.target.value) setErrorPhone('Введите номер')
+      const re = /^[\d\+][\d\(\)\ -]{8,14}\d$/;
+    if (!re.test(e.target.value)){
+      setErrorPhone('Некорректный ввод')
+    }
+    else ( setErrorPhone(null))
   }
+
+  const handleName = (e)=>{
+      setName(e.target.value);
+    if (!e.target.value) setErrorName('Введите имя')
+      const re = /^[a-zA-Zа-яёА-ЯЁ]+$/u;
+    if (!re.test(e.target.value)){
+    setErrorName('Некорректный ввод.')
+    }
+    else (  setErrorName(null))
+  }
+
+  const handleSubm = (e, nameF, phone) => {
+        e.preventDefault();
+        setFormData(state => ({...state,
+            name:  {nameF},
+            phone: {phone},
+            }))
+
+            emailjs.send('service_xg5umvn', 'template_7i0z3ee', {
+              phone: formData.phone.phone,
+              name:  formData.name.nameF,
+            }, '9bhmH2zfa0KYm0OUd') 
+          .then((result) => {
+            console.log(result);}, 
+          (error) => {
+            console.log(error);});
+            setPhone("");
+            setName("");
+            setModalActive(true)}
 
   return (
     <div className={styles.box}>
@@ -122,10 +178,12 @@ export default function HowToBuy() {
             {date.getDate()}.{date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1}
           </div>
         </div>
-        <form className={styles.formNext}>
-          <input type="text" className={styles.inputNext} placeholder='Имя' />
-          <input type="text" className={styles.inputNext} placeholder='Телефон' />
-          <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleClick} styles={how_to_buy} />
+        <form  onSubmit={(e)=>handleSubm(e)} className={styles.formNext} >
+          {(errorName&&nameDirty)&&<div className='error'>{errorName}</div>}
+          <input type="text" onChange={e=>handleName(e)} onBlur={e=>setNameDirty(true)} value={nameF}  className={styles.inputNext} placeholder='Имя' />
+          {(errorPhone&&phoneDirty)&&<div className='error'>{errorPhone}</div>}
+          <input onChange={e=>handlePhone(e)} onBlur={e=>setPhoneDirty(true)} value={phone} type="text" className={styles.inputNext} placeholder='Телефон' />
+          <Button name="РАССЧИТАТЬ ВОРОТА" styles={how_to_buy} disabled={!valid}/>
         </form>
       </div>
       {modalActive &&

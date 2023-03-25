@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import emailjs from '@emailjs/browser';
 import styles from './WhyDoorhan.module.scss';
 import Title from '../Title/Title';
 import ModalGrats from '../Modal/ModalGrats';
@@ -14,7 +15,8 @@ import { blue } from '../Title/Title';
 
 export default function WhyDoorhan() {
 
-  
+  const [modalActive, setModalActive] = useState(false);
+
   const [nameF, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [valid, setValid] = useState(false);
@@ -29,57 +31,58 @@ export default function WhyDoorhan() {
   
   useEffect(() => {setFormData({
     phone: {phone},
-    name: {nameF}})
-  }, [nameF, 
-    phone, valid]);
+    name: {nameF}})}, [nameF, phone, valid]);
 
-    useEffect(() => {
-      if (errorName || errorPhone) {
-        setValid(false) 
-      }
-      else {
-        setValid(true)
-      }
-    }, [errorName, errorPhone]);
-
-    
+  useEffect(() => {
+    if (errorName || errorPhone) {
+      setValid(false) 
+    }
+    else {
+      setValid(true)
+    }}, [errorName, errorPhone]);
 
   const handlePhone = (e)=>{
-    setPhone(e.target.value);
+      setPhone(e.target.value);
     if (!e.target.value) setErrorPhone('Введите номер')
-    const re = /^[\d\+][\d\(\)\ -]{8,14}\d$/;
-  if (!re.test(e.target.value)){
-  setErrorPhone('Некорректный ввод')
-  }
-  else (  setErrorPhone(null)
-  )
+      const re = /^[\d\+][\d\(\)\ -]{8,14}\d$/;
+    if (!re.test(e.target.value)){
+      setErrorPhone('Некорректный ввод')
+    }
+    else ( setErrorPhone(null))
   }
 
   const handleName = (e)=>{
-    setName(e.target.value);
+      setName(e.target.value);
     if (!e.target.value) setErrorName('Введите имя')
-    const re = /^[a-zA-Zа-яёА-ЯЁ]+$/u;
-  if (!re.test(e.target.value)){
-  setErrorName('Некорректный ввод.')
-  }
-  else (  setErrorName(null)
-  )
+      const re = /^[a-zA-Zа-яёА-ЯЁ]+$/u;
+    if (!re.test(e.target.value)){
+    setErrorName('Некорректный ввод.')
+    }
+    else (  setErrorName(null))
   }
 
-  const handleSubm = (e, nameF, 
-    phone) => {
+  const handleSubm = (e, nameF, phone) => {
         e.preventDefault();
+        
         setFormData(state => ({...state,
             name:  {nameF},
             phone: {phone},
             }))
 
-            console.log(formData);
-          handleSubmit(e)}
+            emailjs.send('service_xg5umvn', 'template_7i0z3ee', {
+              phone: formData.phone.phone,
+              name:  formData.name.nameF,
+            }, '9bhmH2zfa0KYm0OUd') 
+          .then((result) => {
+            console.log(result);}, 
+          (error) => {
+            console.log(error);});
+            setPhone("");
+            setName("");
+            handleSubmit(e);}
 
 
   document.body.style.overflow = '';
-  const [modalActive, setModalActive] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();

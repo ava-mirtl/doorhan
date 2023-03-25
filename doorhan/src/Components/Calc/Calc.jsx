@@ -106,6 +106,16 @@ export default function Calc() {
           (error) => {
             console.log(error);});
 
+      setCount(0);
+      setCount2(0);
+      setPhone("");
+      setType("");
+      setIspol("");
+      setAvtom("");
+      setColor("");
+      setTexture("");
+      setVorota("");
+
             setModalActive(true);
           }
 

@@ -27,11 +27,6 @@ const [formData, setFormData] = useState({phone: ""});
 
   useEffect(() => {  }, [ errorPhone]);
 
-  useEffect(() => {
-     if(!phoneDirty&&!phone){
-        setErrorPhone(false)}
-      }, [ phoneDirty, phone]);
-
 
   const handlePhone = (e)=>{
       setPhone(e.target.value);
@@ -48,7 +43,7 @@ const [formData, setFormData] = useState({phone: ""});
         setFormData(state => ({...state,
             phone:  {phone},
             }))
-        emailjs.send('service_xg5umvn', 'template_w6wem2o', formData.phone, '9bhmH2zfa0KYm0OUd') 
+        emailjs.send('service_xg5umvn', 'template_7i0z3ee', formData.phone, '9bhmH2zfa0KYm0OUd') 
           .then((result) => {
             console.log(result);}, 
           (error) => {
@@ -81,7 +76,7 @@ const handleClick = ()=>
       <form onSubmit={e=>handleSubm(e)} 
       className={styles.form} >
         
-        <input onBlur={e=>setPhoneDirty(true)} onChange={e=>handlePhone(e)} value={phone} type="text" className={styles.input} style={(phoneDirty&&errorPhone)?{border: "2px solid #F3950A"}:{border: "1px solid gray"}} placeholder='Телефон'/>
+        <input onBlur={e=>setPhoneDirty(true)} onChange={e=>handlePhone(e)} value={phone} type="text" className={styles.input} style={(phoneDirty&&errorPhone)?{border: "2px solid red"}:{border: "1px solid gray"}} placeholder='Телефон'/>
         <button type='submit' disabled={errorPhone}
         className={styles.btn}>Заказать звонок</button></form>
     </div>
