@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 import Title from '../Title/Title';
 import Tabs from '../Tablist/Tablist';
 import ModalGrats from '../Modal/ModalGrats';
@@ -45,56 +46,66 @@ export default function Calc() {
   const [phoneDirty, setPhoneDirty] = useState(false)
 
 
-  useEffect(() => {setFormData({
-    phone: {phone},
-    type: { type },
-    ispolnenie: { ispol },
-    avtomatika: { avtom },
-    dlina: { count },
-    visota: { count2 }, 
-    color: { color }, 
-    texture: { texture },
-    vorota: { vorota }})
-  }, [phone, type, ispol, avtom,
-    count, count2, color, texture, vorota, valid]);
-    useEffect(() => {
-    }, [formData]);
+  useEffect(() => {
+    setFormData({
+        phone: { phone },
+        type: { type },
+        ispolnenie: { ispol },
+        avtomatika: { avtom },
+        dlina: { count },
+        visota: { count2 }, 
+        color: { color }, 
+        texture: { texture },
+        vorota: { vorota }})}, [phone, type, ispol, avtom,
+                                count, count2, color, texture, vorota, valid]);
+
+  useEffect(() => { }, [formData]);
     
-    useEffect(() => {
-      if (!error) {
-        setValid(true) 
-      }
-    }, [error]);
+  useEffect(() => { if (!error) { setValid(true) }}, [error]);
     
 
-  const handlePhone = (e)=>{
+  const handlePhone = (e) =>{
     setPhone(e.target.value);
     if (!e.target.value) setError('Введите номер')
     const re = /^[\d\+][\d\(\)\ -]{8,14}\d$/;
-  if (!re.test(e.target.value)){
-  setError('Допустимый формат: +7(XXX)XXX-XX-XX, 8XXX XXX XX XX, 8XXXXXXXXXX +7XXXXXXXXXX')
-  }
-  else (  setError(null)
-  )
+      if (!re.test(e.target.value)){
+        setError('Допустимый формат: +7(XXX)XXX-XX-XX, 8XXX XXX XX XX, 8XXXXXXXXXX +7XXXXXXXXXX')
+      }
+    else (  setError(null)
+)
   }
 
-  const handleSubmit = (e, nameForm, 
-    phone, type, ispolnenie, avtomatika,
-    dlina, visota, color, texture, vorota) => {
+
+  const handleSubmit = (e, 
+    phone, type, ispol, avtom,
+    count, count2, color, texture, vorota) => {
         e.preventDefault();
         setFormData(state => ({...state,
-            name:  {nameForm},
-            phone: {phone},
+            phone: { phone },
             type: { type },
-            ispolnenie: { ispolnenie },
-            avtomatika: { avtomatika },
-            dlina: { dlina },
-            visota: { visota }, 
+            ispolnenie: { ispol },
+            avtomatika: { avtom },
+            dlina: { count },
+            visota: { count2 }, 
             color: { color }, 
             texture: { texture },
             vorota: { vorota }}))
 
-            console.log(formData);
+            emailjs.send('service_xg5umvn', 'template_w6wem2o', { 
+              phone: formData.phone.phone,
+              type: formData.type.type,
+              ispolnenie: formData.ispolnenie.ispol,
+              avtomatika: formData.avtomatika.avtom,
+              dlina: formData.dlina.count,
+              visota: formData.visota.count2, 
+              color: formData.color.color, 
+              texture: formData.texture.texture,
+              vorota: formData.vorota.vorota }, '9bhmH2zfa0KYm0OUd') 
+          .then((result) => {
+            console.log(result);}, 
+          (error) => {
+            console.log(error);});
+
             setModalActive(true);
           }
 
