@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import emailjs from '@emailjs/browser';
 import styles from './Header.module.scss';
 import ModalGrats from '../Modal/ModalGrats';
 import ModalInputs from '../Modal/ModalInputs';
@@ -14,45 +15,47 @@ import { medium } from '../Button/Button';
 
 
 export default function Header() {
+  
 
 document.body.style.overflow = '';
 const [phone, setPhone] = useState("");
 const [errorPhone, setErrorPhone] = useState("введите номер телефона");
 const [phoneDirty, setPhoneDirty] = useState(false);
 const [formData, setFormData] = useState({phone: ""});
-useEffect(() => {setFormData({
-  phone: {phone}})
-}, [ 
-  phone]);
+
+  useEffect(() => { setFormData( {phone: {phone}} )}, [ phone ]);
+
+  useEffect(() => {  }, [ errorPhone]);
 
   useEffect(() => {
-  }, [ errorPhone]);
-
-  useEffect(() => {
-    if(!phoneDirty&&!phone){
-    setErrorPhone(false)}
-  }, [ phoneDirty, phone]);
+     if(!phoneDirty&&!phone){
+        setErrorPhone(false)}
+      }, [ phoneDirty, phone]);
 
 
   const handlePhone = (e)=>{
-    setPhone(e.target.value);
-    if (!e.target.value) setErrorPhone(true)
-    const re = /^[\d\+][\d\(\)\ -]{8,14}\d$/;
-  if (!re.test(e.target.value)){
-  setErrorPhone(true)
-  }
-  else (  setErrorPhone(null)
-  )
-  }
+      setPhone(e.target.value);
+        if (!e.target.value) setErrorPhone(true);
+      const re = /^[\d\+][\d\(\)\ -]{8,14}\d$/;
+        if (!re.test(e.target.value)){
+          setErrorPhone(true)
+        }
+      else ( setErrorPhone(null))
+    }
 
   const handleSubm = (e, phone) => {
-        e.preventDefault();
+    e.preventDefault();
         setFormData(state => ({...state,
             phone:  {phone},
             }))
-
-            console.log(formData);
-            handleSubmit(e)}
+        emailjs.send('service_xg5umvn', 'template_w6wem2o', formData.phone, '9bhmH2zfa0KYm0OUd') 
+          .then((result) => {
+            console.log(result);}, 
+          (error) => {
+            console.log(error);});
+            setPhone("");
+            handleSubmit(e);
+        };
 
 
 const [modalSecond, setModalSecond] = useState(false);
@@ -65,7 +68,7 @@ const handleSubmit = (event)=>
     }
 
 
-const handleClick = (event)=>
+const handleClick = ()=>
     {
     setModalSecond(true);
     }
@@ -75,7 +78,8 @@ const handleClick = (event)=>
     <div className={styles.header}> 
       <img className={styles.logo} src={logo} alt="logo"/>
       <span className={styles.phone}>+7(495)127-05-21</span>
-      <form onSubmit={e=>handleSubm(e)} className={styles.form}>
+      <form onSubmit={e=>handleSubm(e)} 
+      className={styles.form} >
         
         <input onBlur={e=>setPhoneDirty(true)} onChange={e=>handlePhone(e)} value={phone} type="text" className={styles.input} style={(phoneDirty&&errorPhone)?{border: "2px solid #F3950A"}:{border: "1px solid gray"}} placeholder='Телефон'/>
         <button type='submit' disabled={errorPhone}
