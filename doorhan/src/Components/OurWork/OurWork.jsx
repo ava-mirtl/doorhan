@@ -31,7 +31,7 @@ export default function OurWork() {
     }
     return (
         <div>
-            <Title styles={blue} title="НАШИ РАБОТЫ" />
+            <Title style={blue} title="НАШИ РАБОТЫ" />
             <div className={styles.container}>
                 <div className={styles.container__btns}>
                     <Button styles={promBlock ? our_gar : our_prom} onClick={(e) => handleOff(e)} name='ГАРАЖНЫЕ' />

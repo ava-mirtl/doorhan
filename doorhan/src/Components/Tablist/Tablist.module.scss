@@ -126,3 +126,25 @@ input[id="radio-3"] {
         
     }
 }
+@media (max-width: 1200px) and (orientation: portrait){
+.container {
+        .tabs{
+            margin-top: 30px;
+            width: 96%;
+            .tab {
+                height: 65px;
+            font-size: larger;
+                width: 33%;
+            }
+            .glider {                
+                height: 65px;
+                width: 33%;
+            }
+        }
+.content{
+    width: 96%;
+    max-height: 350px;
+}
+        
+    }
+}

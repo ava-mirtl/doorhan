@@ -97,3 +97,19 @@
         }
     }
 }
+@media (max-width: 1200px) and (orientation: portrait){
+    .scheme__container {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: none;
+
+        .scheme__block {
+            height: 140px;
+            .text {
+                font-size: larger;
+                line-height: 20px;
+
+            }
+        }
+    }
+}

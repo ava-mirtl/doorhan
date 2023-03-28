@@ -66,10 +66,10 @@ export default function ModalInputs({ active, setActive, handleSubmit}) {
             phone: {phone},
             }))
 
-      emailjs.send('service_xg5umvn', 'template_7i0z3ee', {
+      emailjs.send("service_onlg9xh","template_32oil1t", {
           phone: formData.phone.phone,
           name:  formData.name.nameF,
-          }, '9bhmH2zfa0KYm0OUd') 
+          }, 'ZjXCD_toGWo9fEoVg') 
           .then((result) => {
             console.log(result);}, 
           (error) => {

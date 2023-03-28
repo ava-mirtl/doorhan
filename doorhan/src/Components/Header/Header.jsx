@@ -43,7 +43,7 @@ const [formData, setFormData] = useState({phone: ""});
         setFormData(state => ({...state,
             phone:  {phone},
             }))
-        emailjs.send('service_xg5umvn', 'template_7i0z3ee', formData.phone, '9bhmH2zfa0KYm0OUd') 
+        emailjs.send("service_onlg9xh","template_32oil1t", formData.phone, 'ZjXCD_toGWo9fEoVg') 
           .then((result) => {
             console.log(result);}, 
           (error) => {

@@ -23,6 +23,7 @@ export const howto = {
 export const why = {
   padding: "10px",
   width: "100%",
+  maxWidth: "550px",
   minHeight: "45px",
   height: "2.5vw",
   fontSize: "10pt"
@@ -60,9 +61,9 @@ export const medium3 = {
 export const our_gar = {
   padding: "10px",
   width: "20%",
-  minWidth: "200px",
+  minWidth: "250px",
   height: "100%",
-  fontSize: "12pt",
+  fontSize: "large",
   margin: "0.5vw",
   backgroundColor: 'white',
   border: "2px solid #F39912",
@@ -71,9 +72,9 @@ export const our_gar = {
 export const our_prom = {
   padding: "10px",
   width: "20%",
-  minWidth: "200px",
+  minWidth: "250px",
   height: "100%",
-  fontSize: "12pt",
+  fontSize: "large",
   margin: "0.5vw",
 
 }

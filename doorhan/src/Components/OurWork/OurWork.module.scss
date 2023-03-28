@@ -155,3 +155,12 @@
     }
 
 }
+@media (max-width: 1200px) and (orientation: portrait){
+    .container { .container__btns_mini {
+    display: none;
+
+    }
+
+    .container__btns {
+    display: flex;  }}
+}

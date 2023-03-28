@@ -264,3 +264,36 @@
 }
 
 }
+@media (max-width: 1200px) and (orientation: portrait){
+    .txtContainer, .dropContainer, .txtContainer2, .dropContainer2{
+        display: none;
+    }
+        
+    .dropmini{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        .btnmini{
+            width: 60%;
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 15vh;
+            min-height: 220px;
+            justify-content: space-around;
+            text-align: center;
+            font-size: larger;
+
+    
+        }
+    }
+    .formNext {
+        min-width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: larger;
+    }
+}

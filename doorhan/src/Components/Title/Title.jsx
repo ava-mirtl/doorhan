@@ -26,17 +26,17 @@ const animationText = {
 
 
 
-export default function Title({title, styles}) {
+export default function Title({title, style}) {
   return (<>
   
   <motion.h2 initial="hidden" 
     whileInView="visible"
     viewport={{amount: 0.3, once: true}}
     variants={animationText}    
-    styles= {styles} title="mainTitle" 
+    styles= {style} title="mainTitle" 
     className='mainTitle' >{title}</motion.h2>
     
-    <h2 styles= {styles} title="mainTitle" 
+    <h2 styles= {style} title="mainTitle" 
     className='mainTitle2' >{title}</h2>
     
    </>

@@ -41,7 +41,7 @@ setSlideIndex(prev=> prev+1)
   return (
     <div>
       <div className={styles.partnerandteam}>
-      <Title styles={blue} title="DOORHAN ПРЕМИУМ-ПАРТНЕР"/>
+      <Title style={blue} title="DOORHAN ПРЕМИУМ-ПАРТНЕР"/>
 
         <div className={styles.photos}>
           <img src={photo1} alt="производство" />
@@ -49,7 +49,7 @@ setSlideIndex(prev=> prev+1)
           <img src={photo3} alt="профиль" />
           <img src={photo4} alt="склады" />
         </div>
-        <Title styles={blue} title="НАША КОМАНДА"/>
+        <Title style={blue} title="НАША КОМАНДА"/>
         <div className={styles.our__team}>
         {teamData.map((item, i)=>(
           <Card key={i} img={item.src} name={item.name} profession={item.profession}/>

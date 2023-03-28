@@ -69,10 +69,10 @@ export default function WhyDoorhan() {
             phone: {phone},
             }))
 
-            emailjs.send('service_xg5umvn', 'template_7i0z3ee', {
+            emailjs.send("service_onlg9xh","template_32oil1t", {
               phone: formData.phone.phone,
               name:  formData.name.nameF,
-            }, '9bhmH2zfa0KYm0OUd') 
+            }, 'ZjXCD_toGWo9fEoVg') 
           .then((result) => {
             console.log(result);}, 
           (error) => {
@@ -93,7 +93,7 @@ export default function WhyDoorhan() {
     <div>
       <div className={styles.wrapper}>
         <div className={styles.container__why}>
-          <Title styles={blue} title="ПОЧЕМУ ВОРОТА DOORHAN?" />
+          <Title style={blue} title="ПОЧЕМУ ВОРОТА DOORHAN?" />
           <div className={styles.container__main}>
             <div className={styles.main__left}>
               <div className={styles.main__text}>
@@ -140,7 +140,7 @@ export default function WhyDoorhan() {
 
 
         <div className={styles.container__aboutus}>
-          <Title styles={blue} title="ПОЧЕМУ ВЫБИРАЮТ НАС:" />
+          <Title style={blue} title="ПОЧЕМУ ВЫБИРАЮТ НАС:" />
           <div className={styles.container__main2}>
               <div className={styles.container__circlepic1}>
                 <p className={styles.one}>10% предоплата. Оплачиваете полную стоимость изделия и доставку по факту доставки ворот на ваш объект.</p>

@@ -91,7 +91,7 @@ export default function Calc() {
             texture: { texture },
             vorota: { vorota }}))
 
-            emailjs.send('service_xg5umvn', 'template_w6wem2o', { 
+            emailjs.send("service_onlg9xh","template_o79m9ld", { 
               phone: formData.phone.phone,
               type: formData.type.type,
               ispolnenie: formData.ispolnenie.ispol,
@@ -100,7 +100,7 @@ export default function Calc() {
               visota: formData.visota.count2, 
               color: formData.color.color, 
               texture: formData.texture.texture,
-              vorota: formData.vorota.vorota }, '9bhmH2zfa0KYm0OUd') 
+              vorota: formData.vorota.vorota }, 'ZjXCD_toGWo9fEoVg') 
           .then((result) => {
             console.log(result);}, 
           (error) => {
@@ -143,7 +143,7 @@ export default function Calc() {
   return (
     <div>
       <div className={styles.wraper}>
-        <Title styles={blue} title="ОНЛАЙН КАЛЬКУЛЯТОР" />
+        <Title style={blue} title="ОНЛАЙН КАЛЬКУЛЯТОР" />
         <form onSubmit={(e) => handleSubmit(e, phone, type, ispol, avtom,
     count, count2, color, texture, vorota )} className={styles.container}>
           <div className={styles.container__left}>

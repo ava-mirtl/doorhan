@@ -26,62 +26,70 @@ export default function HowToBuy() {
 
   const [phoneDirty, setPhoneDirty] = useState(false);
   const [nameDirty, setNameDirty] = useState(false);
-  const [formData, setFormData] = useState({phone: "", name: ""});
-
-  useEffect(() => {setFormData({
-    phone: {phone},
-    name: {nameF}})}, [nameF, phone, valid]);
+  const [formData, setFormData] = useState({ phone: "", name: "" });
 
   useEffect(() => {
-    if (errorName&&!nameDirty || errorPhone&&!phoneDirty) {
-      setValid(false) 
+    setFormData({
+      phone: { phone },
+      name: { nameF }
+    })
+  }, [nameF, phone, valid]);
+
+  useEffect(() => {
+    if (errorName && !nameDirty || errorPhone && !phoneDirty) {
+      setValid(false)
     }
     else {
       setValid(true)
-    }}, [errorName, errorPhone]);
+    }
+  }, [errorName, errorPhone]);
 
-  const handlePhone = (e)=>{
-      setPhone(e.target.value);
+  const handlePhone = (e) => {
+    setPhone(e.target.value);
     if (!e.target.value) setErrorPhone('Введите номер')
-      const re = /^[\d\+][\d\(\)\ -]{8,14}\d$/;
-    if (!re.test(e.target.value)){
+    const re = /^[\d\+][\d\(\)\ -]{8,14}\d$/;
+    if (!re.test(e.target.value)) {
       setErrorPhone('Некорректный ввод')
     }
-    else ( setErrorPhone(null))
+    else (setErrorPhone(null))
   }
 
-  const handleName = (e)=>{
-      setName(e.target.value);
+  const handleName = (e) => {
+    setName(e.target.value);
     if (!e.target.value) setErrorName('Введите имя')
-      const re = /^[a-zA-Zа-яёА-ЯЁ]+$/u;
-    if (!re.test(e.target.value)){
-    setErrorName('Некорректный ввод.')
+    const re = /^[a-zA-Zа-яёА-ЯЁ]+$/u;
+    if (!re.test(e.target.value)) {
+      setErrorName('Некорректный ввод.')
     }
-    else (  setErrorName(null))
+    else (setErrorName(null))
   }
 
   const handleSubm = (e, nameF, phone) => {
-        e.preventDefault();
-        setFormData(state => ({...state,
-            name:  {nameF},
-            phone: {phone},
-            }))
+    e.preventDefault();
+    setFormData(state => ({
+      ...state,
+      name: { nameF },
+      phone: { phone },
+    }))
 
-            emailjs.send('service_xg5umvn', 'template_7i0z3ee', {
-              phone: formData.phone.phone,
-              name:  formData.name.nameF,
-            }, '9bhmH2zfa0KYm0OUd') 
-          .then((result) => {
-            console.log(result);}, 
-          (error) => {
-            console.log(error);});
-            setPhone("");
-            setName("");
-            setModalActive(true)}
+    emailjs.send("service_onlg9xh","template_32oil1t", {
+      phone: formData.phone.phone,
+      name: formData.name.nameF,
+    }, 'ZjXCD_toGWo9fEoVg')
+      .then((result) => {
+        console.log(result);
+      },
+        (error) => {
+          console.log(error);
+        });
+    setPhone("");
+    setName("");
+    setModalActive(true)
+  }
 
   return (
     <div className={styles.box}>
-      <Title styles={white} title="КАК КУПИТЬ ВОРОТА ЗА 1 ДЕНЬ" />
+      <Title style={white} title="КАК КУПИТЬ ВОРОТА ЗА 1 ДЕНЬ" />
       <div className={styles.container}>
         <div className={styles.dropContainer}>
           <div className={styles.btn}>
@@ -139,36 +147,36 @@ export default function HowToBuy() {
 
 
         <div className={styles.dropmini}>
-        <div className={styles.btnmini}>
+          <div className={styles.btnmini}>
             <OrangeBtn img={calendar} />
             <div className={styles.txtmini}>МЫ МОЖЕМ ВАМ ПОМОЧЬ ПРИОБРЕСТИ ВОРОТА ЗА 1 ДЕНЬ!
-          </div>
+            </div>
           </div>
 
           <div className={styles.btnmini}>
             <OrangeBtn img={house} />
             <div className={styles.txtmini}>БОЛЬШОЙ АССОРТИМЕНТ ГОТОВЫХ ВОРОТ МЫ ХРАНИМ НА НАШЕМ СКЛАДЕ.
-          </div>
+            </div>
           </div>
 
           <div className={styles.btnmini}>
             <OrangeBtn img={price} />
             <div className={styles.txtmini}>НА ВОРОТА СО СКЛАДА ДЕЙСТВУЕТ СПЕЦИАЛЬНАЯ ЦЕНА.
             </div>
-            </div>
+          </div>
 
 
           <div className={styles.btnmini}>
             <OrangeBtn img={sm} />
             <div className={styles.txtmini}>ЕСЛИ ВЫ ЗНАЕТЕ РАЗМЕРЫ СВОЕГО ПРОЕМА, МЫ ПОДБЕРЕМ ВОРОТА ИЗ ТЕХ, ЧТО В НАЛИЧИИ НА СКЛАДЕ.
+            </div>
           </div>
-          </div>
-        
+
           <div className={styles.btnmini}>
             <OrangeBtn img={dogovor} />
             <div className={styles.txtmini}>ЗАКЛЮЧИВ ДОГОВОР ПО ЭЛЕКТРОННОЙ ПОЧТЕ, ВЫ СМОЖЕТЕ РАССЧИТАТЬСЯ ПО ФАКТУ ДОСТАВКИ ВОРОТ НА ОБЪЕКТ.
+            </div>
           </div>
-        </div>
         </div>
 
         <div className={styles.dateContainer}>
@@ -178,12 +186,12 @@ export default function HowToBuy() {
             {date.getDate()}.{date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1}
           </div>
         </div>
-        <form  onSubmit={(e)=>handleSubm(e)} className={styles.formNext} >
-          {(errorName&&nameDirty)&&<div className='error'>{errorName}</div>}
-          <input type="text" onChange={e=>handleName(e)} onBlur={e=>setNameDirty(true)} value={nameF}  className={styles.inputNext} placeholder='Имя' />
-          {(errorPhone&&phoneDirty)&&<div className='error'>{errorPhone}</div>}
-          <input onChange={e=>handlePhone(e)} onBlur={e=>setPhoneDirty(true)} value={phone} type="text" className={styles.inputNext} placeholder='Телефон' />
-          <Button name="РАССЧИТАТЬ ВОРОТА" styles={how_to_buy} disabled={!valid}/>
+        <form onSubmit={(e) => handleSubm(e)} className={styles.formNext} >
+          {(errorName && nameDirty) && <div className='error'>{errorName}</div>}
+          <input type="text" onChange={e => handleName(e)} onBlur={e => setNameDirty(true)} value={nameF} className={styles.inputNext} placeholder='Имя' />
+          {(errorPhone && phoneDirty) && <div className='error'>{errorPhone}</div>}
+          <input onChange={e => handlePhone(e)} onBlur={e => setPhoneDirty(true)} value={phone} type="text" className={styles.inputNext} placeholder='Телефон' />
+          <Button name="РАССЧИТАТЬ ВОРОТА" styles={how_to_buy} disabled={!valid} />
         </form>
       </div>
       {modalActive &&
