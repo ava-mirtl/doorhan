@@ -254,13 +254,12 @@
                         border-radius: 90px;
                         cursor: pointer;
                         transition: color 0.15s ease-in;
-                        font-size: 10pt;
                     }
 
                     .glider__avtom {
                         position: absolute;
                         display: flex;
-                        height: 65px;
+                        height: 100%;
                         width: 50%;
                         background-color: $base-blue;
                         z-index: 1;

@@ -235,6 +235,23 @@
     height: 26px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 1175px) {
     .container__aboutus {
         font-size: 10pt;
@@ -457,20 +474,27 @@
 
 
 }
-@media (hover: hover){
-    .container__main{.main__left{ .main__text:hover {
-        background-color: $base-blue;
-        color: white;
-    }}}
+
+@media (hover: hover) {
+    .container__main {
+        .main__left {
+            .main__text:hover {
+                background-color: $base-blue;
+                color: white;
+            }
+        }
+    }
 }
 
-@media (max-width: 500px){
+@media (max-width: 500px) {
 
-.container__aboutus {
-    min-height: auto;}}
+    .container__aboutus {
+        min-height: auto;
+    }
+}
 
-    @media (max-width: 1200px) and (orientation: portrait){
- .container__main {
+@media (max-width: 1200px) and (orientation: portrait) {
+    .container__main {
         display: flex;
         flex-direction: column;
 
@@ -501,7 +525,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center ;
+            justify-content: center;
             min-height: 250px;
 
 
@@ -601,4 +625,4 @@
     }
 
 
-    }
+}
