@@ -71,11 +71,12 @@
 
 .mainСontainer {
     display: flex;
+    max-width: 100%;
 }
 
 .imgCont,
 .content {
-    width: 49vw;
+    width: 50vw;
 }
 
 .imgCont {

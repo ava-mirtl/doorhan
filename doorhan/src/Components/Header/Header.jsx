@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import emailjs from '@emailjs/browser';
+import Marquiz from '../Marquiz';
 import styles from './Header.module.scss';
 import ModalGrats from '../Modal/ModalGrats';
 import ModalInputs from '../Modal/ModalInputs';
@@ -9,9 +10,7 @@ import percent from '../../assets/icons/percent.png';
 import settings from '../../assets/icons/settings.png';
 import shipping from '../../assets/icons/local_shipping (1).png';
 import box from '../../assets/icons/warehouse.png';
-import Button from '../Button/Button'
 import OrangeBtn from '../OrangeBtn/OrangeBtn';
-import { medium } from '../Button/Button';
 
 
 export default function Header() {
@@ -83,7 +82,7 @@ const handleClick = ()=>
     <div className={styles.mainСontainer}>
       <div className={styles.imgCont}>
         <div className={styles.buttonCont}>
-          <Button name="ЗАПИСАТЬСЯ НА ЗАМЕР" onClick={handleClick} styles={medium}/>
+          <Marquiz/>
         </div>
       </div>
     <div className={styles.content}>

@@ -63,7 +63,7 @@ export default function OurWork() {
                                 <p className={styles.p}><span>Способ управления: </span>автоматические</p>
                             </div>}
                         <div className={styles.btn}>
-                            <Button name="РАССЧИТАТЬ ВОРОТА" onClick={handleClick} styles={medium3} />
+                            <Button name="Записаться на замер" onClick={handleClick} styles={medium3} />
                         </div>
                     </div>
                 </div>

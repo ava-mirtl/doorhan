@@ -787,31 +787,32 @@ input[name="texture"] {
         }
     }
 }
-@media (max-width: 1200px) and (orientation: portrait){
+@media (max-width: 1200px) and (orientation: portrait) and  (min-width: 600px){
     
         .container {
         flex-direction: column;
         justify-content: center;
+                    max-width: 100vw;
+
         .container__left{
-            max-width: 100vw;
+            width: 98vw;
             .container__left_top{
-                max-width: 97vw;
+                max-width: 100%;
             }
     .container__left_bottom{
-        max-width: 95vw;
+        max-width: 100%;
 
         .container_controls{
             width: 70%;
             .control_1, .control_2{
                 .tabs__avtom, .tabs__isp{
                     .tab__isp1,.tab__isp2, .tab__avtom1,.tab__avtom2{
-                        font-size: larger;
+                        font-size: 10px;
                     }
                 }
                 .tabs__p{
-                    font-size: larger;
-
-                }
+                    font-size: 10px;
+                    }
             }
             .control_3{
                 .sizes{
