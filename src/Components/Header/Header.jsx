@@ -85,7 +85,7 @@ export default function Header() {
     <div className={styles.mainСontainer}>
       <div className={styles.imgCont}>
         <div className={styles.buttonCont}>
-          <Marquiz />
+          <Marquiz/>
         </div>
       </div>
       <div className={styles.content}>
