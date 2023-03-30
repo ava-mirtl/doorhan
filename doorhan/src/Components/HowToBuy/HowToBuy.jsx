@@ -72,7 +72,7 @@ export default function HowToBuy() {
       phone: { phone },
     }))
 
-    emailjs.send("service_onlg9xh","template_32oil1t", {
+    emailjs.send("service_onlg9xh", "template_32oil1t", {
       phone: formData.phone.phone,
       name: formData.name.nameF,
     }, 'ZjXCD_toGWo9fEoVg')
@@ -198,5 +198,6 @@ export default function HowToBuy() {
         <ModalGrats active={modalActive} setActive={setModalActive} />
       }
     </div>
+
   )
 }
