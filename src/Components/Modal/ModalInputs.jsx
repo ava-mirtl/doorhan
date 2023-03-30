@@ -86,10 +86,8 @@ export default function ModalInputs({ active, setActive, handleSubmit}) {
       <div className="popupContainerNext">
         <div className="popupTitleNext">РАСЧЕТ СТОИМОСТИ УСЛУГИ</div>
         <form onSubmit={(e)=>handleSubm(e)} className="formNext">
-          {(errorName&&nameDirty)&&<div className='error'>{errorName}</div>}
-          <input type="text" onChange={e=>handleName(e)} onBlur={e=>setNameDirty(true)} value={nameF} className="inputNext" placeholder='Ваше имя'  />
-          {(errorPhone&&phoneDirty)&&<div className='error'>{errorPhone}</div>}
-          <input type="text" onChange={e=>handlePhone(e)} onBlur={e=>setPhoneDirty(true)} value={phone} className="inputNext" placeholder='Телефон'  />
+          <input type="text" onChange={e=>handleName(e)} onBlur={e=>setNameDirty(true)} style={(nameDirty && errorName) && { border: "2px solid red" }} value={nameF} className="inputNext" placeholder='Ваше имя'  />
+          <input type="text" onChange={e=>handlePhone(e)} onBlur={e=>setPhoneDirty(true)} style={(phoneDirty && errorPhone)&& { border: "2px solid red" }} value={phone} className="inputNext" placeholder='Телефон'  />
           <Button name="РАССЧИТАТЬ ВОРОТА" disabled={!valid} styles={popupStyle} />
         </form>
       </div>
