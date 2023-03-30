@@ -25,7 +25,7 @@ export const why = {
   width: "100%",
   maxWidth: "550px",
   minHeight: "45px",
-  height: "2.5vw",
+  height: "45px",
   fontSize: "10pt"
 }
 
@@ -52,7 +52,7 @@ export const medium3 = {
   height: "64px",
   fontSize: "1rem",
   minWidth: "200px",
-  
+
 
   width: "100%",
 
@@ -110,11 +110,11 @@ export const how_to_buy = {
 
 
 export default function Button({ name, onClick, styles, disabled }) {
-  
+
   return (
     onClick
-    ?<button style={styles} onClick={(e) => onClick(e)} className="btn">{name}</button>
-    :<button style={styles} disabled = {disabled} className="btn">{name}</button>
+      ? <button style={styles} onClick={(e) => onClick(e)} className="btn">{name}</button>
+      : <button style={styles} disabled={disabled} className="btn">{name}</button>
 
   )
 }
