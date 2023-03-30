@@ -1,7 +1,7 @@
 {
   "name": "doorhan",
   "version": "0.1.0",
-  "homepage": "https://ava-mirtl.github.io/doorhan",
+  "homepage": "https://ava-mirtl.github.io/doorhan/doorhan",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
