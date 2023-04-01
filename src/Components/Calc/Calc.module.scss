@@ -257,7 +257,6 @@
                     }
 
                     .glider__avtom {
-                        -webkit-appearance: none;
                         position: absolute;
                         display: flex;
                         height: 65px;
@@ -417,7 +416,6 @@
 
         .container_texture {
 
-
             p {
                 margin: 4vh 0;
             }
@@ -553,9 +551,6 @@ input[name="texture"] {
 
 
 @media (max-width: 1200px) {
-    // .container {
-    //     flex-direction: column;
-    // }
 
     .container__left_bottom {
         display: flex;
@@ -576,12 +571,6 @@ input[name="texture"] {
             width: 100%;
         }
     }
-
-    // .container__left_bottom {
-    //     justify-content: center;
-    //     margin-top: 2vh;
-    //     margin-left: 1rem;
-    // }
 
 }
 
@@ -769,10 +758,109 @@ input[name="texture"] {
     }
 }
 
-@media (max-width: 480) {
+@media (max-width: 480px) {
     .container {
         .container__left {
+
             .container__left_bottom {
+                .container_controls {
+                    margin: 5vh 0;
+                    width: 95%;
+
+                    .control_1 {
+                        .isp1 {
+                            &:checked {
+
+                                &~.tab__isp1 {
+                                    color: #FFFFFF;
+                                }
+
+                                &~.glider__isp {
+                                    transform: translateX(0);
+
+                                }
+                            }
+                        }
+
+                        .isp2 {
+                            &:checked {
+                                &~.tab__isp2 {
+                                    color: #FFFFFF;
+                                }
+
+                                &~.glider__isp {
+                                    transform: translateX(100%);
+                                }
+                            }
+                        }
+
+                        .tabs__isp {
+
+                            .tab__isp1,
+                            .tab__isp2 {
+                                font-size: 9pt;
+                            }
+
+                        }
+
+                    }
+
+                    .control_2 {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 3rem;
+
+
+                        .avtom1 {
+                            &:checked {
+                                &~.tab__avtom1 {
+                                    color: white;
+                                }
+
+                                &~.glider__avtom {
+                                    transform: translateX(0);
+                                }
+                            }
+                        }
+
+                        .avtom2 {
+                            &:checked {
+                                &~.tab__avtom2 {
+                                    color: white;
+                                }
+
+                                &~.glider__avtom {
+                                    transform: translateX(100%);
+
+                                }
+                            }
+                        }
+
+                        .tabs__avtom {
+                            margin-left: 1rem;
+                            display: flex;
+                            background: linear-gradient(176.59deg, rgba(233, 251, 255, 0) 5.41%, rgba(248, 254, 255, 0) 5.42%, rgba(237, 237, 237, 0.45) 26.05%, rgba(247, 247, 247, 0.45) 79.2%, rgba(255, 255, 255, 0) 97.4%);
+                            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
+                            backdrop-filter: blur(30.5px);
+                            border-radius: 90px;
+                            height: 65px;
+                            width: 100%;
+
+
+
+                            .tab__avtom1,
+                            .tab__avtom2 {
+                                padding: 0;
+                                font-size: 10pt;
+                            }
+
+
+                        }
+                    }
+
+
+                }
+
                 .container_texture {
                     .texture__cards {
                         width: 100%;
