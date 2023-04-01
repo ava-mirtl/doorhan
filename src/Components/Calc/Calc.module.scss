@@ -776,11 +776,10 @@ input[name="texture"] {
 
                                 &~.tab__isp1 {
                                     color: white;
+                                    background-color: $base-blue ;
                                 }
 
                                 &~.glider__isp {
-                                    height: 65px;
-                                    max-width: 50%;
                                     transform: translateX(0);
 
                                 }
@@ -791,12 +790,10 @@ input[name="texture"] {
                             &:checked {
                                 &~.tab__isp2 {
                                     color: white;
+                                    background-color: $base-blue ;
                                 }
 
                                 &~.glider__isp {
-                                    height: 65px;
-                                    max-width: 50%;
-                                    background-color: $base-blue;
                                     transform: translateX(100%);
                                 }
                             }
@@ -808,18 +805,11 @@ input[name="texture"] {
 
                             .tab__isp1,
                             .tab__isp2 {
-                                height: 100%;
-                                width: 50%;
                                 font-size: 10pt;
 
                             }
 
-                            .glider__isp {
-                                height: 65px;
-                                width: 50%;
-                                background-color: $base-blue;
-                                max-width: 50%;
-                            }
+                            .glider__isp {}
                         }
 
                     }
