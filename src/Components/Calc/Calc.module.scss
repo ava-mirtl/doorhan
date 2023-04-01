@@ -257,9 +257,11 @@
                     }
 
                     .glider__avtom {
+                        -webkit-appearance: none;
                         position: absolute;
                         display: flex;
                         height: 65px;
+                        margin: 0 auto;
                         width: 50%;
                         background-color: $base-blue;
                         z-index: 1;

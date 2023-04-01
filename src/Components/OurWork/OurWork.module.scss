@@ -1,5 +1,9 @@
 @import "../../styles/vars.scss";
 
+body {
+    -webkit-text-size-adjust: none;
+}
+
 .container {
     width: 95%;
     margin: 2rem auto;
