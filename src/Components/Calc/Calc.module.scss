@@ -775,7 +775,7 @@ input[name="texture"] {
                             &:checked {
 
                                 &~.tab__isp1 {
-                                    color: $base-blue;
+                                    color: white;
                                     border: 2px solid $base-blue;
                                 }
 
@@ -789,8 +789,7 @@ input[name="texture"] {
                         .isp2 {
                             &:checked {
                                 &~.tab__isp2 {
-                                    color: $base-blue;
-                                    border: 2px solid $base-blue;
+                                    color: white;
                                 }
 
                                 &~.glider__isp {
@@ -801,7 +800,6 @@ input[name="texture"] {
 
                         .tabs__isp {
                             margin-left: 0.5rem;
-
                             width: 100%;
 
                             .tab__isp1,
@@ -815,7 +813,7 @@ input[name="texture"] {
                             .glider__isp {
                                 height: 65px;
                                 width: 50%;
-                                background-color: white;
+                                background-color: $base-blue;
                                 max-width: 50%;
                             }
                         }
@@ -823,7 +821,7 @@ input[name="texture"] {
                     }
 
                     .control_2 {
-                        margin-top: 3rem;
+                        margin-top: 2rem;
 
                         .avtom1 {
                             &:checked {
@@ -853,41 +851,19 @@ input[name="texture"] {
 
                         .tabs__avtom {
                             margin-left: 1rem;
-                            display: flex;
-                            background: linear-gradient(176.59deg, rgba(233, 251, 255, 0) 5.41%, rgba(248, 254, 255, 0) 5.42%, rgba(237, 237, 237, 0.45) 26.05%, rgba(247, 247, 247, 0.45) 79.2%, rgba(255, 255, 255, 0) 97.4%);
-                            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
-                            backdrop-filter: blur(30.5px);
-                            border-radius: 90px;
                             height: 65px;
                             width: 100%;
 
                             .tab__avtom1,
                             .tab__avtom2 {
-                                display: flex;
-                                align-items: center;
-                                text-align: center;
-                                justify-content: center;
-                                height: 65px;
-                                padding: 0 5px;
-                                width: 50%;
-                                font-size: 0.9vw;
-                                border-radius: 90px;
-                                cursor: pointer;
-                                transition: color 0.15s ease-in;
+                                font-size: 10pt;
                             }
 
                             .glider__avtom {
-                                position: absolute;
-                                display: flex;
-                                height: 65px;
-                                margin: 0 auto;
                                 width: 50%;
                                 max-width: 50%;
                                 background-color: $base-blue;
-                                z-index: 1;
-                                border-radius: 74px;
-                                transition: 0.25s ease-out;
-                                box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
+
                             }
                         }
                     }
