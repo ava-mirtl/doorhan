@@ -961,8 +961,8 @@ and (-webkit-device-pixel-ratio: 3){
 
                         .tabs__avtom,
                         .tabs__isp {
-                        width: 80vw;
-                        max-width: 80vw;
+                        width: 380px;
+                        max-width: 380px;
                             .tab__isp1,
                             .tab__isp2,
                             .tab__avtom1,
@@ -970,8 +970,9 @@ and (-webkit-device-pixel-ratio: 3){
                                 font-size: 10px;
                             }
                            .glider__isp, .glider__avtom {
-                            display: none;                               
-                            }
+                            width: 190px;
+                        max-width: 190px;
+                            } 
                         }
 
                         .tabs__p {
