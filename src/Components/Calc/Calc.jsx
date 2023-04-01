@@ -36,8 +36,8 @@ export default function Calc() {
   const [countError, setCountError] = useState("");
   const [phone, setPhone] = useState("");
   const [type, setType] = useState("");
-  const [ispol, setIspol] = useState("встроенная");
-  const [avtom, setAvtom] = useState("горизонтальная");
+  const [ispol, setIspol] = useState("горизонтальная");
+  const [avtom, setAvtom] = useState("встроенная");
   const [color, setColor] = useState("");
   const [texture, setTexture] = useState("");
   const [vorota, setVorota] = useState("");
