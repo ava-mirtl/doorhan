@@ -272,6 +272,18 @@
 
 }
 
+@media (max-width: 480px) {
+
+    .btnmini {
+
+
+        .txtmini {
+            font-size: 1rem;
+        }
+    }
+
+}
+
 @media (max-width: 1200px) and (orientation: portrait) {
 
     .txtContainer,

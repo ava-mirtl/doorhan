@@ -1,6 +1,5 @@
 @import '../../styles/vars.scss';
 
-
 *,
 *:after,
 *:before {
@@ -107,62 +106,91 @@ input[id="radio-3"] {
 
 @media (max-width: 1000px) {
     .container {
-        .tabs{
+        .tabs {
             margin-top: 30px;
             width: 96%;
+
             .tab {
                 height: 65px;
                 font-size: 10pt;
                 width: 33%;
             }
-            .glider {                
+
+            .glider {
                 height: 65px;
                 width: 33%;
             }
         }
-.content{
-    width: 96%;
-}
-        
-    }
-}
-@media (max-width: 1200px) and (orientation: portrait) and (min-width: 600px){
-.container {
-        .tabs{
-            margin-top: 30px;
+
+        .content {
             width: 96%;
-            .tab {
-                height: 65px;
-            font-size: larger;
-                width: 33%;
-            }
-            .glider {                
-                height: 65px;
-                width: 33%;
-            }
         }
-.content{
-    width: 96%;
-    max-height: 350px;
-}
-        
+
     }
 }
 
-@media (max-width: 400px){
+@media (max-width: 480px) {
     .container {
-        .tabs{
+        .tabs {
+            width: 96%;
+
+            .tab {
+                font-size: 8pt;
+                width: 30%;
+            }
+
+            .glider {
+                width: 30%;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 1200px) and (orientation: portrait) and (min-width: 600px) {
+    .container {
+        .tabs {
+            margin-top: 30px;
+            width: 96%;
+
+            .tab {
+                height: 65px;
+                font-size: larger;
+                width: 33%;
+            }
+
+            .glider {
+                height: 65px;
+                width: 33%;
+            }
+        }
+
+        .content {
+            width: 96%;
+            max-height: 350px;
+        }
+
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        .tabs {
             height: 70px;
             margin-top: 30px;
             width: 98%;
+
             .tab {
                 height: 56px;
-            font-size: 12px;
+                font-size: 12px;
                 width: 33%;
             }
-            .glider {                
+
+            .glider {
                 height: 56px;
                 width: 32%;
             }
         }
-}}
+    }
+}
