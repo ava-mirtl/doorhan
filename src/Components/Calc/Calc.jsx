@@ -142,12 +142,17 @@ const handleChange = (e, set) =>{
   setCountError(null);
   const value = parseInt(e.target.value);
   if (/^\d*$/.test(value)){
-  set(value);}
+    set(value);}
   else {
  setCountError('введите числовое значение в сантиметрах')
   }
 }
 
+const handleInput = (e, set) =>{
+  setCountError(null);
+  if (!e.target.value){
+    set("");}
+}
 
   return (
     <div>
@@ -263,7 +268,7 @@ const handleChange = (e, set) =>{
                       >
                         <img src={str} alt="left" />
                       </button>
-                      <input type="text" name='dlina' onChange={(e)=>handleChange(e, setCount)} value={count}/>
+                      <input type="text" name='dlina' onInput={(e)=>handleInput(e, setCount)} onChange={(e)=>handleChange(e, setCount)} value={count}/>
                       <button className={styles.bt_right}
                         type="button"
                         onClick={() => onNextClick(count, setCount)}
@@ -283,7 +288,7 @@ const handleChange = (e, set) =>{
                       >
                         <img src={str} alt="left" />
                       </button>
-                      <input type="text" name='visota' onChange={(e)=>handleChange(e, setCount2)} value={count2}/>
+                      <input type="text" name='visota'  onInput={(e)=>handleInput(e, setCount)} onChange={(e)=>handleChange(e, setCount2)} value={count2}/>
                       <button className={styles.bt_right}
                         type="button"
                         onClick={() => onNextClick(count2, setCount2)}
