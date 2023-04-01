@@ -33,6 +33,7 @@ export default function Calc() {
   const [modalActive, setModalActive] = useState(false);
   const [count, setCount] = useState(0);
   const [count2, setCount2] = useState(0);
+  const [countError, setCountError] = useState("");
   const [phone, setPhone] = useState("");
   const [type, setType] = useState("");
   const [ispol, setIspol] = useState("");
@@ -125,19 +126,27 @@ export default function Calc() {
 
   //счетчики длина и высота
   const onNextClick = (a, set) => {
-    set(a + 1);
+    set(a + 10);
   }
 
   const onPrevClick = (a, set) => {
-    if (a > 0) {
-      set(a - 1);
+    if (a > 10) {
+      set(a - 10);
     }
     else {
-      set(a)
+      set(0)
     }
   }
 
-
+const handleChange = (e, set) =>{
+  setCountError(null);
+  const value = parseInt(e.target.value);
+  if (/^\d*$/.test(value)){
+  set(value);}
+  else {
+ setCountError('введите числовое значение в сантиметрах')
+  }
+}
 
 
   return (
@@ -254,7 +263,7 @@ export default function Calc() {
                       >
                         <img src={str} alt="left" />
                       </button>
-                      <input type="text" name='dlina' value={count} readOnly/>
+                      <input type="text" name='dlina' onChange={(e)=>handleChange(e, setCount)} value={count}/>
                       <button className={styles.bt_right}
                         type="button"
                         onClick={() => onNextClick(count, setCount)}
@@ -274,7 +283,7 @@ export default function Calc() {
                       >
                         <img src={str} alt="left" />
                       </button>
-                      <input type="text" name='visota' value={count2} readOnly/>
+                      <input type="text" name='visota' onChange={(e)=>handleChange(e, setCount2)} value={count2}/>
                       <button className={styles.bt_right}
                         type="button"
                         onClick={() => onNextClick(count2, setCount2)}
@@ -283,6 +292,8 @@ export default function Calc() {
                       </button>
                     </div>
                   </div>
+                  {countError&&<p className={styles.error}>{countError}</p>}
+
                 </div>
                 <div className={styles.control_4}>
                   <p className={styles.tabs__p}>ВЫБЕРИТЕ <br />ЦВЕТ ВОРОТ</p>
