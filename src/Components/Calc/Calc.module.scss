@@ -163,7 +163,6 @@
                         justify-content: center;
                         height: 100%;
                         width: 50%;
-                        font-size: 1.10rem;
                         border-radius: 90px;
                         cursor: pointer;
                         transition: color 0.15s ease-in;
@@ -178,6 +177,7 @@
                         height: 65px;
                         width: 50%;
                         background-color: $base-blue;
+                        max-width: 50%;
                         z-index: 1;
                         border-radius: 74px;
                         transition: 0.25s ease-out;
@@ -250,7 +250,7 @@
                         height: 65px;
                         padding: 0 5px;
                         width: 50%;
-                        font-size: 10pt;
+                        font-size: 0.9vw;
                         border-radius: 90px;
                         cursor: pointer;
                         transition: color 0.15s ease-in;
@@ -263,6 +263,7 @@
                         height: 65px;
                         margin: 0 auto;
                         width: 50%;
+                        max-width: 50%;
                         background-color: $base-blue;
                         z-index: 1;
                         border-radius: 74px;
@@ -850,12 +851,12 @@ input[name="texture"] {
                             .tab__isp2,
                             .tab__avtom1,
                             .tab__avtom2 {
-                                font-size: 10px;
+                                font-size: 16px;
                             }
                         }
 
                         .tabs__p {
-                            font-size: 10px;
+                            font-size: 16px;
                         }
                     }
 
