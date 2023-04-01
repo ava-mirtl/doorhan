@@ -83,7 +83,7 @@ export const our_gar_mini = {
   width: "35%",
   minWidth: "128px",
   height: "100%",
-  fontSize: "7.5pt",
+  fontSize: "2vw",
   margin: "0.5vw",
   backgroundColor: 'white',
   border: "2px solid #F39912",
@@ -94,8 +94,9 @@ export const our_prom_mini = {
   width: "35%",
   minWidth: "128px",
   height: "100%",
-  fontSize: "7.5pt",
+  fontSize: "2vw",
   margin: "0.5vw",
+  
 
 }
 export const how_to_buy = {
