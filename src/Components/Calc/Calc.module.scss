@@ -776,10 +776,11 @@ input[name="texture"] {
 
                                 &~.tab__isp1 {
                                     color: white;
-                                    border: 2px solid $base-blue;
                                 }
 
                                 &~.glider__isp {
+                                    height: 65px;
+                                    max-width: 50%;
                                     transform: translateX(0);
 
                                 }
@@ -793,6 +794,9 @@ input[name="texture"] {
                                 }
 
                                 &~.glider__isp {
+                                    height: 65px;
+                                    max-width: 50%;
+                                    background-color: $base-blue;
                                     transform: translateX(100%);
                                 }
                             }
