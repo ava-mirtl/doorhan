@@ -942,3 +942,45 @@ input[name="texture"] {
         }
     }
 }
+@media only screen 
+and (device-width:375px)
+and (device-height: 812px)
+and (-webkit-device-pixel-ratio: 3){
+    .container {
+
+        .container__left {
+
+            .container__left_bottom {
+                max-width: 100%;
+
+                .container_controls {
+                    width: 70%;
+
+                    .control_1,
+                    .control_2 {
+
+                        .tabs__avtom,
+                        .tabs__isp {
+                        width: 80vw;
+                        max-width: 80vw;
+                            .tab__isp1,
+                            .tab__isp2,
+                            .tab__avtom1,
+                            .tab__avtom2 {
+                                font-size: 10px;
+                            }
+                           .glider__isp, .glider__avtom {
+                                width: 40vw;
+                                max-width: 40vw;
+                            }
+                        }
+
+                        .tabs__p {
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
