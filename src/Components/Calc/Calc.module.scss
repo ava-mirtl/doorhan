@@ -769,8 +769,6 @@ input[name="texture"] {
                     width: 90%;
 
                     .control_1 {
-
-
                         .isp1 {
                             &:checked {
 
@@ -821,6 +819,7 @@ input[name="texture"] {
                             &:checked {
                                 &~.tab__avtom1 {
                                     color: white;
+                                    background-color: $base-blue ;
                                 }
 
                                 &~.glider__avtom {
@@ -833,6 +832,7 @@ input[name="texture"] {
                             &:checked {
                                 &~.tab__avtom2 {
                                     color: white;
+                                    background-color: $base-blue ;
                                 }
 
                                 &~.glider__avtom {
