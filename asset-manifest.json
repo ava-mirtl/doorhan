@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/doorhan/static/css/main.07fbbd4d.css",
+    "main.css": "/doorhan/static/css/main.003180c3.css",
     "main.js": "/doorhan/static/js/main.5baf967c.js",
     "static/media/montserrat-regular.svg": "/doorhan/static/media/montserrat-regular.254481e221ee7c29499f.svg",
     "static/media/Rectangle31.png": "/doorhan/static/media/Rectangle31.a670b4a0a9d00519de47.png",
@@ -42,11 +42,11 @@
     "static/media/days.woff2": "/doorhan/static/media/days.81026aa7c3e673cd23e1.woff2",
     "static/media/logo.png": "/doorhan/static/media/logo.2b1482f81ee45c618c9a.png",
     "index.html": "/doorhan/index.html",
-    "main.07fbbd4d.css.map": "/doorhan/static/css/main.07fbbd4d.css.map",
+    "main.003180c3.css.map": "/doorhan/static/css/main.003180c3.css.map",
     "main.5baf967c.js.map": "/doorhan/static/js/main.5baf967c.js.map"
   },
   "entrypoints": [
-    "static/css/main.07fbbd4d.css",
+    "static/css/main.003180c3.css",
     "static/js/main.5baf967c.js"
   ]
 }
