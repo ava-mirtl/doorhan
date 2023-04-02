@@ -257,7 +257,6 @@
                     }
 
                     .glider__avtom {
-                        -webkit-appearance: none;
                         position: absolute;
                         display: flex;
                         height: 65px;
@@ -418,7 +417,6 @@
 
         .container_texture {
 
-
             p {
                 margin: 4vh 0;
             }
@@ -554,9 +552,6 @@ input[name="texture"] {
 
 
 @media (max-width: 1200px) {
-    // .container {
-    //     flex-direction: column;
-    // }
 
     .container__left_bottom {
         display: flex;
@@ -577,12 +572,6 @@ input[name="texture"] {
             width: 100%;
         }
     }
-
-    // .container__left_bottom {
-    //     justify-content: center;
-    //     margin-top: 2vh;
-    //     margin-left: 1rem;
-    // }
 
 }
 
@@ -723,7 +712,7 @@ input[name="texture"] {
 
 
 
-@media (max-width: 600) {
+@media (max-width: 600px) {
     .container__left_bottom {
         .container_texture {
             .texture__cards {
@@ -770,10 +759,112 @@ input[name="texture"] {
     }
 }
 
-@media (max-width: 480) {
+@media (max-width: 480px) {
     .container {
         .container__left {
+
             .container__left_bottom {
+                .container_controls {
+                    margin: 4vh 0;
+                    width: 90%;
+
+                    .control_1 {
+                        .isp1 {
+                            &:checked {
+
+                                &~.tab__isp1 {
+                                    color: white;
+                                    background-color: $base-blue ;
+                                }
+
+                                &~.glider__isp {
+                                    transform: translateX(0);
+
+                                }
+                            }
+                        }
+
+                        .isp2 {
+                            &:checked {
+                                &~.tab__isp2 {
+                                    color: white;
+                                    background-color: $base-blue ;
+                                }
+
+                                &~.glider__isp {
+                                    transform: translateX(100%);
+                                }
+                            }
+                        }
+
+                        .tabs__isp {
+                            margin-left: 0.5rem;
+                            width: 100%;
+
+                            .tab__isp1,
+                            .tab__isp2 {
+                                font-size: 9pt;
+
+                            }
+
+                            .glider__isp {}
+                        }
+
+                    }
+
+                    .control_2 {
+                        margin-top: 2rem;
+
+                        .avtom1 {
+                            &:checked {
+                                &~.tab__avtom1 {
+                                    color: white;
+                                    background-color: $base-blue ;
+                                }
+
+                                &~.glider__avtom {
+                                    transform: translateX(0);
+                                }
+                            }
+                        }
+
+                        .avtom2 {
+                            &:checked {
+                                &~.tab__avtom2 {
+                                    color: white;
+                                    background-color: $base-blue ;
+                                }
+
+                                &~.glider__avtom {
+                                    transform: translateX(100%);
+
+                                }
+                            }
+                        }
+
+
+                        .tabs__avtom {
+                            margin-left: 1rem;
+                            height: 65px;
+                            width: 100%;
+
+                            .tab__avtom1,
+                            .tab__avtom2 {
+                                font-size: 9pt;
+                            }
+
+                            .glider__avtom {
+                                width: 50%;
+                                max-width: 50%;
+                                background-color: $base-blue;
+
+                            }
+                        }
+                    }
+
+
+                }
+
                 .container_texture {
                     .texture__cards {
                         width: 100%;
@@ -942,10 +1033,8 @@ input[name="texture"] {
         }
     }
 }
-@media only screen 
-and (device-width:375px)
-and (device-height: 812px)
-and (-webkit-device-pixel-ratio: 3){
+
+@media only screen and (device-width:375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
     .container {
 
         .container__left {
@@ -959,29 +1048,35 @@ and (-webkit-device-pixel-ratio: 3){
                     .control_1,
                     .control_2 {
                         font-size: 10px;
+
                         .tabs__avtom,
                         .tabs__isp {
-                        width: 380px;
-                        max-width: 380px;
-                        .tab__isp1,
+                            width: 380px;
+                            max-width: 380px;
+
+                            .tab__isp1,
                             .tab__isp2,
                             .tab__avtom1,
                             .tab__avtom2 {
-                        font-size: 10px;}
+                                font-size: 10px;
+                            }
+
                             .tab__isp1:checked,
                             .tab__isp2:checked,
                             .tab__avtom1:checked,
                             .tab__avtom2:checked {
-                        color: $base-white;
-                        font-size: 10px;
-                        background-color: $base-blue;
-                        z-index: 5;
-                        border-radius: 74px;
-                        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
+                                color: $base-white;
+                                font-size: 10px;
+                                background-color: $base-blue;
+                                z-index: 5;
+                                border-radius: 74px;
+                                box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
                             }
-                           .glider__isp, .glider__avtom {
-                            display: none
-                            } 
+
+                            .glider__isp,
+                            .glider__avtom {
+                                display: none
+                            }
                         }
 
                         .tabs__p {

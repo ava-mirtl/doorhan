@@ -1,6 +1,5 @@
 @import '../../styles/vars.scss';
 
-
 *,
 *:after,
 *:before {
@@ -107,62 +106,116 @@ input[id="radio-3"] {
 
 @media (max-width: 1000px) {
     .container {
-        .tabs{
+        .tabs {
             margin-top: 30px;
             width: 96%;
+
             .tab {
                 height: 65px;
                 font-size: 10pt;
                 width: 33%;
             }
-            .glider {                
+
+            .glider {
                 height: 65px;
                 width: 33%;
             }
         }
-.content{
-    width: 96%;
-}
-        
-    }
-}
-@media (max-width: 1200px) and (orientation: portrait) and (min-width: 600px){
-.container {
-        .tabs{
-            margin-top: 30px;
+
+        .content {
             width: 96%;
-            .tab {
-                height: 65px;
-            font-size: larger;
-                width: 33%;
-            }
-            .glider {                
-                height: 65px;
-                width: 33%;
-            }
         }
-.content{
-    width: 96%;
-    max-height: 350px;
-}
-        
+
     }
 }
 
-@media (max-width: 400px){
+@media (max-width: 480px) {
     .container {
-        .tabs{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .tabs {
+        width: 100%;
+    }
+
+    .tab {
+        font-size: 1rem;
+
+    }
+
+    input[id="radio-1"] {
+        &:checked {
+            &~.glider {
+                transform: translateX(0);
+            }
+        }
+
+        input[id="radio-2"] {
+            &:checked {
+                &~.glider {
+                    transform: translateX(100%);
+                }
+            }
+        }
+
+        input[id="radio-3"] {
+            &:checked {
+                &~.glider {
+                    transform: translateX(200%);
+                }
+
+            }
+        }
+
+    }
+}
+
+
+
+@media (max-width: 1200px) and (orientation: portrait) and (min-width: 600px) {
+    .container {
+        .tabs {
+            margin-top: 30px;
+            width: 96%;
+
+            .tab {
+                height: 65px;
+                font-size: larger;
+                width: 33%;
+            }
+
+            .glider {
+                height: 65px;
+                width: 33%;
+            }
+        }
+
+        .content {
+            width: 96%;
+            max-height: 350px;
+        }
+
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        .tabs {
             height: 70px;
             margin-top: 30px;
             width: 98%;
+
             .tab {
                 height: 56px;
-            font-size: 12px;
-                width: 33%;
+                font-size: 12px;
+
             }
-            .glider {                
-                height: 56px;
-                width: 32%;
+
+            .glider {
+                width: 110px;
+                height: 55px;
             }
         }
-}}
+    }
+}
