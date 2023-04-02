@@ -288,7 +288,7 @@ const handleInput = (e, set) =>{
                       >
                         <img src={str} alt="left" />
                       </button>
-                      <input type="text" name='visota'  onInput={(e)=>handleInput(e, setCount)} onChange={(e)=>handleChange(e, setCount2)} value={count2}/>
+                      <input type="text" name='visota'  onInput={(e)=>handleInput(e, setCount2)} onChange={(e)=>handleChange(e, setCount2)} value={count2}/>
                       <button className={styles.bt_right}
                         type="button"
                         onClick={() => onNextClick(count2, setCount2)}
@@ -297,9 +297,8 @@ const handleInput = (e, set) =>{
                       </button>
                     </div>
                   </div>
-                  {countError&&<p className={styles.error}>{countError}</p>}
-
                 </div>
+                {countError&&<p className={styles.error}>{countError}</p>}
                 <div className={styles.control_4}>
                   <p className={styles.tabs__p}>ВЫБЕРИТЕ <br />ЦВЕТ ВОРОТ</p>
                   <div className={styles.colors}>
