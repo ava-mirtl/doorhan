@@ -138,6 +138,7 @@
 
                         .bigpic {
                             width: 140%;
+                            min-width: fit-content;
                         }
                     }
                 }
@@ -181,38 +182,38 @@
 .container__circlepic1 {
     position: absolute;
     top: 14%;
-    right: calc(50vw + 186px);
+    right: calc(50% + 186px);
 }
 
 .container__circlepic2 {
     position: absolute;
     top: 38%;
-    right: calc(50vw + 270px);
+    right: calc(50% + 270px);
 
 }
 
 .container__circlepic3 {
     position: absolute;
     top: 80%;
-    right: calc(50vw + 196px);
+    right: calc(50% + 196px);
 }
 
 .container__circlepic4 {
     position: absolute;
     top: 14%;
-    left: calc(50vw + 186px);
+    left: calc(50% + 186px);
 }
 
 .container__circlepic5 {
     position: absolute;
     top: 60%;
-    left: calc(50vw + 270px);
+    left: calc(50% + 270px);
 }
 
 .container__circlepic6 {
     position: absolute;
     top: 80%;
-    left: calc(50vw + 200px);
+    left: calc(50% + 200px);
 }
 
 .container__circlepic7 {

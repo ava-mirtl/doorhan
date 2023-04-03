@@ -4,6 +4,7 @@
 .wraper {
     background: linear-gradient(176.59deg, rgba(233, 251, 255, 0) 5.41%, rgba(248, 254, 255, 0) 5.42%, rgba(237, 237, 237, 0.45) 26.05%, rgba(247, 247, 247, 0.45) 79.2%, rgba(255, 255, 255, 0) 97.4%);
     font-family: $fontM;
+    max-width: 100%;
 }
 
 .error {
@@ -22,6 +23,7 @@
 .container__left {
     display: flex;
     flex-direction: column;
+    max-width: 68%;
 
     .container__left_top {
         display: flex;
@@ -74,6 +76,7 @@
             p {
                 position: relative;
                 bottom: 1rem;
+                padding: 0 10px;
 
 
             }
@@ -92,8 +95,8 @@
 
 
         .container_controls {
-            margin: 8vh 1vw;
-            width: 30vw;
+            margin: 8% 1%;
+            width: 65%;
 
             input[type="radio"] {
                 display: none;
@@ -416,6 +419,7 @@
 
 
         .container_texture {
+            padding-left: 20px;
 
             p {
                 margin: 4vh 0;
@@ -435,7 +439,7 @@
                         margin-right: 1rem;
                         box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);
                         border-radius: 7px;
-                        width: 10.5vw;
+                        width: 10.5%;
                         min-width: 120px;
 
                         input:checked~.checked_texture {
@@ -446,7 +450,7 @@
                             margin: 0.6rem;
 
                             img {
-                                width: 9.3vw;
+                                width: 9.3%;
                                 min-width: 100px;
 
                             }
@@ -465,7 +469,7 @@
                         margin-right: 1rem;
                         box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);
                         border-radius: 7px;
-                        width: 10.5vw;
+                        width: 10.5%;
                         min-width: 120px;
 
 
@@ -477,7 +481,7 @@
                             margin: 0.6rem;
 
                             img {
-                                width: 9.3vw;
+                                width: 9.3%;
                                 min-width: 100px;
                             }
                         }
@@ -501,7 +505,7 @@
     flex-direction: column;
     margin-top: 1rem;
     margin-left: 1.5rem;
-    width: 90%;
+    width: 94%;
 
     .input {
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), #F9F9F9;
@@ -552,11 +556,33 @@ input[name="texture"] {
 
 
 @media (max-width: 1200px) {
-
+   
+.container__left{
     .container__left_bottom {
         display: flex;
         flex-direction: column;
         align-items: center;
+        .container_controls{
+            max-width: 90%;
+            width: 90%;
+            margin: 20px;            
+        }
+        .container_texture{
+            max-width: 100%;
+            width: 90%;
+            .texture__cards{
+                flex-direction: row;
+            }
+            .texture1{
+                width: fit-content;
+            }
+            label{
+                max-width: 150px;
+            }
+            p{
+                margin: 10px 0;
+            }
+        }
     }
 
 
@@ -565,13 +591,14 @@ input[name="texture"] {
         flex-direction: column;
         margin-top: 1rem;
         margin-left: 1.5rem;
-        width: 90%;
+        width: 96%;
 
         .input {
             margin-bottom: 10px;
             width: 100%;
         }
-    }
+       
+    }}
 
 }
 
@@ -1034,53 +1061,151 @@ input[name="texture"] {
     }
 }
 
-@media only screen and (device-width:375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+@media only screen and (device-width:375px) and (device-width:320px) {
     .container {
-
         .container__left {
 
             .container__left_bottom {
-                max-width: 100%;
-
                 .container_controls {
-                    width: 70%;
+                    margin: 4vh 0;
+                    width: 90%;
 
-                    .control_1,
-                    .control_2 {
-                        font-size: 10px;
+                    .control_1 {
+                        .isp1 {
+                            &:checked {
 
-                        .tabs__avtom,
-                        .tabs__isp {
-                            width: 380px;
-                            max-width: 380px;
+                                &~.tab__isp1 {
+                                    color: white;
+                                    background-color: $base-blue ;
+                                }
 
-                            .tab__isp1,
-                            .tab__isp2,
-                            .tab__avtom1,
-                            .tab__avtom2 {
-                                font-size: 10px;
-                            }
+                                &~.glider__isp {
+                                    transform: translateX(0);
 
-                            .tab__isp1:checked,
-                            .tab__isp2:checked,
-                            .tab__avtom1:checked,
-                            .tab__avtom2:checked {
-                                color: $base-white;
-                                font-size: 10px;
-                                background-color: $base-blue;
-                                z-index: 5;
-                                border-radius: 74px;
-                                box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
-                            }
-
-                            .glider__isp,
-                            .glider__avtom {
-                                display: none
+                                }
                             }
                         }
 
-                        .tabs__p {
-                            font-size: 10px;
+                        .isp2 {
+                            &:checked {
+                                &~.tab__isp2 {
+                                    color: white;
+                                    background-color: $base-blue ;
+                                }
+
+                                &~.glider__isp {
+                                    transform: translateX(100%);
+                                }
+                            }
+                        }
+
+                        .tabs__isp {
+                            margin-left: 0.5rem;
+                            width: 100%;
+
+                            .tab__isp1,
+                            .tab__isp2 {
+                                font-size: 9pt;
+
+                            }
+
+                            .glider__isp {}
+                        }
+
+                    }
+
+                    .control_2 {
+                        margin-top: 2rem;
+
+                        .avtom1 {
+                            &:checked {
+                                &~.tab__avtom1 {
+                                    color: white;
+                                    background-color: $base-blue ;
+                                }
+
+                                &~.glider__avtom {
+                                    transform: translateX(0);
+                                }
+                            }
+                        }
+
+                        .avtom2 {
+                            &:checked {
+                                &~.tab__avtom2 {
+                                    color: white;
+                                    background-color: $base-blue ;
+                                }
+
+                                &~.glider__avtom {
+                                    transform: translateX(100%);
+
+                                }
+                            }
+                        }
+
+
+                        .tabs__avtom {
+                            margin-left: 1rem;
+                            height: 65px;
+                            width: 100%;
+
+                            .tab__avtom1,
+                            .tab__avtom2 {
+                                font-size: 9pt;
+                            }
+
+                            .glider__avtom {
+                                width: 50%;
+                                max-width: 50%;
+                                background-color: $base-blue;
+
+                            }
+                        }
+                    }
+
+
+                }
+
+                .container_texture {
+                    .texture__cards {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+
+                        .texture1 {
+
+                            .first,
+                            .second {
+                                width: 10vw;
+                                min-width: 100px;
+
+                                .img {
+                                    margin: 0.2rem;
+
+                                    img {
+                                        width: 9.3vw;
+                                        min-width: 90px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .texture2 {
+                            .third {
+                                width: 10vw;
+                                min-width: 100px;
+
+                                .img {
+                                    margin: 0.6rem;
+
+                                    img {
+                                        width: 9.3vw;
+                                        min-width: 90px;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
