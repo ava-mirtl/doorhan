@@ -137,8 +137,9 @@
                         background: rgba(252, 252, 252, 0);
 
                         .bigpic {
+                            align-self: center;
                             width: 140%;
-                            min-width: fit-content;
+                            height: 80%;
                         }
                     }
                 }
