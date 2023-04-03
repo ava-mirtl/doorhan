@@ -1061,7 +1061,7 @@ input[name="texture"] {
     }
 }
 
-@media only screen and (device-width:375px) and (device-width:320px) {
+@media only screen and (device-width:375px), (device-width:320px), (device-width:460px){
     .container {
         .container__left {
 
