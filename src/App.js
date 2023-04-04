@@ -20,8 +20,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path={`liquidation/`} element={<HeaderFirst />}/>
-        <Route path={`sale/`} element={<HeaderSecond />}/>
+        <Route path={`/liquidation/`} element={<HeaderFirst />}/>
+        <Route path={`/sale/`} element={<HeaderSecond />}/>
         <Route path="/"  element={<Header />}/>
       </Routes>
       <Link to="/liquidation?big_sale=${promoDate}" />
