@@ -10,7 +10,7 @@ import {
   Link,
 } from 'react-router-dom';
 import './styles/App.css';
-
+//?big_sale=${promoDate}
 
 function App() {
   const date = new Date;
@@ -20,10 +20,12 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path={`/doorhan/liquidation/big_sale=${promoDate}`} element={<HeaderFirst />}/>
-        <Route path={`/doorhan/big_sale=${promoDate}`} element={<HeaderSecond />}/>
-        <Route path={"/doorhan/"}  element={<Header />}/>
+        <Route path={`liquidation/`} element={<HeaderFirst />}/>
+        <Route path={`sale/`} element={<HeaderSecond />}/>
+        <Route path="/"  element={<Header />}/>
       </Routes>
+      <Link to="/liquidation?big_sale=${promoDate}" />
+        <Link to="/sale?big_sale=${promoDate}" />
       <Main />
       <Footer />
     </Router>
