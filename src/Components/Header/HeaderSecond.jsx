@@ -21,6 +21,8 @@ export default function Header() {
   const [errorPhone, setErrorPhone] = useState("введите номер телефона");
   const [phoneDirty, setPhoneDirty] = useState(false);
   const [formData, setFormData] = useState({ phone: "" });
+  const date = new Date;
+  const promoDate = `0${date.getDate()+1}.0${date.getMonth() + 1}.${date.getFullYear()}`
 
   useEffect(() => { setFormData({ phone: { phone } }) }, [phone]);
 
@@ -89,8 +91,8 @@ export default function Header() {
         </div>
       </div>
       <div className={styles.content}>
-        <h1>ГАРАЖНЫЕ ВОРОТА В РАССРОЧКУ</h1>
-        <div className={styles.subtitle}>Купи ворота в рассрочку на выгодных условиях!</div>
+      <div className={styles.subtitle}>АКЦИЯ ДО {promoDate}</div>
+        <h1>ГАРАЖНЫЕ ВОРОТА DOORHAN</h1>
         <div className={styles.item}>
           <OrangeBtn img={atm} />
           <span className={styles.txt}>10% ПРЕДОПЛАТА.</span>

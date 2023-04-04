@@ -10,7 +10,7 @@ import styles from './Main.module.scss';
 
 export default function Main() {
   return (
-    <div>
+    <div className={styles.main__wrapper}>
       <WhyDoorhan />
       <Scheme />
       <Calc />
