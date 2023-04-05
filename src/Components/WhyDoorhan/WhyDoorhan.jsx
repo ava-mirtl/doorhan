@@ -47,7 +47,7 @@ export default function WhyDoorhan() {
       if (e.target.value=="") setErrorPhone("Введите номер телефона");
       const re = /^\+7\s?\(?\d{3}\)?\s?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/;
       if (!re.test(e.target.value)) {
-        setErrorPhone("Допустимый формат: +7 (999) 999-99-99; +7 999-999-99-99; +7 999 999 99; 79999999999")
+        setErrorPhone("Допустимый формат: +7 (999) 999-99-99; +7 999-999-99-99; +7 999 999 99")
       }
       else (setErrorPhone(null))
     }

@@ -21,8 +21,8 @@ export default function HowToBuy() {
   const [nameF, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [valid, setValid] = useState(false);
-  const [errorName, setErrorName] = useState("введите имя");
-  const [errorPhone, setErrorPhone] = useState("введите номер телефона");
+  const [errorName, setErrorName] = useState("Введите имя");
+  const [errorPhone, setErrorPhone] = useState("Введите номер телефона");
 
   const [phoneDirty, setPhoneDirty] = useState(false);
   const [nameDirty, setNameDirty] = useState(false);
@@ -50,7 +50,7 @@ export default function HowToBuy() {
     if (e.target.value=="") setErrorPhone("Введите номер телефона");
     const re = /^\+7\s?\(?\d{3}\)?\s?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/;
     if (!re.test(e.target.value)) {
-      setErrorPhone("Формат телефона: +7 (999) 999-99-99; +7 999-999-99-99; +7 999 999 99; 79999999999")
+      setErrorPhone("Формат телефона: +7 (999) 999-99-99; +7 999-999-99-99; +7 999 999 99")
     }
     else (setErrorPhone(null))
   }
