@@ -30,14 +30,16 @@ export default function Header() {
 
 
   const handlePhone = (e) => {
+    setErrorPhone(null)
     setPhone(e.target.value);
-    if (!e.target.value) setErrorPhone(true);
-    const re = /^[\d\+][\d\(\)\ -]{8,14}\d$/;
+    if (e.target.value=="") setErrorPhone("Введите номер телефона");
+    const re = /^\+7\s?\(?\d{3}\)?\s?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/;
     if (!re.test(e.target.value)) {
-      setErrorPhone(true)
+      setErrorPhone("Допустимый формат: +7 (999) 999-99-99; +7 999-999-99-99; +7 999 999 99; 79999999999")
     }
     else (setErrorPhone(null))
   }
+
 
   const handleSubm = (e, phone) => {
     e.preventDefault();
@@ -78,6 +80,7 @@ export default function Header() {
         <span className={styles.phone}>+7(495)127-05-21</span>
         <form onSubmit={e => handleSubm(e)}
           className={styles.form} >
+                  {errorPhone&&<div className='error'>{errorPhone}</div>}
 
           <input onBlur={e => setPhoneDirty(true)} onChange={e => handlePhone(e)} value={phone} type="text" className={styles.input} style={(phoneDirty && errorPhone) ? { border: "2px solid red" } : { border: "1px solid gray" }} placeholder='Телефон' />
           <button type='submit' disabled={errorPhone}

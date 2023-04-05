@@ -14,6 +14,10 @@
     transition: opacity 0.4s;
     height: 100vh;
 }
+.error{
+    font-size: 25px;
+    color: red;
+}
 
 .modal.active {
     opacity: 1;

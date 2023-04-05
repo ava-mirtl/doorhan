@@ -21,12 +21,11 @@ export default function OurWork() {
     }
 
     const handleSubmit = (event) => {
-        setModalSecond(false);
         event.preventDefault();
+        setModalSecond(false);
         setModalActive(true);
     }
     const handleClick = (event) => {
-        event.preventDefault();
         setModalSecond(true);
     }
     return (
@@ -67,15 +66,14 @@ export default function OurWork() {
                         </div>
                     </div>
                 </div>
-
             </div>
 
-            {modalActive &&
-                <ModalGrats active={modalActive} setActive={setModalActive} />
-            }
-            {
+                    {
                 modalSecond &&
                 <ModalInputs active={modalSecond} setActive={setModalSecond} handleSubmit={handleSubmit} />
+            }
+                {modalActive &&
+                <ModalGrats active={modalActive} setActive={setModalActive} />
             }
         </div>
     )

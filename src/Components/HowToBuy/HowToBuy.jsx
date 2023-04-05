@@ -45,11 +45,12 @@ export default function HowToBuy() {
   }, [errorName, errorPhone]);
 
   const handlePhone = (e) => {
+    setErrorPhone(null)
     setPhone(e.target.value);
-    if (!e.target.value) setErrorPhone('Введите номер')
-    const re = /^[\d\+][\d\(\)\ -]{8,14}\d$/;
+    if (e.target.value=="") setErrorPhone("Введите номер телефона");
+    const re = /^\+7\s?\(?\d{3}\)?\s?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/;
     if (!re.test(e.target.value)) {
-      setErrorPhone('Некорректный ввод')
+      setErrorPhone("Формат телефона: +7 (999) 999-99-99; +7 999-999-99-99; +7 999 999 99; 79999999999")
     }
     else (setErrorPhone(null))
   }
@@ -59,7 +60,7 @@ export default function HowToBuy() {
     if (!e.target.value) setErrorName('Введите имя')
     const re = /^[a-zA-Zа-яёА-ЯЁ]+$/u;
     if (!re.test(e.target.value)) {
-      setErrorName('Некорректный ввод.')
+      setErrorName('Формат имени: только буквы кириллицы или латиницы')
     }
     else (setErrorName(null))
   }
@@ -185,11 +186,12 @@ export default function HowToBuy() {
           <div className={styles.date}>
             {date.getDate()}.{date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1}
           </div>
-        </div>
+        </div>          
+        {(errorName && nameDirty) && <div className={styles.error}>{errorName}</div>}
+        {(errorPhone && phoneDirty) && <div className={styles.error}>{errorPhone}</div>}
+
         <form onSubmit={(e) => handleSubm(e)} className={styles.formNext} >
-          {(errorName && nameDirty) && <div className='error'>{errorName}</div>}
           <input type="text" onChange={e => handleName(e)} onBlur={e => setNameDirty(true)} value={nameF} className={styles.inputNext} placeholder='Имя' />
-          {(errorPhone && phoneDirty) && <div className='error'>{errorPhone}</div>}
           <input onChange={e => handlePhone(e)} onBlur={e => setPhoneDirty(true)} value={phone} type="text" className={styles.inputNext} placeholder='Телефон' />
           <Button name="РАССЧИТАТЬ ВОРОТА" styles={how_to_buy} disabled={!valid} />
         </form>

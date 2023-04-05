@@ -43,7 +43,7 @@ export default function Calc() {
   const [vorota, setVorota] = useState("");
   const [formData, setFormData] = useState(initialData);
   const [valid, setValid] = useState(false);
-  const [error, setError] = useState("введите номер телефона");
+  const [errorPhone, setErrorPhone] = useState("Введите номер телефона");
   const [phoneDirty, setPhoneDirty] = useState(false)
 
 
@@ -62,18 +62,18 @@ export default function Calc() {
 
   useEffect(() => { }, [formData]);
     
-  useEffect(() => { if (!error) { setValid(true) }}, [error]);
+  useEffect(() => { if (!errorPhone) { setValid(true) }}, [errorPhone]);
     
 
-  const handlePhone = (e) =>{
+  const handlePhone = (e) => {
+    setErrorPhone(null)
     setPhone(e.target.value);
-    if (!e.target.value) setError('Введите номер')
-    const re = /^[\d\+][\d\(\)\ -]{8,14}\d$/;
-      if (!re.test(e.target.value)){
-        setError('Допустимый формат: +7(XXX)XXX-XX-XX, 8XXX XXX XX XX, 8XXXXXXXXXX +7XXXXXXXXXX')
-      }
-    else (  setError(null)
-)
+    if (e.target.value=="") setErrorPhone("Введите номер телефона");
+    const re = /^\+7\s?\(?\d{3}\)?\s?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/;
+    if (!re.test(e.target.value)) {
+      setErrorPhone("Допустимый формат: +7 (999) 999-99-99; +7 999-999-99-99; +7 999 999 99; 79999999999")
+    }
+    else (setErrorPhone(null))
   }
 
 
@@ -400,11 +400,11 @@ const handleInput = (e, set) =>{
             </div>
             <div className={styles.container__right_bottom}>
               <div className={styles.container__form}>
-                {(phoneDirty&&error)&&<div className={styles.error}>{error}</div>}
+                {(phoneDirty&&errorPhone)&&<div className={styles.error}>{errorPhone}</div>}
                 <input type="text" onChange={e=>handlePhone(e)}
                 onBlur={()=>setPhoneDirty(true)} className={styles.input} placeholder='Телефон' name='phone' value={phone} 
                 />
-                <Button type='submit' styles={medium3} name="УТОЧНИТЬ СТОИМОСТЬ" disabled={error}/>
+                <Button type='submit' styles={medium3} name="УТОЧНИТЬ СТОИМОСТЬ" disabled={errorPhone}/>
               </div>
             </div>
           </div>

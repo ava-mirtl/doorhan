@@ -20,8 +20,8 @@ export default function WhyDoorhan() {
   const [nameF, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [valid, setValid] = useState(false);
-  const [errorName, setErrorName] = useState("введите имя");
-  const [errorPhone, setErrorPhone] = useState("введите номер телефона");
+  const [errorName, setErrorName] = useState("Bведите имя");
+  const [errorPhone, setErrorPhone] = useState("Bведите номер телефона");
 
   const [phoneDirty, setPhoneDirty] = useState(false);
   const [nameDirty, setNameDirty] = useState(false);
@@ -41,15 +41,16 @@ export default function WhyDoorhan() {
       setValid(true)
     }}, [errorName, errorPhone]);
 
-  const handlePhone = (e)=>{
+    const handlePhone = (e) => {
+      setErrorPhone(null)
       setPhone(e.target.value);
-    if (!e.target.value) setErrorPhone('Введите номер')
-      const re = /^[\d\+][\d\(\)\ -]{8,14}\d$/;
-    if (!re.test(e.target.value)){
-      setErrorPhone('Некорректный ввод')
+      if (e.target.value=="") setErrorPhone("Введите номер телефона");
+      const re = /^\+7\s?\(?\d{3}\)?\s?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/;
+      if (!re.test(e.target.value)) {
+        setErrorPhone("Допустимый формат: +7 (999) 999-99-99; +7 999-999-99-99; +7 999 999 99; 79999999999")
+      }
+      else (setErrorPhone(null))
     }
-    else ( setErrorPhone(null))
-  }
 
   const handleName = (e)=>{
       setName(e.target.value);
@@ -127,11 +128,11 @@ export default function WhyDoorhan() {
             <div className={styles.main__right}>
               <div className={styles.form__box}>
                 <form onSubmit={(e)=>handleSubm(e)}  className={styles.form}>
-                {(errorName&&nameDirty)&&<div className='error'>{errorName}</div>}
+                {(errorName&&nameDirty)&&<div className={styles.error}>{errorName}</div>}
                   <input type="text" onChange={e=>handleName(e)} onBlur={e=>setNameDirty(true)} value={nameF}  className={styles.input} placeholder='Имя' />
-                  {(errorPhone&&phoneDirty)&&<div className='error'>{errorPhone}</div>}
                   <input onChange={e=>handlePhone(e)} onBlur={e=>setPhoneDirty(true)} value={phone} type="text" className={styles.input} placeholder='Телефон' />
                   <Button name="ПОЛУЧИТЬ ПОДАРОК" styles={why} disabled={!valid}/>
+                  {(errorPhone&&phoneDirty)&&<div className={styles.error}>{errorPhone}</div>}
                 </form>
               </div>
             </div>
