@@ -7,12 +7,14 @@
   outline-offset: 0;
 }
 html {
-  display: flex;
-  justify-content: center;
+  width: 100%;
 }
+
 body {
-  width: 1720px;
+  max-width: 1720px;
+  margin: 0 auto;
 }
+
 #root {
   max-width: 100%;
 }
