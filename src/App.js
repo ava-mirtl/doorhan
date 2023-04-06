@@ -13,19 +13,20 @@ import './styles/App.css';
 //?big_sale=${promoDate}
 
 function App() {
-  const date = new Date;
-  const promoDate = `0${date.getDate()+1}.0${date.getMonth() + 1}.${date.getFullYear()}`
-  console.log(promoDate);
+  const date = new Date();
+  const promoDate = `0${date.getDate()+1}.0${date.getMonth() + 1}.${date.getFullYear()}`;
+  
 
   return (
     <Router>
       <Routes>
-        <Route path={`/liquidation/`} element={<HeaderFirst />}/>
-        <Route path={`/sale/`} element={<HeaderSecond />}/>
-        <Route path="/"  element={<Header />}/>
+        <Route path="/liquidation" element={<HeaderFirst />} />
+        <Route path="/sale" element={<HeaderSecond />} />
+        <Route path="/" element={<Header />} />
       </Routes>
-        <Link to="/liquidation?big_sale=${promoDate}" />
-        <Link to="/sale?big_sale=${promoDate}" />
+      <Link to={`/liquidation?big_sale=${promoDate}`} />
+      <Link to={`/?big_sale=${promoDate}`} />
+      <Link to={`/sale?big_sale=${promoDate}`} />
       <Main />
       <Footer />
     </Router>

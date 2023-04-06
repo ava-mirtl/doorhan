@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
+import { useLocation } from 'react-router-dom';
 import Marquiz from '../Marquiz';
 import styles from './Header.module.scss';
 import ModalGrats from '../Modal/ModalGrats';
@@ -15,14 +16,17 @@ import OrangeBtn from '../OrangeBtn/OrangeBtn';
 
 export default function Header() {
 
-
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const utmContent = queryParams.get('big_sale') || 'default_big_sale';
   document.body.style.overflow = '';
   const [phone, setPhone] = useState("");
-  const [errorPhone, setErrorPhone] = useState("введите номер телефона");
+  const [errorPhone, setErrorPhone] = useState(null);
   const [phoneDirty, setPhoneDirty] = useState(false);
   const [formData, setFormData] = useState({ phone: "" });
   const date = new Date;
-  const promoDate = `0${date.getDate()+1}.0${date.getMonth() + 1}.${date.getFullYear()}`
+  const bigSaleParam = queryParams.get('big_sale');
+  const promoDate = bigSaleParam ? bigSaleParam.split('.').reverse().join('.') : `0${date.getDate()+1}.0${date.getMonth() + 1}.${date.getFullYear()}`;
 
   useEffect(() => { setFormData({ phone: { phone } }) }, [phone]);
 
@@ -69,9 +73,7 @@ export default function Header() {
   }
 
 
-  const handleClick = () => {
-    setModalSecond(true);
-  }
+
 
 
   return (<>
@@ -91,7 +93,11 @@ export default function Header() {
     <div className={styles.mainСontainer}>
       <div className={styles.imgCont}>
         <div className={styles.buttonCont}>
-          <Marquiz/>
+        <div className={styles.header__activity}>
+      <div className={styles.header__activity_button}>
+        <Marquiz utm_content={utmContent}/>
+      </div>
+    </div>
         </div>
       </div>
       <div className={styles.content}>
