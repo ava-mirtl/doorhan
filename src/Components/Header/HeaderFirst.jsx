@@ -29,15 +29,17 @@ export default function Header() {
   useEffect(() => { }, [errorPhone]);
 
 
+
   const handlePhone = (e) => {
-    setErrorPhone(null)
+    setErrorPhone(null);
     setPhone(e.target.value);
-    if (e.target.value=="") setErrorPhone("Введите номер телефона");
+    if (e.target.value.trim() === "") {
+      return;
+    }
     const re = /^\+7\s?\(?\d{3}\)?\s?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/;
     if (!re.test(e.target.value)) {
-      setErrorPhone("Допустимый формат: +7 (999) 999-99-99; +7 999-999-99-99; +7 999 999 99")
+      setErrorPhone("Допустимый формат: +7 (999) 999-99-99; +7 999-999-99-99; +7 999 999 99");
     }
-    else (setErrorPhone(null))
   }
 
   const handleSubm = (e, phone) => {
