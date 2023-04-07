@@ -100,8 +100,8 @@ export default function Header() {
         </div>
       </div>
       <div className={styles.content}>
-        <h1>ГАРАЖНЫЕ ВОРОТА СО СКИДКОЙ</h1>
-        <div className={styles.subtitle}>Оформи заявку сейчас и получи скидку 25%</div>
+        <h1>ГАРАЖНЫЕ ВОРОТА DOORHAN</h1>
+        <div className={styles.subtitle}>Бесплатная доставка до объекта</div>
         <div className={styles.item}>
           <OrangeBtn img={atm} />
           <span className={styles.txt}>10% ПРЕДОПЛАТА.</span>
