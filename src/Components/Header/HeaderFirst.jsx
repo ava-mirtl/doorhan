@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useSearchParams, redirect } from 'react-router-dom';
 import Marquiz from '../Marquiz';
 import styles from './Header.module.scss';
 import ModalGrats from '../Modal/ModalGrats';
@@ -15,6 +15,7 @@ import OrangeBtn from '../OrangeBtn/OrangeBtn';
 
 
 export default function Header() {
+ 
 
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
