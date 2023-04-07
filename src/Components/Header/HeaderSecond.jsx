@@ -82,7 +82,7 @@ export default function Header() {
         <span className={styles.phone}>+7(495)127-05-21</span>
         <form onSubmit={e => handleSubm(e)}
           className={styles.form} >
-                  {errorPhone&&<div className='error'>{errorPhone}</div>}
+                  {errorPhone&&<div className={styles.error}>{errorPhone}</div>}
 
           <input onBlur={e => setPhoneDirty(true)} onChange={e => handlePhone(e)} value={phone} type="text" className={styles.input} style={(phoneDirty && errorPhone) ? { border: "2px solid red" } : { border: "1px solid gray" }} placeholder='Телефон' />
           <button type='submit' disabled={errorPhone}

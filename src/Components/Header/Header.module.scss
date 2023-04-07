@@ -13,7 +13,7 @@
 
 .logo {
     margin: 10px 30px;
-    width: 20vw;
+    width: 20%;
 }
 
 .phone {
@@ -49,7 +49,8 @@
 }
 .error{
     width: 100%;
-    padding: 5px;
+    font-size: 15px;
+    padding: 0 0 2px;
     color: red;
 }
 
@@ -81,13 +82,25 @@
 }
 
 .imgCont,
-    .content {
-        width: 50%;
-    }
+.content {
+    width: 50%;
+}
+
+.imgCont {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background: url('../../assets/images/Rectangle31.png') no-repeat;
+    -moz-background-size: 100%;
+    -webkit-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    max-width: 100%;
+}
 
 .buttonCont {
     height: 30%;
-    width: 30vw;
+    width: 30%;
     display: flex;
     justify-content: center;
 
@@ -97,18 +110,29 @@
 }
 
 .content {
-    padding: 2% 2%;
-    max-width: 100%;
+    color: #F9F9F9;
+    background: linear-gradient(322.66deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 37.38%), #02336F;
+    padding: 2vw 2vw;
+    box-sizing: border-box;
+    max-width: 100vw;
 }
 
 h1 {
-    font-size: 1.7vw;
+    font-family: $fontD;
+    letter-spacing: 0.05em;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3vw;
+    padding: 10px 20px;
 }
 
 .subtitle,
 .txt {
-    letter-spacing: 0.04em;
-    font-size: 1.3vw;
+    padding: 0 20px;
+    font-family: $fontM;
+    letter-spacing: 0.05em;
+    font-size: 1.7vw;
+    font-weight: 400;
 }
 
 .subtitle {
@@ -117,13 +141,13 @@ h1 {
 
 .txt {
     padding: 0;
-    font-size: 1vw;
+    font-size: 1.3vw;
 }
 
 .item {
     display: flex;
     align-items: center;
-    margin: 0.7vw 20px;
+    margin: 0.9vw 20px;
 }
 
 
@@ -256,87 +280,55 @@ h1 {
 @media (min-width: 1720px){
 
     .header {
-        max-height: 80px;
+        margin: 0 0 20px;
+        padding: 20px 0 0;
     }
     
     .logo {
-        width: 15%;
+        width: 18%;
     }
     
     .phone {
+        height: 130px;
         font-size: 1.5vw;
     }
 
     
-    .btn:hover {
-        box-shadow: -11px -8px 8px 27px rgba(114, 79, 46, 0.2) inset;
+    
+    .mainСontainer {
+        max-width: 100%;
     }
-    
-   
-    
-    
-    .imgCont {
-        display: flex;
-        justify-content: center;
-        align-items: end;
-        background: url('../../assets/images/Rectangle31.png') no-repeat;
-        -moz-background-size: 100%;
-        -webkit-background-size: 100%;
-        -o-background-size: 100%;
-        background-size: 100%;
+ 
+
+    .content {
+        padding: 2%;
         max-width: 100%;
     }
     
-    .buttonCont {
-        height: 30%;
-        width: 30vw;
-        display: flex;
-        justify-content: center;
-    
-        button {
-            font-size: 1.5vw;
-        }
-    }
-    
-    .content {
-        color: #F9F9F9;
-        background: linear-gradient(322.66deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 37.38%), #02336F;
-        padding: 2vw 2vw;
-        box-sizing: border-box;
-        max-width: 100vw;
-    }
-    
     h1 {
-        font-family: $fontD;
-        letter-spacing: 0.05em;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 3vw;
-        padding: 10px 20px;
+        letter-spacing: 0.04em;
+        font-size: 2.5vw;
     }
     
     .subtitle,
     .txt {
-        padding: 0 20px;
-        font-family: $fontM;
-        letter-spacing: 0.05em;
-        font-size: 1.7vw;
-        font-weight: 400;
+        letter-spacing: 0.04em;
+        font-size: 1.5vw;
     }
     
     .subtitle {
-        margin: 1.5rem 0;
+        margin: 1.2rem 0;
     }
     
     .txt {
         padding: 0;
-        font-size: 1.3vw;
+        font-size: 1vw;
     }
     
     .item {
         display: flex;
         align-items: center;
-        margin: 0.9vw 20px;
+        margin: 0.7vw 20px;
     }
     
 

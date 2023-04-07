@@ -111,3 +111,15 @@ margin: 25px;}
     }
     
 }
+@media (min-width: 1720px){
+    .footerContainer{
+        padding: 20px 40px;
+        max-width: 100%;
+    }
+    .footerContent{
+        width: 40%;
+        img{
+        width: 75%;
+        }
+
+}}

@@ -1204,3 +1204,56 @@ input[name="texture"] {
         }
     }
 }
+@media (min-width: 1720px){
+    .wraper{
+        max-width: 100%;
+    }
+    .container__left {
+
+    .container__left_bottom {
+
+        .container_controls {
+            .control_1 {
+                .tabs__isp {
+
+                    .tab__isp1,
+                    .tab__isp2 {
+                        font-size: 0.8vw;
+                    }
+            }}
+
+            .control_2 {
+
+                .tabs__avtom {
+                    .tab__avtom1,
+                    .tab__avtom2 {
+                        font-size: 0.8vw;
+                    }
+                }
+            }
+
+
+            .control_3 {
+
+                .sizes {
+                    max-width: 32%;
+                }
+            }
+
+            .control_4 {
+                display: flex;
+                align-items: center;
+                margin-top: 3rem;
+                max-width: 100%;
+                width: 100%;
+
+                .colors {
+                   
+                    width: 70%;                   
+                }
+            }
+        }
+        
+    }
+}
+}

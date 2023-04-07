@@ -1,8 +1,9 @@
 @import "../../styles/vars.scss";
 
 .scheme {
-    padding: 2vw 0;
+    padding: 10px 0;
     background-color: $base-blue;
+    max-width: 100%;
 
     h2 {
         color: $base-white;
@@ -112,4 +113,28 @@
             }
         }
     }
+}
+@media (min-width: 1720px){
+    
+.scheme__container {
+    grid-template-columns: repeat(2, minmax(160px, 1100px));
+
+
+    .scheme__block {
+
+        .text {
+            font-family: $fontM;
+            font-size: 1.2vw;
+            font-weight: 600;
+            padding-right: 15px;
+            line-height: 28px;
+
+            a {
+                text-decoration: none;
+                color: $base-blue;
+            }
+
+        }
+    }
+}
 }
