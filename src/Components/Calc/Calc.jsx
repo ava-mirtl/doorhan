@@ -40,7 +40,7 @@ export default function Calc() {
   const [avtom, setAvtom] = useState("встроенная");
   const [color, setColor] = useState("");
   const [texture, setTexture] = useState("");
-  const [vorota, setVorota] = useState("");
+  const [vorota, setVorota] = useState("откатные");
   const [formData, setFormData] = useState(initialData);
   const [valid, setValid] = useState(false);
   const [errorPhone, setErrorPhone] = useState("Введите номер телефона");

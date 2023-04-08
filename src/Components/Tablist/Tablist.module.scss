@@ -264,34 +264,27 @@ input[id="radio-3"] {
         max-width:none;
     }
     
-    input[id="radio-1"] {
-        &:checked {
-            &~.tab {
+    input[id="radio-1"]:checked+.tab {
+      
         background-color: $base-white;
         border-radius: 74px;
         box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
-            }
         }
-    }
     
-    input[id="radio-2"] {
-        &:checked {
-            &~.tab {
+    
+    input[id="radio-2"]:checked+.tab {
                 background-color: $base-white;
                 border-radius: 74px;
                 box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
-            }
-        }
+    
     }
     
-    input[id="radio-3"] {
-        &:checked {
-            &~.tab {
+    input[id="radio-3"]:checked+.tab {
+      
                 background-color: $base-white;
                 border-radius: 74px;
                 box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
-                    }
-        }
+            
     }
     
     .glider {

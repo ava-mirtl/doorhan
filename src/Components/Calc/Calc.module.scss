@@ -1063,6 +1063,7 @@ input[name="texture"] {
                         display: flex;
                         flex-direction: column;
                         flex-wrap: wrap;
+                        align-items: center;
 
                         .texture1 {
 
@@ -1072,7 +1073,7 @@ input[name="texture"] {
                                 min-width: 100px;
 
                                 .img {
-                                    margin: 0.2rem;
+                                    margin: 0.3rem;
 
                                     img {
                                         width: 9.3vw;
@@ -1088,7 +1089,7 @@ input[name="texture"] {
                                 min-width: 100px;
 
                                 .img {
-                                    margin: 0.6rem;
+                                    margin: 0.3rem;
 
                                     img {
                                         width: 9.3vw;
