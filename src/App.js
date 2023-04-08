@@ -29,6 +29,9 @@ return    }
         <Route path="/liquidation" element={<HeaderFirst />} />
         <Route path="/sale" element={<HeaderSecond />} />
         <Route path="/" element={<Header />} />
+        <Route path="/doorhan/liquidation" element={<HeaderFirst />} />
+        <Route path="/doorhan/sale" element={<HeaderSecond />} />
+        <Route path="/doorhan/" element={<Header />} />
       </Routes>
       <Main />
       <Footer />
