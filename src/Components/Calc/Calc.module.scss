@@ -550,7 +550,59 @@ input[name="texture"] {
 
 
 
+@media (min-width: 1720px){
+    .wraper{
+        max-width: 100%;
+    }
+    .container__left {
 
+    .container__left_bottom {
+
+        .container_controls {
+            .control_1 {
+                .tabs__isp {
+
+                    .tab__isp1,
+                    .tab__isp2 {
+                        font-size: 0.8vw;
+                    }
+            }}
+
+            .control_2 {
+
+                .tabs__avtom {
+                    .tab__avtom1,
+                    .tab__avtom2 {
+                        font-size: 0.8vw;
+                    }
+                }
+            }
+
+
+            .control_3 {
+
+                .sizes {
+                    max-width: 32%;
+                }
+            }
+
+            .control_4 {
+                display: flex;
+                align-items: center;
+                margin-top: 3rem;
+                max-width: 100%;
+                width: 100%;
+
+                .colors {
+                   
+                    width: 70%;                   
+                }
+            }
+        }
+        
+    }
+}
+}
 
 
 
@@ -786,159 +838,6 @@ input[name="texture"] {
     }
 }
 
-@media (max-width: 480px) {
-    .container {
-        .container__left {
-
-            .container__left_bottom {
-                .container_controls {
-                    margin: 4vh 0;
-                    width: 90%;
-
-                    .control_1 {
-                        .isp1 {
-                            &:checked {
-
-                                &~.tab__isp1 {
-                                    color: white;
-                                    background-color: $base-blue ;
-                                }
-
-                                &~.glider__isp {
-                                    transform: translateX(0);
-
-                                }
-                            }
-                        }
-
-                        .isp2 {
-                            &:checked {
-                                &~.tab__isp2 {
-                                    color: white;
-                                    background-color: $base-blue ;
-                                }
-
-                                &~.glider__isp {
-                                    transform: translateX(100%);
-                                }
-                            }
-                        }
-
-                        .tabs__isp {
-                            margin-left: 0.5rem;
-                            width: 100%;
-
-                            .tab__isp1,
-                            .tab__isp2 {
-                                font-size: 9pt;
-
-                            }
-
-                            .glider__isp {}
-                        }
-
-                    }
-
-                    .control_2 {
-                        margin-top: 2rem;
-
-                        .avtom1 {
-                            &:checked {
-                                &~.tab__avtom1 {
-                                    color: white;
-                                    background-color: $base-blue ;
-                                }
-
-                                &~.glider__avtom {
-                                    transform: translateX(0);
-                                }
-                            }
-                        }
-
-                        .avtom2 {
-                            &:checked {
-                                &~.tab__avtom2 {
-                                    color: white;
-                                    background-color: $base-blue ;
-                                }
-
-                                &~.glider__avtom {
-                                    transform: translateX(100%);
-
-                                }
-                            }
-                        }
-
-
-                        .tabs__avtom {
-                            margin-left: 1rem;
-                            height: 65px;
-                            width: 100%;
-
-                            .tab__avtom1,
-                            .tab__avtom2 {
-                                font-size: 9pt;
-                            }
-
-                            .glider__avtom {
-                                width: 50%;
-                                max-width: 50%;
-                                background-color: $base-blue;
-
-                            }
-                        }
-                    }
-
-
-                }
-
-                .container_texture {
-                    .texture__cards {
-                        width: 100%;
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: wrap;
-                        justify-content: center;
-
-                        .texture1 {
-
-                            .first,
-                            .second {
-                                width: 10vw;
-                                min-width: 100px;
-
-                                .img {
-                                    margin: 0.3rem;
-
-                                    img {
-                                        width: 9.3vw;
-                                        min-width: 90px;
-                                    }
-                                }
-                            }
-                        }
-
-                        .texture2 {
-                            .third {
-                                width: 10vw;
-                                min-width: 100px;
-
-                                .img {
-                                    margin: 0.3rem;
-
-                                    img {
-                                        width: 9.3vw;
-                                        min-width: 90px;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
 
 @media (max-width: 1200px) and (orientation: portrait) and (min-width: 600px) {
 
@@ -1062,7 +961,7 @@ input[name="texture"] {
     }
 }
 
-@media only screen and (device-width:375px), only screen and  (device-width:320px), only screen and  (device-width:460px){
+@media only screen and (device-width:375px), only screen and  (device-width:320px), only screen and  (device-width:460px), only screen and  (device-width:428px), (max-width: 480px){
     .container {
         .container__left {
 
@@ -1203,57 +1102,4 @@ input[name="texture"] {
             }
         }
     }
-}
-@media (min-width: 1720px){
-    .wraper{
-        max-width: 100%;
-    }
-    .container__left {
-
-    .container__left_bottom {
-
-        .container_controls {
-            .control_1 {
-                .tabs__isp {
-
-                    .tab__isp1,
-                    .tab__isp2 {
-                        font-size: 0.8vw;
-                    }
-            }}
-
-            .control_2 {
-
-                .tabs__avtom {
-                    .tab__avtom1,
-                    .tab__avtom2 {
-                        font-size: 0.8vw;
-                    }
-                }
-            }
-
-
-            .control_3 {
-
-                .sizes {
-                    max-width: 32%;
-                }
-            }
-
-            .control_4 {
-                display: flex;
-                align-items: center;
-                margin-top: 3rem;
-                max-width: 100%;
-                width: 100%;
-
-                .colors {
-                   
-                    width: 70%;                   
-                }
-            }
-        }
-        
-    }
-}
 }

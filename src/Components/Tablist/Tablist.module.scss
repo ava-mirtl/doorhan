@@ -247,5 +247,54 @@ input[id="radio-3"] {
 .glider {
     max-width: 160px;
 }
+}
 
+@media only screen and (device-width:375px), only screen and  (device-width:320px), only screen and  (device-width:460px), only screen and  (device-width:428px), (max-width: 480px){
+
+    .tab {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 65px;
+        font-size: 1.3vw;
+        border-radius: 74px;
+        cursor: pointer;
+        transition: color 0.15s ease-in;
+        width: 10.8vw;
+        max-width:none;
+    }
+    
+    input[id="radio-1"] {
+        &:checked {
+            &~.tab {
+        background-color: $base-white;
+        border-radius: 74px;
+        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
+            }
+        }
+    }
+    
+    input[id="radio-2"] {
+        &:checked {
+            &~.tab {
+                background-color: $base-white;
+                border-radius: 74px;
+                box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
+            }
+        }
+    }
+    
+    input[id="radio-3"] {
+        &:checked {
+            &~.tab {
+                background-color: $base-white;
+                border-radius: 74px;
+                box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
+                    }
+        }
+    }
+    
+    .glider {
+        display: none;
+    }
 }
