@@ -65,7 +65,7 @@
                 justify-content: center;
                 .error{
                     color: red;
-                    max-width: 15%;
+                    max-width: 250px;
                     padding: 10px;
                     font-size: large;
                 }
@@ -427,10 +427,15 @@
                 background-size: 100%;
                 position: relative;
                 right: 7vw;
+                .form
+                {.input{
+                    width: 100%;
+                }}
+                
 
                 .form button {
                     width: 100%;
-                    min-width: 210px;
+                    min-width: 200px;
                     max-width: 550px;
                 }
             }
@@ -503,6 +508,10 @@
                     flex-direction: column;
                     justify-content: center;
                     padding-bottom: 20px 0;
+                    .error{
+                        max-width: 100%;
+                    }
+    
 
                     .input {
                         width: 100%;

@@ -77,7 +77,7 @@ export default function Header() {
     <div className={styles.header__container}>
       <div className={styles.header}>
         <img className={styles.logo} src={logo} alt="logo" />
-        <span className={styles.phone}>+7(495)127-05-21</span>
+        <span className={styles.phone} href='tel:+7(495)127-05-21'>+7(495)127-05-21</span>
         <form onSubmit={e => handleSubm(e)}
           className={styles.form} >
                   {errorPhone&&<div className={styles.error}>{errorPhone}</div>}

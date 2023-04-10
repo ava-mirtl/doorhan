@@ -41,43 +41,59 @@ export default function WhyDoorhan() {
       setValid(true)
     }}, [errorName, errorPhone]);
 
-    const handlePhone = (e) => {
+    const handlePhone = (phone) => {
       setErrorPhone(null)
-      setPhone(e.target.value);
-      if (e.target.value=="") setErrorPhone("Введите номер телефона");
-      const re = /^\+7\s?\(?\d{3}\)?\s?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/;
-      if (!re.test(e.target.value)) {
+      setPhone(phone);
+      if (phone=="") {
+        setErrorPhone("Введите номер телефона");}
+      else {if (!/^\+7\s?\(?\d{3}\)?\s?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/.test(phone)) {
         setErrorPhone("Допустимый формат: +7 (999) 999-99-99; +7 999-999-99-99; +7 999 999 99")
       }
       else (setErrorPhone(null))
+    }}
+
+    const validatePhone = (phone) => {
+      if (phone==="") {
+        setErrorPhone("Введите номер телефона");
+        return false;
+      } else if (!/^\+7\s?\(?\d{3}\)?\s?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/.test(phone)) {
+        setErrorPhone("Допустимый формат: +7 (999) 999-99-99; +7 999-999-99-99; +7 999 999 99");
+        return false;
+      } else {
+        setErrorPhone(null);
+        return true;
+      }
     }
 
-  const handleName = (e)=>{
-      setName(e.target.value);
-    if (!e.target.value) setErrorName('Введите имя')
-      const re = /^[a-zA-Zа-яёА-ЯЁ]+$/u;
-    if (!re.test(e.target.value)){
-    setErrorName('Некорректный ввод.')
+    const handleName = (name) => {
+      setName(name);
+      if (!name) {
+        setErrorName('Введите имя');
+      } else {
+        const re = /^[a-zA-Zа-яёА-ЯЁ]+$/u;
+        if (!re.test(name)) {
+          setErrorName('Допустимы буквы кириллицы и латиницы');
+        } else {
+          setErrorName(null);
+        }
+      }
     }
-    else (  setErrorName(null))
-  }
 
   const handleSubm = (e, nameF, phone) => {
         e.preventDefault();
-        
         setFormData(state => ({...state,
             name:  {nameF},
             phone: {phone},
             }))
 
-            emailjs.send("service_onlg9xh","template_32oil1t", {
-              phone: formData.phone.phone,
-              name:  formData.name.nameF,
-            }, 'ZjXCD_toGWo9fEoVg') 
-          .then((result) => {
-            console.log(result);}, 
-          (error) => {
-            console.log(error);});
+          //   emailjs.send("service_onlg9xh","template_32oil1t", {
+          //     phone: formData.phone.phone,
+          //     name:  formData.name.nameF,
+          //   }, 'ZjXCD_toGWo9fEoVg') 
+          // .then((result) => {
+          //   console.log(result);}, 
+          // (error) => {
+          //   console.log(error);});
             setPhone("");
             setName("");
             handleSubmit(e);}
@@ -129,9 +145,17 @@ export default function WhyDoorhan() {
               <div className={styles.form__box}>
                 <form onSubmit={(e)=>handleSubm(e)}  className={styles.form}>
                 {(errorName&&nameDirty)&&<div className={styles.error}>{errorName}</div>}
-                  <input type="text" onChange={e=>handleName(e)} onBlur={e=>setNameDirty(true)} value={nameF}  className={styles.input} placeholder='Имя' />
-                  <input onChange={e=>handlePhone(e)} onBlur={e=>setPhoneDirty(true)} value={phone} type="text" className={styles.input} placeholder='Телефон' />
-                  <Button name="ПОЛУЧИТЬ ПОДАРОК" styles={why} disabled={!valid}/>
+                  <input type="text" onChange={e=>handleName(e.target.value)} onBlur={e=>setNameDirty(true)} value={nameF}  className={styles.input} placeholder='Имя' />
+                  <input onChange={e=>handlePhone(e.target.value)} onBlur={e=>setPhoneDirty(true)} value={phone} type="text" className={styles.input} placeholder='+7 912 345 67 89' />
+                  <Button name="ПОЛУЧИТЬ ПОДАРОК" styles={why} onClick={(e) => {
+                    e.preventDefault();
+  if (validatePhone(phone)) {
+    setValid(true);
+  } else {
+    setErrorPhone("Проверьте правильность ввода")
+    setValid(false);
+  }
+}} disabled={!valid}/>
                   {(errorPhone&&phoneDirty)&&<div className={styles.error}>{errorPhone}</div>}
                 </form>
               </div>
