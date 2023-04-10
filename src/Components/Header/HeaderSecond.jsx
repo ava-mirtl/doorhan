@@ -25,9 +25,7 @@ export default function Header() {
   const [errorPhone, setErrorPhone] = useState(null);
   const [phoneDirty, setPhoneDirty] = useState(false);
   const [formData, setFormData] = useState({ phone: "" });
-  const date = new Date;
-  const bigSaleParam = queryParams.get('big_sale');
-  const promoDate = bigSaleParam ? bigSaleParam.split('.').reverse().join('.') : `0${date.getDate()+1}.0${date.getMonth() + 1}.${date.getFullYear()}`;
+  
   useEffect(() => { setFormData({ phone: { phone } }) }, [phone]);
 
   useEffect(() => { }, [errorPhone]);

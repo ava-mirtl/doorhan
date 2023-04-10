@@ -9,9 +9,19 @@ import './styles/App.css';
 
 function App() {
   const initializePromoDate = useCallback(() => {
-    const date = new Date();
-    const promoDate = `0${date.getDate() + 1}.0${date.getMonth() + 1}.${date.getFullYear()}`;
-  
+    let currentDate = new Date();
+    currentDate.setDate(currentDate.getDate()+1);
+        let dd = '';
+    if(currentDate.getDate() < 10){
+        dd += '0';
+    }
+    dd += `${currentDate.getDate()}.`;
+    let mm = '';
+    if(currentDate.getMonth() < 9){
+        mm += '0';
+    }
+    mm += `${currentDate.getMonth() + 1}.${currentDate.getFullYear()}`;
+    let promoDate = dd+mm
     if (!window.location.search) {
        window.location.href = `?big_sale=${promoDate}`;
        console.log(window.location.href);
