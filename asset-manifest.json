@@ -1,12 +1,11 @@
 {
   "files": {
-    "main.css": "/doorhan/static/css/main.0ce905fd.css",
-    "main.js": "/doorhan/static/js/main.f5575100.js",
+    "main.css": "/doorhan/static/css/main.d9b2af3b.css",
+    "main.js": "/doorhan/static/js/main.46fe2989.js",
     "static/media/montserrat-regular.svg": "/doorhan/static/media/montserrat-regular.254481e221ee7c29499f.svg",
     "static/media/Rectangle31.png": "/doorhan/static/media/Rectangle31.a670b4a0a9d00519de47.png",
-    "static/media/gv.png": "/doorhan/static/media/gv.286721309a69bb053bb7.png",
-    "static/media/gv2.png": "/doorhan/static/media/gv2.ab6844e110530d9ad745.png",
     "static/media/gift.png": "/doorhan/static/media/gift.d8844ffbeae3d30cf9de.png",
+    "static/media/gv2.png": "/doorhan/static/media/gv2.f6276e31a85f848e4cf8.png",
     "static/media/montserrat-regular.otf": "/doorhan/static/media/montserrat-regular.377beafd9db71d7fbf45.otf",
     "static/media/image 16.png": "/doorhan/static/media/image 16.15f4974f84d0cd265090.png",
     "static/media/montserrat-regular.eot": "/doorhan/static/media/montserrat-regular.e140bc072318f581ecfd.eot",
@@ -19,6 +18,7 @@
     "static/media/popup1.jpg": "/doorhan/static/media/popup1.0800d55dcc4afcd22e16.jpg",
     "static/media/team1.png": "/doorhan/static/media/team1.755451e8d9327590692d.png",
     "static/media/montserrat-regular.woff": "/doorhan/static/media/montserrat-regular.e01d048caf7e291dbc7a.woff",
+    "static/media/gv.png": "/doorhan/static/media/gv.02069d263ee98bcee5e5.png",
     "static/media/vorota2.png": "/doorhan/static/media/vorota2.8d9d6a396be01b32844c.png",
     "static/media/premium4.png": "/doorhan/static/media/premium4.813d6b63faec9595b330.png",
     "static/media/vorota3.png": "/doorhan/static/media/vorota3.0dcb41be92a826d22ad0.png",
@@ -42,11 +42,11 @@
     "static/media/days.woff2": "/doorhan/static/media/days.81026aa7c3e673cd23e1.woff2",
     "static/media/logo.png": "/doorhan/static/media/logo.2b1482f81ee45c618c9a.png",
     "index.html": "/doorhan/index.html",
-    "main.0ce905fd.css.map": "/doorhan/static/css/main.0ce905fd.css.map",
-    "main.f5575100.js.map": "/doorhan/static/js/main.f5575100.js.map"
+    "main.d9b2af3b.css.map": "/doorhan/static/css/main.d9b2af3b.css.map",
+    "main.46fe2989.js.map": "/doorhan/static/js/main.46fe2989.js.map"
   },
   "entrypoints": [
-    "static/css/main.0ce905fd.css",
-    "static/js/main.f5575100.js"
+    "static/css/main.d9b2af3b.css",
+    "static/js/main.46fe2989.js"
   ]
 }
