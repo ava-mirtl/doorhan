@@ -11,7 +11,7 @@ export default function Footer() {
         <h2 className={styles.footerTitle}>КОНТАКТЫ</h2>
         <div className={styles.footerAdress}>
           <address className={styles.footerTxt}>Дальняя улица, 15, Одинцово, Московская область</address>
-          <div className={styles.footerTxt}>+7 495 127 05 21</div>
+          <a href='tel:+7(495)127-05-21' className={styles.footerTxt}><span>+7 495 127</span> 05 21</a>
           <a className={styles.footerLink} href="#">Политика конфиденциальности</a>
         </div>
       </div>

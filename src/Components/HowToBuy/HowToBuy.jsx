@@ -43,27 +43,43 @@ export default function HowToBuy() {
       setValid(true)
     }
   }, [errorName, errorPhone]);
+ const handlePhone = (phone) => {
+      setErrorPhone(null)
+      setPhone(phone);
+      if (phone=="") {
+        setErrorPhone("Введите номер телефона");}
+      else {if (!/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(phone)) {
+        setErrorPhone("Допустимый формат: +7 (999) 999-99-99; 8 999-999-99-99; 8 999 999 99; 79999999999")
+      }
+      else (setErrorPhone(null))
+    }}
 
-  const handlePhone = (e) => {
-    setErrorPhone(null)
-    setPhone(e.target.value);
-    if (e.target.value=="") setErrorPhone("Введите номер телефона");
-    const re = /^\+7\s?\(?\d{3}\)?\s?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/;
-    if (!re.test(e.target.value)) {
-      setErrorPhone("Формат телефона: +7 (999) 999-99-99; +7 999-999-99-99; +7 999 999 99")
+    const validatePhone = (phone) => {
+      if (phone==="") {
+        setErrorPhone("Введите номер телефона");
+        return false;
+      } else if (!/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(phone)) {
+        setErrorPhone("Допустимый формат: +7 (999) 999-99-99; 8 999-999-99-99; 8 999 999 99; 79999999999");
+        return false;
+      } else {
+        setErrorPhone(null);
+        return true;
+      }
     }
-    else (setErrorPhone(null))
-  }
 
-  const handleName = (e) => {
-    setName(e.target.value);
-    if (!e.target.value) setErrorName('Введите имя')
-    const re = /^[a-zA-Zа-яёА-ЯЁ]+$/u;
-    if (!re.test(e.target.value)) {
-      setErrorName('Формат имени: только буквы кириллицы или латиницы')
+    const handleName = (name) => {
+      setName(name);
+      if (!name) {
+        setErrorName('Введите имя');
+      } else {
+        const re = /^[a-zA-Zа-яёА-ЯЁ]+$/u;
+        if (!re.test(name)) {
+          setErrorName('Формат имени: только буквы кириллицы или латиницы');
+        } else {
+          setErrorName(null);
+        }
+      }
     }
-    else (setErrorName(null))
-  }
 
   const handleSubm = (e, nameF, phone) => {
     e.preventDefault();
@@ -191,9 +207,17 @@ export default function HowToBuy() {
         {(errorPhone && phoneDirty) && <div className={styles.error}>{errorPhone}</div>}
 
         <form onSubmit={(e) => handleSubm(e)} className={styles.formNext} >
-          <input type="text" onChange={e => handleName(e)} onBlur={e => setNameDirty(true)} value={nameF} className={styles.inputNext} placeholder='Имя' />
-          <input onChange={e => handlePhone(e)} onBlur={e => setPhoneDirty(true)} value={phone} type="text" className={styles.inputNext} placeholder='Телефон' />
-          <Button name="РАССЧИТАТЬ ВОРОТА" styles={how_to_buy} disabled={!valid} />
+          <input type="text" onChange={e=>handleName(e.target.value)} onBlur={e => setNameDirty(true)} value={nameF} className={styles.inputNext} placeholder='Имя' />
+          <input onChange={e=>handlePhone(e.target.value)} onBlur={e => setPhoneDirty(true)} value={phone} type="text" className={styles.inputNext} placeholder='+7 912 345 67 89' />
+          <Button name="РАССЧИТАТЬ ВОРОТА" styles={how_to_buy} onClick={(e) => {
+                    e.preventDefault();
+  if (validatePhone(phone)) {
+    setValid(true);
+  } else {
+    setErrorPhone("Проверьте правильность ввода")
+    setValid(false);
+  }
+}} disabled={!valid}/>
         </form>
       </div>
       {modalActive &&

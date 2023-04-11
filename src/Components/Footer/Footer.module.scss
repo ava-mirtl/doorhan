@@ -7,6 +7,18 @@
     display: flex;
     justify-content: space-around;
     background: linear-gradient(291.94deg, rgba(255, 255, 255, 0.2) 4.77%, rgba(255, 255, 255, 0) 26.71%), #003676;
+.footerContent{
+    
+        .footerAdress{
+            .footerTxt{
+small{
+    small{
+        opacity: 1;
+    }
+}            }
+        }
+    
+}
 }
 .footerTitle{
     font-family: $fontD;
@@ -20,6 +32,8 @@ margin: 25px;}
     font-style: normal;
     font-weight: 100;
     font-family: $fontM;
+    color: $base-white;
+    text-decoration: none;
     font-size: 18pt;
     width: 60%;
 }

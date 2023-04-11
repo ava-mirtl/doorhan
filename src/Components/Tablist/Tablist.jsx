@@ -51,13 +51,13 @@ export default function Tabs({vorota, state}) {
                 <span className={styles.glider}></span>
             </div>
             {one && <div className={styles.content}>
-                <img src={vor1} alt="ОТКАТНЫЕ" />
+            <img src={vor3} alt="ГАРАЖНЫЕ" />
             </div>}
             {two && <div className={styles.content}>
                 <img src={vor2} alt="РАСПАШНЫЕ" />
             </div>}
             {three && <div className={styles.content}>
-                <img src={vor3} alt="ГАРАЖНЫЕ" />
+            <img src={vor1} alt="ОТКАТНЫЕ" />
             </div>}
         </div>
 

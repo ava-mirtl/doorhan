@@ -69,9 +69,9 @@ export default function Calc() {
     setErrorPhone(null)
     setPhone(e.target.value);
     if (e.target.value=="") setErrorPhone("Введите номер телефона");
-    const re = /^\+7\s?\(?\d{3}\)?\s?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/;
+    const re = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
     if (!re.test(e.target.value)) {
-      setErrorPhone("Допустимый формат: +7 (999) 999-99-99; +7 999-999-99-99; +7 999 999 99")
+      setErrorPhone("Допустимый формат: +7 (999) 999-99-99; 8 999-999-99-99; 8 999 999 99; 79999999999")
     }
     else (setErrorPhone(null))
   }
@@ -126,12 +126,12 @@ export default function Calc() {
 
   //счетчики длина и высота
   const onNextClick = (a, set) => {
-    set(a + 10);
+    set(a + 100);
   }
 
   const onPrevClick = (a, set) => {
-    if (a > 10) {
-      set(a - 10);
+    if (a > 100) {
+      set(a - 100);
     }
     else {
       set(0)
@@ -259,7 +259,7 @@ const handleInput = (e, set) =>{
                   <p className={styles.tabs__p}>РАЗМЕРЫ</p>
                   <div className={styles.sizes}>
                     <div className={styles.sizes__title}>
-                      ДЛИНА
+                      ШИРИНА
                     </div>
                     <div className={styles.sizes__count}>
                       <button className={styles.bt_left}
@@ -392,8 +392,6 @@ const handleInput = (e, set) =>{
               </div>
             </div>
           </div>
-
-
           <div className={styles.container__right}>
             <div className={styles.container__right_top}>
               <Tabs vorota={vorota} state={setVorota}/>

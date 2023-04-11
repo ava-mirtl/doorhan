@@ -36,9 +36,9 @@ export default function Header() {
     if (e.target.value.trim() === "") {
       return;
     }
-    const re = /^\+7\s?\(?\d{3}\)?\s?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/;
+    const re = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
     if (!re.test(e.target.value)) {
-      setErrorPhone("Допустимый формат: +7 (999) 999-99-99; +7 999-999-99-99; +7 999 999 99");
+      setErrorPhone("Допустимый формат: +7 (999) 999-99-99; 8 999-999-99-99; 8 999 999 99; 79999999999");
     }
   }
 
@@ -73,7 +73,7 @@ export default function Header() {
     <div className={styles.header__container}>
       <div className={styles.header}>
         <img className={styles.logo} src={logo} alt="logo"/>
-        <a className={styles.phone} href='tel:+7(495)127-05-21'>+7(495)127-05-21</a>
+        <a className={styles.phone} href='tel:+7(495)127-05-21'><span>+7(495)127</span>-05-21</a>
         <form onSubmit={e => handleSubm(e)}
           className={styles.form} >
                   {errorPhone&&<div className={styles.error}>{errorPhone}</div>}

@@ -36,27 +36,43 @@ export default function ModalInputs({ active, setActive, handleSubmit}) {
     }, [errorName, errorPhone]);
     
 
-  const handlePhone = (e)=>{
-    setPhone(e.target.value);
-    if (!e.target.value) setErrorPhone('Введите номер')
-    const re = /^\+7\s?\(?\d{3}\)?\s?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/;
-  if (!re.test(e.target.value)){
-  setErrorPhone('Допустимый формат: +7 (999) 999-99-99; +7 999-999-99-99; +7 999 999 99')
-  }
-  else (  setErrorPhone(null)
-  )
-  }
+const handlePhone = (phone) => {
+      setErrorPhone(null)
+      setPhone(phone);
+      if (phone=="") {
+        setErrorPhone("Введите номер телефона");}
+      else {if (!/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(phone)) {
+        setErrorPhone("Допустимый формат: +7 (999) 999-99-99; 8 999-999-99-99; 8 999 999 99; 79999999999")
+      }
+      else (setErrorPhone(null))
+    }}
 
-  const handleName = (e)=>{
-    setName(e.target.value);
-    if (!e.target.value) setErrorName('Введите имя')
-    const re = /^[a-zA-Zа-яёА-ЯЁ]+$/u;
-  if (!re.test(e.target.value)){
-  setErrorName('Некорректный ввод.')
-  }
-  else (  setErrorName(null)
-  )
-  }
+    const validatePhone = (phone) => {
+      if (phone==="") {
+        setErrorPhone("Введите номер телефона");
+        return false;
+      } else if (!/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(phone)) {
+        setErrorPhone("Допустимый формат: +7 (999) 999-99-99; 8 999-999-99-99; 8 999 999 99; 79999999999");
+        return false;
+      } else {
+        setErrorPhone(null);
+        return true;
+      }
+    }
+
+    const handleName = (name) => {
+      setName(name);
+      if (!name) {
+        setErrorName('Введите имя');
+      } else {
+        const re = /^[a-zA-Zа-яёА-ЯЁ]+$/u;
+        if (!re.test(name)) {
+          setErrorName('Формат имени: только буквы кириллицы или латиницы');
+        } else {
+          setErrorName(null);
+        }
+      }
+    }
 
   const handleSubm = (e, nameF, 
     phone) => {
@@ -86,9 +102,17 @@ export default function ModalInputs({ active, setActive, handleSubmit}) {
       <div className="popupContainerNext">
         {(errorPhone&&phoneDirty)?<div className="error">{errorPhone}</div>:<div className="popupTitleNext">РАСЧЕТ СТОИМОСТИ УСЛУГИ</div>}
         <form onSubmit={(e)=>handleSubm(e)} className="formNext">
-          <input type="text" onChange={e=>handleName(e)} onBlur={e=>setNameDirty(true)} style={(errorName && nameDirty)? { border: "2px solid red" }:{ border: "2px solid grey" }} value={nameF} className="inputNext" placeholder='Ваше имя'  />
-          <input type="text" onChange={e=>handlePhone(e)} onBlur={e=>setPhoneDirty(true)} style={(errorPhone&& phoneDirty)? { border: "2px solid red" }:{ border: "2px solid grey" }} value={phone} className="inputNext" placeholder='Телефон'  />
-          <Button name="РАССЧИТАТЬ ВОРОТА" disabled={!valid} styles={popupStyle} />
+          <input type="text" onChange={e=>handleName(e.target.value)} onBlur={e=>setNameDirty(true)} style={(errorName && nameDirty)? { border: "2px solid red" }:{ border: "2px solid grey" }} value={nameF} className="inputNext" placeholder='Ваше имя'  />
+          <input type="text" onChange={e=>handlePhone(e.target.value)} onBlur={e=>setPhoneDirty(true)} style={(errorPhone&& phoneDirty)? { border: "2px solid red" }:{ border: "2px solid grey" }} value={phone} className="inputNext" placeholder='Телефон'  />
+          <Button name="РАССЧИТАТЬ ВОРОТА"  styles={popupStyle} onClick={(e) => {
+                    e.preventDefault();
+  if (validatePhone(phone)) {
+    setValid(true);
+  } else {
+    setErrorPhone("Проверьте правильность ввода")
+    setValid(false);
+  }
+}} disabled={!valid}/>
         </form>
       </div>
     </Modal>

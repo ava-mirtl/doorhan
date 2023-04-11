@@ -46,8 +46,8 @@ export default function WhyDoorhan() {
       setPhone(phone);
       if (phone=="") {
         setErrorPhone("Введите номер телефона");}
-      else {if (!/^\+7\s?\(?\d{3}\)?\s?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/.test(phone)) {
-        setErrorPhone("Допустимый формат: +7 (999) 999-99-99; +7 999-999-99-99; +7 999 999 99")
+      else {if (!/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(phone)) {
+        setErrorPhone("Допустимый формат: +7 (999) 999-99-99; 8 999-999-99-99; 8 999 999 99; 79999999999")
       }
       else (setErrorPhone(null))
     }}
@@ -56,8 +56,8 @@ export default function WhyDoorhan() {
       if (phone==="") {
         setErrorPhone("Введите номер телефона");
         return false;
-      } else if (!/^\+7\s?\(?\d{3}\)?\s?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/.test(phone)) {
-        setErrorPhone("Допустимый формат: +7 (999) 999-99-99; +7 999-999-99-99; +7 999 999 99");
+      } else if (!/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(phone)) {
+        setErrorPhone("Допустимый формат: +7 (999) 999-99-99; 8 999-999-99-99; 8 999 999 99; 79999999999");
         return false;
       } else {
         setErrorPhone(null);
@@ -72,7 +72,7 @@ export default function WhyDoorhan() {
       } else {
         const re = /^[a-zA-Zа-яёА-ЯЁ]+$/u;
         if (!re.test(name)) {
-          setErrorName('Допустимы буквы кириллицы и латиницы');
+          setErrorName('Формат имени: только буквы кириллицы или латиницы');
         } else {
           setErrorName(null);
         }
@@ -85,15 +85,14 @@ export default function WhyDoorhan() {
             name:  {nameF},
             phone: {phone},
             }))
-
-          //   emailjs.send("service_onlg9xh","template_32oil1t", {
-          //     phone: formData.phone.phone,
-          //     name:  formData.name.nameF,
-          //   }, 'ZjXCD_toGWo9fEoVg') 
-          // .then((result) => {
-          //   console.log(result);}, 
-          // (error) => {
-          //   console.log(error);});
+            emailjs.send("service_onlg9xh","template_32oil1t", {
+              phone: formData.phone.phone,
+              name:  formData.name.nameF,
+            }, 'ZjXCD_toGWo9fEoVg') 
+          .then((result) => {
+            console.log(result);}, 
+          (error) => {
+            console.log(error);});
             setPhone("");
             setName("");
             handleSubmit(e);}
