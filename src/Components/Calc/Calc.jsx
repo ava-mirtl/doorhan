@@ -392,6 +392,8 @@ const handleInput = (e, set) =>{
               </div>
             </div>
           </div>
+
+
           <div className={styles.container__right}>
             <div className={styles.container__right_top}>
               <Tabs vorota={vorota} state={setVorota}/>
