@@ -36,28 +36,28 @@ export default function Tabs({vorota, state}) {
         <div className={styles.container}>
             <div className={styles.tabs}>
                 <input type="radio" id="radio-1" name="tabs" 
-                value="откатные" checked={vorota=="откатные"?true:false}
-                onChange={(e)=>state(e.target.value)} onClick={handleChekOne} />
-                <label className={styles.tab} htmlFor="radio-1">ОТКАТНЫЕ</label>
+                value="гаражные" checked={vorota=="гаражные"?true:false}
+                onChange={(e)=>state(e.target.value)} 
+                onClick={handleChekOne} />
+                <label className={styles.tab} htmlFor="radio-1">ГАРАЖНЫЕ</label>
                 <input type="radio" id="radio-2" name="tabs" 
                 value="распашные" checked={vorota=="распашные"?true:false}
                 onChange={(e)=>state(e.target.value)} onClick={handleChekTwo} />
                 <label className={styles.tab} htmlFor="radio-2">РАСПАШНЫЕ</label>
                 <input type="radio" id="radio-3" name="tabs" 
-                value="гаражные" checked={vorota=="гаражные"?true:false}
-                onChange={(e)=>state(e.target.value)} 
-                onClick={handleChekThree} />
-                <label className={styles.tab} htmlFor="radio-3">ГАРАЖНЫЕ</label>
+                value="откатные" checked={vorota=="откатные"?true:false}
+                onChange={(e)=>state(e.target.value)} onClick={handleChekThree} />
+                <label className={styles.tab} htmlFor="radio-3">ОТКАТНЫЕ</label>
                 <span className={styles.glider}></span>
             </div>
             {one && <div className={styles.content}>
-            <img src={vor3} alt="ГАРАЖНЫЕ" />
+            <img src={vor1} alt="ГАРАЖНЫЕ" />
             </div>}
             {two && <div className={styles.content}>
                 <img src={vor2} alt="РАСПАШНЫЕ" />
             </div>}
             {three && <div className={styles.content}>
-            <img src={vor1} alt="ОТКАТНЫЕ" />
+            <img src={vor3} alt="ОТКАТНЫЕ" />
             </div>}
         </div>
 
