@@ -142,7 +142,7 @@ export default function WhyDoorhan() {
             </div>
             <div className={styles.main__right}>
               <div className={styles.form__box}>
-                <form onSubmit={(e)=>handleSubm(e)}  className={styles.form}>
+                <form className={styles.form}>
                 {(errorName&&nameDirty)&&<div className={styles.error}>{errorName}</div>}
                   <input type="text" onChange={e=>handleName(e.target.value)} onBlur={e=>setNameDirty(true)} value={nameF}  className={styles.input} placeholder='Имя' />
                   <input onChange={e=>handlePhone(e.target.value)} onBlur={e=>setPhoneDirty(true)} value={phone} type="text" className={styles.input} placeholder='+7 912 345 67 89' />
@@ -154,6 +154,7 @@ export default function WhyDoorhan() {
     setErrorPhone("Проверьте правильность ввода")
     setValid(false);
   }
+  handleSubm(e)
 }} disabled={!valid}/>
                   {(errorPhone&&phoneDirty)&&<div className={styles.error}>{errorPhone}</div>}
                 </form>

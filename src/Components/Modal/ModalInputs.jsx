@@ -1,12 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import emailjs from '@emailjs/browser';
 import Modal from './Modal';
+import ModalGrats from './ModalGrats';
 import Button from '../Button/Button'
 import { popupStyle } from '../Button/Button';
 import "./modal.scss";
 
 
 export default function ModalInputs({ active, setActive, handleSubmit}) {
+  const [modalActiveGrats, setModalActiveGrats] = useState(false);
 
 
   
@@ -97,24 +99,26 @@ const handlePhone = (phone) => {
             handleSubmit(e)
       }
 
-  return (
+  return (<>
     <Modal active={active} setActive={setActive}>
       <div className="popupContainerNext">
         {(errorPhone&&phoneDirty)?<div className="error">{errorPhone}</div>:<div className="popupTitleNext">РАСЧЕТ СТОИМОСТИ УСЛУГИ</div>}
-        <form onSubmit={(e)=>handleSubm(e)} className="formNext">
+        <form className="formNext">
           <input type="text" onChange={e=>handleName(e.target.value)} onBlur={e=>setNameDirty(true)} style={(errorName && nameDirty)? { border: "2px solid red" }:{ border: "2px solid grey" }} value={nameF} className="inputNext" placeholder='Ваше имя'  />
           <input type="text" onChange={e=>handlePhone(e.target.value)} onBlur={e=>setPhoneDirty(true)} style={(errorPhone&& phoneDirty)? { border: "2px solid red" }:{ border: "2px solid grey" }} value={phone} className="inputNext" placeholder='Телефон'  />
-          <Button name="РАССЧИТАТЬ ВОРОТА"  styles={popupStyle} onClick={(e) => {
-                    e.preventDefault();
+          <Button name="РАССЧИТАТЬ ВОРОТА" styles={popupStyle} onClick={(e) => {
+  e.preventDefault();
   if (validatePhone(phone)) {
     setValid(true);
   } else {
     setErrorPhone("Проверьте правильность ввода")
     setValid(false);
   }
+  handleSubm(e)
 }} disabled={!valid}/>
         </form>
       </div>
     </Modal>
+    </>
   )
 }

@@ -206,7 +206,7 @@ export default function HowToBuy() {
         {(errorName && nameDirty) && <div className={styles.error}>{errorName}</div>}
         {(errorPhone && phoneDirty) && <div className={styles.error}>{errorPhone}</div>}
 
-        <form onSubmit={(e) => handleSubm(e)} className={styles.formNext} >
+        <form className={styles.formNext} >
           <input type="text" onChange={e=>handleName(e.target.value)} onBlur={e => setNameDirty(true)} value={nameF} className={styles.inputNext} placeholder='Имя' />
           <input onChange={e=>handlePhone(e.target.value)} onBlur={e => setPhoneDirty(true)} value={phone} type="text" className={styles.inputNext} placeholder='+7 912 345 67 89' />
           <Button name="РАССЧИТАТЬ ВОРОТА" styles={how_to_buy} onClick={(e) => {
@@ -217,6 +217,7 @@ export default function HowToBuy() {
     setErrorPhone("Проверьте правильность ввода")
     setValid(false);
   }
+  handleSubm(e)
 }} disabled={!valid}/>
         </form>
       </div>

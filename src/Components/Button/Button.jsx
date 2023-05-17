@@ -107,11 +107,10 @@ export const how_to_buy = {
 }
 
 
-export default function Button({ name, onClick, styles, disabled }) {
-
+export default function Button({ name, onClick, styles, disabled}) {
   return (
     onClick
-      ? <button style={styles} onClick={(e) => onClick(e)} className="btn">{name}</button>
+      ? <button style={styles} disabled={disabled} onClick={(e) => onClick(e)} className="btn">{name}</button>
       : <button style={styles} disabled={disabled} className="btn">{name}</button>
 
   )
